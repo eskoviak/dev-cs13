@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Survey_Threshold_Reached__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field gets checked to TRUE when the survey threshold value has been reached for the number of surveys sent out in a 12 month period.</description>
+    <externalId>false</externalId>
+    <label>Survey Threshold Reached</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

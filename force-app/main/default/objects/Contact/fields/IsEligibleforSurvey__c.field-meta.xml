@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsEligibleforSurvey__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contacts designated as eligible to receive a Customer Experience survey. This can be contrasted with the Do Not Send Survey Flag.</description>
+    <externalId>false</externalId>
+    <label>Is Eligible for Survey</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

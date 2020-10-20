@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_M3_Fields_Cannot_Be_Edited</fullName>
+    <active>true</active>
+    <description>Only Sys Admin and Cast Iron profiles can edit M3 Contact Names, Phone Number, Email and Active status cannot be modified</description>
+    <errorConditionFormula>AND(
+         OwnerId  =  &quot;005F0000001ru0a&quot;,
+         $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+         $Profile.Name &lt;&gt; &quot;RWS Customer Service Power User&quot;,
+         $Profile.Name &lt;&gt; &quot;Cast Iron Integration&quot;, 
+         $Profile.Name &lt;&gt; &quot;Eloqua Integration&quot;,          
+        OR(
+                ISCHANGED( LastName ),
+                ISCHANGED( FirstName ),
+                ISCHANGED( Email ),
+                ISCHANGED( Phone ),
+                ISCHANGED(  Active__c ) 
+                )
+)</errorConditionFormula>
+    <errorMessage>This Contact is linked to M3/Movex. The Name, Email and Phone cannot be edited.  To change this information, log an &quot;Account Information Change Request&quot; case.</errorMessage>
+</ValidationRule>

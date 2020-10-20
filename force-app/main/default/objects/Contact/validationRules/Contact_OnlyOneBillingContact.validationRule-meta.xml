@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_OnlyOneBillingContact</fullName>
+    <active>true</active>
+    <description>A BPC account can only have one Billing Contact. This validation rule will require human intervention. To allow a user to change or update the billing contact (after deletion) uncheck the Account field HasBillingContact_BPC__c.</description>
+    <errorConditionFormula>AND(
+	Account.HasBillingContact_BPC__c = True,
+	isNew(),
+OR(
+    isPickVal(Contact_Identifier__c, &apos;Billing&apos;),
+    isPickVal(Contact_Identifier__c, &apos;Primary &amp; Billing&apos;))
+)</errorConditionFormula>
+    <errorMessage>The Account already has a Billing Contact. Please contact the help desk or a Salesforce Administrator to change the Billing Contact.</errorMessage>
+</ValidationRule>

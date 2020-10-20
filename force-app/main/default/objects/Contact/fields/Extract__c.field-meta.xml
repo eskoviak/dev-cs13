@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Extract__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this box to use it as a filter in extract files so as to export only specific records</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For internal use only</inlineHelpText>
+    <label>Extract</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

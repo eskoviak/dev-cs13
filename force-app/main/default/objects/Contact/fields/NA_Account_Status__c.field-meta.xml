@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Account_Status__c</fullName>
+    <description>For National Accounts Only; from R-00880</description>
+    <externalId>false</externalId>
+    <formula>TEXT(Account.NA_Account_Status__c)</formula>
+    <label>NA Account Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

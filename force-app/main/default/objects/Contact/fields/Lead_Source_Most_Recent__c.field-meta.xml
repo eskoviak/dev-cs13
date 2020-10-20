@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source_Most_Recent__c</fullName>
+    <description>Eloqua Integrated</description>
+    <externalId>false</externalId>
+    <label>Lead Source Most Recent</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Referral</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Account Referral</label>
+            </value>
+            <value>
+                <fullName>Advertisement</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Advertisement</label>
+            </value>
+            <value>
+                <fullName>Affiliate/Partner</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Affiliate/Partner</label>
+            </value>
+            <value>
+                <fullName>Cold Call</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Cold Call</label>
+            </value>
+            <value>
+                <fullName>Direct Mail Campaign</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Direct Mail Campaign</label>
+            </value>
+            <value>
+                <fullName>Email Campaign</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Email Campaign</label>
+            </value>
+            <value>
+                <fullName>Fitting Stool Lead</fullName>
+                <default>false</default>
+                <label>Fitting Stool Lead</label>
+            </value>
+            <value>
+                <fullName>Fitting Stool Survey</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Fitting Stool Survey</label>
+            </value>
+            <value>
+                <fullName>General Phone Inquiry</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>General Phone Inquiry</label>
+            </value>
+            <value>
+                <fullName>International Lead</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>International Lead</label>
+            </value>
+            <value>
+                <fullName>ISM</fullName>
+                <default>false</default>
+                <label>ISM</label>
+            </value>
+            <value>
+                <fullName>Jigsaw</fullName>
+                <default>false</default>
+                <label>Jigsaw</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Paid Email List</fullName>
+                <default>false</default>
+                <label>Paid Email List</label>
+            </value>
+            <value>
+                <fullName>Paid Search (SEM Campaign)</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Paid Search (SEM Campaign)</label>
+            </value>
+            <value>
+                <fullName>Retail Store</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Retail Store</label>
+            </value>
+            <value>
+                <fullName>Telemarketing</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Telemarketing</label>
+            </value>
+            <value>
+                <fullName>Trade Show</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Trade Show</label>
+            </value>
+            <value>
+                <fullName>Website</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Website</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

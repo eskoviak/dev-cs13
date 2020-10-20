@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Community_Contact_Update_Rule</fullName>
+    <active>true</active>
+    <description>Only System Admin and API are allowed to update the Partner Community Users record type (Contact Record Type)</description>
+    <errorConditionFormula>AND(OR( 
+ISCHANGED(Active__c ), 
+ISCHANGED(Email), 
+ISCHANGED(FirstName), 
+ISCHANGED(LastName), 
+ISCHANGED(Phone),
+ISCHANGED(EMS_Login__c),
+ISCHANGED(Entity_ID__c)), 
+         $Profile.Name &lt;&gt; &quot;Cast Iron Integration&quot;, 
+         $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+         RecordTypeId = &quot;0122A000000s21s&quot;
+ )</errorConditionFormula>
+    <errorMessage>Only System Administrators and the EMS to Salesforce Integration is allowed to update the Partner Community Contact records.</errorMessage>
+</ValidationRule>

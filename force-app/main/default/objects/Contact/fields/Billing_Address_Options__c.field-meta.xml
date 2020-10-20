@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Address_Options__c</fullName>
+    <description>Picklist to indicate if the contacts address is the same as the account billing address in which they are associated with.  Values are Same as Account or Different
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Picklist to indicate if the contacts address is the same as the account billing address in which they are associated with.  Values are Same as Account or Different</inlineHelpText>
+    <label>Billing Address Options</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Same as Account</fullName>
+                <default>false</default>
+                <label>Same as Account</label>
+            </value>
+            <value>
+                <fullName>Different</fullName>
+                <default>false</default>
+                <label>Different</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

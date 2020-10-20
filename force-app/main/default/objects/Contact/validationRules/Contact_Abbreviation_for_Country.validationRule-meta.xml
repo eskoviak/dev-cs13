@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Abbreviation_for_Country</fullName>
+    <active>true</active>
+    <description>The Contact MailingCountry must be the two letter abbreviation.</description>
+    <errorConditionFormula>AND ( RecordType.Name = &apos;Business Partner&apos;,
+NOT(ISBLANK(MailingCountry)),
+OR(
+LEN( MailingCountry ) &lt; 2,
+NOT(
+CONTAINS(&apos;US:CA&apos;,
+MailingCountry)
+)))</errorConditionFormula>
+    <errorDisplayField>MailingCountry</errorDisplayField>
+    <errorMessage>A valid two-letter country code is required.</errorMessage>
+</ValidationRule>

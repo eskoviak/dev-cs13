@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Survey_Task__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Do not delete.Used when a related case is closed this field gets checked and triggers a workflow to create a new survey task for the contact related to the case</description>
+    <externalId>false</externalId>
+    <label>Create Survey Task</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

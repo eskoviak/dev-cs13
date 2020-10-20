@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RWBAA_User_Type__c</fullName>
+    <description>This is a field used by MSTS to identify the type of user that will be set up in their system. It is included in Contact Outbound Message for RWBAA Customer User Request.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a field used by MSTS to identify the type of user that will be set up in their system. It is included in Contact Outbound Message.</inlineHelpText>
+    <label>RWBAA User Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>safety-manager</fullName>
+                <default>false</default>
+                <label>safety-manager</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

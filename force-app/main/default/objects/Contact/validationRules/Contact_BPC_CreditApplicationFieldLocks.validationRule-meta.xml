@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_BPC_CreditApplicationFieldLocks</fullName>
+    <active>false</active>
+    <description>Locking and Primary Contacts when related Account Credit Application is in processing / active.</description>
+    <errorConditionFormula>AND(
+	Not($Profile.Name = &apos;RWS Business Partner Community&apos;),
+    Not($Profile.Name = &apos;System Administrator&apos;),
+    Not(isBlank(Text(Contact_Identifier__c))),
+    Not(isBlank(Text(Account.Credit_Status__c))),
+OR(
+	isChanged(Contact_Identifier__c),
+	isChanged(Email),
+        isChanged(LastName),
+        isChanged(FirstName)
+	)
+	)</errorConditionFormula>
+    <errorMessage>A Credit Application has been processed for the related Account. Name, Email and Contact Identifier are locked.</errorMessage>
+</ValidationRule>

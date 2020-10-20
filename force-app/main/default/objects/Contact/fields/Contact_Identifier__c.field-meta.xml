@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Identifier__c</fullName>
+    <description>This field was requested by Jeff G to identify the primary contact.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please identify this contact as Primary or Billing.</inlineHelpText>
+    <label>Contact Identifier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Primary</fullName>
+                <default>false</default>
+                <label>Primary</label>
+            </value>
+            <value>
+                <fullName>Billing</fullName>
+                <default>false</default>
+                <label>Billing</label>
+            </value>
+            <value>
+                <fullName>Primary &amp; Billing</fullName>
+                <default>false</default>
+                <label>Primary &amp; Billing</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Invoice Payment Portal Admin</label>
+            </value>
+            <value>
+                <fullName>Truck Run</fullName>
+                <default>false</default>
+                <label>Truck Run</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

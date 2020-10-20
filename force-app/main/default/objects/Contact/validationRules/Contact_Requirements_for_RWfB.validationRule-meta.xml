@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Requirements_for_RWfB</fullName>
+    <active>true</active>
+    <description>Requires Email  and full name when  Contacts RT is Business Partner</description>
+    <errorConditionFormula>AND(
+RecordType.Name = &apos;Business Partner&apos;,
+Not($Profile.Name = &apos;RWS Business Partner Community&apos;),
+OR(
+isBlank(Email),
+isBlank(FirstName),
+isBlank(LastName)
+))</errorConditionFormula>
+    <errorMessage>Full Name and Email are required for RWfB Contacts.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>White_Paper_Designing_a_Program__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Eloqua Integrated</description>
+    <externalId>false</externalId>
+    <label>White Paper - Designing a Program</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

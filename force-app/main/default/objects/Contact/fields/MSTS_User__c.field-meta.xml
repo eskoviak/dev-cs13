@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MSTS_User__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Boolean field to designate if MSTS Contact outbound message has been sent, display on related lists and is used in validation rules to prevent the change of RWBAA User Type.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Boolean field to designate if MSTS Contact outbound message has been sent, display on related lists and is used in validation rules to prevent the change of RWBAA User Type.</inlineHelpText>
+    <label>MSTS User</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

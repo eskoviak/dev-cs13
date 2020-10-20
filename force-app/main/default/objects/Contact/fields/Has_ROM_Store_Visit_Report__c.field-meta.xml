@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_ROM_Store_Visit_Report__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that a ROM Visit report is attached to this contact. Used to exclude the contact from merges</description>
+    <externalId>false</externalId>
+    <label>Has ROM Store Visit Report</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

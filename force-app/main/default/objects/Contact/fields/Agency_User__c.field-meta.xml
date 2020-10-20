@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agency_User__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Used to identify Users who are Agency Users.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the Agency User if this user is an Agency User.</inlineHelpText>
+    <label>Agency User</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>AgencyContacts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

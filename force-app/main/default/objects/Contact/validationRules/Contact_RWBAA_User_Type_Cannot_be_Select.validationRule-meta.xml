@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_RWBAA_User_Type_Cannot_be_Select</fullName>
+    <active>true</active>
+    <description>Prevent the ability to change the RWBAA User Type until the Account has been Published for downstream systems (MSTS), is Active and matches other criteria.</description>
+    <errorConditionFormula>AND( 
+NOT(ISBLANK(TEXT(RWBAA_User_Type__c))), 
+Not($Profile.Name = &apos;System Administrator&apos;), 
+OR( 
+NOT(ISPICKVAL( Account.Credit_Status__c,&quot;Approved/Active&quot;)), 
+CONTAINS(LOWER(Email),&apos;@redwingshoes.com&apos;), 
+ISBLANK(Email), 
+NOT(ISBLANK(TEXT(Contact_Identifier__c))) 
+) 
+)</errorConditionFormula>
+    <errorMessage>RWBAA User Type cannot be selected for a Primary or Billing contact or a Red Wing Shoe employee. Account’s credit status must be “Approved/Active”.</errorMessage>
+</ValidationRule>

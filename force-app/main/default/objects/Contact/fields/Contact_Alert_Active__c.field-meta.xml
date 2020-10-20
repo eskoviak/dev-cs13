@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Alert_Active__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indiciates a problem Contact; instructions to handle the Contact are included in the Contact Alert Notes field.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box to display a red flag indicating this is a problem Contact.  Add info to the Contact Alert Notes field to describe the problem.</inlineHelpText>
+    <label>Contact Alert Active</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

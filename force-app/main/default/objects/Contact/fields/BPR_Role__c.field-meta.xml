@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BPR_Role__c</fullName>
+    <description>Business Partner Community Contact Roles
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Business Partner Community Contact Roles</inlineHelpText>
+    <label>BPC Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Primary Contact</fullName>
+                <default>true</default>
+                <label>Primary Contact</label>
+            </value>
+            <value>
+                <fullName>Billing Contact</fullName>
+                <default>false</default>
+                <label>Billing Contact</label>
+            </value>
+            <value>
+                <fullName>Buyer</fullName>
+                <default>false</default>
+                <label>Buyer</label>
+            </value>
+            <value>
+                <fullName>Admin Asst</fullName>
+                <default>false</default>
+                <label>Admin Asst</label>
+            </value>
+            <value>
+                <fullName>Associate</fullName>
+                <default>false</default>
+                <label>Associate</label>
+            </value>
+            <value>
+                <fullName>Company Executive</fullName>
+                <default>false</default>
+                <label>Company Executive</label>
+            </value>
+            <value>
+                <fullName>CPA</fullName>
+                <default>false</default>
+                <label>CPA</label>
+            </value>
+            <value>
+                <fullName>EH&amp;S</fullName>
+                <default>false</default>
+                <label>EH&amp;S</label>
+            </value>
+            <value>
+                <fullName>Facility and Operations Manager</fullName>
+                <default>false</default>
+                <label>Facility and Operations Manager</label>
+            </value>
+            <value>
+                <fullName>Human Resource Management</fullName>
+                <default>false</default>
+                <label>Human Resource Management</label>
+            </value>
+            <value>
+                <fullName>Owner</fullName>
+                <default>false</default>
+                <label>Owner</label>
+            </value>
+            <value>
+                <fullName>Purchasing Management</fullName>
+                <default>false</default>
+                <label>Purchasing Management</label>
+            </value>
+            <value>
+                <fullName>Safety Director</fullName>
+                <default>false</default>
+                <label>Safety Director</label>
+            </value>
+            <value>
+                <fullName>Sales Rep</fullName>
+                <default>false</default>
+                <label>Sales Rep</label>
+            </value>
+            <value>
+                <fullName>Store Manager</fullName>
+                <default>false</default>
+                <label>Store Manager</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Admin Assistant</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Admin Assistant</label>
+            </value>
+            <value>
+                <fullName>EH&amp;S (Environmental, Health, Safety)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>EH&amp;S (Environmental, Health, Safety)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

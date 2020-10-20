@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Annual_Survey__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Works in conjunction with the annual survey batch process and workflow and should NOT be deleted.</description>
+    <externalId>false</externalId>
+    <label>Send Annual Survey</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

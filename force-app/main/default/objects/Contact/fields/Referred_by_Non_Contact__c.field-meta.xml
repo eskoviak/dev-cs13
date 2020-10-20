@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referred_by_Non_Contact__c</fullName>
+    <description>If this Contact was referred by another Contact, use this field to link to that Contact&apos;s record; if not, enter the name in the &quot;Referred by Non-Contact&quot; field</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If this Contact was referred by a person other than a Contact in Salesforce, enter the name in this field.  If the referring person has a Contact record in Salesforce, please use the &quot;Referred by Contact&quot; field to link to that Contact record.</inlineHelpText>
+    <label>Referred by Non-Contact</label>
+    <length>60</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

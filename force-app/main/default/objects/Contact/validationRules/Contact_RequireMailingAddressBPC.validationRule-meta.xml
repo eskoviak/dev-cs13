@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_RequireMailingAddressBPC</fullName>
+    <active>false</active>
+    <description>Require a billing address for BPC Billing or Primary &amp; Billing Contacts</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Text(Contact_Identifier__c))),
+OR(
+isBlank(MailingStreet),
+isBlank(MailingCity),
+isBlank(MailingState),
+isBlank(MailingPostalCode),
+isBlank(MailingCountry)
+)
+)</errorConditionFormula>
+    <errorMessage>Mailing Address is a required field Primary and Billing Business Partner Contacts. Identified by the Contact Identifier picklist.</errorMessage>
+</ValidationRule>

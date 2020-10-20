@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referred_by_Store__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>From &quot;Combined Contact Requirements for Review 3-26&quot; spreadsheet</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If this Contact was referred by a Store, use this field to link to that Store&apos;s record.</inlineHelpText>
+    <label>Referred by Store</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Store Referrals</relationshipLabel>
+    <relationshipName>Contacts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

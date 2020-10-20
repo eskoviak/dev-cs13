@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Preference__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Inidicate the method by which this Contact prefers to be contacted</inlineHelpText>
+    <label>Contact Preference</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Email</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Phone - Office</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Phone - Office</label>
+            </value>
+            <value>
+                <fullName>Phone - Mobile</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Phone - Mobile</label>
+            </value>
+            <value>
+                <fullName>USPS</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>USPS</label>
+            </value>
+            <value>
+                <fullName>Fax</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Fax</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

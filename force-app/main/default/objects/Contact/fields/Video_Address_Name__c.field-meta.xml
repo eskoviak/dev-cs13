@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Video_Address_Name__c</fullName>
+    <description>From &quot;Combined Contact Requirements for Review 3-26&quot; spreadsheet</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter Video Address Names on separate lines.  Example: Skype Name</inlineHelpText>
+    <label>Video Address Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

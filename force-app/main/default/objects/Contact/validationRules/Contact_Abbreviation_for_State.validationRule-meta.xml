@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Abbreviation_for_State</fullName>
+    <active>true</active>
+    <description>The Contact MailingState/Province must be the two letter abbreviation.</description>
+    <errorConditionFormula>AND (RecordType.Name = &apos;Business Partner&apos;,
+MailingCountry  = &apos;US&apos;,
+OR(
+LEN( MailingState ) &lt; 2,
+NOT(
+CONTAINS(&apos;AL:AK:AZ:AR:CA:CO:CT:DE:DC:FL:GA:HI:ID:IL:IN:IA:KS:KY:LA:ME:MD:MA:MI:MN:MS:MO:MT:NE:NV:NH:NJ:NM:NY:NC:ND:OH:OK:OR:PA:RI:SC:SD:TN:TX:UT:VT:VA:WA:WV:WI:WY&apos;,
+MailingState)
+)))</errorConditionFormula>
+    <errorDisplayField>MailingState</errorDisplayField>
+    <errorMessage>A valid two-letter state code is required.</errorMessage>
+</ValidationRule>

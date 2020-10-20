@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Abbreviation_for_Province</fullName>
+    <active>true</active>
+    <description>The Contact MailingState/Province must be the two letter abbreviation.</description>
+    <errorConditionFormula>AND ( RecordType.Name  = &apos;Business Partner&apos;,
+MailingCountry  = &apos;CA&apos;,
+OR(
+LEN( MailingState ) &lt; 2,
+NOT(
+CONTAINS(&apos;AB:BC:MB:NB:NL:NT:NS:NU:ON:PC:QC:SK:YT&apos;,
+MailingState)
+)))</errorConditionFormula>
+    <errorDisplayField>MailingState</errorDisplayField>
+    <errorMessage>A valid two-letter province code is required.</errorMessage>
+</ValidationRule>

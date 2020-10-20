@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_RWBAA_User_Type_Cannot_be_Change</fullName>
+    <active>true</active>
+    <description>Prevent the ability to change the RWBAA User Type once it has been selected and MSTS User has been sent via outbound message.</description>
+    <errorConditionFormula>AND(
+ISCHANGED( RWBAA_User_Type__c ),
+MSTS_User__c = TRUE,
+NOT($Profile.Name = &apos;System Administrator&apos;)
+)</errorConditionFormula>
+    <errorMessage>RWBAA User Type cannot be changed once it has been sent to MSTS.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Telemarketing_Alert_Code__c</fullName>
+    <description>Eloqua Integrated</description>
+    <externalId>false</externalId>
+    <label>Alert Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ISM to Call Immediately</fullName>
+                <default>false</default>
+                <label>ISM to Call Immediately</label>
+            </value>
+            <value>
+                <fullName>ISM to Follow up in 1 Month</fullName>
+                <default>false</default>
+                <label>ISM to Follow up in 1 Month</label>
+            </value>
+            <value>
+                <fullName>ISM to Follow up in 2 Weeks</fullName>
+                <default>false</default>
+                <label>ISM to Follow up in 2 Weeks</label>
+            </value>
+            <value>
+                <fullName>See Notes in Eloqua Prior to Calling</fullName>
+                <default>false</default>
+                <label>See Notes in Eloqua Prior to Calling</label>
+            </value>
+            <value>
+                <fullName>Do Not Call Customer at this Time</fullName>
+                <default>false</default>
+                <label>Do Not Call Customer at this Time</label>
+            </value>
+            <value>
+                <fullName>See Notes in Salesforce Prior to Calling</fullName>
+                <default>false</default>
+                <label>See Notes in Salesforce Prior to Calling</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

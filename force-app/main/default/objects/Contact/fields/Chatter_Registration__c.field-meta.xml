@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chatter_Registration__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is integrated with Eloqua and is checked when the contact has requested sign up for chatter.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Integrated with Eloqua - If checked the contact has signed up for Chatter</inlineHelpText>
+    <label>Chatter Registration</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

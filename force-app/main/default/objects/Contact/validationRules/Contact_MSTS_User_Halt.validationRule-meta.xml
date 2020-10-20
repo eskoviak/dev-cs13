@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_MSTS_User_Halt</fullName>
+    <active>false</active>
+    <description>Prevent the ability to change the RWBAA User Type if the Contact is not the Primary Contact or is using a Red Wing Shoes email address.</description>
+    <errorConditionFormula>CONTAINS(LOWER(Email),&apos;@redwingshoes.com&apos;)</errorConditionFormula>
+    <errorMessage>RWBAA User Type cannot be selected if the Contact is not the Primary Contact or is using a Red Wing Shoes email address.</errorMessage>
+</ValidationRule>
