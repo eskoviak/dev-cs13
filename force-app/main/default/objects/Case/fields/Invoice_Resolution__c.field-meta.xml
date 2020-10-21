@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Resolution__c</fullName>
+    <description>The action taken that resolved the invoice issue</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The action taken that settled the invoice issue</inlineHelpText>
+    <label>Invoice Resolution</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Paid</fullName>
+                <default>false</default>
+                <label>Paid</label>
+            </value>
+            <value>
+                <fullName>Adjusted</fullName>
+                <default>false</default>
+                <label>Adjusted</label>
+            </value>
+            <value>
+                <fullName>Write-Off</fullName>
+                <default>false</default>
+                <label>Write-Off</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

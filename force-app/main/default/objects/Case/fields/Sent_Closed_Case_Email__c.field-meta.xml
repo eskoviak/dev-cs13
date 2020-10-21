@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sent_Closed_Case_Email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This indicates a closed case email has been sent and is used in the workflow, so that no additional emails are inadvertently sent.</description>
+    <externalId>false</externalId>
+    <label>Sent Closed Case Email</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

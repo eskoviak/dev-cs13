@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Swag_Item__c</fullName>
+    <description>Swag promotional item given to consumer</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Swag promotional item given to consumer</inlineHelpText>
+    <label>Swag Item</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Boot Care Products</fullName>
+                <default>false</default>
+                <label>Boot Care Products</label>
+            </value>
+            <value>
+                <fullName>Hat</fullName>
+                <default>false</default>
+                <label>Hat</label>
+            </value>
+            <value>
+                <fullName>Lace Keepers</fullName>
+                <default>false</default>
+                <label>Lace Keepers</label>
+            </value>
+            <value>
+                <fullName>Magnets</fullName>
+                <default>false</default>
+                <label>Magnets</label>
+            </value>
+            <value>
+                <fullName>Mug</fullName>
+                <default>false</default>
+                <label>Mug</label>
+            </value>
+            <value>
+                <fullName>Notebook</fullName>
+                <default>false</default>
+                <label>Notebook</label>
+            </value>
+            <value>
+                <fullName>Pens</fullName>
+                <default>false</default>
+                <label>Pens</label>
+            </value>
+            <value>
+                <fullName>Safety Whistle</fullName>
+                <default>false</default>
+                <label>Safety Whistle</label>
+            </value>
+            <value>
+                <fullName>Stickers</fullName>
+                <default>false</default>
+                <label>Stickers</label>
+            </value>
+            <value>
+                <fullName>T-Shirt</fullName>
+                <default>false</default>
+                <label>T-Shirt</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Swag</controllingFieldValue>
+            <controllingFieldValue>Coupon and Swag</controllingFieldValue>
+            <valueName>Boot Care Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Swag</controllingFieldValue>
+            <controllingFieldValue>Coupon and Swag</controllingFieldValue>
+            <valueName>Hat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Swag</controllingFieldValue>
+            <controllingFieldValue>Coupon and Swag</controllingFieldValue>
+            <valueName>Lace Keepers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Swag</controllingFieldValue>
+            <controllingFieldValue>Coupon and Swag</controllingFieldValue>
+            <valueName>Magnets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Swag</controllingFieldValue>
+            <controllingFieldValue>Coupon and Swag</controllingFieldValue>
+            <valueName>Mug</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Swag</controllingFieldValue>
+            <controllingFieldValue>Coupon and Swag</controllingFieldValue>
+            <valueName>Notebook</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Swag</controllingFieldValue>
+            <controllingFieldValue>Coupon and Swag</controllingFieldValue>
+            <valueName>Pens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Swag</controllingFieldValue>
+            <controllingFieldValue>Coupon and Swag</controllingFieldValue>
+            <valueName>Safety Whistle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Swag</controllingFieldValue>
+            <controllingFieldValue>Coupon and Swag</controllingFieldValue>
+            <valueName>Stickers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Swag</controllingFieldValue>
+            <controllingFieldValue>Coupon and Swag</controllingFieldValue>
+            <valueName>T-Shirt</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

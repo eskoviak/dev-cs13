@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QA_Working_Case__c</fullName>
+    <description>This is the QA that is testing the Case.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the name of the QA resource that is testing this Case.</inlineHelpText>
+    <label>QA Working Case</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sarika Samala</fullName>
+                <default>true</default>
+                <label>Sarika Samala</label>
+            </value>
+            <value>
+                <fullName>Chad Anderson</fullName>
+                <default>false</default>
+                <label>Chad Anderson</label>
+            </value>
+            <value>
+                <fullName>Cicily Punauakee</fullName>
+                <default>false</default>
+                <label>Cicily Punauakee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

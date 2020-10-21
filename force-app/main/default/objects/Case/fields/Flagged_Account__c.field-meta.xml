@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flagged_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is populated with the Case&apos;s account ID (used for the lookup). When the account ID is present, this field acts as a flag to populate the case in the Flagged Case Related List on the Account record.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is populated with the Case&apos;s account ID (used for the lookup). When the account ID is present, this field acts as a flag to populate the case in the Flagged Case Related List on the Account record.</inlineHelpText>
+    <label>Flagged Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Corrective Action Cases</relationshipLabel>
+    <relationshipName>FlaggedAccount</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

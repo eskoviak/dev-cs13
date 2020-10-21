@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ISH_Backer_Panel_Total__c</fullName>
+    <externalId>false</externalId>
+    <label>ISH Backer Panel Total</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1-8 units</fullName>
+                <default>false</default>
+                <label>1-8 units</label>
+            </value>
+            <value>
+                <fullName>9-17 units</fullName>
+                <default>false</default>
+                <label>9-17 units</label>
+            </value>
+            <value>
+                <fullName>18-26 units</fullName>
+                <default>false</default>
+                <label>18-26 units</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

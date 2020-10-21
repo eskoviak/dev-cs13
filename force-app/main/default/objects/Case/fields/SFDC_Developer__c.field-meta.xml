@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Developer__c</fullName>
+    <description>This is the Salesforce.com developer who is assigned to the case.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the Salesforce.com developer if needed for resolution.</inlineHelpText>
+    <label>SFDC Developer</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Demand Chain</fullName>
+                <default>false</default>
+                <label>Demand Chain</label>
+            </value>
+            <value>
+                <fullName>Magnet360</fullName>
+                <default>false</default>
+                <label>Magnet360</label>
+            </value>
+            <value>
+                <fullName>RWSC Developer</fullName>
+                <default>false</default>
+                <label>RWSC Developer</label>
+            </value>
+            <value>
+                <fullName>SFDC Premier Services</fullName>
+                <default>false</default>
+                <label>SFDC Premier Services</label>
+            </value>
+            <value>
+                <fullName>Eagle Creek</fullName>
+                <default>false</default>
+                <label>Eagle Creek</label>
+            </value>
+            <value>
+                <fullName>Andy Boettcher</fullName>
+                <default>false</default>
+                <label>Andy Boettcher</label>
+            </value>
+            <value>
+                <fullName>Eirik Ackerman</fullName>
+                <default>false</default>
+                <label>Eirik Ackerman</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

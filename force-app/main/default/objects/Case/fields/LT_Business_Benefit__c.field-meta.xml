@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LT_Business_Benefit__c</fullName>
+    <description>Long-Term Business Benefit</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the Long-Term Business Benefit here.</inlineHelpText>
+    <label>LT Business Benefit</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer satisfaction</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Customer satisfaction</label>
+            </value>
+            <value>
+                <fullName>Data reliability and consistency</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Data reliability and consistency</label>
+            </value>
+            <value>
+                <fullName>Data visibility to support decision-making</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Data visibility to support decision-making</label>
+            </value>
+            <value>
+                <fullName>Expense reduction</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Expense reduction</label>
+            </value>
+            <value>
+                <fullName>Process improvement (simplify, agile, execute)</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Process improvement (simplify, agile, execute)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

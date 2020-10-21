@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Delivery_Date__c</fullName>
+    <description>The date we should target for delivery</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date we should traget for delivery</inlineHelpText>
+    <label>Target Delivery Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

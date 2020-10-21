@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alignment_to_Corp_Goals__c</fullName>
+    <description>Describes how this request when fulfilled, will align with Corporate Goals</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Describes how this request when fulfilled, will align with Corporate Goals</inlineHelpText>
+    <label>Alignment to Corp Goals</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Helps develop high performing talent</fullName>
+                <default>false</default>
+                <label>Helps develop high performing talent</label>
+            </value>
+            <value>
+                <fullName>Helps Heritage business globally</fullName>
+                <default>false</default>
+                <label>Helps Heritage business globally</label>
+            </value>
+            <value>
+                <fullName>Helps increase productivity</fullName>
+                <default>false</default>
+                <label>Helps increase productivity</label>
+            </value>
+            <value>
+                <fullName>Helps increase industrial market share</fullName>
+                <default>false</default>
+                <label>Helps increase industrial market share</label>
+            </value>
+            <value>
+                <fullName>Helps retail competitive advantage</fullName>
+                <default>false</default>
+                <label>Helps retail competitive advantage</label>
+            </value>
+            <value>
+                <fullName>Helps Vasque brand</fullName>
+                <default>false</default>
+                <label>Helps Vasque brand</label>
+            </value>
+            <value>
+                <fullName>Increased margins</fullName>
+                <default>false</default>
+                <label>Increased margins</label>
+            </value>
+            <value>
+                <fullName>Increased revenue</fullName>
+                <default>false</default>
+                <label>Increased revenue</label>
+            </value>
+            <value>
+                <fullName>Involves Red Wing community</fullName>
+                <default>false</default>
+                <label>Involves Red Wing community</label>
+            </value>
+            <value>
+                <fullName>WOW! our customers</fullName>
+                <default>false</default>
+                <label>WOW! our customers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

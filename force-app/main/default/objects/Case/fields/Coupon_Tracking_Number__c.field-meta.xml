@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Coupon_Tracking_Number__c</fullName>
+    <description>Coupon Tracking Number or range of number</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Coupon tracking number or range of numbers. For example 791-794.</inlineHelpText>
+    <label>Coupon Tracking #</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RWBAA_Require_Account_if_Transfer_MSTS</fullName>
+    <active>true</active>
+    <description>RWBAA Require Account to be added to case if Transferring to  MSTS</description>
+    <errorConditionFormula>IF(
+AND(
+RecordType.Name = &apos;RWBAA Cases&apos;,
+TEXT( Stage__c ) = &quot;Assigned to MSTS&quot;,
+ISBLANK( AccountId )),true,false)</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>Please attach case to Account before transfer to MSTS</errorMessage>
+</ValidationRule>

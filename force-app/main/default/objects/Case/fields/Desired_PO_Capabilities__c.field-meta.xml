@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Desired_PO_Capabilities__c</fullName>
+    <description>Indicates if the account has a desired PO capability for capturing PO numbers on transaction/invoices.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates if the account has a desired PO capability for capturing PO numbers on transaction/invoices.</inlineHelpText>
+    <label>Desired PO Capabilities</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blanket</fullName>
+                <default>false</default>
+                <label>Blanket</label>
+            </value>
+            <value>
+                <fullName>Individual</fullName>
+                <default>false</default>
+                <label>Individual</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

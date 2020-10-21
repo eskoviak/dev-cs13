@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BA_Unit_Testing__c</fullName>
+    <description>BA Unit Testing</description>
+    <externalId>false</externalId>
+    <inlineHelpText>BA Unit testing of the solution to ensure quality before UAT.</inlineHelpText>
+    <label>BA Unit Testing</label>
+    <precision>7</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Compliance_required_fields</fullName>
+    <active>false</active>
+    <description>Upon closure of a Compliance case, the fields in the &quot;Compliance Case Required Information&quot; section need to be completed.</description>
+    <errorConditionFormula>AND(
+        ISPICKVAL( Type, &apos;Compliance / Chargeback&apos;),
+        ISPICKVAL( Status, &apos;Closed&apos;),
+
+        OR(
+        
+                 AND( 
+                             ISBLANK(  Delivery__c),
+                             ISBLANK(  PO__c ),
+                             ISBLANK(   DN__c )
+                           ),
+     
+                OR( 
+                             ISBLANK( Chargeback_Amount__c),
+                             ISBLANK( Chargeback_Date_Received__c),
+                             ISPICKVAL( Credit_Status__c, &apos;&apos;),
+                             ISPICKVAL(  Warehouse__c , &apos;&apos;) 
+               )
+))</errorConditionFormula>
+    <errorMessage>For Compliance / Chargeback cases, the following fields must be entered before the case can be closed:  Credit Status, Warehouse, Chargeback Amount, Chargeback Date Received and either  Delivery #, PO # or DN #.</errorMessage>
+</ValidationRule>

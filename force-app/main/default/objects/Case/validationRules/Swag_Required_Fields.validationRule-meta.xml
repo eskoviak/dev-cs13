@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Swag_Required_Fields</fullName>
+    <active>true</active>
+    <description>Required fields for Swag are Reason, Swag Item, Brand, and Subject</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( Type ,&apos;Swag&apos;),
+OR(
+ISBLANK( Text(Reason__c )),
+ISBLANK(Brand__c),
+ISBLANK(Quantity__c),
+ISBLANK( Shipping_Address_Line_1__c ),
+ISBLANK( Shipping_Address_City__c ),
+ISBLANK( Text (Shipping_Address_State_Province__c )),
+ISBLANK( Shipping_Address_ZIP_Postal_Code__c ),
+ISBLANK( Text (Shipping_Address_Country__c )),
+ISBLANK(Consumer_Phone__c),
+ISBLANK( Subject )))</errorConditionFormula>
+    <errorDisplayField>Type</errorDisplayField>
+    <errorMessage>Reason, Swag Item, Brand,Subject, Quantity, Phone, Email, and Shipping Info are required when Primary Case Type is &quot;Swag&quot;</errorMessage>
+</ValidationRule>

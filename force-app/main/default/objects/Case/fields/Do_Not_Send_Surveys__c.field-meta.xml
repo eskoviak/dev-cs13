@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Send_Surveys__c</fullName>
+    <description>Do NOT Delete - used for Case - Closed Send Survey workflow to check if Contact does not want to receive surveys</description>
+    <externalId>false</externalId>
+    <formula>Contact.Do_Not_Send_Surveys__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Do Not Send Surveys</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

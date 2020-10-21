@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Maintenance_Queue</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Customer_Number__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>Secondary_Case_Type__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Queue</filterScope>
+    <label>Customer Maintenance Queue</label>
+    <queue>Customer_Maintenance_Queue</queue>
+    <sharedTo>
+        <group>Customer_Maintenance_Group</group>
+    </sharedTo>
+</ListView>

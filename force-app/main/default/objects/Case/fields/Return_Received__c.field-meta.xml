@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_Received__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox used to know if return has been received or not. If not received we notify the owner. In some cases finance needs to know if consumer actually sent the boots back.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Return has been received. See comments for details.</inlineHelpText>
+    <label>Return Received</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BTC_Type_Detail__c</fullName>
+    <externalId>false</externalId>
+    <label>BTC Type Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bid/Tender</fullName>
+                <default>false</default>
+                <label>Bid/Tender</label>
+            </value>
+            <value>
+                <fullName>Contract/Agreement</fullName>
+                <default>false</default>
+                <label>Contract/Agreement</label>
+            </value>
+            <value>
+                <fullName>Customer Form</fullName>
+                <default>false</default>
+                <label>Customer Form</label>
+            </value>
+            <value>
+                <fullName>Program Agreement Redlines</fullName>
+                <default>false</default>
+                <label>Program Agreement Redlines</label>
+            </value>
+            <value>
+                <fullName>RWSS Contracts</fullName>
+                <default>false</default>
+                <label>RWSS Contracts</label>
+            </value>
+            <value>
+                <fullName>Shipping/Routing Updates</fullName>
+                <default>false</default>
+                <label>Shipping/Routing Updates</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Vendor Agreement / Contract in Review</controllingFieldValue>
+            <valueName>Bid/Tender</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor Agreement / Contract in Review</controllingFieldValue>
+            <valueName>Contract/Agreement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor Agreement / Contract in Review</controllingFieldValue>
+            <valueName>Customer Form</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor Agreement / Contract in Review</controllingFieldValue>
+            <valueName>Program Agreement Redlines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor Agreement / Contract in Review</controllingFieldValue>
+            <valueName>RWSS Contracts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor Agreement / Contract in Review</controllingFieldValue>
+            <valueName>Shipping/Routing Updates</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

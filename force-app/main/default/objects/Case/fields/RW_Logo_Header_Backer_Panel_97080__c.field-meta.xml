@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RW_Logo_Header_Backer_Panel_97080__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(ISPICKVAL( RW_Slatwall_Panel_Total__c , &quot;1-8 units&quot;)), &quot;1&quot;, 
+IF(AND(ISPICKVAL( RW_Slatwall_Panel_Total__c , &quot;9-17 units&quot;)), &quot;2&quot;, 
+IF(AND(ISPICKVAL( RW_Slatwall_Panel_Total__c , &quot;18-26 units&quot;)), &quot;3&quot;,&quot; &quot;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>RW Logo Header Backer Panel 97080</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

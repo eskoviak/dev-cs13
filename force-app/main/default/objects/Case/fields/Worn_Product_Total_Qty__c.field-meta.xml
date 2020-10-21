@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Worn_Product_Total_Qty__c</fullName>
+    <description>Total for all Worn Products below.</description>
+    <externalId>false</externalId>
+    <formula>Style_02206_Worn__c + Style_02211_Worn__c + Style_02223_Worn__c + Style_02226_Worn__c + Style_02230_Worn__c + Style_02238_Worn__c + Style_02249_Worn__c + Style_02254_Worn__c + Style_02270_Worn__c + Style_02404_Worn__c + Style_02405_Worn__c + Style_02406_Worn__c + Style_02408_Worn__c + Style_02412_Worn__c + Style_02414_Worn__c + Style_02416_Worn__c + Style_02426_Worn__c + Style_02491_Worn__c +  Style_03505_Worn__c + Style_03507_Worn__c + Style_03508_Worn__c + Style_03523_Worn__c + Style_03526_Worn__c + Style_03528_Worn__c + Style_03568_Worn__c + Style_04206_Worn__c + Style_04208_Worn__c + Style_04210_Worn__c + Style_04273_Worn__c + Style_04406_Worn__c + Style_04414_Worn__c + Style_04425_Worn__c + Style_04433_Worn__c + Style_04435_Worn__c + Style_04436_Worn__c + Style_04437_Worn__c + Style_04438_Worn__c + Style_04445_Worn__c + Style_04478_Worn__c + Style_04481_Worn__c + Style_04483_Worn__c + Style_04484_Worn__c + Style_04494_Worn__c + Style_04497_Worn__c + Style_22406_Worn__c + Style_22408_Worn__c + Style_52406_Worn__c + Style_52408_Worn__c + Style_82406_Worn__c + Style_82408_Worn__c + Style_86004_Worn__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This is the total for all Worn Products below.</inlineHelpText>
+    <label>Worn Product Total Qty</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

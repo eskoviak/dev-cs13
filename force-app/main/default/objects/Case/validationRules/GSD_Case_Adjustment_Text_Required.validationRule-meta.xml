@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GSD_Case_Adjustment_Text_Required</fullName>
+    <active>true</active>
+    <description>Validates that there is adjustment text if field is flagged as Incorrect or Corrected.</description>
+    <errorConditionFormula>IF(
+AND(
+(RecordType.Name) = &apos;Industrial Account Validation&apos;,  
+OR(
+     AND(
+         OR(ISPICKVAL( Primary_Contact_Info__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Primary_Contact_Info__c ,&quot;Corrected&quot;))),            
+         ISBLANK( Primary_Contact_Adjustment__c )),
+     AND(
+         OR(ISPICKVAL( Billing_Contact_Info__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Billing_Contact_Info__c ,&quot;Corrected&quot;))),
+         ISBLANK(Billing_Contact_Adjustment__c)),
+     AND(
+         OR(ISPICKVAL( Secondary_Contact_Info__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Secondary_Contact_Info__c ,&quot;Corrected&quot;))),
+         ISBLANK( Secondary_Contact_Adjustment__c )),
+     AND(
+         OR(ISPICKVAL( Vendor_Setup__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Vendor_Setup__c ,&quot;Corrected&quot;))),
+         ISBLANK( Vendor_Setup_Adjustment__c )),
+     AND(
+         OR(ISPICKVAL( Tax_Status__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Tax_Status__c ,&quot;Corrected&quot;))),
+         ISBLANK( Tax_Status_Adjustment__c )),
+     AND(
+         OR(ISPICKVAL( Physical_Location_Address__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Physical_Location_Address__c ,&quot;Corrected&quot;))),
+         ISBLANK( Physical_Location_Address_Adjustment__c )),
+     AND(
+         OR(ISPICKVAL( Billing_Location_Address__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Billing_Location_Address__c ,&quot;Corrected&quot;))),
+         ISBLANK( Billing_Location_Address_Adjustments__c )),
+     AND(
+         OR(ISPICKVAL( Account_Hierarchy__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Account_Hierarchy__c ,&quot;Corrected&quot;))),
+         ISBLANK( Hierarchy_Adjustment__c )),
+     AND(
+         OR(ISPICKVAL( Payment_Terms__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Payment_Terms__c ,&quot;Corrected&quot;))),
+         ISBLANK( Payment_Terms_Adjustment__c )),
+     AND(
+         OR(ISPICKVAL( Invoice_Frequency__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Invoice_Frequency__c ,&quot;Corrected&quot;))),
+         ISBLANK( Invoice_Frequency_Adjustment__c )),
+     AND(
+         OR(ISPICKVAL( Billing_Attributes_Grouping__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Billing_Attributes_Grouping__c ,&quot;Corrected&quot;))),
+         ISBLANK( Billing_Attributes_Grouping_Adjustment__c )),
+     AND(
+         OR(ISPICKVAL( Invoice_Delivery__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Invoice_Delivery__c ,&quot;Corrected&quot;))),
+         ISBLANK( Invoice_Delivery_Adjustment__c )),
+     AND(
+         OR(ISPICKVAL( Invoice_Type__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Invoice_Type__c ,&quot;Corrected&quot;))),
+         ISBLANK( Invoice_Type_Adjustment__c )),
+     AND(
+         OR(ISPICKVAL( PO_Requirements__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( PO_Requirements__c ,&quot;Corrected&quot;))),
+         ISBLANK( PO_Requirements_Adjustment__c )),
+     AND(
+         OR(ISPICKVAL( Program_Specifications__c ,&quot;Incorrect&quot;),
+           (ISPICKVAL( Program_Specifications__c ,&quot;Corrected&quot;))),
+         ISBLANK( Program_Specifications_Adjustment__c )),
+     AND(
+         ISPICKVAL( Program_Agreement__c ,&quot;Incomplete&quot;),
+         ISBLANK( Program_Agreement_Adjustment__c ))))
+,true,false)</errorConditionFormula>
+    <errorMessage>Please enter adjustment details where corresponding item is Incorrect or Corrected.</errorMessage>
+</ValidationRule>

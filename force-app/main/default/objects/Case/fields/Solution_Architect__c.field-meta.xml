@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution_Architect__c</fullName>
+    <description>These are deliverables that need input from the Red Wing Solution Architect.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please specify if we need a Solution Architect as per of this analysis.</inlineHelpText>
+    <label>Solution Architect</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Eagle Creek</fullName>
+                <default>false</default>
+                <label>Eagle Creek</label>
+            </value>
+            <value>
+                <fullName>John Wester</fullName>
+                <default>false</default>
+                <label>John Wester</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

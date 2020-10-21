@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Case_Type_requires_notes</fullName>
+    <active>true</active>
+    <description>When one of the &quot;Other ...&quot; Case Type Detail values is chosen, the &quot;Other Case Type Detail&quot; field needs to be completed</description>
+    <errorConditionFormula>AND(
+        ISBLANK (   Other_Case_Type_Detail__c ),
+    OR(
+            ISPICKVAL( Type, &apos;Other Case Type&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other Account Info Change Request&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other Compliance / Chargeback&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other Credit / Billing&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other Customer / Consumer Inquiry&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other E-Order&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other Marketing&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other Order&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other Price&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other Product&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other Repair / Return&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other Sales Support&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other Shipping&apos;),
+            ISPICKVAL( Case_Type_Detail__c, &apos;Other Transfer&apos;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Other_Case_Type_Detail__c</errorDisplayField>
+    <errorMessage>If one of the &quot;Other&quot; values in the Case Type Detail fields is selected, describe the Case Type here.</errorMessage>
+</ValidationRule>

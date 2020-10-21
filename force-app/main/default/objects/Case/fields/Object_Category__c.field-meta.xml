@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Object_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Object Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account</fullName>
+                <default>false</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>Account - Industrial</fullName>
+                <default>false</default>
+                <label>Account - Industrial</label>
+            </value>
+            <value>
+                <fullName>Account - M3 Account</fullName>
+                <default>false</default>
+                <label>Account - M3 Account</label>
+            </value>
+            <value>
+                <fullName>Activities</fullName>
+                <default>false</default>
+                <label>Activities</label>
+            </value>
+            <value>
+                <fullName>Case</fullName>
+                <default>false</default>
+                <label>Case</label>
+            </value>
+            <value>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+                <label>Chatter</label>
+            </value>
+            <value>
+                <fullName>Community</fullName>
+                <default>false</default>
+                <label>Community</label>
+            </value>
+            <value>
+                <fullName>Contact</fullName>
+                <default>false</default>
+                <label>Contact</label>
+            </value>
+            <value>
+                <fullName>Contact - Industrial</fullName>
+                <default>false</default>
+                <label>Contact - Industrial</label>
+            </value>
+            <value>
+                <fullName>Contact - M3 Contact</fullName>
+                <default>false</default>
+                <label>Contact - M3 Contact</label>
+            </value>
+            <value>
+                <fullName>CTI</fullName>
+                <default>false</default>
+                <label>CTI</label>
+            </value>
+            <value>
+                <fullName>Dashboard</fullName>
+                <default>false</default>
+                <label>Dashboard</label>
+            </value>
+            <value>
+                <fullName>Eloqua Integration</fullName>
+                <default>false</default>
+                <label>Eloqua Integration</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Lead</fullName>
+                <default>false</default>
+                <label>Lead</label>
+            </value>
+            <value>
+                <fullName>Phone</fullName>
+                <default>false</default>
+                <label>Phone</label>
+            </value>
+            <value>
+                <fullName>Profiles and Visibility</fullName>
+                <default>false</default>
+                <label>Profiles and Visibility</label>
+            </value>
+            <value>
+                <fullName>Reports and Dashboards</fullName>
+                <default>false</default>
+                <label>Reports and Dashboards</label>
+            </value>
+            <value>
+                <fullName>ROM Visit Report</fullName>
+                <default>false</default>
+                <label>ROM Visit Report</label>
+            </value>
+            <value>
+                <fullName>Salesforce1</fullName>
+                <default>false</default>
+                <label>Salesforce1</label>
+            </value>
+            <value>
+                <fullName>Salesforce to Outlook</fullName>
+                <default>false</default>
+                <label>Salesforce to Outlook</label>
+            </value>
+            <value>
+                <fullName>SF and IA Integration</fullName>
+                <default>false</default>
+                <label>SF and IA Integration</label>
+            </value>
+            <value>
+                <fullName>SF and Xstore Integration</fullName>
+                <default>false</default>
+                <label>SF and Xstore Integration</label>
+            </value>
+            <value>
+                <fullName>SF integration to M3</fullName>
+                <default>false</default>
+                <label>SF integration to M3</label>
+            </value>
+            <value>
+                <fullName>Sharepoint Integration</fullName>
+                <default>false</default>
+                <label>Sharepoint Integration</label>
+            </value>
+            <value>
+                <fullName>Store Data</fullName>
+                <default>false</default>
+                <label>Store Data</label>
+            </value>
+            <value>
+                <fullName>TTR</fullName>
+                <default>false</default>
+                <label>TTR</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

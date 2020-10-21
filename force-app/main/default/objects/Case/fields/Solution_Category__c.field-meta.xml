@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Solution Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Configure SF</fullName>
+                <default>false</default>
+                <label>Configure SF</label>
+            </value>
+            <value>
+                <fullName>Field Mapping</fullName>
+                <default>false</default>
+                <label>Field Mapping</label>
+            </value>
+            <value>
+                <fullName>Modify M3 Integration</fullName>
+                <default>false</default>
+                <label>Modify M3 Integration</label>
+            </value>
+            <value>
+                <fullName>New Integration</fullName>
+                <default>false</default>
+                <label>New Integration</label>
+            </value>
+            <value>
+                <fullName>Orchestration</fullName>
+                <default>false</default>
+                <label>Orchestration</label>
+            </value>
+            <value>
+                <fullName>Update M3</fullName>
+                <default>false</default>
+                <label>Update M3</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

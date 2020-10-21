@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Partner__c</fullName>
+    <description>Business partner that works with the business unit making the request</description>
+    <externalId>false</externalId>
+    <label>Business Partner</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Jackie Johnson</fullName>
+                <default>false</default>
+                <label>Jackie Johnson</label>
+            </value>
+            <value>
+                <fullName>Paige Stajkowski</fullName>
+                <default>false</default>
+                <label>Paige Stajkowski</label>
+            </value>
+            <value>
+                <fullName>Kim Katzenmeyer</fullName>
+                <default>false</default>
+                <label>Kim Katzenmeyer</label>
+            </value>
+            <value>
+                <fullName>Larissa Scott</fullName>
+                <default>false</default>
+                <label>Larissa Scott</label>
+            </value>
+            <value>
+                <fullName>Chris Doman</fullName>
+                <default>false</default>
+                <label>Chris Doman</label>
+            </value>
+            <value>
+                <fullName>Jeff Harvey</fullName>
+                <default>false</default>
+                <label>Jeff Harvey</label>
+            </value>
+            <value>
+                <fullName>Jay Wardle</fullName>
+                <default>false</default>
+                <label>Jay Wardle</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

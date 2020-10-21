@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subtotal__c</fullName>
+    <description>Sum of Extended Price of Product on DTI Record</description>
+    <externalId>false</externalId>
+    <label>Subtotal</label>
+    <summarizedField>Claim_Details__c.Extended_Price__c</summarizedField>
+    <summaryForeignKey>Claim_Details__c.Case__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

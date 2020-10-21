@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MSTS_Support_Needed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox indicates if a case stage has ever been set to &quot;Assigned to MSTS&quot; for assistance from MSTS.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This checkbox indicates if a case stage has ever been set to &quot;Assigned to MSTS&quot; for assistance from MSTS.</inlineHelpText>
+    <label>MSTS Support Needed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

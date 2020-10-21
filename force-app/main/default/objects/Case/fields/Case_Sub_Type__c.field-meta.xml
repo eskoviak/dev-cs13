@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Sub_Type__c</fullName>
+    <description>Case Sub Type for RWBAA Cases.  Corresponds to MSTS list.</description>
+    <externalId>false</externalId>
+    <label>Case Sub Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account</fullName>
+                <default>false</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>Account Inquiry</fullName>
+                <default>false</default>
+                <label>Account Inquiry</label>
+            </value>
+            <value>
+                <fullName>Account Name</fullName>
+                <default>false</default>
+                <label>Account Name</label>
+            </value>
+            <value>
+                <fullName>Account Restructure</fullName>
+                <default>false</default>
+                <label>Account Restructure</label>
+            </value>
+            <value>
+                <fullName>Advanced Return</fullName>
+                <default>false</default>
+                <label>Advanced Return</label>
+            </value>
+            <value>
+                <fullName>Adverse Letters</fullName>
+                <default>false</default>
+                <label>Adverse Letters</label>
+            </value>
+            <value>
+                <fullName>Aging Notif/Delinq Details</fullName>
+                <default>false</default>
+                <label>Aging Notif/Delinq Details</label>
+            </value>
+            <value>
+                <fullName>Altus</fullName>
+                <default>false</default>
+                <label>Altus</label>
+            </value>
+            <value>
+                <fullName>Authorization</fullName>
+                <default>false</default>
+                <label>Authorization</label>
+            </value>
+            <value>
+                <fullName>Auto Reply</fullName>
+                <default>false</default>
+                <label>Auto Reply</label>
+            </value>
+            <value>
+                <fullName>AWI</fullName>
+                <default>false</default>
+                <label>AWI</label>
+            </value>
+            <value>
+                <fullName>Backorder Delay</fullName>
+                <default>false</default>
+                <label>Backorder Delay</label>
+            </value>
+            <value>
+                <fullName>Banking Info Update</fullName>
+                <default>false</default>
+                <label>Banking Info Update</label>
+            </value>
+            <value>
+                <fullName>Batch/Loader</fullName>
+                <default>false</default>
+                <label>Batch/Loader</label>
+            </value>
+            <value>
+                <fullName>Billed to Incorrect Customer/Incorrect Card</fullName>
+                <default>false</default>
+                <label>Billed to Incorrect Customer/Incorrect Card</label>
+            </value>
+            <value>
+                <fullName>Billing Change</fullName>
+                <default>false</default>
+                <label>Billing Change</label>
+            </value>
+            <value>
+                <fullName>Billing Error</fullName>
+                <default>false</default>
+                <label>Billing Error</label>
+            </value>
+            <value>
+                <fullName>C2C</fullName>
+                <default>false</default>
+                <label>C2C</label>
+            </value>
+            <value>
+                <fullName>Chargeback</fullName>
+                <default>false</default>
+                <label>Chargeback</label>
+            </value>
+            <value>
+                <fullName>Chargeback Requested/Credit Not Processed</fullName>
+                <default>false</default>
+                <label>Chargeback Requested/Credit Not Processed</label>
+            </value>
+            <value>
+                <fullName>Check by Phone/CC Link</fullName>
+                <default>false</default>
+                <label>Check by Phone/CC Link</label>
+            </value>
+            <value>
+                <fullName>CLI</fullName>
+                <default>false</default>
+                <label>CLI</label>
+            </value>
+            <value>
+                <fullName>Collection Checks</fullName>
+                <default>false</default>
+                <label>Collection Checks</label>
+            </value>
+            <value>
+                <fullName>Contact Add/Update</fullName>
+                <default>false</default>
+                <label>Contact Add/Update</label>
+            </value>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>Credit Issue</fullName>
+                <default>false</default>
+                <label>Credit Issue</label>
+            </value>
+            <value>
+                <fullName>Credit Line Status</fullName>
+                <default>false</default>
+                <label>Credit Line Status</label>
+            </value>
+            <value>
+                <fullName>Credit Review</fullName>
+                <default>false</default>
+                <label>Credit Review</label>
+            </value>
+            <value>
+                <fullName>Credit Transaction (FC/QQ Only)</fullName>
+                <default>false</default>
+                <label>Credit Transaction (FC/QQ Only)</label>
+            </value>
+            <value>
+                <fullName>Customer Communication</fullName>
+                <default>false</default>
+                <label>Customer Communication</label>
+            </value>
+            <value>
+                <fullName>Deactivate</fullName>
+                <default>false</default>
+                <label>Deactivate</label>
+            </value>
+            <value>
+                <fullName>Delinquency Notice</fullName>
+                <default>false</default>
+                <label>Delinquency Notice</label>
+            </value>
+            <value>
+                <fullName>Duplicate Transaction/Double Billed</fullName>
+                <default>false</default>
+                <label>Duplicate Transaction/Double Billed</label>
+            </value>
+            <value>
+                <fullName>Exceeded Allowed Time</fullName>
+                <default>false</default>
+                <label>Exceeded Allowed Time</label>
+            </value>
+            <value>
+                <fullName>Failed Settlement - Credit Card</fullName>
+                <default>false</default>
+                <label>Failed Settlement - Credit Card</label>
+            </value>
+            <value>
+                <fullName>Failed Settlement - Voucher</fullName>
+                <default>false</default>
+                <label>Failed Settlement - Voucher</label>
+            </value>
+            <value>
+                <fullName>Fax Spam</fullName>
+                <default>false</default>
+                <label>Fax Spam</label>
+            </value>
+            <value>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+                <label>Follow-up</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Fraud Review</fullName>
+                <default>false</default>
+                <label>Fraud Review</label>
+            </value>
+            <value>
+                <fullName>GGR</fullName>
+                <default>false</default>
+                <label>GGR</label>
+            </value>
+            <value>
+                <fullName>Held Payments</fullName>
+                <default>false</default>
+                <label>Held Payments</label>
+            </value>
+            <value>
+                <fullName>IEP Compliance</fullName>
+                <default>false</default>
+                <label>IEP Compliance</label>
+            </value>
+            <value>
+                <fullName>Incorrect Price</fullName>
+                <default>false</default>
+                <label>Incorrect Price</label>
+            </value>
+            <value>
+                <fullName>Invalid/Incorrect Product or Style</fullName>
+                <default>false</default>
+                <label>Invalid/Incorrect Product or Style</label>
+            </value>
+            <value>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>Invoice/Statement Request</fullName>
+                <default>false</default>
+                <label>Invoice/Statement Request</label>
+            </value>
+            <value>
+                <fullName>Invoice Inquiry</fullName>
+                <default>false</default>
+                <label>Invoice Inquiry</label>
+            </value>
+            <value>
+                <fullName>Invoice Integration</fullName>
+                <default>false</default>
+                <label>Invoice Integration</label>
+            </value>
+            <value>
+                <fullName>Invoice Processing</fullName>
+                <default>false</default>
+                <label>Invoice Processing</label>
+            </value>
+            <value>
+                <fullName>Invoice Rejections</fullName>
+                <default>false</default>
+                <label>Invoice Rejections</label>
+            </value>
+            <value>
+                <fullName>Invoice Research</fullName>
+                <default>false</default>
+                <label>Invoice Research</label>
+            </value>
+            <value>
+                <fullName>Junk Mail</fullName>
+                <default>false</default>
+                <label>Junk Mail</label>
+            </value>
+            <value>
+                <fullName>Late Shipment</fullName>
+                <default>false</default>
+                <label>Late Shipment</label>
+            </value>
+            <value>
+                <fullName>Legal Letters</fullName>
+                <default>false</default>
+                <label>Legal Letters</label>
+            </value>
+            <value>
+                <fullName>Manual Apply</fullName>
+                <default>false</default>
+                <label>Manual Apply</label>
+            </value>
+            <value>
+                <fullName>Merchant</fullName>
+                <default>false</default>
+                <label>Merchant</label>
+            </value>
+            <value>
+                <fullName>Merchant/Dealer Communication</fullName>
+                <default>false</default>
+                <label>Merchant/Dealer Communication</label>
+            </value>
+            <value>
+                <fullName>Misdirected Funds</fullName>
+                <default>false</default>
+                <label>Misdirected Funds</label>
+            </value>
+            <value>
+                <fullName>Missing Remit</fullName>
+                <default>false</default>
+                <label>Missing Remit</label>
+            </value>
+            <value>
+                <fullName>Missing Required Info/Docs</fullName>
+                <default>false</default>
+                <label>Missing Required Info/Docs</label>
+            </value>
+            <value>
+                <fullName>New Customer</fullName>
+                <default>false</default>
+                <label>New Customer</label>
+            </value>
+            <value>
+                <fullName>New Customer Location</fullName>
+                <default>false</default>
+                <label>New Customer Location</label>
+            </value>
+            <value>
+                <fullName>New Merchant/Dealer</fullName>
+                <default>false</default>
+                <label>New Merchant/Dealer</label>
+            </value>
+            <value>
+                <fullName>New Merchant Location</fullName>
+                <default>false</default>
+                <label>New Merchant Location</label>
+            </value>
+            <value>
+                <fullName>Non-Payment</fullName>
+                <default>false</default>
+                <label>Non-Payment</label>
+            </value>
+            <value>
+                <fullName>NSF Account</fullName>
+                <default>false</default>
+                <label>NSF Account</label>
+            </value>
+            <value>
+                <fullName>Offsetting Trxs</fullName>
+                <default>false</default>
+                <label>Offsetting Trxs</label>
+            </value>
+            <value>
+                <fullName>Paper App</fullName>
+                <default>false</default>
+                <label>Paper App</label>
+            </value>
+            <value>
+                <fullName>Password/Account Reset</fullName>
+                <default>false</default>
+                <label>Password/Account Reset</label>
+            </value>
+            <value>
+                <fullName>Payment Error</fullName>
+                <default>false</default>
+                <label>Payment Error</label>
+            </value>
+            <value>
+                <fullName>Payment Notification</fullName>
+                <default>false</default>
+                <label>Payment Notification</label>
+            </value>
+            <value>
+                <fullName>Payment Not Received</fullName>
+                <default>false</default>
+                <label>Payment Not Received</label>
+            </value>
+            <value>
+                <fullName>PO Issue</fullName>
+                <default>false</default>
+                <label>PO Issue</label>
+            </value>
+            <value>
+                <fullName>PO Receipt</fullName>
+                <default>false</default>
+                <label>PO Receipt</label>
+            </value>
+            <value>
+                <fullName>Portal</fullName>
+                <default>false</default>
+                <label>Portal</label>
+            </value>
+            <value>
+                <fullName>POS Issue</fullName>
+                <default>false</default>
+                <label>POS Issue</label>
+            </value>
+            <value>
+                <fullName>POS Support</fullName>
+                <default>false</default>
+                <label>POS Support</label>
+            </value>
+            <value>
+                <fullName>PO Verification</fullName>
+                <default>false</default>
+                <label>PO Verification</label>
+            </value>
+            <value>
+                <fullName>Product/Service Issue</fullName>
+                <default>false</default>
+                <label>Product/Service Issue</label>
+            </value>
+            <value>
+                <fullName>Program Billing System Issue</fullName>
+                <default>false</default>
+                <label>Program Billing System Issue</label>
+            </value>
+            <value>
+                <fullName>Program Inquiry</fullName>
+                <default>false</default>
+                <label>Program Inquiry</label>
+            </value>
+            <value>
+                <fullName>Purchase Policy</fullName>
+                <default>false</default>
+                <label>Purchase Policy</label>
+            </value>
+            <value>
+                <fullName>Reactivate</fullName>
+                <default>false</default>
+                <label>Reactivate</label>
+            </value>
+            <value>
+                <fullName>Reconciliation</fullName>
+                <default>false</default>
+                <label>Reconciliation</label>
+            </value>
+            <value>
+                <fullName>Recourse removal w/ docs</fullName>
+                <default>false</default>
+                <label>Recourse removal w/ docs</label>
+            </value>
+            <value>
+                <fullName>Redlines/Signature</fullName>
+                <default>false</default>
+                <label>Redlines/Signature</label>
+            </value>
+            <value>
+                <fullName>Red Wing - Blanket PO</fullName>
+                <default>false</default>
+                <label>Red Wing - Blanket PO</label>
+            </value>
+            <value>
+                <fullName>Refund</fullName>
+                <default>false</default>
+                <label>Refund</label>
+            </value>
+            <value>
+                <fullName>Reimbursement Report</fullName>
+                <default>false</default>
+                <label>Reimbursement Report</label>
+            </value>
+            <value>
+                <fullName>Remittance</fullName>
+                <default>false</default>
+                <label>Remittance</label>
+            </value>
+            <value>
+                <fullName>Returned Payments</fullName>
+                <default>false</default>
+                <label>Returned Payments</label>
+            </value>
+            <value>
+                <fullName>Service Gate Certification</fullName>
+                <default>false</default>
+                <label>Service Gate Certification</label>
+            </value>
+            <value>
+                <fullName>Service Gate Credentials</fullName>
+                <default>false</default>
+                <label>Service Gate Credentials</label>
+            </value>
+            <value>
+                <fullName>Service Gate Support</fullName>
+                <default>false</default>
+                <label>Service Gate Support</label>
+            </value>
+            <value>
+                <fullName>Shipping Issue</fullName>
+                <default>false</default>
+                <label>Shipping Issue</label>
+            </value>
+            <value>
+                <fullName>Special Projects</fullName>
+                <default>false</default>
+                <label>Special Projects</label>
+            </value>
+            <value>
+                <fullName>Special Return</fullName>
+                <default>false</default>
+                <label>Special Return</label>
+            </value>
+            <value>
+                <fullName>System Generated Report</fullName>
+                <default>false</default>
+                <label>System Generated Report</label>
+            </value>
+            <value>
+                <fullName>Tax/Fee Issue</fullName>
+                <default>false</default>
+                <label>Tax/Fee Issue</label>
+            </value>
+            <value>
+                <fullName>Tax Inquiry</fullName>
+                <default>false</default>
+                <label>Tax Inquiry</label>
+            </value>
+            <value>
+                <fullName>Tax Issue</fullName>
+                <default>false</default>
+                <label>Tax Issue</label>
+            </value>
+            <value>
+                <fullName>TIN Matching</fullName>
+                <default>false</default>
+                <label>TIN Matching</label>
+            </value>
+            <value>
+                <fullName>TPR/DAR</fullName>
+                <default>false</default>
+                <label>TPR/DAR</label>
+            </value>
+            <value>
+                <fullName>Unapplied Inquiry</fullName>
+                <default>false</default>
+                <label>Unapplied Inquiry</label>
+            </value>
+            <value>
+                <fullName>Unauthorized Purchase</fullName>
+                <default>false</default>
+                <label>Unauthorized Purchase</label>
+            </value>
+            <value>
+                <fullName>Undeliverable Email</fullName>
+                <default>false</default>
+                <label>Undeliverable Email</label>
+            </value>
+            <value>
+                <fullName>UniPay</fullName>
+                <default>false</default>
+                <label>UniPay</label>
+            </value>
+            <value>
+                <fullName>Vendor Forms</fullName>
+                <default>false</default>
+                <label>Vendor Forms</label>
+            </value>
+            <value>
+                <fullName>Virus</fullName>
+                <default>false</default>
+                <label>Virus</label>
+            </value>
+            <value>
+                <fullName>Warranty/Defective Merchandise</fullName>
+                <default>false</default>
+                <label>Warranty/Defective Merchandise</label>
+            </value>
+            <value>
+                <fullName>Web Account Access</fullName>
+                <default>false</default>
+                <label>Web Account Access</label>
+            </value>
+            <value>
+                <fullName>Web Navigation</fullName>
+                <default>false</default>
+                <label>Web Navigation</label>
+            </value>
+            <value>
+                <fullName>Zero Dollar Wash</fullName>
+                <default>false</default>
+                <label>Zero Dollar Wash</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Online Order Return</controllingFieldValue>
+            <valueName>Advanced Return</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Order Return</controllingFieldValue>
+            <valueName>Special Return</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Order Return</controllingFieldValue>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>Warranty/Defective Merchandise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Order</controllingFieldValue>
+            <valueName>Backorder Delay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Order</controllingFieldValue>
+            <valueName>Failed Settlement - Credit Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Order</controllingFieldValue>
+            <valueName>Failed Settlement - Voucher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Order</controllingFieldValue>
+            <valueName>Late Shipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Change</controllingFieldValue>
+            <valueName>Account Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Change</controllingFieldValue>
+            <valueName>Account Name</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Change</controllingFieldValue>
+            <valueName>Account Restructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Change</controllingFieldValue>
+            <valueName>Banking Info Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Change</controllingFieldValue>
+            <valueName>Billing Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Change</controllingFieldValue>
+            <valueName>Contact Add/Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Change</controllingFieldValue>
+            <valueName>Deactivate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Change</controllingFieldValue>
+            <valueName>Purchase Policy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Change</controllingFieldValue>
+            <valueName>Reactivate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Change</controllingFieldValue>
+            <valueName>Undeliverable Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AR Request</controllingFieldValue>
+            <valueName>Aging Notif/Delinq Details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AR Request</controllingFieldValue>
+            <valueName>Check by Phone/CC Link</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AR Request</controllingFieldValue>
+            <valueName>Delinquency Notice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AR Request</controllingFieldValue>
+            <valueName>Payment Notification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AR Request</controllingFieldValue>
+            <valueName>Refund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Authorization</controllingFieldValue>
+            <valueName>Authorization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Chargeback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Invoice/Statement Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Red Wing - Blanket PO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Tax Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Vendor Forms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Collections</controllingFieldValue>
+            <valueName>Altus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>CLI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Credit Line Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Credit Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Recourse removal w/ docs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>Billed to Incorrect Customer/Incorrect Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>Chargeback Requested/Credit Not Processed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>Customer Communication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>Duplicate Transaction/Double Billed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>Incorrect Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>Invalid/Incorrect Product or Style</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>Merchant/Dealer Communication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>Missing Required Info/Docs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>PO Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>Portal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>Shipping Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dispute</controllingFieldValue>
+            <valueName>Tax Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoice Processing</controllingFieldValue>
+            <valueName>Invoice Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoice Processing</controllingFieldValue>
+            <valueName>Invoice Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoice Processing</controllingFieldValue>
+            <valueName>Invoice Processing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoice Processing</controllingFieldValue>
+            <valueName>Invoice Rejections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoice Processing</controllingFieldValue>
+            <valueName>Invoice Research</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoice Processing</controllingFieldValue>
+            <valueName>PO Receipt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoice Processing</controllingFieldValue>
+            <valueName>POS Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merchant Reimbursement</controllingFieldValue>
+            <valueName>Held Payments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merchant Reimbursement</controllingFieldValue>
+            <valueName>Reimbursement Report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merchant Reimbursement</controllingFieldValue>
+            <valueName>Returned Payments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merchant Reimbursement</controllingFieldValue>
+            <valueName>TPR/DAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>New Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>New Merchant/Dealer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Paper App</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Program Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment Forward</controllingFieldValue>
+            <valueName>Corporate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment Forward</controllingFieldValue>
+            <valueName>Merchant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Remittance</controllingFieldValue>
+            <valueName>Manual Apply</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Remittance</controllingFieldValue>
+            <valueName>Remittance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Remittance</controllingFieldValue>
+            <valueName>Unapplied Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Remittance</controllingFieldValue>
+            <valueName>Zero Dollar Wash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Spam</controllingFieldValue>
+            <valueName>Fax Spam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Spam</controllingFieldValue>
+            <valueName>Junk Mail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Spam</controllingFieldValue>
+            <valueName>Virus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Special Projects</controllingFieldValue>
+            <valueName>TIN Matching</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Issues/Notices</controllingFieldValue>
+            <valueName>Auto Reply</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Issues/Notices</controllingFieldValue>
+            <valueName>POS Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Issues/Notices</controllingFieldValue>
+            <valueName>Program Billing System Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web/Portal</controllingFieldValue>
+            <valueName>Password/Account Reset</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web/Portal</controllingFieldValue>
+            <valueName>Web Account Access</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web/Portal</controllingFieldValue>
+            <valueName>Web Navigation</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

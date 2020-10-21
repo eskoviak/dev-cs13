@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Detail_Description__c</fullName>
+    <description>Breaks down Case Type Detail into finer category</description>
+    <externalId>false</externalId>
+    <inlineHelpText>With a Compliance or Customer/Consumer Inquiry case, this Type Detail Description field is required.</inlineHelpText>
+    <label>Type Detail Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Case_Type_Detail__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10K - 50K</fullName>
+                <default>false</default>
+                <label>10K - 50K</label>
+            </value>
+            <value>
+                <fullName>1K - 5K</fullName>
+                <default>false</default>
+                <label>1K - 5K</label>
+            </value>
+            <value>
+                <fullName>ASN Missing/Incorrect</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>ASN Missing/Incorrect</label>
+            </value>
+            <value>
+                <fullName>Campaign Inquiry</fullName>
+                <default>false</default>
+                <label>Campaign Inquiry</label>
+            </value>
+            <value>
+                <fullName>Corporate Recourse</fullName>
+                <default>false</default>
+                <label>Corporate Recourse</label>
+            </value>
+            <value>
+                <fullName>Corporate Recourse - Over 360</fullName>
+                <default>false</default>
+                <label>Corporate Recourse - Over 360</label>
+            </value>
+            <value>
+                <fullName>Covanta</fullName>
+                <default>false</default>
+                <label>Covanta</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Credit Card Terms</fullName>
+                <default>false</default>
+                <label>Credit Card Terms</label>
+            </value>
+            <value>
+                <fullName>Dealer Recourse</fullName>
+                <default>false</default>
+                <label>Dealer Recourse</label>
+            </value>
+            <value>
+                <fullName>Dealer Recourse - Over 360</fullName>
+                <default>false</default>
+                <label>Dealer Recourse - Over 360</label>
+            </value>
+            <value>
+                <fullName>Defective Allowance</fullName>
+                <default>false</default>
+                <label>Defective Allowance</label>
+            </value>
+            <value>
+                <fullName>Defective Merchandise</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Defective Merchandise</label>
+            </value>
+            <value>
+                <fullName>Document Formatting/Information Error</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Document Formatting/Information Error</label>
+            </value>
+            <value>
+                <fullName>Drop</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Drop</label>
+            </value>
+            <value>
+                <fullName>Duplicate Sale</fullName>
+                <default>false</default>
+                <label>Duplicate Sale</label>
+            </value>
+            <value>
+                <fullName>Early Shipment</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Early Shipment</label>
+            </value>
+            <value>
+                <fullName>Ecomm</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Ecomm</label>
+            </value>
+            <value>
+                <fullName>EDI</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>EDI</label>
+            </value>
+            <value>
+                <fullName>Esales</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Esales</label>
+            </value>
+            <value>
+                <fullName>Fam NP</fullName>
+                <default>false</default>
+                <label>Fam NP</label>
+            </value>
+            <value>
+                <fullName>File missing</fullName>
+                <default>false</default>
+                <label>File missing</label>
+            </value>
+            <value>
+                <fullName>Files don’t match</fullName>
+                <default>false</default>
+                <label>Files don’t match</label>
+            </value>
+            <value>
+                <fullName>Freight</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Freight</label>
+            </value>
+            <value>
+                <fullName>Frustration Free Packaging</fullName>
+                <default>false</default>
+                <label>Frustration Free Packaging</label>
+            </value>
+            <value>
+                <fullName>GS1-128 Labels Incorrect</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>GS1-128 Labels Incorrect</label>
+            </value>
+            <value>
+                <fullName>IA</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>IA</label>
+            </value>
+            <value>
+                <fullName>Ideal Inventory Stock Exchange</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Ideal Inventory Stock Exchange</label>
+            </value>
+            <value>
+                <fullName>Inactive Single NP</fullName>
+                <default>false</default>
+                <label>Inactive Single NP</label>
+            </value>
+            <value>
+                <fullName>Inactive Single NP &lt; 300</fullName>
+                <default>false</default>
+                <label>Inactive Single NP &lt; 300</label>
+            </value>
+            <value>
+                <fullName>In Collections</fullName>
+                <default>false</default>
+                <label>In Collections</label>
+            </value>
+            <value>
+                <fullName>Incorrect</fullName>
+                <default>false</default>
+                <label>Incorrect</label>
+            </value>
+            <value>
+                <fullName>Incorrect Account</fullName>
+                <default>false</default>
+                <label>Incorrect Account</label>
+            </value>
+            <value>
+                <fullName>Incorrect Address</fullName>
+                <default>false</default>
+                <label>Incorrect Address</label>
+            </value>
+            <value>
+                <fullName>Incorrect Amount</fullName>
+                <default>false</default>
+                <label>Incorrect Amount</label>
+            </value>
+            <value>
+                <fullName>Incorrect Freight Billing Method</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Incorrect Freight Billing Method</label>
+            </value>
+            <value>
+                <fullName>Incorrect Items Shipped</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Incorrect Items Shipped</label>
+            </value>
+            <value>
+                <fullName>Information</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Information</label>
+            </value>
+            <value>
+                <fullName>Inventory Turns</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Inventory Turns</label>
+            </value>
+            <value>
+                <fullName>IOC</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>IOC</label>
+            </value>
+            <value>
+                <fullName>Labels Incorrect - Placement/Format</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Labels Incorrect - Placement/Format</label>
+            </value>
+            <value>
+                <fullName>Labels Missing</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Labels Missing</label>
+            </value>
+            <value>
+                <fullName>Late Shipment</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Late Shipment</label>
+            </value>
+            <value>
+                <fullName>Levels</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Levels</label>
+            </value>
+            <value>
+                <fullName>Manually Entered Order</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Manually Entered Order</label>
+            </value>
+            <value>
+                <fullName>MDF, Advertising, Coop</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>MDF, Advertising, Coop</label>
+            </value>
+            <value>
+                <fullName>Microsite</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Microsite</label>
+            </value>
+            <value>
+                <fullName>Missing</fullName>
+                <default>false</default>
+                <label>Missing</label>
+            </value>
+            <value>
+                <fullName>Need original email to customer</fullName>
+                <default>false</default>
+                <label>Need original email to customer</label>
+            </value>
+            <value>
+                <fullName>Need to Upload</fullName>
+                <default>false</default>
+                <label>Need to Upload</label>
+            </value>
+            <value>
+                <fullName>No Contact</fullName>
+                <default>false</default>
+                <label>No Contact</label>
+            </value>
+            <value>
+                <fullName>Non-Recourse</fullName>
+                <default>false</default>
+                <label>Non-Recourse</label>
+            </value>
+            <value>
+                <fullName>Non-Recourse - Over 360</fullName>
+                <default>false</default>
+                <label>Non-Recourse - Over 360</label>
+            </value>
+            <value>
+                <fullName>No Recent Activity</fullName>
+                <default>false</default>
+                <label>No Recent Activity</label>
+            </value>
+            <value>
+                <fullName>Over 360</fullName>
+                <default>false</default>
+                <label>Over 360</label>
+            </value>
+            <value>
+                <fullName>P.O.P.</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>P.O.P.</label>
+            </value>
+            <value>
+                <fullName>Paid directly to store (local bill)</fullName>
+                <default>false</default>
+                <label>Paid directly to store (local bill)</label>
+            </value>
+            <value>
+                <fullName>Payroll/Cash</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Payroll/Cash</label>
+            </value>
+            <value>
+                <fullName>Payroll Deduct/Cash Paid</fullName>
+                <default>false</default>
+                <label>Payroll Deduct/Cash Paid</label>
+            </value>
+            <value>
+                <fullName>POS</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>POS</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Pricing Variance</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Pricing Variance</label>
+            </value>
+            <value>
+                <fullName>Product Inquiry</fullName>
+                <default>false</default>
+                <label>Product Inquiry</label>
+            </value>
+            <value>
+                <fullName>Product Not Selling Well</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Product Not Selling Well</label>
+            </value>
+            <value>
+                <fullName>Program Abuse</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Program Abuse</label>
+            </value>
+            <value>
+                <fullName>Program Knowledge</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Program Knowledge</label>
+            </value>
+            <value>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+                <label>Public Relations</label>
+            </value>
+            <value>
+                <fullName>Requirements</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Requirements</label>
+            </value>
+            <value>
+                <fullName>Retailer Not Available</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Retailer Not Available</label>
+            </value>
+            <value>
+                <fullName>Return</fullName>
+                <default>false</default>
+                <label>Return</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Shortage/Overage</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Shortage/Overage</label>
+            </value>
+            <value>
+                <fullName>Signage</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Signage</label>
+            </value>
+            <value>
+                <fullName>Single NP</fullName>
+                <default>false</default>
+                <label>Single NP</label>
+            </value>
+            <value>
+                <fullName>SOE</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>SOE</label>
+            </value>
+            <value>
+                <fullName>Special Handling</fullName>
+                <default>false</default>
+                <label>Special Handling</label>
+            </value>
+            <value>
+                <fullName>Split By</fullName>
+                <default>false</default>
+                <label>Split By</label>
+            </value>
+            <value>
+                <fullName>Store Closing</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Store Closing</label>
+            </value>
+            <value>
+                <fullName>Store Inquiries</fullName>
+                <default>false</default>
+                <label>Store Inquiries</label>
+            </value>
+            <value>
+                <fullName>Store Program</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Store Program</label>
+            </value>
+            <value>
+                <fullName>Store Stock Availability</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Store Stock Availability</label>
+            </value>
+            <value>
+                <fullName>Subsidy/Payroll Deduct</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Subsidy/Payroll Deduct</label>
+            </value>
+            <value>
+                <fullName>SVS Fee</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>SVS Fee</label>
+            </value>
+            <value>
+                <fullName>Tax</fullName>
+                <default>false</default>
+                <label>Tax</label>
+            </value>
+            <value>
+                <fullName>Temp Recourse</fullName>
+                <default>false</default>
+                <label>Temp Recourse</label>
+            </value>
+            <value>
+                <fullName>Temp Recourse - Over 360</fullName>
+                <default>false</default>
+                <label>Temp Recourse - Over 360</label>
+            </value>
+            <value>
+                <fullName>Top 9</fullName>
+                <default>false</default>
+                <label>Top 9</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Unknown Reason</fullName>
+                <default>false</default>
+                <label>Unknown Reason</label>
+            </value>
+            <value>
+                <fullName>VIP</fullName>
+                <default>false</default>
+                <label>VIP</label>
+            </value>
+            <value>
+                <fullName>Wrong Carrier</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Wrong Carrier</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other Allowance</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Other Allowance</label>
+            </value>
+            <value>
+                <fullName>Other EDI Compliance</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Other EDI Compliance</label>
+            </value>
+            <value>
+                <fullName>Other Packing Compliance</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Other Packing Compliance</label>
+            </value>
+            <value>
+                <fullName>Other Pricing</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Other Pricing</label>
+            </value>
+            <value>
+                <fullName>Other Program</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Other Program</label>
+            </value>
+            <value>
+                <fullName>Other Retailer Location</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Other Retailer Location</label>
+            </value>
+            <value>
+                <fullName>Other Return</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Other Return</label>
+            </value>
+            <value>
+                <fullName>Other Shipping Compliance</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Other Shipping Compliance</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Account Status</controllingFieldValue>
+            <valueName>Drop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Status</controllingFieldValue>
+            <valueName>Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IT Compliance</controllingFieldValue>
+            <controllingFieldValue>EDI Compliance</controllingFieldValue>
+            <valueName>ASN Missing/Incorrect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IT Compliance</controllingFieldValue>
+            <controllingFieldValue>EDI Compliance</controllingFieldValue>
+            <valueName>Document Formatting/Information Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IT Compliance</controllingFieldValue>
+            <controllingFieldValue>EDI Compliance</controllingFieldValue>
+            <valueName>GS1-128 Labels Incorrect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IT Compliance</controllingFieldValue>
+            <controllingFieldValue>EDI Compliance</controllingFieldValue>
+            <valueName>Other EDI Compliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return Authorization (RA)</controllingFieldValue>
+            <valueName>Product Not Selling Well</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return Authorization (RA)</controllingFieldValue>
+            <valueName>Store Closing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return Authorization (RA)</controllingFieldValue>
+            <valueName>Store Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return Authorization (RA)</controllingFieldValue>
+            <valueName>Other Return</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Allowance</controllingFieldValue>
+            <valueName>Defective Allowance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Allowance</controllingFieldValue>
+            <valueName>Defective Merchandise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Allowance</controllingFieldValue>
+            <valueName>Freight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Allowance</controllingFieldValue>
+            <valueName>MDF, Advertising, Coop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Allowance</controllingFieldValue>
+            <valueName>Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Allowance</controllingFieldValue>
+            <valueName>SVS Fee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Allowance</controllingFieldValue>
+            <valueName>Other Allowance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Portal Invoice</controllingFieldValue>
+            <valueName>Incorrect Amount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Portal Invoice</controllingFieldValue>
+            <valueName>Need to Upload</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Open Invoice</controllingFieldValue>
+            <valueName>Credit Card Terms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>File</controllingFieldValue>
+            <valueName>File missing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>File</controllingFieldValue>
+            <valueName>Files don’t match</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contact</controllingFieldValue>
+            <valueName>No Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Original Invoice Not Received</controllingFieldValue>
+            <valueName>Need original email to customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amount</controllingFieldValue>
+            <valueName>Duplicate Sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amount</controllingFieldValue>
+            <valueName>Paid directly to store (local bill)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amount</controllingFieldValue>
+            <valueName>Payroll Deduct/Cash Paid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amount</controllingFieldValue>
+            <valueName>Return</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amount</controllingFieldValue>
+            <valueName>Tax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auth Form #</controllingFieldValue>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <controllingFieldValue>Cost Center</controllingFieldValue>
+            <controllingFieldValue>Department</controllingFieldValue>
+            <controllingFieldValue>District #</controllingFieldValue>
+            <controllingFieldValue>Employee ID</controllingFieldValue>
+            <controllingFieldValue>Job / Group Name</controllingFieldValue>
+            <controllingFieldValue>Job / Group Number</controllingFieldValue>
+            <controllingFieldValue>Location</controllingFieldValue>
+            <controllingFieldValue>Plant Number</controllingFieldValue>
+            <controllingFieldValue>PO</controllingFieldValue>
+            <controllingFieldValue>Ticket / Receipt Number</controllingFieldValue>
+            <valueName>Incorrect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auth Form #</controllingFieldValue>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <controllingFieldValue>Cost Center</controllingFieldValue>
+            <controllingFieldValue>Department</controllingFieldValue>
+            <controllingFieldValue>District #</controllingFieldValue>
+            <controllingFieldValue>Employee ID</controllingFieldValue>
+            <controllingFieldValue>Job / Group Name</controllingFieldValue>
+            <controllingFieldValue>Job / Group Number</controllingFieldValue>
+            <controllingFieldValue>Location</controllingFieldValue>
+            <controllingFieldValue>Plant Number</controllingFieldValue>
+            <controllingFieldValue>PO</controllingFieldValue>
+            <controllingFieldValue>Suffix</controllingFieldValue>
+            <controllingFieldValue>Ticket / Receipt Number</controllingFieldValue>
+            <valueName>Missing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Auth Form #</controllingFieldValue>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <controllingFieldValue>Cost Center</controllingFieldValue>
+            <controllingFieldValue>Department</controllingFieldValue>
+            <controllingFieldValue>District #</controllingFieldValue>
+            <controllingFieldValue>Employee ID</controllingFieldValue>
+            <controllingFieldValue>Job / Group Name</controllingFieldValue>
+            <controllingFieldValue>Job / Group Number</controllingFieldValue>
+            <controllingFieldValue>Location</controllingFieldValue>
+            <controllingFieldValue>Plant Number</controllingFieldValue>
+            <controllingFieldValue>PO</controllingFieldValue>
+            <controllingFieldValue>Ticket / Receipt Number</controllingFieldValue>
+            <valueName>Split By</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bill To</controllingFieldValue>
+            <valueName>Incorrect Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bill To</controllingFieldValue>
+            <valueName>Incorrect Address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Entry Error</controllingFieldValue>
+            <valueName>Ecomm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Entry Error</controllingFieldValue>
+            <valueName>EDI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Entry Error</controllingFieldValue>
+            <valueName>Esales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Entry Error</controllingFieldValue>
+            <valueName>IA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Entry Error</controllingFieldValue>
+            <valueName>IOC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Entry Error</controllingFieldValue>
+            <valueName>Manually Entered Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Entry Error</controllingFieldValue>
+            <valueName>Microsite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Entry Error</controllingFieldValue>
+            <valueName>POS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order Entry Error</controllingFieldValue>
+            <valueName>SOE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unknown Issue</controllingFieldValue>
+            <valueName>Unknown Reason</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>10K - 50K</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>1K - 5K</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Corporate Recourse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Corporate Recourse - Over 360</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Covanta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Dealer Recourse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Dealer Recourse - Over 360</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Fam NP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Inactive Single NP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Inactive Single NP &lt; 300</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>In Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Non-Recourse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Non-Recourse - Over 360</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>No Recent Activity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Over 360</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Single NP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Temp Recourse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Temp Recourse - Over 360</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>Top 9</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>GSD Round 1</controllingFieldValue>
+            <controllingFieldValue>GSD Round 2</controllingFieldValue>
+            <valueName>VIP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <valueName>Levels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <valueName>Payroll/Cash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <valueName>Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <valueName>Requirements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <valueName>Subsidy/Payroll Deduct</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <valueName>Other Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailer Location</controllingFieldValue>
+            <valueName>Program Abuse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailer Location</controllingFieldValue>
+            <valueName>Program Knowledge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailer Location</controllingFieldValue>
+            <valueName>Retailer Not Available</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailer Location</controllingFieldValue>
+            <valueName>Store Stock Availability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailer Location</controllingFieldValue>
+            <valueName>Other Retailer Location</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pricing</controllingFieldValue>
+            <valueName>Pricing Variance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pricing</controllingFieldValue>
+            <valueName>Other Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping Compliance</controllingFieldValue>
+            <valueName>Early Shipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping Compliance</controllingFieldValue>
+            <valueName>Incorrect Freight Billing Method</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping Compliance</controllingFieldValue>
+            <valueName>Late Shipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping Compliance</controllingFieldValue>
+            <valueName>Wrong Carrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping Compliance</controllingFieldValue>
+            <valueName>Other Shipping Compliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing Compliance</controllingFieldValue>
+            <valueName>Frustration Free Packaging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing Compliance</controllingFieldValue>
+            <valueName>Incorrect Items Shipped</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing Compliance</controllingFieldValue>
+            <valueName>Labels Incorrect - Placement/Format</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing Compliance</controllingFieldValue>
+            <valueName>Labels Missing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing Compliance</controllingFieldValue>
+            <valueName>Shortage/Overage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing Compliance</controllingFieldValue>
+            <valueName>Other Packing Compliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Campaign</controllingFieldValue>
+            <valueName>Campaign Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Campaign</controllingFieldValue>
+            <valueName>Product Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Campaign</controllingFieldValue>
+            <valueName>Public Relations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Campaign</controllingFieldValue>
+            <valueName>Store Inquiries</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

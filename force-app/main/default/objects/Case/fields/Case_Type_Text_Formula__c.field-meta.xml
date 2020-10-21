@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Type_Text_Formula__c</fullName>
+    <description>Translates Primary Case Type picklist values into Text so they can be used in a workflow rule to default the subject</description>
+    <externalId>false</externalId>
+    <formula>IF(  ISPICKVAL(Type, &quot;Account Info Change Request(M3)&quot;), &quot;Account Info Change Request(M3)&quot;, 
+IF(  ISPICKVAL(Type, &quot;Approved - National Account Participant&quot;), &quot;Approved - National Account Participant&quot;,   
+IF(  ISPICKVAL(Type, &quot;Finance / Billing&quot;), &quot;Finance / Billing&quot;, 
+IF(  ISPICKVAL(Type, &quot;Remove - National Account Participant&quot;), &quot;Remove - National Account Participant&quot;, 
+IF(  ISPICKVAL(Type, &quot;Repair / Return&quot;), &quot;Repair / Return&quot;, 
+IF(  ISPICKVAL(Type, &quot;Shipping&quot;), &quot;Shipping&quot;, 
+IF(  ISPICKVAL(Type, &quot;Store Data&quot;), &quot;Store Data&quot;, 
+IF(  ISPICKVAL(Type, &quot;Vendor Agreement / Contract in Review&quot;), &quot;Vendor Agreement / Contract in Review&quot;, 
+IF(  ISPICKVAL(Type, &quot;Other Case Type&quot;),  &quot;Other Case Type&quot;,
+IF(  ISPICKVAL(Type, &quot;Store Tier Level Change&quot;),  &quot;Store Tier Level Change&quot;,
+IF(  ISPICKVAL(Type, &quot;Account Info Change Request(IA)&quot;), &quot;Account Info Change Request(IA)&quot;, 
+IF(  ISPICKVAL(Type, &quot;Authorization Form Build&quot;), &quot;Authorization Form Build&quot;, 
+IF(  ISPICKVAL(Type, &quot;Credit Check Request&quot;), &quot;Credit Check Request&quot;, 
+IF(  ISPICKVAL(Type, &quot;Distribution Match Up&quot;), &quot;Distribution Match Up&quot;, 
+IF(  ISPICKVAL(Type, &quot;Poster Build Request&quot;), &quot;Poster Build Request&quot;, 
+IF(  ISPICKVAL(Type, &quot;Price List Build Request&quot;), &quot;Price List Build Request&quot;, 
+IF(  ISPICKVAL(Type, &quot;Request for NAS and Price List Build&quot;), &quot;Request for NAS and Price List Build&quot;, 
+IF(  ISPICKVAL(Type, &quot;Launch Account&quot;), &quot;Launch Account&quot;, 
+IF(  ISPICKVAL(Type, &quot;Consumer Complaint - Resolved&quot;), &quot;Consumer Complaint - Resolved&quot;, 
+IF(  ISPICKVAL(Type, &quot;CRV Recovery&quot;), &quot;CRV Recovery&quot;, 
+IF(  ISPICKVAL(Type, &quot;Online Order&quot;), &quot;Online Order&quot;, 
+IF(  ISPICKVAL(Type, &quot;Order&quot;), &quot;Order&quot;, 
+IF(  ISPICKVAL(Type, &quot;Product Inquiry&quot;), &quot;Product Inquiry&quot;, 
+IF(  ISPICKVAL(Type, &quot;Repair&quot;), &quot;Repair&quot;, 
+IF(  ISPICKVAL(Type, &quot;Return&quot;), &quot;Return&quot;,
+IF(  ISPICKVAL(Type, &quot;Warranty&quot;), &quot;Warranty&quot;,
+IF(  ISPICKVAL(Type, &quot;Other&quot;), &quot;Other&quot;,   
+IF(  ISPICKVAL(Type, &quot;New Order&quot;), &quot;New Order&quot;, 
+IF(  ISPICKVAL(Type, &quot;Order Cancel&quot;), &quot;Order Cancel&quot;,
+IF(  ISPICKVAL(Type, &quot;Order Revision&quot;), &quot;Order Revision&quot;,
+IF(  ISPICKVAL(Type, &quot;Order Status&quot;), &quot;Order Status&quot;,
+IF(  ISPICKVAL(Type, &quot;Product Availability&quot;), &quot;Product Availability&quot;,
+IF(  ISPICKVAL(Type, &quot;Other Inquiries&quot;), &quot;Other Inquiries&quot;,
+IF(  ISPICKVAL(Type, &quot;Request NAS for Account&quot;),  &quot;Request NAS for Account&quot;,&quot; &quot;
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)</formula>
+    <label>Case Type Text Formula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

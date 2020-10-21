@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Invoice_Resolution_Required</fullName>
+    <active>true</active>
+    <description>Invoice Resolution is required before the case can be closed</description>
+    <errorConditionFormula>AND(NOT(OR(ISPICKVAL(Invoice_Resolution__c ,&apos;Paid&apos;),
+        ISPICKVAL(Invoice_Resolution__c ,&apos;Adjusted&apos;),
+        ISPICKVAL( Invoice_Resolution__c , &apos;Write-Off&apos;))), 
+      ISPICKVAL(Status,&apos;Closed&apos;),
+    OR(ISPICKVAL( Type, &apos;Rejected Invoices&apos;),
+       ISPICKVAL( Type, &apos;Rejected Credit Memos&apos;),
+       ISPICKVAL( Type, &apos;Incorrect Legal Entity Billed&apos;)))</errorConditionFormula>
+    <errorMessage>The Invoice Resolution is required before closing this type of case; Rejected invoices, Rejected Credit Memos, Incorrect Legal Entity Billed</errorMessage>
+</ValidationRule>

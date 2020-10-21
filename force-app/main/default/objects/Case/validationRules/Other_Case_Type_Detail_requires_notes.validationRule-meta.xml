@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Case_Type_Detail_requires_notes</fullName>
+    <active>true</active>
+    <description>When &quot;Other  Return &quot; is selected in Type Detail description, the &quot;Other Case Type Detail&quot; field needs to be completed</description>
+    <errorConditionFormula>AND(
+        ISBLANK (Other_Case_Type_Detail__c ),
+        ISPICKVAL( Type, &apos;Repair / Return&apos;),
+        ISPICKVAL( Case_Type_Detail__c, &apos;Return Authorization (RA)&apos;),
+            ISPICKVAL( Type_Detail_Description__c, &apos;Other Return&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Other_Case_Type_Detail__c</errorDisplayField>
+    <errorMessage>If &quot;Other Return&quot; is selected in Type Detail Description field, please enter a brief description</errorMessage>
+</ValidationRule>

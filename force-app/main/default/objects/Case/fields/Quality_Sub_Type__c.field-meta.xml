@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quality_Sub_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Quality Sub Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Defect</fullName>
+                <default>false</default>
+                <label>Defect</label>
+            </value>
+            <value>
+                <fullName>Expired</fullName>
+                <default>false</default>
+                <label>Expired</label>
+            </value>
+            <value>
+                <fullName>Failed Testing</fullName>
+                <default>false</default>
+                <label>Failed Testing</label>
+            </value>
+            <value>
+                <fullName>Inaccuracy</fullName>
+                <default>false</default>
+                <label>Inaccuracy</label>
+            </value>
+            <value>
+                <fullName>Inadequate</fullName>
+                <default>false</default>
+                <label>Inadequate</label>
+            </value>
+            <value>
+                <fullName>Incorrect Revision</fullName>
+                <default>false</default>
+                <label>Incorrect Revision</label>
+            </value>
+            <value>
+                <fullName>Incorrect Shoe</fullName>
+                <default>false</default>
+                <label>Incorrect Shoe</label>
+            </value>
+            <value>
+                <fullName>Insufficient Training</fullName>
+                <default>false</default>
+                <label>Insufficient Training</label>
+            </value>
+            <value>
+                <fullName>Missing Pair</fullName>
+                <default>false</default>
+                <label>Missing Pair</label>
+            </value>
+            <value>
+                <fullName>Missing Shoe</fullName>
+                <default>false</default>
+                <label>Missing Shoe</label>
+            </value>
+            <value>
+                <fullName>Not Legible</fullName>
+                <default>false</default>
+                <label>Not Legible</label>
+            </value>
+            <value>
+                <fullName>No Training</fullName>
+                <default>false</default>
+                <label>No Training</label>
+            </value>
+            <value>
+                <fullName>Not Registered</fullName>
+                <default>false</default>
+                <label>Not Registered</label>
+            </value>
+            <value>
+                <fullName>Quantity</fullName>
+                <default>false</default>
+                <label>Quantity</label>
+            </value>
+            <value>
+                <fullName>Serial Number Legibility</fullName>
+                <default>false</default>
+                <label>Serial Number Legibility</label>
+            </value>
+            <value>
+                <fullName>Tag Issue</fullName>
+                <default>false</default>
+                <label>Tag Issue</label>
+            </value>
+            <value>
+                <fullName>Training Timeline</fullName>
+                <default>false</default>
+                <label>Training Timeline</label>
+            </value>
+            <value>
+                <fullName>Uncontrolled</fullName>
+                <default>false</default>
+                <label>Uncontrolled</label>
+            </value>
+            <value>
+                <fullName>Visual</fullName>
+                <default>false</default>
+                <label>Visual</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Insufficient Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>No Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Training Timeline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Packing</controllingFieldValue>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <controllingFieldValue>Documentation</controllingFieldValue>
+            <controllingFieldValue>Calibrated Equipment</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing</controllingFieldValue>
+            <valueName>Incorrect Shoe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing</controllingFieldValue>
+            <valueName>Missing Pair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing</controllingFieldValue>
+            <valueName>Missing Shoe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing</controllingFieldValue>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <valueName>Quantity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing</controllingFieldValue>
+            <valueName>Tag Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <valueName>Defect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <controllingFieldValue>Calibrated Equipment</controllingFieldValue>
+            <valueName>Expired</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <valueName>Failed Testing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <valueName>Visual</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documentation</controllingFieldValue>
+            <valueName>Inadequate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documentation</controllingFieldValue>
+            <valueName>Incorrect Revision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documentation</controllingFieldValue>
+            <valueName>Not Legible</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documentation</controllingFieldValue>
+            <valueName>Uncontrolled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Calibrated Equipment</controllingFieldValue>
+            <valueName>Inaccuracy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Calibrated Equipment</controllingFieldValue>
+            <valueName>Not Registered</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Calibrated Equipment</controllingFieldValue>
+            <valueName>Serial Number Legibility</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

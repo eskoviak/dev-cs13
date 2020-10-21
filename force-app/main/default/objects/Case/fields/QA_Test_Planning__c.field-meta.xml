@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QA_Test_Planning__c</fullName>
+    <description>QA Test Planning</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Hours needed for the development of test cases based on critical functionality.</inlineHelpText>
+    <label>QA Test Planning</label>
+    <precision>7</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

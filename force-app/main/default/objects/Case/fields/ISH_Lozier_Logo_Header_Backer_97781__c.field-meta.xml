@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ISH_Lozier_Logo_Header_Backer_97781__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(ISPICKVAL( ISH_Lozier_End_Cap_Panel_Total__c , &quot;1-4 units&quot;)), &quot;1&quot;, 
+IF(AND(ISPICKVAL( ISH_Lozier_End_Cap_Panel_Total__c , &quot;5-9 units&quot;)), &quot;2&quot;, 
+IF(AND(ISPICKVAL( ISH_Lozier_End_Cap_Panel_Total__c , &quot;10-14 units&quot;)), &quot;3&quot;,&quot; &quot;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ISH Lozier Logo Header Backer 97781</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RWFB_Consumer_Require_Close_Reason</fullName>
+    <active>true</active>
+    <description>Requires a closed reason, root cause and corrective action upon closing RWFB Consumer Case</description>
+    <errorConditionFormula>IF(
+AND(
+RecordType.Name = &apos;RWFB Consumer Cases&apos;,
+TEXT(Status) = &quot;Closed&quot;,
+OR(
+ISBLANK(TEXT(Root_Cause__c)),
+ISBLANK(TEXT(Corrective_Action__c)))),true,false)</errorConditionFormula>
+    <errorMessage>Please enter a  Root Cause and Corrective Action when Closing Case</errorMessage>
+</ValidationRule>

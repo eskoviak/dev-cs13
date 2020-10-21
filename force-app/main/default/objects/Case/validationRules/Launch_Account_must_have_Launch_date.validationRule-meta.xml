@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Launch_Account_must_have_Launch_date</fullName>
+    <active>true</active>
+    <description>A Launch date must be entered for a Launch Account case</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL( Type, &apos;Launch Account&apos;),
+    ISBLANK ( Natl_Acct_Launch_Date__c)
+)</errorConditionFormula>
+    <errorDisplayField>Natl_Acct_Launch_Date__c</errorDisplayField>
+    <errorMessage>You must enter the Natl Acct Launch Date  for a &quot;Launch Account&quot; case</errorMessage>
+</ValidationRule>

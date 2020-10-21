@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admin_Working_Case__c</fullName>
+    <description>Name of the SFDC Admin that is testing this Case.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the name of the SFDC Admin that is testing this Case.</inlineHelpText>
+    <label>Admin Working Case</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Centerstance</fullName>
+                <default>false</default>
+                <label>Centerstance</label>
+            </value>
+            <value>
+                <fullName>Chad Anderson</fullName>
+                <default>false</default>
+                <label>Chad Anderson</label>
+            </value>
+            <value>
+                <fullName>Cicily Punauakee</fullName>
+                <default>false</default>
+                <label>Cicily Punauakee</label>
+            </value>
+            <value>
+                <fullName>Demand Chain</fullName>
+                <default>false</default>
+                <label>Demand Chain</label>
+            </value>
+            <value>
+                <fullName>Acumen Solutions</fullName>
+                <default>false</default>
+                <label>Acumen Solutions</label>
+            </value>
+            <value>
+                <fullName>Eagle Creek</fullName>
+                <default>false</default>
+                <label>Eagle Creek</label>
+            </value>
+            <value>
+                <fullName>Kim Katzenmeyer</fullName>
+                <default>false</default>
+                <label>Kim Katzenmeyer</label>
+            </value>
+            <value>
+                <fullName>No Admin</fullName>
+                <default>false</default>
+                <label>No Admin</label>
+            </value>
+            <value>
+                <fullName>Salesforce Administration Services</fullName>
+                <default>false</default>
+                <label>Salesforce Administration Services</label>
+            </value>
+            <value>
+                <fullName>Eirik Ackerman</fullName>
+                <default>false</default>
+                <label>Eirik Ackerman</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QA_Defect_and_Retest__c</fullName>
+    <description>Time to work Defect and Retest.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Hours for defects and retest of fixes.</inlineHelpText>
+    <label>QA Defect and Retest</label>
+    <precision>7</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

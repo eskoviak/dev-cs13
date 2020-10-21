@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_of_Day__c</fullName>
+    <externalId>false</externalId>
+    <formula>(CASE(VALUE(LEFT(RIGHT(text(CreatedDate),FIND(&quot; &quot;, TEXT( CreatedDate ))-2),2)),
+00,&quot;Evening&quot;,
+01,&quot;Evening&quot;,
+02,&quot;Evening&quot;,
+03,&quot;Night&quot;,
+04,&quot;Night&quot;,
+05,&quot;Night&quot;,
+06,&quot;Night&quot;,
+07,&quot;Night&quot;,
+08,&quot;Night&quot;,
+09,&quot;Morning&quot;,
+10,&quot;Morning&quot;,
+11,&quot;Morning&quot;,
+12,&quot;Morning&quot;,
+13,&quot;Morning&quot;,
+14,&quot;Morning&quot;,
+15,&quot;Morning&quot;,
+16,&quot;Morning&quot;,
+17,&quot;Afternoon&quot;,
+18,&quot;Afternoon&quot;,
+19,&quot;Afternoon&quot;,
+20,&quot;Afternoon&quot;,
+21,&quot;Afternoon&quot;,
+22,&quot;Afternoon&quot;,
+23,&quot;Evening&quot;,
+&quot;00&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Time of Day</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

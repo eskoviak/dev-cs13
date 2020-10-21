@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Origin__c</fullName>
+    <description>This is a new case origin fields to support the web to case.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a case origin fields to support the web to case.</inlineHelpText>
+    <label>Obsolete Case Origin</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Heritage Website</fullName>
+                <default>false</default>
+                <label>Heritage Website</label>
+            </value>
+            <value>
+                <fullName>Vasque Website</fullName>
+                <default>false</default>
+                <label>Vasque Website</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

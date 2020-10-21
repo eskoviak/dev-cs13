@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_Category__c</fullName>
+    <description>This field is used to categorize Salesforce Change Requests into categories for budgeting</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the budget category for this Salesforce Change Request</inlineHelpText>
+    <label>*Delete* Budget Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer WOW!</fullName>
+                <default>false</default>
+                <label>Customer WOW!</label>
+            </value>
+            <value>
+                <fullName>New Development</fullName>
+                <default>false</default>
+                <label>New Development</label>
+            </value>
+            <value>
+                <fullName>Production Support</fullName>
+                <default>false</default>
+                <label>Production Support</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

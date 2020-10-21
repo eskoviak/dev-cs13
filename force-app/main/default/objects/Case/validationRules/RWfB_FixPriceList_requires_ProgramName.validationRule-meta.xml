@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RWfB_FixPriceList_requires_ProgramName</fullName>
+    <active>true</active>
+    <description>Require a Program Name for RWfB case, Fix Price List Primary Case Type</description>
+    <errorConditionFormula>RecordType.Name = &apos;RWfB Cases&apos; &amp;&amp;
+ISPICKVAL(Type, &quot;Fix Price List&quot;) &amp;&amp; 
+ISBLANK(Program_Names__c)</errorConditionFormula>
+    <errorDisplayField>Program_Names__c</errorDisplayField>
+    <errorMessage>Program name is required for the Price List that needs to be fixed. When there are multiple programs, separate the names with a comma.</errorMessage>
+</ValidationRule>

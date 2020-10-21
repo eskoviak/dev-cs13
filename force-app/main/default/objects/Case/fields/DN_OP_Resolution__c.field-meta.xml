@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DN_OP_Resolution__c</fullName>
+    <description>Describes how the debit note was resolved; case closed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Describes how the debit note was resolved; case closed</inlineHelpText>
+    <label>DN/OP Resolution</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Paid</fullName>
+                <default>false</default>
+                <label>Paid</label>
+            </value>
+            <value>
+                <fullName>Clearing</fullName>
+                <default>false</default>
+                <label>Clearing</label>
+            </value>
+            <value>
+                <fullName>Write-off</fullName>
+                <default>false</default>
+                <label>Write-off</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Paid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Clearing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Write-off</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

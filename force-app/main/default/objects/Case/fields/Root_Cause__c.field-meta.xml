@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Root_Cause__c</fullName>
+    <externalId>false</externalId>
+    <label>Root Cause</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account # incorrect</fullName>
+                <default>false</default>
+                <label>Account # incorrect</label>
+            </value>
+            <value>
+                <fullName>Ariba Issue</fullName>
+                <default>false</default>
+                <label>Ariba Issue</label>
+            </value>
+            <value>
+                <fullName>Blanket PO Reference</fullName>
+                <default>false</default>
+                <label>Blanket PO Reference</label>
+            </value>
+            <value>
+                <fullName>Buyers name missing</fullName>
+                <default>false</default>
+                <label>Buyers name missing</label>
+            </value>
+            <value>
+                <fullName>Clear Open Transactions</fullName>
+                <default>false</default>
+                <label>Clear Open Transactions</label>
+            </value>
+            <value>
+                <fullName>Cost Center or Buyers Name Missing</fullName>
+                <default>false</default>
+                <label>Cost Center or Buyers Name Missing</label>
+            </value>
+            <value>
+                <fullName>Customer Error</fullName>
+                <default>false</default>
+                <label>Customer Error</label>
+            </value>
+            <value>
+                <fullName>Data Quality</fullName>
+                <default>false</default>
+                <label>Data Quality</label>
+            </value>
+            <value>
+                <fullName>Disputed transactions (Held up payment)</fullName>
+                <default>false</default>
+                <label>Disputed transactions (Held up payment)</label>
+            </value>
+            <value>
+                <fullName>Does not understand Invoice</fullName>
+                <default>false</default>
+                <label>Does not understand Invoice</label>
+            </value>
+            <value>
+                <fullName>Duplicate Shipment</fullName>
+                <default>false</default>
+                <label>Duplicate Shipment</label>
+            </value>
+            <value>
+                <fullName>Firewall</fullName>
+                <default>false</default>
+                <label>Firewall</label>
+            </value>
+            <value>
+                <fullName>GL code missing</fullName>
+                <default>false</default>
+                <label>GL code missing</label>
+            </value>
+            <value>
+                <fullName>Goods Receipt not Processed</fullName>
+                <default>false</default>
+                <label>Goods Receipt not Processed</label>
+            </value>
+            <value>
+                <fullName>Has not received invoices – Portal</fullName>
+                <default>false</default>
+                <label>Has not received invoices – Portal</label>
+            </value>
+            <value>
+                <fullName>Has not received invoices – Standard</fullName>
+                <default>false</default>
+                <label>Has not received invoices – Standard</label>
+            </value>
+            <value>
+                <fullName>Incorrect Account Setup</fullName>
+                <default>false</default>
+                <label>Incorrect Account Setup</label>
+            </value>
+            <value>
+                <fullName>Incorrect Billing attributes</fullName>
+                <default>false</default>
+                <label>Incorrect Billing attributes</label>
+            </value>
+            <value>
+                <fullName>Incorrect Invoice Uploaded to Portal</fullName>
+                <default>false</default>
+                <label>Incorrect Invoice Uploaded to Portal</label>
+            </value>
+            <value>
+                <fullName>Incorrect Vendor Setup</fullName>
+                <default>false</default>
+                <label>Incorrect Vendor Setup</label>
+            </value>
+            <value>
+                <fullName>Invoice address incorrect</fullName>
+                <default>false</default>
+                <label>Invoice address incorrect</label>
+            </value>
+            <value>
+                <fullName>Invoice submitted incorrectly</fullName>
+                <default>false</default>
+                <label>Invoice submitted incorrectly</label>
+            </value>
+            <value>
+                <fullName>Known/Standard error</fullName>
+                <default>false</default>
+                <label>Known/Standard error</label>
+            </value>
+            <value>
+                <fullName>Lack of Payment Options</fullName>
+                <default>false</default>
+                <label>Lack of Payment Options</label>
+            </value>
+            <value>
+                <fullName>Misapplied or Unapplied Payments</fullName>
+                <default>false</default>
+                <label>Misapplied or Unapplied Payments</label>
+            </value>
+            <value>
+                <fullName>Missed expectations on cutover to RWBAA</fullName>
+                <default>false</default>
+                <label>Missed expectations on cutover to RWBAA</label>
+            </value>
+            <value>
+                <fullName>Missing POs</fullName>
+                <default>false</default>
+                <label>Missing POs</label>
+            </value>
+            <value>
+                <fullName>Missing Required Docs</fullName>
+                <default>false</default>
+                <label>Missing Required Docs</label>
+            </value>
+            <value>
+                <fullName>No Issue</fullName>
+                <default>false</default>
+                <label>No Issue</label>
+            </value>
+            <value>
+                <fullName>No Issue/Current AR</fullName>
+                <default>false</default>
+                <label>No Issue/Current AR</label>
+            </value>
+            <value>
+                <fullName>No Longer in Business</fullName>
+                <default>false</default>
+                <label>No Longer in Business</label>
+            </value>
+            <value>
+                <fullName>No Response from Customer</fullName>
+                <default>false</default>
+                <label>No Response from Customer</label>
+            </value>
+            <value>
+                <fullName>PO# incorrect</fullName>
+                <default>false</default>
+                <label>PO# incorrect</label>
+            </value>
+            <value>
+                <fullName>Pricing incorrect</fullName>
+                <default>false</default>
+                <label>Pricing incorrect</label>
+            </value>
+            <value>
+                <fullName>Process Issue</fullName>
+                <default>false</default>
+                <label>Process Issue</label>
+            </value>
+            <value>
+                <fullName>Products shipped incorrect</fullName>
+                <default>false</default>
+                <label>Products shipped incorrect</label>
+            </value>
+            <value>
+                <fullName>Quantity does not match PO</fullName>
+                <default>false</default>
+                <label>Quantity does not match PO</label>
+            </value>
+            <value>
+                <fullName>Remittance</fullName>
+                <default>false</default>
+                <label>Remittance</label>
+            </value>
+            <value>
+                <fullName>RWS/MSTS Human Error</fullName>
+                <default>false</default>
+                <label>RWS/MSTS Human Error</label>
+            </value>
+            <value>
+                <fullName>Sent to 3rd Party Collections</fullName>
+                <default>false</default>
+                <label>Sent to 3rd Party Collections</label>
+            </value>
+            <value>
+                <fullName>Shipping charges incorrect</fullName>
+                <default>false</default>
+                <label>Shipping charges incorrect</label>
+            </value>
+            <value>
+                <fullName>Ship to address incorrect</fullName>
+                <default>false</default>
+                <label>Ship to address incorrect</label>
+            </value>
+            <value>
+                <fullName>SH - Minor Issue</fullName>
+                <default>false</default>
+                <label>SH - Minor Issue</label>
+            </value>
+            <value>
+                <fullName>SH - Preexisting Agreement</fullName>
+                <default>false</default>
+                <label>SH - Preexisting Agreement</label>
+            </value>
+            <value>
+                <fullName>Spam</fullName>
+                <default>false</default>
+                <label>Spam</label>
+            </value>
+            <value>
+                <fullName>Special Handing Transition to Standard</fullName>
+                <default>false</default>
+                <label>Special Handing Transition to Standard</label>
+            </value>
+            <value>
+                <fullName>Substitutions</fullName>
+                <default>false</default>
+                <label>Substitutions</label>
+            </value>
+            <value>
+                <fullName>System Issue</fullName>
+                <default>false</default>
+                <label>System Issue</label>
+            </value>
+            <value>
+                <fullName>Tax/service charge on invoice incorrect</fullName>
+                <default>false</default>
+                <label>Tax/service charge on invoice incorrect</label>
+            </value>
+            <value>
+                <fullName>Tax Not Paid</fullName>
+                <default>false</default>
+                <label>Tax Not Paid</label>
+            </value>
+            <value>
+                <fullName>Technology Issue</fullName>
+                <default>false</default>
+                <label>Technology Issue</label>
+            </value>
+            <value>
+                <fullName>Training Issue</fullName>
+                <default>false</default>
+                <label>Training Issue</label>
+            </value>
+            <value>
+                <fullName>Typo in Email</fullName>
+                <default>false</default>
+                <label>Typo in Email</label>
+            </value>
+            <value>
+                <fullName>Unable to receive a link for Invoice</fullName>
+                <default>false</default>
+                <label>Unable to receive a link for Invoice</label>
+            </value>
+            <value>
+                <fullName>Unable to receive an attachment</fullName>
+                <default>false</default>
+                <label>Unable to receive an attachment</label>
+            </value>
+            <value>
+                <fullName>Unable to receive an Invoice</fullName>
+                <default>false</default>
+                <label>Unable to receive an Invoice</label>
+            </value>
+            <value>
+                <fullName>Wrong Contact Data</fullName>
+                <default>false</default>
+                <label>Wrong Contact Data</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

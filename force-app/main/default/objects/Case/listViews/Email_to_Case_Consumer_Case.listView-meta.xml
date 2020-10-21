@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_to_Case_Consumer_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Email-to-Case Consumer Queue</label>
+    <queue>Email_to_Case_Consumer_Queue</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

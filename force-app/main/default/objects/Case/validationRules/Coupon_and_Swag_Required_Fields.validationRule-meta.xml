@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Coupon_and_Swag_Required_Fields</fullName>
+    <active>true</active>
+    <description>Required fields for Coupon and Swag are Reason, Swag Item, Coupon Number, Brand, and Subject</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( Type ,&apos;Coupon and Swag&apos;),
+OR(
+ISBLANK( Text(Reason__c )),
+ISBLANK( Coupon_Tracking_Number__c ),
+ISBLANK( Text(Reason__c )),
+ISBLANK(Brand__c),
+ISBLANK(Quantity__c),
+ISBLANK( Shipping_Address_Line_1__c ),
+ISBLANK( Shipping_Address_City__c ),
+ISBLANK( Text (Shipping_Address_State_Province__c )),
+ISBLANK( Shipping_Address_ZIP_Postal_Code__c ),
+ISBLANK( Text (Shipping_Address_Country__c )),
+ISBLANK(Consumer_Phone__c),
+ISBLANK( Subject )))</errorConditionFormula>
+    <errorDisplayField>Type</errorDisplayField>
+    <errorMessage>Reason, Swag Item, Coupon Tracking #, Brand,Subject, Quantity, and Shipping Info are required when Primary Case Type is &quot;Coupon and Swag&quot;</errorMessage>
+</ValidationRule>

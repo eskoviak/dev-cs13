@@ -1,7 +1,7 @@
 {
   "orgName": "Demo company",
   "edition": "Developer",
-  "features": [],
+  "features": ["PersonAccounts"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
@@ -14,5 +14,17 @@
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
     }
+  },
+  "objectSettings" : {
+    "opportunity" : {
+      "sharingModel" : "private"
+    },
+    "account" : {
+      "sharingModel" : "private"
+    },
+    "contact" : {
+      "sharingModel" : "private"
+    }
   }
+
 }

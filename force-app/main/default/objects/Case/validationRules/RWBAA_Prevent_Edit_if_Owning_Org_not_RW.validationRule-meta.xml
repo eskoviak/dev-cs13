@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RWBAA_Prevent_Edit_if_Owning_Org_not_RW</fullName>
+    <active>true</active>
+    <description>This validation rule will prevent field edits for RWBAA cases if the Owning Org is not Red Wing</description>
+    <errorConditionFormula>AND(
+    AND(NOT(ISCHANGED(Last_Comment_Date__c)),
+RecordType.DeveloperName = &quot;RWBAA_Cases&quot;,
+      $User.FirstName &lt;&gt; &quot;Automated&quot;,
+    AND(ISPICKVAL(PRIORVALUE(Owning_Organization__c),&quot;MSTS&quot;),
+    ISPICKVAL(Owning_Organization__c,&quot;MSTS&quot;))
+   ))</errorConditionFormula>
+    <errorMessage>Case is not owned by Red Wing, no changes allowed.</errorMessage>
+</ValidationRule>

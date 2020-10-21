@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_Received_requires_Comment</fullName>
+    <active>true</active>
+    <description>When the Return Received is checked, the Return Dept Comment is required.</description>
+    <errorConditionFormula>AND(
+Return_Received__c  = True,
+ISBLANK(Return_Dept_Comment__c ))</errorConditionFormula>
+    <errorDisplayField>Return_Dept_Comment__c</errorDisplayField>
+    <errorMessage>Please enter Return Dept Comments</errorMessage>
+</ValidationRule>

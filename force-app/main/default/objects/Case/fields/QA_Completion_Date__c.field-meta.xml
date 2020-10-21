@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QA_Completion_Date__c</fullName>
+    <description>This is the date that the QA testing is expected to be completed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the date that the QA testing is expected to be completed.</inlineHelpText>
+    <label>QA Completion Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

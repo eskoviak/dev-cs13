@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Corrective_Action__c</fullName>
+    <description>Subset of picklist values associated with the Root Cause field for RWBAA cases.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select appropriate value based on the Root Cause selected</inlineHelpText>
+    <label>Corrective Action</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Root_Cause__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corrected Data &amp; QC</fullName>
+                <default>false</default>
+                <label>Corrected Data &amp; QC</label>
+            </value>
+            <value>
+                <fullName>Created Enhancement Request</fullName>
+                <default>false</default>
+                <label>Created Enhancement Request</label>
+            </value>
+            <value>
+                <fullName>Created Helpdesk Ticket</fullName>
+                <default>false</default>
+                <label>Created Helpdesk Ticket</label>
+            </value>
+            <value>
+                <fullName>Governance/auditing</fullName>
+                <default>false</default>
+                <label>Governance/auditing</label>
+            </value>
+            <value>
+                <fullName>Implemented revised process</fullName>
+                <default>false</default>
+                <label>Implemented revised process</label>
+            </value>
+            <value>
+                <fullName>No Action</fullName>
+                <default>false</default>
+                <label>No Action</label>
+            </value>
+            <value>
+                <fullName>Training / Coaching</fullName>
+                <default>false</default>
+                <label>Training / Coaching</label>
+            </value>
+            <value>
+                <fullName>Workaround</fullName>
+                <default>false</default>
+                <label>Workaround</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Data Quality</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Technology Issue</controllingFieldValue>
+            <valueName>Corrected Data &amp; QC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Quality</controllingFieldValue>
+            <controllingFieldValue>Process Issue</controllingFieldValue>
+            <controllingFieldValue>Training Issue</controllingFieldValue>
+            <controllingFieldValue>System Issue</controllingFieldValue>
+            <controllingFieldValue>Known/Standard error</controllingFieldValue>
+            <controllingFieldValue>Customer Error</controllingFieldValue>
+            <controllingFieldValue>RWS/MSTS Human Error</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Remittance</controllingFieldValue>
+            <controllingFieldValue>Spam</controllingFieldValue>
+            <controllingFieldValue>No Issue</controllingFieldValue>
+            <controllingFieldValue>Technology Issue</controllingFieldValue>
+            <controllingFieldValue>Missing Required Docs</controllingFieldValue>
+            <valueName>No Action</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Quality</controllingFieldValue>
+            <controllingFieldValue>Process Issue</controllingFieldValue>
+            <controllingFieldValue>Training Issue</controllingFieldValue>
+            <controllingFieldValue>System Issue</controllingFieldValue>
+            <controllingFieldValue>Known/Standard error</controllingFieldValue>
+            <controllingFieldValue>Customer Error</controllingFieldValue>
+            <controllingFieldValue>RWS/MSTS Human Error</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Technology Issue</controllingFieldValue>
+            <valueName>Training / Coaching</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Quality</controllingFieldValue>
+            <controllingFieldValue>Process Issue</controllingFieldValue>
+            <controllingFieldValue>Training Issue</controllingFieldValue>
+            <controllingFieldValue>System Issue</controllingFieldValue>
+            <controllingFieldValue>Known/Standard error</controllingFieldValue>
+            <controllingFieldValue>Customer Error</controllingFieldValue>
+            <controllingFieldValue>RWS/MSTS Human Error</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Technology Issue</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Process Issue</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Technology Issue</controllingFieldValue>
+            <valueName>Governance/auditing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Process Issue</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Implemented revised process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Issue</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Technology Issue</controllingFieldValue>
+            <valueName>Created Enhancement Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Issue</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Technology Issue</controllingFieldValue>
+            <valueName>Created Helpdesk Ticket</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Known/Standard error</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Technology Issue</controllingFieldValue>
+            <valueName>Workaround</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

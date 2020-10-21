@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_Case_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If the Case involves multiple topics, select the appropriate Secondary Case Type Detail values</inlineHelpText>
+    <label>Secondary Case Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Administrative for Sales</fullName>
+                <default>false</default>
+                <label>Administrative for Sales</label>
+            </value>
+            <value>
+                <fullName>Availability</fullName>
+                <default>false</default>
+                <label>Availability</label>
+            </value>
+            <value>
+                <fullName>Backorder</fullName>
+                <default>false</default>
+                <label>Backorder</label>
+            </value>
+            <value>
+                <fullName>Business Cards</fullName>
+                <default>false</default>
+                <label>Business Cards</label>
+            </value>
+            <value>
+                <fullName>Buying Programs</fullName>
+                <default>false</default>
+                <label>Buying Programs</label>
+            </value>
+            <value>
+                <fullName>Call Tags</fullName>
+                <default>false</default>
+                <label>Call Tags</label>
+            </value>
+            <value>
+                <fullName>Color</fullName>
+                <default>false</default>
+                <label>Color</label>
+            </value>
+            <value>
+                <fullName>Customer Update for Sales</fullName>
+                <default>false</default>
+                <label>Customer Update for Sales</label>
+            </value>
+            <value>
+                <fullName>Customization</fullName>
+                <default>false</default>
+                <label>Customization</label>
+            </value>
+            <value>
+                <fullName>Dealer Support</fullName>
+                <default>false</default>
+                <label>Dealer Support</label>
+            </value>
+            <value>
+                <fullName>Duplicate Order</fullName>
+                <default>false</default>
+                <label>Duplicate Order</label>
+            </value>
+            <value>
+                <fullName>EDI</fullName>
+                <default>false</default>
+                <label>EDI</label>
+            </value>
+            <value>
+                <fullName>E-Sales</fullName>
+                <default>false</default>
+                <label>E-Sales</label>
+            </value>
+            <value>
+                <fullName>Finishing</fullName>
+                <default>false</default>
+                <label>Finishing</label>
+            </value>
+            <value>
+                <fullName>Loose Grain</fullName>
+                <default>false</default>
+                <label>Loose Grain</label>
+            </value>
+            <value>
+                <fullName>Media Portal</fullName>
+                <default>false</default>
+                <label>Media Portal</label>
+            </value>
+            <value>
+                <fullName>Order Entry Error</fullName>
+                <default>false</default>
+                <label>Order Entry Error</label>
+            </value>
+            <value>
+                <fullName>Order Status for Sales</fullName>
+                <default>false</default>
+                <label>Order Status for Sales</label>
+            </value>
+            <value>
+                <fullName>Package Intercept</fullName>
+                <default>false</default>
+                <label>Package Intercept</label>
+            </value>
+            <value>
+                <fullName>Pick Ticket Request</fullName>
+                <default>false</default>
+                <label>Pick Ticket Request</label>
+            </value>
+            <value>
+                <fullName>Place Order</fullName>
+                <default>false</default>
+                <label>Place Order</label>
+            </value>
+            <value>
+                <fullName>Place Order for Sales</fullName>
+                <default>false</default>
+                <label>Place Order for Sales</label>
+            </value>
+            <value>
+                <fullName>Price Check / Quote</fullName>
+                <default>false</default>
+                <label>Price Check / Quote</label>
+            </value>
+            <value>
+                <fullName>Product Recommendation</fullName>
+                <default>false</default>
+                <label>Product Recommendation</label>
+            </value>
+            <value>
+                <fullName>Proof of Delivery</fullName>
+                <default>false</default>
+                <label>Proof of Delivery</label>
+            </value>
+            <value>
+                <fullName>Red Edge</fullName>
+                <default>false</default>
+                <label>Red Edge</label>
+            </value>
+            <value>
+                <fullName>Return Address</fullName>
+                <default>false</default>
+                <label>Return Address</label>
+            </value>
+            <value>
+                <fullName>Return Status</fullName>
+                <default>false</default>
+                <label>Return Status</label>
+            </value>
+            <value>
+                <fullName>Revise Order for Sales</fullName>
+                <default>false</default>
+                <label>Revise Order for Sales</label>
+            </value>
+            <value>
+                <fullName>RIMS / Micros</fullName>
+                <default>false</default>
+                <label>RIMS / Micros</label>
+            </value>
+            <value>
+                <fullName>Selection (scratches and scars)</fullName>
+                <default>false</default>
+                <label>Selection (scratches and scars)</label>
+            </value>
+            <value>
+                <fullName>Shipping Claims</fullName>
+                <default>false</default>
+                <label>Shipping Claims</label>
+            </value>
+            <value>
+                <fullName>Shoe Search</fullName>
+                <default>false</default>
+                <label>Shoe Search</label>
+            </value>
+            <value>
+                <fullName>SOE</fullName>
+                <default>false</default>
+                <label>SOE</label>
+            </value>
+            <value>
+                <fullName>Stains</fullName>
+                <default>false</default>
+                <label>Stains</label>
+            </value>
+            <value>
+                <fullName>Style Comparison</fullName>
+                <default>false</default>
+                <label>Style Comparison</label>
+            </value>
+            <value>
+                <fullName>Tech Specs</fullName>
+                <default>false</default>
+                <label>Tech Specs</label>
+            </value>
+            <value>
+                <fullName>Temper</fullName>
+                <default>false</default>
+                <label>Temper</label>
+            </value>
+            <value>
+                <fullName>Transfer to A/R</fullName>
+                <default>false</default>
+                <label>Transfer to A/R</label>
+            </value>
+            <value>
+                <fullName>Transfer to Consumers</fullName>
+                <default>false</default>
+                <label>Transfer to Consumers</label>
+            </value>
+            <value>
+                <fullName>Transfer to Credit</fullName>
+                <default>false</default>
+                <label>Transfer to Credit</label>
+            </value>
+            <value>
+                <fullName>Transfer to CSR</fullName>
+                <default>false</default>
+                <label>Transfer to CSR</label>
+            </value>
+            <value>
+                <fullName>Transfer to Customer Relations</fullName>
+                <default>false</default>
+                <label>Transfer to Customer Relations</label>
+            </value>
+            <value>
+                <fullName>Transfer to National Accounts</fullName>
+                <default>false</default>
+                <label>Transfer to National Accounts</label>
+            </value>
+            <value>
+                <fullName>Transfer to Repair</fullName>
+                <default>false</default>
+                <label>Transfer to Repair</label>
+            </value>
+            <value>
+                <fullName>Transfer to Sales</fullName>
+                <default>false</default>
+                <label>Transfer to Sales</label>
+            </value>
+            <value>
+                <fullName>Veins</fullName>
+                <default>false</default>
+                <label>Veins</label>
+            </value>
+            <value>
+                <fullName>Warranty</fullName>
+                <default>false</default>
+                <label>Warranty</label>
+            </value>
+            <value>
+                <fullName>Weight</fullName>
+                <default>false</default>
+                <label>Weight</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other Account Status</fullName>
+                <default>false</default>
+                <label>Other Account Status</label>
+            </value>
+            <value>
+                <fullName>Other Customer</fullName>
+                <default>false</default>
+                <label>Other Customer</label>
+            </value>
+            <value>
+                <fullName>Other E-Order</fullName>
+                <default>false</default>
+                <label>Other E-Order</label>
+            </value>
+            <value>
+                <fullName>Other Marketing</fullName>
+                <default>false</default>
+                <label>Other Marketing</label>
+            </value>
+            <value>
+                <fullName>Other Order</fullName>
+                <default>false</default>
+                <label>Other Order</label>
+            </value>
+            <value>
+                <fullName>Other Price</fullName>
+                <default>false</default>
+                <label>Other Price</label>
+            </value>
+            <value>
+                <fullName>Other Product</fullName>
+                <default>false</default>
+                <label>Other Product</label>
+            </value>
+            <value>
+                <fullName>Other Repair / Return</fullName>
+                <default>false</default>
+                <label>Other Repair / Return</label>
+            </value>
+            <value>
+                <fullName>Other Sales Support</fullName>
+                <default>false</default>
+                <label>Other Sales Support</label>
+            </value>
+            <value>
+                <fullName>Other Shipping</fullName>
+                <default>false</default>
+                <label>Other Shipping</label>
+            </value>
+            <value>
+                <fullName>Other Transfer</fullName>
+                <default>false</default>
+                <label>Other Transfer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

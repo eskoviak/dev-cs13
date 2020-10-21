@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Dev_QA_Estimates__c</fullName>
+    <description>This is the total of all BA, Dev, QA and Other hours.</description>
+    <externalId>false</externalId>
+    <formula>Total_BA_Hours__c + Total_Other_Hours__c + Total_QA_Hours__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This is the total of all BA, Dev, QA and Other hours.</inlineHelpText>
+    <label>TOTAL BA, Dev &amp; QA Estimates</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

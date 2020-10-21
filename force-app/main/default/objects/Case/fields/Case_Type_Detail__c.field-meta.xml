@@ -1,0 +1,2748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Type_Detail__c</fullName>
+    <externalId>false</externalId>
+    <label>Case Type Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2 to 3</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>2 to 3</label>
+            </value>
+            <value>
+                <fullName>30-Day Comfort</fullName>
+                <color>#993300</color>
+                <default>false</default>
+                <label>30-Day Comfort</label>
+            </value>
+            <value>
+                <fullName>3rd Party AP Vendor</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>3rd Party AP Vendor</label>
+            </value>
+            <value>
+                <fullName>3 to 2</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>3 to 2</label>
+            </value>
+            <value>
+                <fullName>3 to 4</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>3 to 4</label>
+            </value>
+            <value>
+                <fullName>4 to 3</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>4 to 3</label>
+            </value>
+            <value>
+                <fullName>Account</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>Account Setup</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Account Setup</label>
+            </value>
+            <value>
+                <fullName>Account Status</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Account Status</label>
+            </value>
+            <value>
+                <fullName>ACH</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>ACH</label>
+            </value>
+            <value>
+                <fullName>Administrative for Sales</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Administrative for Sales</label>
+            </value>
+            <value>
+                <fullName>Advertising</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Advertising</label>
+            </value>
+            <value>
+                <fullName>Allowance</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Allowance</label>
+            </value>
+            <value>
+                <fullName>Amount</fullName>
+                <default>false</default>
+                <label>Amount</label>
+            </value>
+            <value>
+                <fullName>ARIBA Invoice</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>ARIBA Invoice</label>
+            </value>
+            <value>
+                <fullName>Auth Form #</fullName>
+                <default>false</default>
+                <label>Auth Form #</label>
+            </value>
+            <value>
+                <fullName>Availability</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Availability</label>
+            </value>
+            <value>
+                <fullName>Backorder</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Backorder</label>
+            </value>
+            <value>
+                <fullName>Bill To</fullName>
+                <default>false</default>
+                <label>Bill To</label>
+            </value>
+            <value>
+                <fullName>Both New and Worn</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Both New and Worn</label>
+            </value>
+            <value>
+                <fullName>Bounce Back</fullName>
+                <default>false</default>
+                <label>Bounce Back</label>
+            </value>
+            <value>
+                <fullName>Branch</fullName>
+                <default>false</default>
+                <label>Branch</label>
+            </value>
+            <value>
+                <fullName>Business Cards</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Business Cards</label>
+            </value>
+            <value>
+                <fullName>Buying Programs</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Buying Programs</label>
+            </value>
+            <value>
+                <fullName>Cage Code (SAM)</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Cage Code (SAM)</label>
+            </value>
+            <value>
+                <fullName>Call Tags</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Call Tags</label>
+            </value>
+            <value>
+                <fullName>Card Charged Incorrectly</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Card Charged Incorrectly</label>
+            </value>
+            <value>
+                <fullName>Change Account Address</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Change Account Address</label>
+            </value>
+            <value>
+                <fullName>Change Account Fax</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Change Account Fax</label>
+            </value>
+            <value>
+                <fullName>Change Account Phone</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Change Account Phone</label>
+            </value>
+            <value>
+                <fullName>Change Brand Assortment</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Change Brand Assortment</label>
+            </value>
+            <value>
+                <fullName>Change Email for A/P</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Change Email for A/P</label>
+            </value>
+            <value>
+                <fullName>Change Email for Invoices</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Change Email for Invoices</label>
+            </value>
+            <value>
+                <fullName>Change Email for Order Confirmation</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Change Email for Order Confirmation</label>
+            </value>
+            <value>
+                <fullName>Change Purchase Order #</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Change Purchase Order #</label>
+            </value>
+            <value>
+                <fullName>Charge Back</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Charge Back</label>
+            </value>
+            <value>
+                <fullName>Charged for patches/Striping</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Charged for patches/Striping</label>
+            </value>
+            <value>
+                <fullName>Charged for Patches or Striping</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Charged for Patches or Striping</label>
+            </value>
+            <value>
+                <fullName>Check Order Status</fullName>
+                <color>#FF6600</color>
+                <default>false</default>
+                <label>Check Order Status</label>
+            </value>
+            <value>
+                <fullName>Check Return Status</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Check Return Status</label>
+            </value>
+            <value>
+                <fullName>Close Account</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Close Account</label>
+            </value>
+            <value>
+                <fullName>Collections</fullName>
+                <default>false</default>
+                <label>Collections</label>
+            </value>
+            <value>
+                <fullName>Communication</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Communication</label>
+            </value>
+            <value>
+                <fullName>Consumer Online Order Cancelled</fullName>
+                <color>#663300</color>
+                <default>false</default>
+                <label>Consumer Online Order Cancelled</label>
+            </value>
+            <value>
+                <fullName>Consumer Online Order Revision</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Consumer Online Order Revision</label>
+            </value>
+            <value>
+                <fullName>Contact</fullName>
+                <default>false</default>
+                <label>Contact</label>
+            </value>
+            <value>
+                <fullName>Contact Information Updates</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Contact Information Updates</label>
+            </value>
+            <value>
+                <fullName>Contacts</fullName>
+                <default>false</default>
+                <label>Contacts</label>
+            </value>
+            <value>
+                <fullName>Cost Adjustments</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Cost Adjustments</label>
+            </value>
+            <value>
+                <fullName>Cost Center</fullName>
+                <default>false</default>
+                <label>Cost Center</label>
+            </value>
+            <value>
+                <fullName>Credit Approval</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Credit Approval</label>
+            </value>
+            <value>
+                <fullName>Credit Cards</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Credit Cards</label>
+            </value>
+            <value>
+                <fullName>Credit Check Request</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Credit Check Request</label>
+            </value>
+            <value>
+                <fullName>Credit Internally Cleared</fullName>
+                <color>#009900</color>
+                <default>false</default>
+                <label>Credit Internally Cleared</label>
+            </value>
+            <value>
+                <fullName>Credit Issues</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Credit Issues</label>
+            </value>
+            <value>
+                <fullName>Credit Limit</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Credit Limit</label>
+            </value>
+            <value>
+                <fullName>Credit Memo</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Credit Memo</label>
+            </value>
+            <value>
+                <fullName>Credit Memo Issued?</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Credit Memo Issued?</label>
+            </value>
+            <value>
+                <fullName>Credit Memos Paid as Invoice</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Credit Memos Paid as Invoice</label>
+            </value>
+            <value>
+                <fullName>Credit Taken Twice</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Credit Taken Twice</label>
+            </value>
+            <value>
+                <fullName>Customer Update for Sales</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Customer Update for Sales</label>
+            </value>
+            <value>
+                <fullName>Customization</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Customization</label>
+            </value>
+            <value>
+                <fullName>Cybersource Online Order Cancelled</fullName>
+                <color>#3366FF</color>
+                <default>false</default>
+                <label>Cybersource Online Order Cancelled</label>
+            </value>
+            <value>
+                <fullName>Deactivated</fullName>
+                <default>false</default>
+                <label>Deactivated</label>
+            </value>
+            <value>
+                <fullName>Dealer</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Dealer</label>
+            </value>
+            <value>
+                <fullName>Dealer Recourse</fullName>
+                <default>false</default>
+                <label>Dealer Recourse</label>
+            </value>
+            <value>
+                <fullName>Dealer Support</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Dealer Support</label>
+            </value>
+            <value>
+                <fullName>Debit Notice/Overpayment</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Debit Notice/Overpayment</label>
+            </value>
+            <value>
+                <fullName>Deduction Notice</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Deduction Notice</label>
+            </value>
+            <value>
+                <fullName>Defective Allowance</fullName>
+                <default>false</default>
+                <label>Defective Allowance</label>
+            </value>
+            <value>
+                <fullName>Department</fullName>
+                <default>false</default>
+                <label>Department</label>
+            </value>
+            <value>
+                <fullName>Discounts</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Discounts</label>
+            </value>
+            <value>
+                <fullName>Disputes</fullName>
+                <default>false</default>
+                <label>Disputes</label>
+            </value>
+            <value>
+                <fullName>Distribution Match-up</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Distribution Match-up</label>
+            </value>
+            <value>
+                <fullName>District #</fullName>
+                <default>false</default>
+                <label>District #</label>
+            </value>
+            <value>
+                <fullName>DNB</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>DNB</label>
+            </value>
+            <value>
+                <fullName>DTI Return Authorization (RA)</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>DTI Return Authorization (RA)</label>
+            </value>
+            <value>
+                <fullName>Duplicate Invoice/PO</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Duplicate Invoice/PO</label>
+            </value>
+            <value>
+                <fullName>Duplicate Order</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Duplicate Order</label>
+            </value>
+            <value>
+                <fullName>Duplicate PO</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Duplicate PO</label>
+            </value>
+            <value>
+                <fullName>EDI</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>EDI</label>
+            </value>
+            <value>
+                <fullName>EDI Compliance</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>EDI Compliance</label>
+            </value>
+            <value>
+                <fullName>Email Bounce Back</fullName>
+                <default>false</default>
+                <label>Email Bounce Back</label>
+            </value>
+            <value>
+                <fullName>Employee ID</fullName>
+                <default>false</default>
+                <label>Employee ID</label>
+            </value>
+            <value>
+                <fullName>End of Day/Transmits</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>End of Day/Transmits</label>
+            </value>
+            <value>
+                <fullName>Entry Error/Duplication/ Wrong Acct Nbr</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Entry Error/Duplication/ Wrong Acct Nbr</label>
+            </value>
+            <value>
+                <fullName>E-Sales</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>E-Sales</label>
+            </value>
+            <value>
+                <fullName>E-Sales Issues</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>E-Sales Issues</label>
+            </value>
+            <value>
+                <fullName>E-Sales Setup Request</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>E-Sales Setup Request</label>
+            </value>
+            <value>
+                <fullName>File</fullName>
+                <default>false</default>
+                <label>File</label>
+            </value>
+            <value>
+                <fullName>Fit / Sizing</fullName>
+                <color>#DDDDDD</color>
+                <default>false</default>
+                <label>Fit / Sizing</label>
+            </value>
+            <value>
+                <fullName>Footwear Req &amp; Pricing</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Footwear Req &amp; Pricing</label>
+            </value>
+            <value>
+                <fullName>Force to Invoice</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Force to Invoice</label>
+            </value>
+            <value>
+                <fullName>Freight or Service Charge</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Freight or Service Charge</label>
+            </value>
+            <value>
+                <fullName>General Warranty Questions</fullName>
+                <color>#339999</color>
+                <default>false</default>
+                <label>General Warranty Questions</label>
+            </value>
+            <value>
+                <fullName>Global Warranty Questions</fullName>
+                <color>#999999</color>
+                <default>false</default>
+                <label>Global Warranty Questions</label>
+            </value>
+            <value>
+                <fullName>GSD Round 1</fullName>
+                <default>false</default>
+                <label>GSD Round 1</label>
+            </value>
+            <value>
+                <fullName>GSD Round 2</fullName>
+                <default>false</default>
+                <label>GSD Round 2</label>
+            </value>
+            <value>
+                <fullName>HR Issues</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>HR Issues</label>
+            </value>
+            <value>
+                <fullName>Incorrect Account Number</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Incorrect Account Number</label>
+            </value>
+            <value>
+                <fullName>Incorrect Invoice Uploaded to Portal</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Incorrect Invoice Uploaded to Portal</label>
+            </value>
+            <value>
+                <fullName>Incorrect Legal Entity Billed</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Incorrect Legal Entity Billed</label>
+            </value>
+            <value>
+                <fullName>Inquiry</fullName>
+                <color>#FF99FF</color>
+                <default>false</default>
+                <label>Inquiry</label>
+            </value>
+            <value>
+                <fullName>Interest</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Interest</label>
+            </value>
+            <value>
+                <fullName>Inventory</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Inventory</label>
+            </value>
+            <value>
+                <fullName>Inventory Review</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Inventory Review</label>
+            </value>
+            <value>
+                <fullName>Invoice Cleared Internally</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Invoice Cleared Internally</label>
+            </value>
+            <value>
+                <fullName>Invoice Issues</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Invoice Issues</label>
+            </value>
+            <value>
+                <fullName>Invoice Paid Twice</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Invoice Paid Twice</label>
+            </value>
+            <value>
+                <fullName>Invoice Request</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Invoice Request</label>
+            </value>
+            <value>
+                <fullName>Invoicing</fullName>
+                <default>false</default>
+                <label>Invoicing</label>
+            </value>
+            <value>
+                <fullName>Invoicing Paper Mailing</fullName>
+                <default>false</default>
+                <label>Invoicing Paper Mailing</label>
+            </value>
+            <value>
+                <fullName>IT Compliance</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>IT Compliance</label>
+            </value>
+            <value>
+                <fullName>Job / Group Name</fullName>
+                <default>false</default>
+                <label>Job / Group Name</label>
+            </value>
+            <value>
+                <fullName>Job / Group Number</fullName>
+                <default>false</default>
+                <label>Job / Group Number</label>
+            </value>
+            <value>
+                <fullName>Key Account Returns</fullName>
+                <default>false</default>
+                <label>Key Account Returns</label>
+            </value>
+            <value>
+                <fullName>Late Order Entry</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Late Order Entry</label>
+            </value>
+            <value>
+                <fullName>Location</fullName>
+                <default>false</default>
+                <label>Location</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>Marketing Campaign</fullName>
+                <default>false</default>
+                <label>Marketing Campaign</label>
+            </value>
+            <value>
+                <fullName>Media Portal</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Media Portal</label>
+            </value>
+            <value>
+                <fullName>Merchandising</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Merchandising</label>
+            </value>
+            <value>
+                <fullName>Missing Checks</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Missing Checks</label>
+            </value>
+            <value>
+                <fullName>Missing Cost Center/Buyer</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Missing Cost Center/Buyer</label>
+            </value>
+            <value>
+                <fullName>Missing Cost Center or Buyer</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Missing Cost Center or Buyer</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>New Account (Prospect)</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>New Account (Prospect)</label>
+            </value>
+            <value>
+                <fullName>New Exchange</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>New Exchange</label>
+            </value>
+            <value>
+                <fullName>New Order</fullName>
+                <color>#000099</color>
+                <default>false</default>
+                <label>New Order</label>
+            </value>
+            <value>
+                <fullName>New Repair</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>New Repair</label>
+            </value>
+            <value>
+                <fullName>New Shoe Sales</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>New Shoe Sales</label>
+            </value>
+            <value>
+                <fullName>Non-Payment</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Non-Payment</label>
+            </value>
+            <value>
+                <fullName>No Rejection Reason</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>No Rejection Reason</label>
+            </value>
+            <value>
+                <fullName>Not in the Portal</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Not in the Portal</label>
+            </value>
+            <value>
+                <fullName>Open Invoice</fullName>
+                <default>false</default>
+                <label>Open Invoice</label>
+            </value>
+            <value>
+                <fullName>Order Cancel</fullName>
+                <color>#000000</color>
+                <default>false</default>
+                <label>Order Cancel</label>
+            </value>
+            <value>
+                <fullName>Order Cancellation</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Order Cancellation</label>
+            </value>
+            <value>
+                <fullName>Order Changes</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Order Changes</label>
+            </value>
+            <value>
+                <fullName>Order Entry Error</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Order Entry Error</label>
+            </value>
+            <value>
+                <fullName>Order Hold</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Order Hold</label>
+            </value>
+            <value>
+                <fullName>Order Issues</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Order Issues</label>
+            </value>
+            <value>
+                <fullName>Order Revision</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Order Revision</label>
+            </value>
+            <value>
+                <fullName>Order Shortages</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Order Shortages</label>
+            </value>
+            <value>
+                <fullName>Order Status</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Order Status</label>
+            </value>
+            <value>
+                <fullName>Order Status for Sales</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Order Status for Sales</label>
+            </value>
+            <value>
+                <fullName>Original Invoice Not Received</fullName>
+                <default>false</default>
+                <label>Original Invoice Not Received</label>
+            </value>
+            <value>
+                <fullName>Out of Policy Return</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Out of Policy Return</label>
+            </value>
+            <value>
+                <fullName>Owner</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Owner</label>
+            </value>
+            <value>
+                <fullName>Package Intercept</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Package Intercept</label>
+            </value>
+            <value>
+                <fullName>Packing Compliance</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Packing Compliance</label>
+            </value>
+            <value>
+                <fullName>Partial Payment</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Partial Payment</label>
+            </value>
+            <value>
+                <fullName>Paymentech</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Paymentech</label>
+            </value>
+            <value>
+                <fullName>Payment Issues</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Payment Issues</label>
+            </value>
+            <value>
+                <fullName>Payment Total is More Than Total Invoices</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Payment Total is More Than Total Invoices</label>
+            </value>
+            <value>
+                <fullName>Pays Store / Pays RWSC</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Pays Store / Pays RWSC</label>
+            </value>
+            <value>
+                <fullName>Pick Ticket Request</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Pick Ticket Request</label>
+            </value>
+            <value>
+                <fullName>Place Order</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Place Order</label>
+            </value>
+            <value>
+                <fullName>Place Order for Sales</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Place Order for Sales</label>
+            </value>
+            <value>
+                <fullName>Planned Advertising</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Planned Advertising</label>
+            </value>
+            <value>
+                <fullName>Plant Number</fullName>
+                <default>false</default>
+                <label>Plant Number</label>
+            </value>
+            <value>
+                <fullName>PO</fullName>
+                <default>false</default>
+                <label>PO</label>
+            </value>
+            <value>
+                <fullName>PO and Invoice do not Match</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>PO and Invoice do not Match</label>
+            </value>
+            <value>
+                <fullName>PO Cancelled</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>PO Cancelled</label>
+            </value>
+            <value>
+                <fullName>PO Closed</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>PO Closed</label>
+            </value>
+            <value>
+                <fullName>PO Invalid</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>PO Invalid</label>
+            </value>
+            <value>
+                <fullName>PO Rejected</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>PO Rejected</label>
+            </value>
+            <value>
+                <fullName>Portal Invoice</fullName>
+                <default>false</default>
+                <label>Portal Invoice</label>
+            </value>
+            <value>
+                <fullName>Portal Issue</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Portal Issue</label>
+            </value>
+            <value>
+                <fullName>Portals</fullName>
+                <default>false</default>
+                <label>Portals</label>
+            </value>
+            <value>
+                <fullName>Poster Build Request</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Poster Build Request</label>
+            </value>
+            <value>
+                <fullName>Price Check / Quote</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Price Check / Quote</label>
+            </value>
+            <value>
+                <fullName>Price List Build Request</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Price List Build Request</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Product Care / Product Knowledge</fullName>
+                <color>#333333</color>
+                <default>false</default>
+                <label>Product Care / Product Knowledge</label>
+            </value>
+            <value>
+                <fullName>Product Clinic</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Product Clinic</label>
+            </value>
+            <value>
+                <fullName>Product Inquiry</fullName>
+                <default>false</default>
+                <label>Product Inquiry</label>
+            </value>
+            <value>
+                <fullName>Product Recommendation</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Product Recommendation</label>
+            </value>
+            <value>
+                <fullName>Program</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Program</label>
+            </value>
+            <value>
+                <fullName>Program Knowledge</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Program Knowledge</label>
+            </value>
+            <value>
+                <fullName>Program Revision</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Program Revision</label>
+            </value>
+            <value>
+                <fullName>Program Rules</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Program Rules</label>
+            </value>
+            <value>
+                <fullName>Proof of Delivery</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Proof of Delivery</label>
+            </value>
+            <value>
+                <fullName>Prospective New Account</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Prospective New Account</label>
+            </value>
+            <value>
+                <fullName>Quality</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Quality</label>
+            </value>
+            <value>
+                <fullName>Reboxing Fee</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Reboxing Fee</label>
+            </value>
+            <value>
+                <fullName>Recruitment</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Recruitment</label>
+            </value>
+            <value>
+                <fullName>Red Edge</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Red Edge</label>
+            </value>
+            <value>
+                <fullName>Red Line Review</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Red Line Review</label>
+            </value>
+            <value>
+                <fullName>Regulatory</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Regulatory</label>
+            </value>
+            <value>
+                <fullName>Removal</fullName>
+                <default>false</default>
+                <label>Removal</label>
+            </value>
+            <value>
+                <fullName>Reopen Account</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Reopen Account</label>
+            </value>
+            <value>
+                <fullName>Repair Question</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Repair Question</label>
+            </value>
+            <value>
+                <fullName>Replacement</fullName>
+                <color>#9999FF</color>
+                <default>false</default>
+                <label>Replacement</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>RestockingFee</fullName>
+                <color>#993300</color>
+                <default>false</default>
+                <label>RestockingFee</label>
+            </value>
+            <value>
+                <fullName>Retailer Location</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Retailer Location</label>
+            </value>
+            <value>
+                <fullName>Retailer not in requested area</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Retailer not in requested area</label>
+            </value>
+            <value>
+                <fullName>Retailer Program Abuse/Service</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Retailer Program Abuse/Service</label>
+            </value>
+            <value>
+                <fullName>Retailer Stock Availability</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Retailer Stock Availability</label>
+            </value>
+            <value>
+                <fullName>Return Address</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Return Address</label>
+            </value>
+            <value>
+                <fullName>Return Authorization (RA)</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Return Authorization (RA)</label>
+            </value>
+            <value>
+                <fullName>Return Disagreement</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Return Disagreement</label>
+            </value>
+            <value>
+                <fullName>Returns</fullName>
+                <default>false</default>
+                <label>Returns</label>
+            </value>
+            <value>
+                <fullName>Return Status</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Return Status</label>
+            </value>
+            <value>
+                <fullName>Review Accessories</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Review Accessories</label>
+            </value>
+            <value>
+                <fullName>Review Red Line Inventory</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Review Red Line Inventory</label>
+            </value>
+            <value>
+                <fullName>Review Top Sellers</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Review Top Sellers</label>
+            </value>
+            <value>
+                <fullName>Revise Order for Credit</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Revise Order for Credit</label>
+            </value>
+            <value>
+                <fullName>Revise Order for Sales</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Revise Order for Sales</label>
+            </value>
+            <value>
+                <fullName>Revision</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Revision</label>
+            </value>
+            <value>
+                <fullName>RIMS / Micros</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>RIMS / Micros</label>
+            </value>
+            <value>
+                <fullName>RWS Credit Issues</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>RWS Credit Issues</label>
+            </value>
+            <value>
+                <fullName>RWS Inventory Turns</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>RWS Inventory Turns</label>
+            </value>
+            <value>
+                <fullName>RWS Other</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>RWS Other</label>
+            </value>
+            <value>
+                <fullName>RWS P.O.P.</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>RWS P.O.P.</label>
+            </value>
+            <value>
+                <fullName>RWS Signage</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>RWS Signage</label>
+            </value>
+            <value>
+                <fullName>RWS Training</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>RWS Training</label>
+            </value>
+            <value>
+                <fullName>Safety</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Safety</label>
+            </value>
+            <value>
+                <fullName>Sales Promotion</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Sales Promotion</label>
+            </value>
+            <value>
+                <fullName>SAP Non PO invoice</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>SAP Non PO invoice</label>
+            </value>
+            <value>
+                <fullName>Server/Internet</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Server/Internet</label>
+            </value>
+            <value>
+                <fullName>Shipped to Wrong Address</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Shipped to Wrong Address</label>
+            </value>
+            <value>
+                <fullName>Shipping Claims</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Shipping Claims</label>
+            </value>
+            <value>
+                <fullName>Shipping Compliance</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Shipping Compliance</label>
+            </value>
+            <value>
+                <fullName>Shipping Error</fullName>
+                <color>#6600CC</color>
+                <default>false</default>
+                <label>Shipping Error</label>
+            </value>
+            <value>
+                <fullName>Shipping Issues</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Shipping Issues</label>
+            </value>
+            <value>
+                <fullName>Shipping Shortage/Overage</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Shipping Shortage/Overage</label>
+            </value>
+            <value>
+                <fullName>Shipping Status</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Shipping Status</label>
+            </value>
+            <value>
+                <fullName>Shipping Tracking Number</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Shipping Tracking Number</label>
+            </value>
+            <value>
+                <fullName>Shoe Search</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Shoe Search</label>
+            </value>
+            <value>
+                <fullName>Short Pay / Over Pay</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Short Pay / Over Pay</label>
+            </value>
+            <value>
+                <fullName>Short Payment</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Short Payment</label>
+            </value>
+            <value>
+                <fullName>Short Shipped</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Short Shipped</label>
+            </value>
+            <value>
+                <fullName>Sign off on Returns for RWSS</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Sign off on Returns for RWSS</label>
+            </value>
+            <value>
+                <fullName>SOA Email Address Updates</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>SOA Email Address Updates</label>
+            </value>
+            <value>
+                <fullName>SOE</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>SOE</label>
+            </value>
+            <value>
+                <fullName>Statement Request</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Statement Request</label>
+            </value>
+            <value>
+                <fullName>Stay on Recourse Request</fullName>
+                <default>false</default>
+                <label>Stay on Recourse Request</label>
+            </value>
+            <value>
+                <fullName>Style Comparison</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Style Comparison</label>
+            </value>
+            <value>
+                <fullName>Suffix</fullName>
+                <default>false</default>
+                <label>Suffix</label>
+            </value>
+            <value>
+                <fullName>Tax Issue</fullName>
+                <default>false</default>
+                <label>Tax Issue</label>
+            </value>
+            <value>
+                <fullName>Tech Specs</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Tech Specs</label>
+            </value>
+            <value>
+                <fullName>Ticket / Receipt Number</fullName>
+                <default>false</default>
+                <label>Ticket / Receipt Number</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Transfers</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Transfers</label>
+            </value>
+            <value>
+                <fullName>Transfer to A/R</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Transfer to A/R</label>
+            </value>
+            <value>
+                <fullName>Transfer to Consumers</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Transfer to Consumers</label>
+            </value>
+            <value>
+                <fullName>Transfer to Credit</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Transfer to Credit</label>
+            </value>
+            <value>
+                <fullName>Transfer to CSR</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Transfer to CSR</label>
+            </value>
+            <value>
+                <fullName>Transfer to Customer Relations</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Transfer to Customer Relations</label>
+            </value>
+            <value>
+                <fullName>Transfer to NA Sales &amp; Mgmt</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Transfer to NA Sales &amp; Mgmt</label>
+            </value>
+            <value>
+                <fullName>Transfer to National Accounts</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Transfer to National Accounts</label>
+            </value>
+            <value>
+                <fullName>Transfer to POS Support</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Transfer to POS Support</label>
+            </value>
+            <value>
+                <fullName>Transfer to Repair</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Transfer to Repair</label>
+            </value>
+            <value>
+                <fullName>Transfer to Retail Accounting</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>Transfer to Retail Accounting</label>
+            </value>
+            <value>
+                <fullName>Transfer to Sales</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Transfer to Sales</label>
+            </value>
+            <value>
+                <fullName>Transfer to Switchboard/Operator</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Transfer to Switchboard/Operator</label>
+            </value>
+            <value>
+                <fullName>Truck</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Truck</label>
+            </value>
+            <value>
+                <fullName>Unapplied Payments</fullName>
+                <default>false</default>
+                <label>Unapplied Payments</label>
+            </value>
+            <value>
+                <fullName>Unidentified Credit</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Unidentified Credit</label>
+            </value>
+            <value>
+                <fullName>Unidentified Invoice</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Unidentified Invoice</label>
+            </value>
+            <value>
+                <fullName>Unknown Issue</fullName>
+                <default>false</default>
+                <label>Unknown Issue</label>
+            </value>
+            <value>
+                <fullName>Update P.O.P.</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Update P.O.P.</label>
+            </value>
+            <value>
+                <fullName>Vendor Compliance</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Vendor Compliance</label>
+            </value>
+            <value>
+                <fullName>Vendor Shop Maintenance</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Vendor Shop Maintenance</label>
+            </value>
+            <value>
+                <fullName>Visual Merchandising</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Visual Merchandising</label>
+            </value>
+            <value>
+                <fullName>VPN</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>VPN</label>
+            </value>
+            <value>
+                <fullName>W-9</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>W-9</label>
+            </value>
+            <value>
+                <fullName>Warranty</fullName>
+                <color>#FF99FF</color>
+                <default>false</default>
+                <label>Warranty</label>
+            </value>
+            <value>
+                <fullName>Warranty Question</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Warranty Question</label>
+            </value>
+            <value>
+                <fullName>Worn</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Worn</label>
+            </value>
+            <value>
+                <fullName>Worn Exchange</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>Worn Exchange</label>
+            </value>
+            <value>
+                <fullName>Write Offs</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>Write Offs</label>
+            </value>
+            <value>
+                <fullName>Wrong Amount</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>Wrong Amount</label>
+            </value>
+            <value>
+                <fullName>Wrong Label</fullName>
+                <color>#FF6666</color>
+                <default>false</default>
+                <label>Wrong Label</label>
+            </value>
+            <value>
+                <fullName>Wrong Lock Box</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Wrong Lock Box</label>
+            </value>
+            <value>
+                <fullName>Wrong Order</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Wrong Order</label>
+            </value>
+            <value>
+                <fullName>Wrong Ship Date</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Wrong Ship Date</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other Account Info Change Request</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Account Info Change Request</label>
+            </value>
+            <value>
+                <fullName>Other Compliance / Chargeback</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Compliance / Chargeback</label>
+            </value>
+            <value>
+                <fullName>Other Customer / Consumer Inquiry</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Customer / Consumer Inquiry</label>
+            </value>
+            <value>
+                <fullName>Other E-Sales</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other E-Sales</label>
+            </value>
+            <value>
+                <fullName>Other Finance / Billing</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Finance / Billing</label>
+            </value>
+            <value>
+                <fullName>Other Marketing</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Marketing</label>
+            </value>
+            <value>
+                <fullName>Other Order</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Order</label>
+            </value>
+            <value>
+                <fullName>Other Order - Consumer</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Order - Consumer</label>
+            </value>
+            <value>
+                <fullName>Other Price</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Price</label>
+            </value>
+            <value>
+                <fullName>Other Product</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Product</label>
+            </value>
+            <value>
+                <fullName>Other Repair / Return</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Repair / Return</label>
+            </value>
+            <value>
+                <fullName>Other Retailer Issue</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Retailer Issue</label>
+            </value>
+            <value>
+                <fullName>Other Sales Support</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Sales Support</label>
+            </value>
+            <value>
+                <fullName>Other Shipping</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Shipping</label>
+            </value>
+            <value>
+                <fullName>Other Transfer</fullName>
+                <color>#CC9933</color>
+                <default>false</default>
+                <label>Other Transfer</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>SLB Inbox</controllingFieldValue>
+            <valueName>Communication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SLB Inbox</controllingFieldValue>
+            <valueName>Incorrect Account Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SLB Inbox</controllingFieldValue>
+            <valueName>Late Order Entry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SLB Inbox</controllingFieldValue>
+            <controllingFieldValue>Order</controllingFieldValue>
+            <valueName>Order Entry Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Inquiry</controllingFieldValue>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Availability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Inquiry</controllingFieldValue>
+            <valueName>Fit / Sizing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Inquiry</controllingFieldValue>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <controllingFieldValue>Finance / Billing</controllingFieldValue>
+            <valueName>Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Inquiry</controllingFieldValue>
+            <valueName>Product Care / Product Knowledge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <valueName>Allowance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <valueName>Credit Internally Cleared</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <valueName>Credit Taken Twice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <valueName>Defective Allowance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <controllingFieldValue>Finance / Billing</controllingFieldValue>
+            <valueName>Discounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <controllingFieldValue>Finance / Billing</controllingFieldValue>
+            <valueName>Freight or Service Charge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <valueName>Key Account Returns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <valueName>Partial Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <valueName>Reboxing Fee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <valueName>RestockingFee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <valueName>Short Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debit Note</controllingFieldValue>
+            <valueName>Unidentified Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Over Payment</controllingFieldValue>
+            <valueName>Credit Memos Paid as Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Over Payment</controllingFieldValue>
+            <valueName>Invoice Cleared Internally</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Over Payment</controllingFieldValue>
+            <valueName>Invoice Paid Twice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Over Payment</controllingFieldValue>
+            <valueName>Payment Total is More Than Total Invoices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Over Payment</controllingFieldValue>
+            <valueName>Unidentified Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Order</controllingFieldValue>
+            <valueName>Consumer Online Order Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Order</controllingFieldValue>
+            <valueName>Consumer Online Order Revision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Order</controllingFieldValue>
+            <valueName>Cybersource Online Order Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Order</controllingFieldValue>
+            <valueName>Other Order - Consumer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Store Tier Level Change</controllingFieldValue>
+            <valueName>2 to 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Store Tier Level Change</controllingFieldValue>
+            <valueName>3 to 2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Store Tier Level Change</controllingFieldValue>
+            <valueName>3 to 4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Store Tier Level Change</controllingFieldValue>
+            <valueName>4 to 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CRV Recovery</controllingFieldValue>
+            <valueName>Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CRV Recovery</controllingFieldValue>
+            <valueName>Replacement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Transfer</controllingFieldValue>
+            <valueName>Transfer to A/R</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Transfer</controllingFieldValue>
+            <valueName>Transfer to Consumers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Transfer</controllingFieldValue>
+            <valueName>Transfer to Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Transfer</controllingFieldValue>
+            <valueName>Transfer to CSR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Transfer</controllingFieldValue>
+            <valueName>Transfer to Customer Relations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Transfer</controllingFieldValue>
+            <valueName>Transfer to National Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Transfer</controllingFieldValue>
+            <valueName>Transfer to Repair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Transfer</controllingFieldValue>
+            <valueName>Transfer to Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Transfer</controllingFieldValue>
+            <valueName>Transfer to Switchboard/Operator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call Transfer</controllingFieldValue>
+            <valueName>Other Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>E-Sales</controllingFieldValue>
+            <valueName>E-Sales Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>E-Sales</controllingFieldValue>
+            <valueName>E-Sales Setup Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>E-Sales</controllingFieldValue>
+            <valueName>Other E-Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing</controllingFieldValue>
+            <valueName>Advertising</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing</controllingFieldValue>
+            <valueName>Business Cards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing</controllingFieldValue>
+            <valueName>Dealer Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing</controllingFieldValue>
+            <valueName>Media Portal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing</controllingFieldValue>
+            <valueName>Red Edge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing</controllingFieldValue>
+            <valueName>Other Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <valueName>Buying Programs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <valueName>Price Check / Quote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Price</controllingFieldValue>
+            <valueName>Other Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Customization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Product Recommendation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <controllingFieldValue>Repair / Return</controllingFieldValue>
+            <valueName>Quality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Shoe Search</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Style Comparison</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Tech Specs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <controllingFieldValue>Policy</controllingFieldValue>
+            <valueName>Warranty Question</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Other Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Credit Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Inventory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Merchandising</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>New Account (Prospect)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>New Shoe Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <controllingFieldValue>Order</controllingFieldValue>
+            <valueName>Order Revision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Planned Advertising</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Product Clinic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Review Accessories</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Review Red Line Inventory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Review Top Sellers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Sales Promotion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Sign off on Returns for RWSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Update P.O.P.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Vendor Shop Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Support</controllingFieldValue>
+            <valueName>Other Sales Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailer Issue</controllingFieldValue>
+            <valueName>Program Knowledge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailer Issue</controllingFieldValue>
+            <valueName>Retailer not in requested area</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailer Issue</controllingFieldValue>
+            <valueName>Retailer Program Abuse/Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailer Issue</controllingFieldValue>
+            <valueName>Retailer Stock Availability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retailer Issue</controllingFieldValue>
+            <valueName>Other Retailer Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment Issue</controllingFieldValue>
+            <valueName>3rd Party AP Vendor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment Issue</controllingFieldValue>
+            <valueName>Deduction Notice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment Issue</controllingFieldValue>
+            <valueName>Invoice Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment Issue</controllingFieldValue>
+            <valueName>Non-Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment Issue</controllingFieldValue>
+            <valueName>Pays Store / Pays RWSC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment Issue</controllingFieldValue>
+            <valueName>Short Pay / Over Pay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment Issue</controllingFieldValue>
+            <valueName>Wrong Lock Box</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment Issue</controllingFieldValue>
+            <controllingFieldValue>Re-Enrollment</controllingFieldValue>
+            <controllingFieldValue>AR Issues</controllingFieldValue>
+            <controllingFieldValue>DTI</controllingFieldValue>
+            <controllingFieldValue>Credit Memo</controllingFieldValue>
+            <controllingFieldValue>Consumer Request</controllingFieldValue>
+            <controllingFieldValue>NA Sales</controllingFieldValue>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <controllingFieldValue>Inventory</controllingFieldValue>
+            <controllingFieldValue>Credit Card</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment Issue</controllingFieldValue>
+            <controllingFieldValue>Finance / Billing</controllingFieldValue>
+            <valueName>Other Finance / Billing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance / Chargeback</controllingFieldValue>
+            <valueName>IT Compliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance / Chargeback</controllingFieldValue>
+            <valueName>Packing Compliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance / Chargeback</controllingFieldValue>
+            <valueName>Shipping Compliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance / Chargeback</controllingFieldValue>
+            <valueName>Other Compliance / Chargeback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance / Billing</controllingFieldValue>
+            <valueName>Account Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance / Billing</controllingFieldValue>
+            <valueName>Credit Cards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance / Billing</controllingFieldValue>
+            <valueName>Credit Limit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance / Billing</controllingFieldValue>
+            <valueName>Interest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance / Billing</controllingFieldValue>
+            <valueName>Missing Checks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order</controllingFieldValue>
+            <controllingFieldValue>Voluntary Recall</controllingFieldValue>
+            <valueName>New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order</controllingFieldValue>
+            <valueName>Order Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order</controllingFieldValue>
+            <controllingFieldValue>Consumer Request</controllingFieldValue>
+            <valueName>Order Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Order</controllingFieldValue>
+            <valueName>Other Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair / Return</controllingFieldValue>
+            <valueName>Regulatory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair / Return</controllingFieldValue>
+            <valueName>Return Address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair / Return</controllingFieldValue>
+            <valueName>Return Authorization (RA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair / Return</controllingFieldValue>
+            <valueName>Return Disagreement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair / Return</controllingFieldValue>
+            <valueName>Return Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair / Return</controllingFieldValue>
+            <valueName>Safety</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair / Return</controllingFieldValue>
+            <valueName>Other Repair / Return</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Force to Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Package Intercept</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Proof of Delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Shipping Claims</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Shipping Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Shipping Shortage/Overage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Wrong Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Other Shipping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Portal</controllingFieldValue>
+            <valueName>Portal Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer / Consumer Inquiry</controllingFieldValue>
+            <valueName>Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer / Consumer Inquiry</controllingFieldValue>
+            <valueName>Prospective New Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer / Consumer Inquiry</controllingFieldValue>
+            <valueName>Retailer Location</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer / Consumer Inquiry</controllingFieldValue>
+            <valueName>Other Customer / Consumer Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Info Change Request</controllingFieldValue>
+            <controllingFieldValue>B2B - Account Info Change</controllingFieldValue>
+            <valueName>Close Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Account</controllingFieldValue>
+            <valueName>Account Setup</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Account</controllingFieldValue>
+            <valueName>Credit Approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Account</controllingFieldValue>
+            <valueName>Vendor Compliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROM</controllingFieldValue>
+            <valueName>HR Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROM</controllingFieldValue>
+            <valueName>Inventory Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROM</controllingFieldValue>
+            <valueName>Recruitment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROM</controllingFieldValue>
+            <valueName>Red Line Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROM</controllingFieldValue>
+            <valueName>Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROM</controllingFieldValue>
+            <valueName>Visual Merchandising</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RWS Compliance Issue</controllingFieldValue>
+            <valueName>RWS Credit Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RWS Compliance Issue</controllingFieldValue>
+            <valueName>RWS Inventory Turns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RWS Compliance Issue</controllingFieldValue>
+            <valueName>RWS Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RWS Compliance Issue</controllingFieldValue>
+            <valueName>RWS P.O.P.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RWS Compliance Issue</controllingFieldValue>
+            <valueName>RWS Signage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RWS Compliance Issue</controllingFieldValue>
+            <valueName>RWS Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>File</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Open Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Original Invoice Not Received</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Tax Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Amount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Auth Form #</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Bill To</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Branch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Cost Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Department</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>District #</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Employee ID</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Job / Group Name</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Job / Group Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Location</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Plant Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>PO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Suffix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <valueName>Ticket / Receipt Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Incorrect Invoice</controllingFieldValue>
+            <controllingFieldValue>EDI Issue - Initial Capture</controllingFieldValue>
+            <valueName>Unknown Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SWAT</controllingFieldValue>
+            <controllingFieldValue>Recourse</controllingFieldValue>
+            <valueName>Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SWAT</controllingFieldValue>
+            <valueName>Contacts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SWAT</controllingFieldValue>
+            <valueName>Disputes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SWAT</controllingFieldValue>
+            <valueName>Invoicing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SWAT</controllingFieldValue>
+            <valueName>Invoicing Paper Mailing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SWAT</controllingFieldValue>
+            <valueName>Portals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SWAT</controllingFieldValue>
+            <controllingFieldValue>Recourse</controllingFieldValue>
+            <valueName>Unapplied Payments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recourse</controllingFieldValue>
+            <valueName>Deactivated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recourse</controllingFieldValue>
+            <valueName>Removal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Recourse</controllingFieldValue>
+            <valueName>Stay on Recourse Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Freight</controllingFieldValue>
+            <valueName>Credit Memo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Freight</controllingFieldValue>
+            <controllingFieldValue>AR Issues</controllingFieldValue>
+            <controllingFieldValue>Sales Discount</controllingFieldValue>
+            <valueName>Write Offs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Re-Enrollment</controllingFieldValue>
+            <valueName>GSD Round 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Re-Enrollment</controllingFieldValue>
+            <valueName>GSD Round 2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AR Issues</controllingFieldValue>
+            <valueName>Invoice Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AR Issues</controllingFieldValue>
+            <valueName>Payment Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DTI</controllingFieldValue>
+            <valueName>Call Tags</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DTI</controllingFieldValue>
+            <controllingFieldValue>Credit Card</controllingFieldValue>
+            <valueName>Card Charged Incorrectly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DTI</controllingFieldValue>
+            <valueName>DTI Return Authorization (RA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DTI</controllingFieldValue>
+            <valueName>Order Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DTI</controllingFieldValue>
+            <valueName>Shipping Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit Memo</controllingFieldValue>
+            <valueName>Credit Memo Issued?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit Memo</controllingFieldValue>
+            <valueName>Wrong Amount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Request</controllingFieldValue>
+            <valueName>Product Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Request</controllingFieldValue>
+            <controllingFieldValue>Repair</controllingFieldValue>
+            <valueName>Repair Question</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Request</controllingFieldValue>
+            <valueName>Returns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Request</controllingFieldValue>
+            <valueName>Warranty</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA Sales</controllingFieldValue>
+            <valueName>Credit Check Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA Sales</controllingFieldValue>
+            <valueName>Distribution Match-up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA Sales</controllingFieldValue>
+            <valueName>Poster Build Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA Sales</controllingFieldValue>
+            <valueName>Price List Build Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <valueName>Footwear Req &amp; Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <valueName>Program Rules</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <valueName>Revision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inventory</controllingFieldValue>
+            <valueName>Cost Adjustments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inventory</controllingFieldValue>
+            <valueName>Transfers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit Card</controllingFieldValue>
+            <valueName>Paymentech</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit Card</controllingFieldValue>
+            <valueName>Server/Internet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit Card</controllingFieldValue>
+            <valueName>VPN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Forms</controllingFieldValue>
+            <valueName>ACH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Forms</controllingFieldValue>
+            <valueName>Cage Code (SAM)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Forms</controllingFieldValue>
+            <valueName>DNB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Forms</controllingFieldValue>
+            <valueName>W-9</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Change</controllingFieldValue>
+            <valueName>Bounce Back</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Month End</controllingFieldValue>
+            <valueName>End of Day/Transmits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Month End</controllingFieldValue>
+            <valueName>Reports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Discount</controllingFieldValue>
+            <valueName>Charge Back</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voluntary Recall</controllingFieldValue>
+            <valueName>Both New and Worn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voluntary Recall</controllingFieldValue>
+            <valueName>Worn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Store Data</controllingFieldValue>
+            <valueName>Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Store Data</controllingFieldValue>
+            <valueName>Dealer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Store Data</controllingFieldValue>
+            <valueName>Owner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Store Data</controllingFieldValue>
+            <valueName>Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Warranty</controllingFieldValue>
+            <valueName>30-Day Comfort</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Warranty</controllingFieldValue>
+            <valueName>General Warranty Questions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Repair</controllingFieldValue>
+            <valueName>New Repair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return</controllingFieldValue>
+            <valueName>Check Return Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Return</controllingFieldValue>
+            <valueName>Out of Policy Return</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Feedback</controllingFieldValue>
+            <valueName>Marketing Campaign</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B2B - Account Info Change</controllingFieldValue>
+            <valueName>Contact Information Updates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B2B - Account Info Change</controllingFieldValue>
+            <valueName>SOA Email Address Updates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>ARIBA Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>Charged for patches/Striping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>Charged for Patches or Striping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>Duplicate Invoice/PO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>Duplicate PO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>Incorrect Invoice Uploaded to Portal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>Incorrect Legal Entity Billed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>Missing Cost Center/Buyer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>Missing Cost Center or Buyer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>No Rejection Reason</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>Not in the Portal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>PO and Invoice do not Match</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>PO Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>PO Closed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>PO Invalid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>PO Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>Portal Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>SAP Non PO invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected Invoices</controllingFieldValue>
+            <valueName>Short Shipped</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

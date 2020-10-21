@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Detailed_Business_Unit__c</fullName>
+    <description>These are the detailed business units.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the detailed business unit here.</inlineHelpText>
+    <label>Detailed Business Unit</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Business_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales ISM</fullName>
+                <default>false</default>
+                <label>Sales ISM</label>
+            </value>
+            <value>
+                <fullName>Sales ROM</fullName>
+                <default>false</default>
+                <label>Sales ROM</label>
+            </value>
+            <value>
+                <fullName>Sales TSM</fullName>
+                <default>false</default>
+                <label>Sales TSM</label>
+            </value>
+            <value>
+                <fullName>Sales B2B</fullName>
+                <default>false</default>
+                <label>Sales B2B</label>
+            </value>
+            <value>
+                <fullName>Sales RD (MGT)</fullName>
+                <default>false</default>
+                <label>Sales RD (MGT)</label>
+            </value>
+            <value>
+                <fullName>Sales NAM</fullName>
+                <default>false</default>
+                <label>Sales NAM</label>
+            </value>
+            <value>
+                <fullName>Sales CAM</fullName>
+                <default>false</default>
+                <label>Sales CAM</label>
+            </value>
+            <value>
+                <fullName>Sales TTR</fullName>
+                <default>false</default>
+                <label>Sales TTR</label>
+            </value>
+            <value>
+                <fullName>Store Operations</fullName>
+                <default>false</default>
+                <label>Store Operations</label>
+            </value>
+            <value>
+                <fullName>Dealer Operations</fullName>
+                <default>false</default>
+                <label>Dealer Operations</label>
+            </value>
+            <value>
+                <fullName>Store Development</fullName>
+                <default>false</default>
+                <label>Store Development</label>
+            </value>
+            <value>
+                <fullName>Merchandising</fullName>
+                <default>false</default>
+                <label>Merchandising</label>
+            </value>
+            <value>
+                <fullName>NA Retail Accounting</fullName>
+                <default>false</default>
+                <label>NA Retail Accounting</label>
+            </value>
+            <value>
+                <fullName>Store Retail Accounting</fullName>
+                <default>false</default>
+                <label>Store Retail Accounting</label>
+            </value>
+            <value>
+                <fullName>Cash Apps</fullName>
+                <default>false</default>
+                <label>Cash Apps</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+                <label>Customer Service</label>
+            </value>
+            <value>
+                <fullName>Customer Relations</fullName>
+                <default>false</default>
+                <label>Customer Relations</label>
+            </value>
+            <value>
+                <fullName>Customer Service - Key Accounts</fullName>
+                <default>false</default>
+                <label>Customer Service - Key Accounts</label>
+            </value>
+            <value>
+                <fullName>Customer Service - International</fullName>
+                <default>false</default>
+                <label>Customer Service - International</label>
+            </value>
+            <value>
+                <fullName>Eloqua</fullName>
+                <default>false</default>
+                <label>Eloqua</label>
+            </value>
+            <value>
+                <fullName>General Marketing</fullName>
+                <default>false</default>
+                <label>General Marketing</label>
+            </value>
+            <value>
+                <fullName>Tax and Audit</fullName>
+                <default>false</default>
+                <label>Tax and Audit</label>
+            </value>
+            <value>
+                <fullName>Multi Channel</fullName>
+                <default>false</default>
+                <label>Multi Channel</label>
+            </value>
+            <value>
+                <fullName>POS / IA</fullName>
+                <default>false</default>
+                <label>POS / IA</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <valueName>Sales ISM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <valueName>Sales ROM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <valueName>Sales TSM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <valueName>Sales B2B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <valueName>Sales RD (MGT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <valueName>Sales NAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <valueName>Sales CAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <valueName>Sales TTR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <valueName>Store Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <controllingFieldValue>Business Development</controllingFieldValue>
+            <valueName>Dealer Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance</controllingFieldValue>
+            <valueName>NA Retail Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance</controllingFieldValue>
+            <valueName>Store Retail Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance</controllingFieldValue>
+            <valueName>Cash Apps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance</controllingFieldValue>
+            <valueName>Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Customer Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Customer Relations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Customer Service - Key Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Customer Service - International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing</controllingFieldValue>
+            <valueName>Eloqua</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing</controllingFieldValue>
+            <valueName>General Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Development</controllingFieldValue>
+            <valueName>Store Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Development</controllingFieldValue>
+            <valueName>Merchandising</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tax</controllingFieldValue>
+            <valueName>Tax and Audit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer WOW</controllingFieldValue>
+            <valueName>Multi Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer WOW</controllingFieldValue>
+            <valueName>POS / IA</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

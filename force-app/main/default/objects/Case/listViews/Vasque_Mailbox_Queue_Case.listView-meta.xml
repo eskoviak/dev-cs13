@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vasque_Mailbox_Queue_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Vasque Mailbox Queue</label>
+    <queue>Vasque_Mailbox_Queue</queue>
+    <sharedTo>
+        <group>Heritage_Mailbox_Owner</group>
+        <group>Irish_Setter_Mailbox_Owner</group>
+        <group>Redwing_Consumer_Mailbox_Owner</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsROMEscalation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used by TriggerController_Case to reassign the case to the related Account&apos;s ROM one-time only.  This field then will be used by a Workflow to send an email to that ROM.</description>
+    <externalId>false</externalId>
+    <label>ROM Escalation</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

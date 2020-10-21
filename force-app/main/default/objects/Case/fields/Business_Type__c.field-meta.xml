@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Type__c</fullName>
+    <description>This is the controlling picklist for the addition of busines unit.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the business type that is related to this issue.</inlineHelpText>
+    <label>Business Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>B2B Sales</fullName>
+                <default>false</default>
+                <label>B2B Sales</label>
+            </value>
+            <value>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+                <label>Business Development</label>
+            </value>
+            <value>
+                <fullName>Business Technology</fullName>
+                <default>false</default>
+                <label>Business Technology</label>
+            </value>
+            <value>
+                <fullName>Commercialization</fullName>
+                <default>false</default>
+                <label>Commercialization</label>
+            </value>
+            <value>
+                <fullName>Customer Experience</fullName>
+                <default>false</default>
+                <label>Customer Experience</label>
+            </value>
+            <value>
+                <fullName>Customer WOW</fullName>
+                <default>false</default>
+                <label>Customer WOW</label>
+            </value>
+            <value>
+                <fullName>Ecommerce/Multi-Channel</fullName>
+                <default>false</default>
+                <label>Ecommerce/Multi-Channel</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>HR</fullName>
+                <default>false</default>
+                <label>HR</label>
+            </value>
+            <value>
+                <fullName>Industrial Account Sales</fullName>
+                <default>false</default>
+                <label>Industrial Account Sales</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Retail Account Sales</fullName>
+                <default>false</default>
+                <label>Retail Account Sales</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>Specialty Account Sales</fullName>
+                <default>false</default>
+                <label>Specialty Account Sales</label>
+            </value>
+            <value>
+                <fullName>Store Operations</fullName>
+                <default>false</default>
+                <label>Store Operations</label>
+            </value>
+            <value>
+                <fullName>Tax</fullName>
+                <default>false</default>
+                <label>Tax</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

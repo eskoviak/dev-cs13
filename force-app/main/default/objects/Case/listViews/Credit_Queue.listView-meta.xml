@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Queue</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Customer_Number__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Case_Type_Detail__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Queue</filterScope>
+    <label>Credit Queue</label>
+    <queue>CreditQueue</queue>
+    <sharedTo>
+        <group>Credit_Group</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>RWS</label>
+    <protected>false</protected>
+    <values>
+        <field>Contact_Record_Type__c</field>
+        <value xsi:type="xsd:string">Partner_Community_Users</value>
+    </values>
+    <values>
+        <field>Default_Pass__c</field>
+        <value xsi:type="xsd:string">RedWingSh0es{0}</value>
+    </values>
+    <values>
+        <field>Email__c</field>
+        <value xsi:type="xsd:string">sales.force@redwingshoes.com</value>
+    </values>
+    <values>
+        <field>ProfileId__c</field>
+        <value xsi:type="xsd:string">RWS Community Limited User</value>
+    </values>
+    <values>
+        <field>Username__c</field>
+        <value xsi:type="xsd:string">store{0}@rwfb.com</value>
+    </values>
+</CustomMetadata>

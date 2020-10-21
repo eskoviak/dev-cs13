@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Identify the brand(s) involved in this Case</inlineHelpText>
+    <label>Brand</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Carhartt</fullName>
+                <default>false</default>
+                <label>Carhartt</label>
+            </value>
+            <value>
+                <fullName>Irish Setter Brands (Work &amp; Hunt)</fullName>
+                <default>false</default>
+                <label>Irish Setter Brands (Work &amp; Hunt)</label>
+            </value>
+            <value>
+                <fullName>Irish Setter Hunt</fullName>
+                <default>false</default>
+                <label>Irish Setter Hunt</label>
+            </value>
+            <value>
+                <fullName>Irish Setter Work</fullName>
+                <default>false</default>
+                <label>Irish Setter Work</label>
+            </value>
+            <value>
+                <fullName>Red Wing</fullName>
+                <default>false</default>
+                <label>Red Wing</label>
+            </value>
+            <value>
+                <fullName>Red Wing Brand</fullName>
+                <default>false</default>
+                <label>Red Wing Brand</label>
+            </value>
+            <value>
+                <fullName>Red Wing Brand - Other</fullName>
+                <default>false</default>
+                <label>Red Wing Brand - Other</label>
+            </value>
+            <value>
+                <fullName>Red Wing Garments</fullName>
+                <default>false</default>
+                <label>Red Wing Garments</label>
+            </value>
+            <value>
+                <fullName>Red Wing Heritage</fullName>
+                <default>false</default>
+                <label>Red Wing Heritage</label>
+            </value>
+            <value>
+                <fullName>Vasque</fullName>
+                <default>false</default>
+                <label>Vasque</label>
+            </value>
+            <value>
+                <fullName>WORX</fullName>
+                <default>false</default>
+                <label>WORX</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SDFC_Closed_Cases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Planned_Release_Date__c</columns>
+    <columns>Object_Category__c</columns>
+    <columns>Requested_By__c</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>Admin_Working_Case__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.TYPE</field>
+        <operation>equals</operation>
+        <value>Salesforce Change Request</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Closed,Emergency Fix - Deployed</value>
+    </filters>
+    <filters>
+        <field>CASES.CLOSED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>10/30/2014 12:00 AM</value>
+    </filters>
+    <label>SDFC Closed Cases</label>
+    <sharedTo>
+        <group>Sr_System_Administrators</group>
+    </sharedTo>
+</ListView>

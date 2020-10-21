@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <description>Describes where the item is within the life cycle of a request</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Describes where the item is within the life cycle of a request</inlineHelpText>
+    <label>Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>1st Attempt to Contact</fullName>
+                <default>false</default>
+                <label>1st Attempt to Contact</label>
+            </value>
+            <value>
+                <fullName>2nd Attempt to Contact</fullName>
+                <default>false</default>
+                <label>2nd Attempt to Contact</label>
+            </value>
+            <value>
+                <fullName>3rd Attempt to Contact</fullName>
+                <default>false</default>
+                <label>3rd Attempt to Contact</label>
+            </value>
+            <value>
+                <fullName>Assigned to MSTS</fullName>
+                <default>false</default>
+                <label>Assigned to MSTS</label>
+            </value>
+            <value>
+                <fullName>Awaiting Term Approval</fullName>
+                <default>false</default>
+                <label>Awaiting Term Approval</label>
+            </value>
+            <value>
+                <fullName>Business Case Complete</fullName>
+                <default>false</default>
+                <label>Business Case Complete</label>
+            </value>
+            <value>
+                <fullName>Business Case In Process</fullName>
+                <default>false</default>
+                <label>Business Case In Process</label>
+            </value>
+            <value>
+                <fullName>Business Case Recommended</fullName>
+                <default>false</default>
+                <label>Business Case Recommended</label>
+            </value>
+            <value>
+                <fullName>Collections Team Processing</fullName>
+                <default>false</default>
+                <label>Collections Team Processing</label>
+            </value>
+            <value>
+                <fullName>Contact Made - Working Case</fullName>
+                <default>false</default>
+                <label>Contact Made - Working Case</label>
+            </value>
+            <value>
+                <fullName>Data Cleanup - RWBAA</fullName>
+                <default>false</default>
+                <label>Data Cleanup - RWBAA</label>
+            </value>
+            <value>
+                <fullName>Data Cleanup - RWS</fullName>
+                <default>false</default>
+                <label>Data Cleanup - RWS</label>
+            </value>
+            <value>
+                <fullName>Docs for Signature Sent to Customer</fullName>
+                <default>false</default>
+                <label>Docs for Signature Sent to Customer</label>
+            </value>
+            <value>
+                <fullName>Change Management Review</fullName>
+                <default>false</default>
+                <label>Obsolete Change Management Review</label>
+            </value>
+            <value>
+                <fullName>Pending Customer Contact</fullName>
+                <default>false</default>
+                <label>Pending Customer Contact</label>
+            </value>
+            <value>
+                <fullName>Pre-Call Research</fullName>
+                <default>false</default>
+                <label>Pre-Call Research</label>
+            </value>
+            <value>
+                <fullName>Working</fullName>
+                <default>false</default>
+                <label>Working</label>
+            </value>
+            <value>
+                <fullName>Red Wing Work Needed</fullName>
+                <default>false</default>
+                <label>Red Wing Work Needed</label>
+            </value>
+            <value>
+                <fullName>Ready for Final Validation</fullName>
+                <default>false</default>
+                <label>Ready for Final Validation</label>
+            </value>
+            <value>
+                <fullName>Ready for Final Verification</fullName>
+                <default>false</default>
+                <label>Ready for Final Verification</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

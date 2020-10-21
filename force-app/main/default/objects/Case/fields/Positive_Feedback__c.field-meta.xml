@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Positive_Feedback__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Positive Customer Feedback about something they read,heard,saw regarding RWSC.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Positive Customer Feedback about something they read,heard,saw regarding RWSC.</inlineHelpText>
+    <label>Positive Feedback</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

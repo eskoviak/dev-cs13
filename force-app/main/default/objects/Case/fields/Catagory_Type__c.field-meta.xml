@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Catagory_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Category Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advanced Admin</fullName>
+                <default>false</default>
+                <label>Advanced Admin</label>
+            </value>
+            <value>
+                <fullName>Code Change</fullName>
+                <default>false</default>
+                <label>Code Change</label>
+            </value>
+            <value>
+                <fullName>Configuration</fullName>
+                <default>false</default>
+                <label>Configuration</label>
+            </value>
+            <value>
+                <fullName>Data Clean up</fullName>
+                <default>false</default>
+                <label>Data Clean up</label>
+            </value>
+            <value>
+                <fullName>Data Load</fullName>
+                <default>false</default>
+                <label>Data Load</label>
+            </value>
+            <value>
+                <fullName>Large project - combo</fullName>
+                <default>false</default>
+                <label>Large project - combo</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>Simple Admin</fullName>
+                <default>false</default>
+                <label>Simple Admin</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

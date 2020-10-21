@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store_Data_Queue</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Store Data Queue</label>
+    <queue>Store_Data_Queue</queue>
+    <sharedTo>
+        <group>Store_Data_Queue</group>
+    </sharedTo>
+</ListView>

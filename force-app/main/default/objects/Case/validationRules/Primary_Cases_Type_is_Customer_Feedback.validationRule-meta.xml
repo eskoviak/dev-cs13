@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Cases_Type_is_Customer_Feedback</fullName>
+    <active>true</active>
+    <description>Customer Experience Case Record Type &gt; Primary Case Type &quot;Customer Feedback&quot; requires a Positive, Negative,Neutral checkbox to be checked</description>
+    <errorConditionFormula>ISPICKVAL( Type, &apos;Customer Feedback&apos;)&amp;&amp;
+ Positive_Feedback__c = False&amp;&amp; 
+ Negative_Feedback__c = False&amp;&amp;
+ Neutral_Feedback__c = False</errorConditionFormula>
+    <errorDisplayField>Neutral_Feedback__c</errorDisplayField>
+    <errorMessage>Please check a box for Positive, Negative, or Neutral Feedback</errorMessage>
+</ValidationRule>
