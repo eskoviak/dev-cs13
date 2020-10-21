@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_CheckCreditApplicationFields</fullName>
+    <active>true</active>
+    <description>Checks Account record to validate if necessary fields are present to send a Credit Application to MultiService System.</description>
+    <errorConditionFormula>AND(
+isPickVal(Send_Credit_Application__c, &apos;Send&apos;),
+OR(
+isBlank(RWfB_Billing_Address_City__c), 
+isBlank(Text(RWfB_Billing_Address_Country__c)), 
+isBlank(RWfB_Billing_Address_Line_1__c),  
+isBlank(Text(RWfB_Billing_Address_State_Province__c)), 
+isBlank(RWfB_Billing_Address_ZIP_Postal_Code__c), 
+isBlank(Text(BPC_Payment_Terms__c)),
+isBlank(Text(Billing_Frequency__c)),
+isBlank(Text( Invoice_Type__c )),
+/*isBlank(Text(Invoice_Delivery_Method__c)),
+/*isBlank(Text(Company_Type__c)),*/
+isBlank(IA_Federal_ID_Nbr__c ),
+isBlank(Text(Requested_Credit_Limi__c)),  
+isBlank(Email_Application_To__c),
+isPickVal(Requires_Invoicing__c, &apos;No&apos;),
+isBlank(Text(RWBAA_Standard_Application__c)),
+HasBillingContact_BPC__c = FALSE,
+isBlank(Primary_Contact_Email__c ),
+isBlank(Primary_Contact_First_Name__c),
+isBlank(Primary_Contact_Last_Name__c),
+isBlank(Legal_Name__c)
+))</errorConditionFormula>
+    <errorMessage>In order to submit a Credit Application, Requires Invoicing must be Yes, Invoice Type, Legal Name, Fed ID Nbr, Payment, Billing fields,and RWfB Address must be populated, and you must have Primary and Billing contacts identified with email and phone.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RWS_Shoe_Locator_Website__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field indicates if the store is on the RWS Shoe Locator Website. 
+Field Type: Store Data
+Integrated: Y SF&gt;RWS Shoe Locator Website</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field indicates if the store is on the RWS Shoe Locator Website.
+
+Responsible Owner: National Accounts</inlineHelpText>
+    <label>RWS Shoe Locator Website</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

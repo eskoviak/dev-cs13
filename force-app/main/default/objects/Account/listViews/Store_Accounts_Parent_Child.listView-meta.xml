@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store_Accounts_Parent_Child</fullName>
+    <columns>PARENT_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>Store_Number__c</columns>
+    <columns>Dealer__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Concept__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.M3_Store_Child_Account,Account.M3_Store_Parent_Account</value>
+    </filters>
+    <filters>
+        <field>Customer_Status__c</field>
+        <operation>equals</operation>
+        <value>20</value>
+    </filters>
+    <label>Active Store Accounts (Parent &amp; Child)</label>
+    <sharedTo>
+        <group>Sr_System_Administrators</group>
+        <group>Store_Data_Users</group>
+        <group>Store_Retail_Accounting_Group</group>
+    </sharedTo>
+</ListView>

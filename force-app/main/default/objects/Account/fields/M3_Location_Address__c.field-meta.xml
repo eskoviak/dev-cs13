@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>M3_Location_Address__c</fullName>
+    <description>M3 Physical Location Address -used to calculate latitude and longitude -DO NOT TOUCH
+Field Type: M3 
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <formula>M3_Location_Street__c &amp; BR() &amp;
+M3_Location_City__c &amp; &apos;, &apos; &amp;
+M3_Location_State_Province__c &amp; &apos; &apos; &amp;
+M3_Location_ZIP_Postal_Code__c &amp; BR() &amp;
+M3_Location_Country__c</formula>
+    <inlineHelpText>This is the &quot;brick and motor&quot; address for the account.</inlineHelpText>
+    <label>Physical Location Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

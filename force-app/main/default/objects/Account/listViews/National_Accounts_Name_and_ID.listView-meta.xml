@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>National_Accounts_Name_and_ID</fullName>
+    <columns>National_Account_Specialist_Name__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>IA_Account_Name__c</columns>
+    <columns>RIMs_Name__c</columns>
+    <columns>RIMS_ID__c</columns>
+    <columns>IA_ID__c</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>NA_Account_Status__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Industrial_Account_Sales,Account.Industrial_Account_Sales_Locked</value>
+    </filters>
+    <filters>
+        <field>IA_Account_Category__c</field>
+        <operation>equals</operation>
+        <value>National Account</value>
+    </filters>
+    <label>National Accounts - RIMS Name and ID</label>
+    <sharedTo>
+        <group>National_Accounts_Administrators</group>
+        <group>Sr_System_Administrators</group>
+    </sharedTo>
+</ListView>

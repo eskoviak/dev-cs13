@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Format__c</fullName>
+    <description>Requested format of invoice 
+Type: IA 
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the format of the invoice as requested by the customer</inlineHelpText>
+    <label>Invoice Format</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consolidate into single invoice</fullName>
+                <default>false</default>
+                <label>Consolidate into single invoice</label>
+            </value>
+            <value>
+                <fullName>Separate invoice for each location</fullName>
+                <default>false</default>
+                <label>Separate invoice for each location</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

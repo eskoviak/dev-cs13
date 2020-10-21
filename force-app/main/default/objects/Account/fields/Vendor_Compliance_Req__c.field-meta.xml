@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_Compliance_Req__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Triggers approval process for new accounts requiring vendor compliance
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Mark this box if the Customer requires a Vendor Compliance contract</inlineHelpText>
+    <label>Vendor Compliance Req</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HasBillingContact_BPC__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used for Submit Credit Application data check. Not on Layout</description>
+    <externalId>false</externalId>
+    <label>HasBillingContact_BPC</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

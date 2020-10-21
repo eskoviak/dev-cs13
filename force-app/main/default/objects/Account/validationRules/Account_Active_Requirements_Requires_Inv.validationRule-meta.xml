@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Active_Requirements_Requires_Inv</fullName>
+    <active>true</active>
+    <description>To activate an Account, please identify if the your Account Requires Invoicing.</description>
+    <errorConditionFormula>AND(
+Active__c = TRUE,
+OR(
+ISBLANK(TEXT(Requires_Invoicing__c ))
+))</errorConditionFormula>
+    <errorMessage>To activate an Account, please identify if the your Account Requires Invoicing.</errorMessage>
+</ValidationRule>

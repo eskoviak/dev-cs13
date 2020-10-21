@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Phone_Validation</fullName>
+    <active>true</active>
+    <description>Please update the Phone to a standard US format.</description>
+    <errorConditionFormula>AND( 
+
+/* This part is to make sure the rule doesn&apos;t fire on a blank value Not() is used because the validation rule fires when it is true, we want it to fire when it is not blank */ 
+Not($Profile.Name = &apos;RWS Business Partner Community&apos;), 
+NOT(ISBLANK(Phone)), 
+
+OR( 
+/* This First Part is an If Statement to ensure the number is 10 digits long and logically checks if it has an extension in the format of xdddd or x dddd only 4 digits is possible */ 
+IF( 
+AND(OR(Contains(Phone, &quot;x&quot;) , Contains(Phone,&quot;x&quot;)),REGEX(RIGHT(Phone,5), &quot;x[0-9]{4}&quot;)), 
+
+NOT(REGEX(Phone, &quot;\\([0-9]{3}\\) [0-9]{3}\\-[0-9]{4} x[0-9]{4}&quot;)), 
+
+IF( 
+AND(OR(Contains(Phone, &quot;x&quot;) , Contains(Phone,&quot;x&quot;)),REGEX(RIGHT(Phone,4), &quot;x[0-9]{3}&quot;)), 
+
+NOT(REGEX(Phone, &quot;\\([0-9]{3}\\) [0-9]{3}\\-[0-9]{4} x[0-9]{3}&quot;)), 
+
+IF( 
+
+AND(OR(Contains(Phone, &quot;x&quot;) , Contains(Phone,&quot;x&quot;)),REGEX(RIGHT(Phone,3), &quot;x[0-9]{2}&quot;)), 
+
+NOT(REGEX(Phone, &quot;\\([0-9]{3}\\) [0-9]{3}\\-[0-9]{4} x[0-9]{2}&quot;)), 
+
+IF( 
+AND(OR(Contains(Phone, &quot;x&quot;) , Contains(Phone,&quot;x&quot;)),REGEX(RIGHT(Phone,2), &quot;x[0-9]{1}&quot;)), 
+
+NOT(REGEX(Phone, &quot;\\([0-9]{3}\\) [0-9]{3}\\-[0-9]{4} x[0-9]{1}&quot;)), 
+
+IF( 
+AND(OR(Contains(Phone, &quot;x&quot;) , Contains(Phone,&quot;x&quot;)),REGEX(RIGHT(Phone,6), &quot;x\\ [0-9]{4}&quot;)), 
+
+NOT(REGEX(Phone, &quot;\\([0-9]{3}\\) [0-9]{3}\\-[0-9]{4} x\\ [0-9]{4}&quot;)), 
+
+IF( 
+AND(OR(Contains(Phone, &quot;x&quot;) , Contains(Phone,&quot;x&quot;)),REGEX(RIGHT(Phone,5), &quot;x\\ [0-9]{3}&quot;)), 
+
+NOT(REGEX(Phone, &quot;\\([0-9]{3}\\) [0-9]{3}\\-[0-9]{4} x\\ [0-9]{3}&quot;)), 
+
+IF( 
+
+AND(OR(Contains(Phone, &quot;x&quot;) , Contains(Phone,&quot;x&quot;)),REGEX(RIGHT(Phone,4), &quot;x\\ [0-9]{2}&quot;)), 
+
+NOT(REGEX(Phone, &quot;\\([0-9]{3}\\) [0-9]{3}\\-[0-9]{4} x\\ [0-9]{2}&quot;)), 
+
+IF( 
+AND(OR(Contains(Phone, &quot;x&quot;) , Contains(Phone,&quot;x&quot;)),REGEX(RIGHT(Phone,3), &quot;x\\ [0-9]{1}&quot;)), 
+
+NOT(REGEX(Phone, &quot;\\([0-9]{3}\\) [0-9]{3}\\-[0-9]{4} x\\ [0-9]{1}&quot;)), 
+
+
+IF( 
+LEFT(Phone,1)=&quot;(&quot;, 
+NOT( REGEX(Phone, &quot;\\([0-9]{3}\\) [0-9]{3}-[0-9]{4}|\\d{10}&quot;)), 
+NOT(REGEX(Phone, &quot;\\D*?(\\d\\D*?){10}&quot;)) 
+
+
+))))))))), 
+
+/* This part is to ensure that the number is not XXXXXXXXXX. NOTE: this does not work with 1111111111 */ 
+mid(Phone, 2, 1) + mid(Phone, 2, 1) + mid(Phone, 2, 1) + mid 
+(Phone, 2, 1) + mid(Phone, 2, 1) + mid(Phone, 2, 1) + mid(Phone, 2, 1) + mid 
+(Phone, 2, 1) + mid(Phone, 2, 1) + mid(Phone, 2, 1) = mid(Phone, 2, 3)+ mid(Phone, 7, 3)+ mid(Phone, 11, 4), 
+
+/* This is to ensure the phone is not 1111111111 */ 
+Phone = &quot;1111111111&quot; 
+
+
+))</errorConditionFormula>
+    <errorMessage>Phone to match standard US format (123) 456-7890 x1234</errorMessage>
+</ValidationRule>

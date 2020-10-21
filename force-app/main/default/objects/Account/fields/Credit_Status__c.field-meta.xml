@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Maintained by MultiService. Submitted Value only used for internal processes.</inlineHelpText>
+    <label>Credit Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Approved/Active</fullName>
+                <default>false</default>
+                <label>Approved/Active</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+                <label>Submitted</label>
+            </value>
+            <value>
+                <fullName>Credit Hold</fullName>
+                <default>false</default>
+                <label>Credit Hold</label>
+            </value>
+            <value>
+                <fullName>Application Sent</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Application Sent</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Approved</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

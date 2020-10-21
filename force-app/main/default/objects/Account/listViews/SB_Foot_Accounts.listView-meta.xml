@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SB_Foot_Accounts</fullName>
+    <columns>ACCOUNT.ACCOUNT_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>M3_Location_City__c</columns>
+    <columns>M3_Location_State_Province__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Facility_Code__c</field>
+        <operation>equals</operation>
+        <value>FSB</value>
+    </filters>
+    <label>SB Foot Accounts</label>
+</ListView>

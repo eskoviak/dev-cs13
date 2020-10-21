@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Opportunity_Dollars__c</fullName>
+    <description>The sales potential for this account in terms of dollars. 
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The estimated sales potential for this account in terms of dollars. Data is only in SFDC.</inlineHelpText>
+    <label>Sales Opportunity Dollars</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Imported__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Identifies Accounts imported from ACT! and Outlook
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates accounts that were Imported from ACT! and Outlook</inlineHelpText>
+    <label>Imported</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

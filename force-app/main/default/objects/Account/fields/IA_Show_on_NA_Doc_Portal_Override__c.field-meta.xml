@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Show_on_NA_Doc_Portal_Override__c</fullName>
+    <description>Used to override the normal business rules that are populating Show on NA Doc Portal field. If Show or Hide is selected, exceptions rules will control the value in Show on NA Doc Portal thru workflow rules</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates whether the National Account Specialist is overriding normal business rules for showing accounts and documents in the Document Portal.</inlineHelpText>
+    <label>Show on NA Doc Portal Override</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>IA_Account_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Override</fullName>
+                <default>true</default>
+                <label>No Override</label>
+            </value>
+            <value>
+                <fullName>Show</fullName>
+                <default>false</default>
+                <label>Show</label>
+            </value>
+            <value>
+                <fullName>Hide</fullName>
+                <default>false</default>
+                <label>Hide</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>National Account</controllingFieldValue>
+            <valueName>No Override</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Account</controllingFieldValue>
+            <valueName>Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Account</controllingFieldValue>
+            <valueName>Hide</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

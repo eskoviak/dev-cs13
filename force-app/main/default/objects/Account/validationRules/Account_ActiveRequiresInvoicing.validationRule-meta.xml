@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_ActiveRequiresInvoicing</fullName>
+    <active>true</active>
+    <description>Account cannot be activated until it meets its Invoicing Requirements.</description>
+    <errorConditionFormula>AND( Active__c = TRUE,
+HasActiveProgram__c = FALSE,
+AND(ISPICKVAL(Requires_Invoicing__c,&apos;Yes&apos;)),
+NOT(ISPICKVAL(Credit_Status__c,&apos;Approved/Active&apos;))
+)</errorConditionFormula>
+    <errorMessage>You cannot activate this Account until Credit is Approved or you have an active Cash and Carry or Subsidy with Pcard program.</errorMessage>
+</ValidationRule>

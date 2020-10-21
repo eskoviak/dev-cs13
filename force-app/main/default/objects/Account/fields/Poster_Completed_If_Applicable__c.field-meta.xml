@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Poster_Completed_If_Applicable__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates Poster has been completed
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates Poster has been completed. Data is only in Salesforce.</inlineHelpText>
+    <label>Obsolete Poster Completed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

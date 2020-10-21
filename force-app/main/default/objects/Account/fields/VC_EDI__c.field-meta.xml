@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VC_EDI__c</fullName>
+    <description>For Vendor Compliance
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only for accounts that require Vendor Compliance</inlineHelpText>
+    <label>EDI</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In Progress</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Yes</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TexMass_Participant__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Store Data field used to indicate which retailers are participating in this National Account program.
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please check the box if this store participates in the TXMAS National Account Program.
+
+Responsible Owner: Business Development</inlineHelpText>
+    <label>TXMAS Participant</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

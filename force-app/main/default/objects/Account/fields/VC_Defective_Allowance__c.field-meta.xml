@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VC_Defective_Allowance__c</fullName>
+    <description>For Vendor Compliance.
+Field Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only for accounts that require Vendor Compliance</inlineHelpText>
+    <label>Defective Allowance</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1%</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>1%</label>
+            </value>
+            <value>
+                <fullName>2%</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>2%</label>
+            </value>
+            <value>
+                <fullName>1% to be taken as DM</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>1% to be taken as DM</label>
+            </value>
+            <value>
+                <fullName>1% DFI</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>1% DFI</label>
+            </value>
+            <value>
+                <fullName>1% DM</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>1% DM</label>
+            </value>
+            <value>
+                <fullName>1.5% DFI</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>1.5% DFI</label>
+            </value>
+            <value>
+                <fullName>Incl in PL calculation</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Incl in PL calculation</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

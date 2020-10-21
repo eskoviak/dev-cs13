@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Alert__c</fullName>
+    <description>Account Alert Flag (red flag image).The purpose is to enable Customer Service to quickly know that there is a customer issue (when a call comes in) and they will need to check the notes to see what is going on with this account.
+Field Type: GBL
+Integrated: N</description>
+    <externalId>false</externalId>
+    <formula>if(
+ Account_Alert_Active__c  = true, IMAGE( &quot;/img/samples/flag_yellow.gif&quot;, &quot;Red Flag&quot;, 20, 20), null
+)</formula>
+    <inlineHelpText>Flag to alert Customer Service to a potential customer issue. Check the account alert notes to see what is going on with this account.</inlineHelpText>
+    <label>Account Alert</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

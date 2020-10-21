@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Order_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The primary contact for orders. This will look up to an existing contact or allow you to create a new contact.   
+Field Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the primary contact for orders for this account. Clicking this field will take you to the contact information.</inlineHelpText>
+    <label>Primary Order Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Accounts (Primary Order Contact)</relationshipLabel>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

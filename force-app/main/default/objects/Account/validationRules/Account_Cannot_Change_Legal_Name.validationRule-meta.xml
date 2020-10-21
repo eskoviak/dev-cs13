@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Cannot_Change_Legal_Name</fullName>
+    <active>true</active>
+    <description>Prevent the ability to changing Legal Name once Credit Status is processing.</description>
+    <errorConditionFormula>AND(
+    Not($Profile.Name = &apos;System Administrator&apos;),
+    Not($Profile.Name = &apos;RWS Business Partner Community&apos;),
+    Not($Profile.Name = &apos;RWS Retail Acctg - National Accounts&apos;),
+    Not(isBlank(Text(Credit_Status__c))),
+    Not(isPickVal(Credit_Status__c, &apos;Rejected&apos;)),
+    isChanged(Legal_Name__c))</errorConditionFormula>
+    <errorMessage>If you need to change the Legal Name, please call the Business Accounts team. This field is locked after the credit application is processing.</errorMessage>
+</ValidationRule>

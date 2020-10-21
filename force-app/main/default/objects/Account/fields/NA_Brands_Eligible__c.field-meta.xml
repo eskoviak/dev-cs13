@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Brands_Eligible__c</fullName>
+    <description>Eligible Brands for Industrial Accounts 
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Eligible Brands for Industrial Accounts. Data is only in Salesforce.</inlineHelpText>
+    <label>Brands Eligible</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Red Wing Brand, Irish Setter Work, WORX</fullName>
+                <default>true</default>
+                <label>Red Wing Brand, Irish Setter Work, WORX</label>
+            </value>
+            <value>
+                <fullName>Red Wing Brand</fullName>
+                <default>false</default>
+                <label>Red Wing Brand</label>
+            </value>
+            <value>
+                <fullName>Irish Setter Work</fullName>
+                <default>false</default>
+                <label>Irish Setter Work</label>
+            </value>
+            <value>
+                <fullName>WORX</fullName>
+                <default>false</default>
+                <label>WORX</label>
+            </value>
+            <value>
+                <fullName>Irish Setter Hunt</fullName>
+                <default>false</default>
+                <label>Irish Setter Hunt</label>
+            </value>
+            <value>
+                <fullName>Red Wing Heritage</fullName>
+                <default>false</default>
+                <label>Red Wing Heritage</label>
+            </value>
+            <value>
+                <fullName>Vasque</fullName>
+                <default>false</default>
+                <label>Vasque</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

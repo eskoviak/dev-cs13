@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dealer_Renewal_Notification__c</fullName>
+    <description>Used to calculate 120 days in advance of the renewal date</description>
+    <externalId>false</externalId>
+    <formula>Dealer_Next_Renewal_Date__c  - 120</formula>
+    <inlineHelpText>120 days in advance of the renewal date</inlineHelpText>
+    <label>Dealer Renewal Alert Date 120</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

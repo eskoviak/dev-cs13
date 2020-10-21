@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Account_Status__c</fullName>
+    <description>The IA Account Status; Active or Inactive 
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The IA Account Status; Active or Inactive. Sent to Salesforce by IA.</inlineHelpText>
+    <label>IA Account Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_Order_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The secondary contact for orders for this account. This is a look up to contact. 
+Field Type: M3 
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the secondary contact for orders for this account. Clicking this field will take you to the contact information.</inlineHelpText>
+    <label>Secondary Order Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Accounts (Secondary Order Contact)</relationshipLabel>
+    <relationshipName>Accounts1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

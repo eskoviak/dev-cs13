@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Payment_Portal_Name__c</fullName>
+    <description>Invoice Payment Portal Name; usually a 3rd party company</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Invoice Payment Portal Name; usually a 3rd party company</inlineHelpText>
+    <label>Invoice Payment Portal Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Invoice_Payment_Portal__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ariba</fullName>
+                <default>false</default>
+                <label>Ariba</label>
+            </value>
+            <value>
+                <fullName>Basware</fullName>
+                <default>false</default>
+                <label>Basware</label>
+            </value>
+            <value>
+                <fullName>BudExchange</fullName>
+                <default>false</default>
+                <label>BudExchange</label>
+            </value>
+            <value>
+                <fullName>Coupa</fullName>
+                <default>false</default>
+                <label>Coupa</label>
+            </value>
+            <value>
+                <fullName>Exostar</fullName>
+                <default>false</default>
+                <label>Exostar</label>
+            </value>
+            <value>
+                <fullName>Flex Supplier</fullName>
+                <default>false</default>
+                <label>Flex Supplier</label>
+            </value>
+            <value>
+                <fullName>GE Appliances</fullName>
+                <default>false</default>
+                <label>GE Appliances</label>
+            </value>
+            <value>
+                <fullName>GEP Smart</fullName>
+                <default>false</default>
+                <label>GEP Smart</label>
+            </value>
+            <value>
+                <fullName>GE Supplier</fullName>
+                <default>false</default>
+                <label>GE Supplier</label>
+            </value>
+            <value>
+                <fullName>GM PowerSupply</fullName>
+                <default>false</default>
+                <label>GM PowerSupply</label>
+            </value>
+            <value>
+                <fullName>GXS</fullName>
+                <default>false</default>
+                <label>GXS</label>
+            </value>
+            <value>
+                <fullName>HGST Oracle</fullName>
+                <default>false</default>
+                <label>HGST Oracle</label>
+            </value>
+            <value>
+                <fullName>iPayables</fullName>
+                <default>false</default>
+                <label>iPayables</label>
+            </value>
+            <value>
+                <fullName>IPP.gov</fullName>
+                <default>false</default>
+                <label>IPP.gov</label>
+            </value>
+            <value>
+                <fullName>J&amp;J</fullName>
+                <default>false</default>
+                <label>J&amp;J</label>
+            </value>
+            <value>
+                <fullName>John Deere</fullName>
+                <default>false</default>
+                <label>John Deere</label>
+            </value>
+            <value>
+                <fullName>K-Buy</fullName>
+                <default>false</default>
+                <label>K-Buy</label>
+            </value>
+            <value>
+                <fullName>LowesLink</fullName>
+                <default>false</default>
+                <label>LowesLink</label>
+            </value>
+            <value>
+                <fullName>Michelin</fullName>
+                <default>false</default>
+                <label>Michelin</label>
+            </value>
+            <value>
+                <fullName>Noble iSupplier</fullName>
+                <default>false</default>
+                <label>Noble iSupplier</label>
+            </value>
+            <value>
+                <fullName>Open Invoice</fullName>
+                <default>false</default>
+                <label>Open Invoice</label>
+            </value>
+            <value>
+                <fullName>Osram-ap</fullName>
+                <default>false</default>
+                <label>Osram-ap</label>
+            </value>
+            <value>
+                <fullName>Payee Central</fullName>
+                <default>false</default>
+                <label>Payee Central</label>
+            </value>
+            <value>
+                <fullName>SiemensIOL</fullName>
+                <default>false</default>
+                <label>SiemensIOL</label>
+            </value>
+            <value>
+                <fullName>Supplier-te</fullName>
+                <default>false</default>
+                <label>Supplier-te</label>
+            </value>
+            <value>
+                <fullName>Taulia</fullName>
+                <default>false</default>
+                <label>Taulia</label>
+            </value>
+            <value>
+                <fullName>Tradeshift</fullName>
+                <default>false</default>
+                <label>Tradeshift</label>
+            </value>
+            <value>
+                <fullName>Transcepta</fullName>
+                <default>false</default>
+                <label>Transcepta</label>
+            </value>
+            <value>
+                <fullName>Tungsten</fullName>
+                <default>false</default>
+                <label>Tungsten</label>
+            </value>
+            <value>
+                <fullName>WAWF</fullName>
+                <default>false</default>
+                <label>WAWF</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Customer Proprietary Portal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Proprietary Portal</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Ariba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Basware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>BudExchange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Coupa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Exostar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Flex Supplier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>GE Appliances</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>GEP Smart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>GE Supplier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>GM PowerSupply</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>GXS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>HGST Oracle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>iPayables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>IPP.gov</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>J&amp;J</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>John Deere</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>K-Buy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>LowesLink</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Michelin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Noble iSupplier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Open Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Osram-ap</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Payee Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>SiemensIOL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Supplier-te</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Taulia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Tradeshift</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Transcepta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Tungsten</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>WAWF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yes</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Billing_Preference__c</fullName>
+    <description>This field is used to designate the type of billing for the account; local, regional, central, or central bill by location.
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates Billing for this account; local, regional, central, or cental bill by location. Defaulted to Central for a National Account &amp; Local for a Major Account. Entered initially in Salesforce and sent to IA. IA will override SF if different.</inlineHelpText>
+    <label>&gt;Billing Preference</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>IA_Account_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Local Bill</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Local Bill</label>
+            </value>
+            <value>
+                <fullName>Central Bill</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Central Bill</label>
+            </value>
+            <value>
+                <fullName>Central Bill by Location</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Central Bill by Location</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Local or Major Account</controllingFieldValue>
+            <controllingFieldValue>National Account</controllingFieldValue>
+            <valueName>Local Bill</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Account</controllingFieldValue>
+            <valueName>Central Bill</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Account</controllingFieldValue>
+            <valueName>Central Bill by Location</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

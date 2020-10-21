@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Previous_ISM__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Previous ISM that had responsibility for the account</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Previous ISM that had responsibility for the account</inlineHelpText>
+    <label>Previous ISM</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Accounts5</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

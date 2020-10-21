@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_NAM__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that the M3 Account has a National Account Manager on the Account Team. This is used in sharing rules and list views.  
+Type: M3
+Integrated:Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that the M3 Account has a National Account Manager on the Account Team.</inlineHelpText>
+    <label>Has NAM</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

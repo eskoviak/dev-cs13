@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospect_Status_Notes__c</fullName>
+    <description>Additional details about the status of the prospect when the Prospect Status picklist value = &quot;Other&quot;. 
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If &quot;Other&quot; is selected in the Prospect Account Status field, provide details here</inlineHelpText>
+    <label>Prospect Status Notes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

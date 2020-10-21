@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tumblr__c</fullName>
+    <description>This is a URL to Tumblr.
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a URL to Tumblr.
+
+Responsible Owner: Marketing</inlineHelpText>
+    <label>Tumblr</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Url</type>
+</CustomField>

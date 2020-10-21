@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Corporate_Guarantee__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates Credit is under Corporate Guarantee</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates Credit is under Corporate Guarantee</inlineHelpText>
+    <label>Obsolete Corporate Guarantee</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

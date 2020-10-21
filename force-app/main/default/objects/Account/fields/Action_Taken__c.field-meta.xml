@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Action_Taken__c</fullName>
+    <description>Brief description of action taken regarding the store layout. 
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Brief description of action taken regarding the store layout. Details are in the Action Details field.
+
+Responsible Owner: Store Development</inlineHelpText>
+    <label>Obsolete Action Taken</label>
+    <length>32</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

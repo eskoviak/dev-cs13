@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Shoemobile_Frequency__c</fullName>
+    <description>The frequency of the shoemobile service fr this account as defined in the picklist.
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the frequency of the shoemobile service. Data is only in Salesforce.</inlineHelpText>
+    <label>Shoemobile Service Frequency</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Weekly</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Weekly</label>
+            </value>
+            <value>
+                <fullName>Every Other Week</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Every Other Week</label>
+            </value>
+            <value>
+                <fullName>Monthly</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Monthly</label>
+            </value>
+            <value>
+                <fullName>Every Other Month</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Every Other Month</label>
+            </value>
+            <value>
+                <fullName>Quarterly</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Quarterly</label>
+            </value>
+            <value>
+                <fullName>Annually</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Annually</label>
+            </value>
+            <value>
+                <fullName>Semi-Annually</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Semi-Annually</label>
+            </value>
+            <value>
+                <fullName>Every Other Year</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Every Other Year</label>
+            </value>
+            <value>
+                <fullName>As Needed</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>As Needed</label>
+            </value>
+            <value>
+                <fullName>Other (See Notes)</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Other (See Notes)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

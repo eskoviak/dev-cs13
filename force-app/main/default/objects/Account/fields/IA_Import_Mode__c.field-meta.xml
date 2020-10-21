@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Import_Mode__c</fullName>
+    <description>IA to SF Integration Mode set by the the IA Service and CastIron. 
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <label>IA Import Mode</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Initial</fullName>
+                <default>false</default>
+                <label>Initial</label>
+            </value>
+            <value>
+                <fullName>Update</fullName>
+                <default>false</default>
+                <label>Update</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

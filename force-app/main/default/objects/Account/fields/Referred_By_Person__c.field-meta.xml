@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referred_By_Person__c</fullName>
+    <description>This is the name of the person who referred the Lead 
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the name of the Person who referred this account. Data is only in Salesforce.</inlineHelpText>
+    <label>Referred By Person</label>
+    <length>80</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

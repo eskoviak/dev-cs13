@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Industrial_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>IA_Account_Category__c</columns>
+    <columns>NA_Purchase_Program__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.ADDRESS1_STREET</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.ADDRESS1_ZIP</columns>
+    <columns>ACCOUNT.ADDRESS1_COUNTRY</columns>
+    <columns>ISM_Primary_Contact__pc</columns>
+    <columns>Active__pc</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Industrial_Account_Sales,Account.Industrial_Account_Sales_Locked</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.TYPE</field>
+        <operation>equals</operation>
+        <value>Customer</value>
+    </filters>
+    <label>Salesforce Industrial Accounts</label>
+    <sharedTo>
+        <group>ISM_Industrial_Sales_Managers</group>
+        <group>ISM_TSM</group>
+        <group>National_Account_Specialists</group>
+        <group>National_Accounts</group>
+        <group>Sr_System_Administrators</group>
+    </sharedTo>
+</ListView>

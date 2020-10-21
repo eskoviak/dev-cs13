@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_RequiredFieldsOfChildAccounts</fullName>
+    <active>true</active>
+    <description>Rule for enforcing required fields if an Account is a Child Account. Does not apply to Community users. Manual step warning: If additional community profile(s) are added, this validation rule will need to be updated with the new profile(s)</description>
+    <errorConditionFormula>AND(
+     RecordType.Name = &apos;Business Partner Community&apos;,
+     Not(isBlank(ParentId)),
+     Not($Profile.Name = &apos;RWS Business Partner Community&apos;),
+     isBlank(Text(Invoice_Parent_Account__c)))
+
+/*To exclude additional profiles, following this pattern      Not($Profile.Name = &apos;PROFILE NAME&apos;)
+*/</errorConditionFormula>
+    <errorDisplayField>Invoice_Parent_Account__c</errorDisplayField>
+    <errorMessage>Field is required for Child Accounts</errorMessage>
+</ValidationRule>

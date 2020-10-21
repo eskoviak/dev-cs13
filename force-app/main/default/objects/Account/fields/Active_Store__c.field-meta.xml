@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Store__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates the store is active in Xstore. The store may be inactive in M3. 
+Used in the integration to Xstore.
+Field Type: Store Data
+Integrated: Y - SF&gt;Xstore.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used in the integration out to Xstore.  This can be different from the Account status.
+
+Responsible Owner: Store Operations</inlineHelpText>
+    <label>Active Store</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

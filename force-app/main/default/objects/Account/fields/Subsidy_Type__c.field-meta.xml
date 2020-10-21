@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subsidy_Type__c</fullName>
+    <description>The type of subsidy; % or amount
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the type of subsidy; % or amount.Sent to Salesforce by IA.</inlineHelpText>
+    <label>Subsidy Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>$</fullName>
+                <default>false</default>
+                <label>$</label>
+            </value>
+            <value>
+                <fullName>%</fullName>
+                <default>false</default>
+                <label>%</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

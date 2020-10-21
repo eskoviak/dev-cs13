@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Truck_Qty__c</fullName>
+    <description>The total number of trucks for the store.
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field show the total number of trucks for the store.
+
+Responsible Owner: Dealer Operations and Store Operations</inlineHelpText>
+    <label>Truck Qty</label>
+    <precision>7</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

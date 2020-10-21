@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Alert_Notes__c</fullName>
+    <description>If the Account Alert flag is displayed, this field contains the notes explaining the customer issue.
+Field Type: GBL
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Describes the customer issue that triggered the Account Alert (up to 255 characters)</inlineHelpText>
+    <label>Account Alert Notes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

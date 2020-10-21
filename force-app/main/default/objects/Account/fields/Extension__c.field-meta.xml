@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Extension__c</fullName>
+    <description>The field holds an extension number when applicable, since salesforce does not have a standard field for this.  
+Type: GBL
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Phone number extension</inlineHelpText>
+    <label>Extension</label>
+    <length>10</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

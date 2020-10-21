@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store_Carries_Factory_Seconds__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This will be used when a consumer calls and asks where they can buy factory seconds. The CE Rep should be able to look at a list of the stores in salesforce and provide the information over the phone. 
+
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates whether the store carries factory seconds 
+
+Responsible Owner: Customer Experience</inlineHelpText>
+    <label>Store Carries Factory Seconds</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

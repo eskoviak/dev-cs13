@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Filed_for_Bankruptcy__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that an account has filed for bankruptcy
+
+Field Data: M3 Account Credit Field</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that an account has filed for bankruptcy</inlineHelpText>
+    <label>Has Filed for Bankruptcy</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

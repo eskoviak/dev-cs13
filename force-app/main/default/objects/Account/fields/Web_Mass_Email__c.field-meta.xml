@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Web_Mass_Email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field indicates of the store participates in mass web email.
+Field Type: Store Data
+Integrated: Y - SF&gt;Shoe Search</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field indicates of the store participates in mass web email.
+
+Responsible Owner: Store Operations</inlineHelpText>
+    <label>Web Mass Email</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

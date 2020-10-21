@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Launch_Date__c</fullName>
+    <description>The date the new account becomes active. 
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date the new account becomes active. Sent to Salesforce by IA.</inlineHelpText>
+    <label>Launch Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

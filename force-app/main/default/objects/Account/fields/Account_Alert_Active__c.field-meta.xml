@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Alert_Active__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>The purpose is to enable Customer Service to quickly know that there is a customer issue (when a call comes in) and they will need to check the notes to see what is going on with this account.
+Field Type: GBL
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Mark this box to indicate a customer issue; fil in the Account Alert Notes field to explain the issue.</inlineHelpText>
+    <label>Account Alert Active</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

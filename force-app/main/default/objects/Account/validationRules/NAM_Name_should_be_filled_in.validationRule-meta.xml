@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NAM_Name_should_be_filled_in</fullName>
+    <active>true</active>
+    <description>NAM Name should be filled in for National Accounts  when there is a National Account Specialist Name populated</description>
+    <errorConditionFormula>AND(ISBLANK( NAM_Name__c),
+    ISPICKVAL(IA_Account_Category__c , &quot;National Account&quot;), 
+    (NOT(ISBLANK ( National_Account_Specialist_Name__c)))    
+    )</errorConditionFormula>
+    <errorDisplayField>NAM_Name__c</errorDisplayField>
+    <errorMessage>NAM Name must be selected before saving the record. It is required when the National Account Specialist has been assigned.</errorMessage>
+</ValidationRule>

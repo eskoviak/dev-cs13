@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSL_Brand__c</fullName>
+    <description>This field indicates the outside brands the store carries. 
+Field Type: Store Data
+Integrated: Y - SF&gt;Xstore Pricing Portal</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field indicates the outside brands the store carries.
+
+Responsible Owner: Store Operations</inlineHelpText>
+    <label>Outside Line Brands</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BUCK</fullName>
+                <default>false</default>
+                <label>BUCK</label>
+            </value>
+            <value>
+                <fullName>Carhart</fullName>
+                <default>false</default>
+                <label>Carhart</label>
+            </value>
+            <value>
+                <fullName>CAROL</fullName>
+                <default>false</default>
+                <label>CAROL</label>
+            </value>
+            <value>
+                <fullName>GEORG</fullName>
+                <default>false</default>
+                <label>GEORG</label>
+            </value>
+            <value>
+                <fullName>GUARD</fullName>
+                <default>false</default>
+                <label>GUARD</label>
+            </value>
+            <value>
+                <fullName>LACRO</fullName>
+                <default>false</default>
+                <label>LACRO</label>
+            </value>
+            <value>
+                <fullName>MCRAE</fullName>
+                <default>false</default>
+                <label>MCRAE</label>
+            </value>
+            <value>
+                <fullName>NORCR</fullName>
+                <default>false</default>
+                <label>NORCR</label>
+            </value>
+            <value>
+                <fullName>OBAFF</fullName>
+                <default>false</default>
+                <label>OBAFF</label>
+            </value>
+            <value>
+                <fullName>OCARH</fullName>
+                <default>false</default>
+                <label>OCARH</label>
+            </value>
+            <value>
+                <fullName>OFLOR</fullName>
+                <default>false</default>
+                <label>OFLOR</label>
+            </value>
+            <value>
+                <fullName>OLAM</fullName>
+                <default>false</default>
+                <label>OLAM</label>
+            </value>
+            <value>
+                <fullName>OMISC</fullName>
+                <default>false</default>
+                <label>OMISC</label>
+            </value>
+            <value>
+                <fullName>OREB</fullName>
+                <default>false</default>
+                <label>OREB</label>
+            </value>
+            <value>
+                <fullName>OSAS</fullName>
+                <default>false</default>
+                <label>OSAS</label>
+            </value>
+            <value>
+                <fullName>OSWAT</fullName>
+                <default>false</default>
+                <label>OSWAT</label>
+            </value>
+            <value>
+                <fullName>PEDAG</fullName>
+                <default>false</default>
+                <label>PEDAG</label>
+            </value>
+            <value>
+                <fullName>RDBCK</fullName>
+                <default>false</default>
+                <label>RDBCK</label>
+            </value>
+            <value>
+                <fullName>RW136</fullName>
+                <default>false</default>
+                <label>RW136</label>
+            </value>
+            <value>
+                <fullName>Supplier 2</fullName>
+                <default>false</default>
+                <label>Supplier 2</label>
+            </value>
+            <value>
+                <fullName>Supplier 3</fullName>
+                <default>false</default>
+                <label>Supplier 3</label>
+            </value>
+            <value>
+                <fullName>Supplier 4</fullName>
+                <default>false</default>
+                <label>Supplier 4</label>
+            </value>
+            <value>
+                <fullName>Supplier 5</fullName>
+                <default>false</default>
+                <label>Supplier 5</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

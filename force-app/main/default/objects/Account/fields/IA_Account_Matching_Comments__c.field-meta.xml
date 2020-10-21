@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Account_Matching_Comments__c</fullName>
+    <description>This field is used to relay comments regarding the exercise of matching the Accounts in SFDC to the RIMS accounts converted to IA.
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Comments about the matching process. Data is only in Salesforce.</inlineHelpText>
+    <label>Account Matching Comments</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

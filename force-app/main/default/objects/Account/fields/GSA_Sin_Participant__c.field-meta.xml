@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GSA_Sin_Participant__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field indicate of the store participates in General Services Administration - Special Item Number participant. 
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field indicate of the store participates in General Services Administration - Special Item Number participant.
+
+Responsible Owner: Business Development</inlineHelpText>
+    <label>GSA Sin Participant</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

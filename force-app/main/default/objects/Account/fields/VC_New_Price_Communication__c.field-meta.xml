@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VC_New_Price_Communication__c</fullName>
+    <description>For Vendor Compliance
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only for accounts that require Vendor Compliance</inlineHelpText>
+    <label>New Price Communication</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DD submits through Vendor Central</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>DD submits through Vendor Central</label>
+            </value>
+            <value>
+                <fullName>Email Excel PL to Mid States through Sales Rep; incl new prices w/discounts</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Email Excel PL to Mid States through Sales Rep; incl new prices w/discounts</label>
+            </value>
+            <value>
+                <fullName>Email Excel PL to Wheatbelt through Sales Rep; incl new prices w/discounts</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Email Excel PL to Wheatbelt through Sales Rep; incl new prices w/discounts</label>
+            </value>
+            <value>
+                <fullName>Email special form through Sales Rep</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Email special form through Sales Rep</label>
+            </value>
+            <value>
+                <fullName>National Account</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>National Account</label>
+            </value>
+            <value>
+                <fullName>Sales Rep handles</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Sales Rep handles</label>
+            </value>
+            <value>
+                <fullName>Sales Rep submits; DD special PL to DM</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Sales Rep submits; DD special PL to DM</label>
+            </value>
+            <value>
+                <fullName>Sales Rep through Vendor Central</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Sales Rep through Vendor Central</label>
+            </value>
+            <value>
+                <fullName>Special form through Sales Rep</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Special form through Sales Rep</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

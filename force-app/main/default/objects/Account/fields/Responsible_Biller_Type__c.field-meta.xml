@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responsible_Biller_Type__c</fullName>
+    <description>Designates who is responsible for billing the industrial account; Corporate Office or Store
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This designates who is responsible for billing the industrial account; either Corporate Office or the Store. Sent to Salesforce by IA.</inlineHelpText>
+    <label>Responsible Biller Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Store</fullName>
+                <default>false</default>
+                <label>Store</label>
+            </value>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

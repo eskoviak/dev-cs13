@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store_Type_Name__c</fullName>
+    <description>Store data field for classifying the type of retail operation.
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the Store Type Name used to indicate the type of retail operation.
+
+Responsible Owner: Dealer Operations and Store Development</inlineHelpText>
+    <label>Store Type Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Retail Store</fullName>
+                <default>false</default>
+                <label>Retail Store</label>
+            </value>
+            <value>
+                <fullName>Retail Combo</fullName>
+                <default>false</default>
+                <label>Retail Combo</label>
+            </value>
+            <value>
+                <fullName>Industrial Mobile Center</fullName>
+                <default>false</default>
+                <label>Industrial Mobile Center</label>
+            </value>
+            <value>
+                <fullName>Truck Only</fullName>
+                <default>false</default>
+                <label>Truck Only</label>
+            </value>
+            <value>
+                <fullName>Special Event/Other</fullName>
+                <default>false</default>
+                <label>Special Event/Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

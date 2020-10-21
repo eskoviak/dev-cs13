@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Ship_to_Loc_Type__c</fullName>
+    <description>Specifies where product can be shipped; to the company, to the employee, or no restrictions
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Specifies where product can be shipped; to the company, to the employee, or either 
+Data is only in Salesforce.</inlineHelpText>
+    <label>Ship-to Location Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Any</fullName>
+                <default>false</default>
+                <label>Any</label>
+            </value>
+            <value>
+                <fullName>Ship to Company</fullName>
+                <default>false</default>
+                <label>Ship to Company</label>
+            </value>
+            <value>
+                <fullName>Ship to Employee</fullName>
+                <default>false</default>
+                <label>Ship to Employee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

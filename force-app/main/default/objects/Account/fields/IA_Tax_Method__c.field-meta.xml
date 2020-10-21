@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Tax_Method__c</fullName>
+    <description>Designates how tax should be charged
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Designates how tax should be charged
+Data is only in Salesforce.</inlineHelpText>
+    <label>Tax Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Tax</fullName>
+                <default>false</default>
+                <label>No Tax</label>
+            </value>
+            <value>
+                <fullName>Subsidy not taxed</fullName>
+                <default>false</default>
+                <label>Subsidy not taxed</label>
+            </value>
+            <value>
+                <fullName>Subsidy taxed</fullName>
+                <default>false</default>
+                <label>Subsidy taxed</label>
+            </value>
+            <value>
+                <fullName>Taxed up to Subsidy</fullName>
+                <default>false</default>
+                <label>Taxed up to Subsidy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

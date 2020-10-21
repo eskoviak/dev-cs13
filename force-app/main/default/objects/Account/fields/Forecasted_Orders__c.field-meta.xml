@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecasted_Orders__c</fullName>
+    <description>Indicates whether this account has forecasted orders
+Field Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates customer sends forecasted orders</inlineHelpText>
+    <label>Forecasted Orders</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Person_Account_First_Name_is_required</fullName>
+    <active>false</active>
+    <description>Require a first name on all person accounts</description>
+    <errorConditionFormula>ISBLANK(FirstName)</errorConditionFormula>
+    <errorDisplayField>FirstName</errorDisplayField>
+    <errorMessage>You must enter the consumer&apos;s First Name</errorMessage>
+</ValidationRule>

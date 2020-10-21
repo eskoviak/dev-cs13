@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountIsShared__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This indicates that a wholesale account is being shared between 2 or more individuals as indicated</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This indicates that a wholesale account is being shared between 2 or more individuals as indicated</inlineHelpText>
+    <label>AccountIsShared</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VC_Comments__c</fullName>
+    <description>For Vendor Compliance
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only for accounts that require Vendor Compliance</inlineHelpText>
+    <label>VC Comments</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

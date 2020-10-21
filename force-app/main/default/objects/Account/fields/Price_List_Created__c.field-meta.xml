@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_List_Created__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Price List Created indicator
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Price List has been created. Data is only in Salesforce.</inlineHelpText>
+    <label>Price List Created</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

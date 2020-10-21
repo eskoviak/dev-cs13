@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand_Notes__c</fullName>
+    <description>Brand Notes for Industrial Accounts - used to make a note about brand information related to the account
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Notes regarding Brands related to the account. Data is only in Salesforce.</inlineHelpText>
+    <label>Brand Notes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

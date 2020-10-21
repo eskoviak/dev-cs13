@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cage_Number__c</fullName>
+    <description>Store Data field for commercial and government entity code. Need these numbers assigned to do business with government accounts.
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the Cage number (Commercial and Government Entity Code). 
+
+Responsible Owner: Retail Accounting</inlineHelpText>
+    <label>Cage Number</label>
+    <length>32</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

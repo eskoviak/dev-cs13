@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store_Region_Number__c</fullName>
+    <description>The Region Number for the Region Name and Director. The field is populated from a formula. This data is specifically for Stores.
+Field Type: Store Data
+Integrated: N - The field is populated from a formula.</description>
+    <externalId>false</externalId>
+    <formula>CASE(Store_Region_Name__c,&quot;West&quot;,&quot;01&quot;,&quot;Central&quot;,&quot;02&quot;,&quot;East&quot;,&quot;03&quot;,&quot;Heartland&quot;,&quot;04&quot;,&quot;South&quot;,&quot;05&quot;,&quot;The Gulf&quot;,&quot;06&quot;,&quot;&quot;)</formula>
+    <inlineHelpText>This is the Region number for the Store Region Name and Region Director.
+
+Responsible Owner: Auto Populated</inlineHelpText>
+    <label>Store Region Number</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

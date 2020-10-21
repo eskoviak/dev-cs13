@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResponsibleBillerStoreNumber__c</fullName>
+    <description>The Responsible Biller Account Store Number</description>
+    <externalId>false</externalId>
+    <formula>Responsible_Biller_Store_Account__r.Store_Number__c</formula>
+    <inlineHelpText>The Responsible Biller Account Store Number</inlineHelpText>
+    <label>Responsible Biller Store Number</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

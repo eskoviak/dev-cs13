@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsNationalAccount__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Obsolete - Replaced by &gt;National or Major Account, but still on page layouts
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Obsolete</inlineHelpText>
+    <label>Obsolete National Account</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

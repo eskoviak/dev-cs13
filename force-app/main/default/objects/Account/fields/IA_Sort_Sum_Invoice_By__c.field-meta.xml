@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Sort_Sum_Invoice_By__c</fullName>
+    <description>Notes about how to sort and/or summarize the invoice 
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Instructions about how the customer would like the invoice sorted and/or summarized. 
+Data is only in Salesforce.</inlineHelpText>
+    <label>Sort/Summarize Invoice By</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

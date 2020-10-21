@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POS_System_Live_Date__c</fullName>
+    <description>The date the Store goes live on the selected Red Wing Shoe Co.Point of Sale System. 
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date the store goes live on the Red Wing Shoe Co. Point of Sale System.</inlineHelpText>
+    <label>POS System Live Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

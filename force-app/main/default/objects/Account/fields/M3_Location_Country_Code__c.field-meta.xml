@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>M3_Location_Country_Code__c</fullName>
+    <description>M3 Location Country Code
+Type: M3
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <label>Physical Location Country Code</label>
+    <length>3</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

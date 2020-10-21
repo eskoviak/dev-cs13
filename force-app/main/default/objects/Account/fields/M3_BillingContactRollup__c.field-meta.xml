@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>M3_BillingContactRollup__c</fullName>
+    <description>Not used - Meant to be used to rollup fields that have been sent from M3
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <label>Obsolete M3 Billing Contact</label>
+    <length>1000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

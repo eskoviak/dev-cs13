@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Final_Conference_Call_Performed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to indicate that the final RWSC &amp; Customer conference call occurred, prior to launching a new Industrial account
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Final conference call with the account has been completed.Data is only in salesforce.</inlineHelpText>
+    <label>Final Conference Call Performed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

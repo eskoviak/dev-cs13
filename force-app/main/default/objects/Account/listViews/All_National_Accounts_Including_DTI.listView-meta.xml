@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_National_Accounts_Including_DTI</fullName>
+    <booleanFilter>1 OR (2 AND 3)</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ACCOUNT_NUMBER</columns>
+    <columns>ACCOUNT.ADDRESS1_STREET</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.ADDRESS1_ZIP</columns>
+    <columns>IA_Bill_to_Address_Notes__c</columns>
+    <columns>ACCOUNT.ADDRESS2_STATE</columns>
+    <columns>National_Account_Specialist_Name__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>IS_PERSON_ACCOUNT</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Has_NAM__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Industrial_Account_Sales,Account.Industrial_Account_Sales_Locked</value>
+    </filters>
+    <filters>
+        <field>IA_Account_Category__c</field>
+        <operation>equals</operation>
+        <value>National Account</value>
+    </filters>
+    <label>All National Accounts (Including DTI)</label>
+    <sharedTo>
+        <group>National_Account_Specialists</group>
+        <group>National_Accounts</group>
+        <role>System_Administrators</role>
+    </sharedTo>
+</ListView>

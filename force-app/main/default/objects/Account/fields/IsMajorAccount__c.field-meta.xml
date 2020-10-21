@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsMajorAccount__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Replaced by &gt;National or Major Account, but still on page layouts
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <label>Local or Major Account</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

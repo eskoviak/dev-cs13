@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Hold_Active__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field triggers Credit Hold &quot;flag&quot;. Workflow rules based on integrated credit limit data from M3 automatically populate and clear this field. 
+Field Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the account is on Credit Hold and causes the Credit Hold &quot;flag&quot; to show on the account.</inlineHelpText>
+    <label>Credit Hold Active</label>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>National_Accounts_Created_Today</fullName>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ACCOUNT_NUMBER</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>IA_Account_Category__c</columns>
+    <columns>NA_Billing_Preference__c</columns>
+    <columns>NA_Account_Status__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>IA_Account_Category__c</field>
+        <operation>equals</operation>
+        <value>National Account</value>
+    </filters>
+    <filters>
+        <field>IA_ID__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>National Accounts Created Today</label>
+    <sharedTo>
+        <role>System_Administrators</role>
+        <roleAndSubordinates>National_Account_Supervisor</roleAndSubordinates>
+    </sharedTo>
+</ListView>

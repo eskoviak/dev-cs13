@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Pass_or_Fail_Response__c</fullName>
+    <description>Used in the SF&lt;&gt;IA Integration; IA will issue a Pass or Fail to SFDC as a response in SF &gt; IA. In IA&gt;SF this is not applicable.
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <label>IA Pass or Fail Response</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pass</fullName>
+                <default>false</default>
+                <label>Pass</label>
+            </value>
+            <value>
+                <fullName>Fail</fullName>
+                <default>false</default>
+                <label>Fail</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

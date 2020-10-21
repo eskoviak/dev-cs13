@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Special_Purchase_Details__c</fullName>
+    <description>Not used - not on an business layouts in use
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <label>Obsolete Special Purchase Details</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

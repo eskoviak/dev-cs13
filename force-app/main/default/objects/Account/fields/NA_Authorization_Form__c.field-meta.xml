@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Authorization_Form__c</fullName>
+    <description>Type of Authorization 
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Type of authorization needed. Data is only in salesforce.</inlineHelpText>
+    <label>Eligibility Management Tool</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RWBA Authorization Form</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>RWBA Authorization Form</label>
+            </value>
+            <value>
+                <fullName>Account Authorization Form</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Account Authorization Form</label>
+            </value>
+            <value>
+                <fullName>List of Authorized Employees</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>List of Authorized Employees</label>
+            </value>
+            <value>
+                <fullName>List of Authorized Employees on P.O.</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>List of Authorized Employees on P.O.</label>
+            </value>
+            <value>
+                <fullName>Pre-Paid Certificate</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Pre-Paid Certificate</label>
+            </value>
+            <value>
+                <fullName>Database of Authorized Employees</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Database of Authorized Employees</label>
+            </value>
+            <value>
+                <fullName>Authorized Names on Purchase Order</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Authorized Names on Purchase Order</label>
+            </value>
+            <value>
+                <fullName>Database of Employees Authorized</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Database of Employees Authorized</label>
+            </value>
+            <value>
+                <fullName>List of Employees Authorized</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>List of Employees Authorized</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

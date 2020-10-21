@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shoe_Truck_Attached__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Not used - not on any business layouts in use 
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <label>Obsolete Shoe Truck Attached</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Status__c</fullName>
+    <description>Updated automatically in the New Account Approval process.
+Field Type: GBL
+Integrated: N
+New Account process has not deployed and approval process is not in use.</description>
+    <externalId>false</externalId>
+    <label>Approval Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <color>#0B6FCE</color>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Submitted for Approval</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Submitted for Approval</label>
+            </value>
+            <value>
+                <fullName>In Vendor Compliance</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>In Vendor Compliance</label>
+            </value>
+            <value>
+                <fullName>In Credit</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>In Credit</label>
+            </value>
+            <value>
+                <fullName>Scheduled for M3</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Scheduled for M3</label>
+            </value>
+            <value>
+                <fullName>Added to M3</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Added to M3</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store_Email__c</fullName>
+    <description>This is the store email address. 
+Field Type: Store Data, - This is a formula field utilizing an M3 integrated field
+Integrated: Y -  SF&gt;Xstore</description>
+    <externalId>false</externalId>
+    <formula>Store_Manager__r.Email</formula>
+    <inlineHelpText>This is the store email address, which comes from the Store Manager contact email address
+
+Responsible Owner: M3 Integration</inlineHelpText>
+    <label>Store Email</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

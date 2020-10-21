@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Credit_Application__c</fullName>
+    <description>Triggers an outbound message to MultiService Credit System. Updates date fields also.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select &apos;Send&apos; to send credit application to MultiService System</inlineHelpText>
+    <label>Send Credit Application</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Send</fullName>
+                <default>false</default>
+                <label>Send</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

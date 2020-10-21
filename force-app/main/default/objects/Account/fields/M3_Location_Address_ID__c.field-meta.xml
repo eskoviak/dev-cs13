@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>M3_Location_Address_ID__c</fullName>
+    <description>The unique id assigned by the M3 integration to the M3 location address</description>
+    <externalId>false</externalId>
+    <label>Obsolete Physical Location Address  ID</label>
+    <length>10</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

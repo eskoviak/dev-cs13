@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Order_Confirmation__c</fullName>
+    <description>Not Used - data type was not compatible with M3 data.</description>
+    <externalId>false</externalId>
+    <label>Obsolete Email: Order Confirmation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

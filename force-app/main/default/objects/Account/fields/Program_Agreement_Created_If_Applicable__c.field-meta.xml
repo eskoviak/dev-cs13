@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Agreement_Created_If_Applicable__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates task to create the Program Agreement is complete
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check Program Agreement Created only if applicable. Data is only in Salesforce.</inlineHelpText>
+    <label>Program Agreement Created</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rel_Retail_Store_ID__c</fullName>
+    <description>This is the Retail Store ID from Relate.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Retail Store ID from Relate.</inlineHelpText>
+    <label>Retail Store ID</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

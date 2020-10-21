@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certificate_of_Liability_Expiration_Date__c</fullName>
+    <description>The Certificate of Liability Expiration Date</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Expiration Date for Certificate of Liability</inlineHelpText>
+    <label>Certificate of Liability Expiration Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

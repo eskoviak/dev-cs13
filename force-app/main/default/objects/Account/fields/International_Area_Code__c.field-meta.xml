@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>International_Area_Code__c</fullName>
+    <description>International Geographical Area Code</description>
+    <externalId>false</externalId>
+    <inlineHelpText>International Geographical Area Code</inlineHelpText>
+    <label>International Area Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ASA</fullName>
+                <default>false</default>
+                <label>ASA</label>
+            </value>
+            <value>
+                <fullName>EAF</fullName>
+                <default>false</default>
+                <label>EAF</label>
+            </value>
+            <value>
+                <fullName>MCA</fullName>
+                <default>false</default>
+                <label>MCA</label>
+            </value>
+            <value>
+                <fullName>MEA</fullName>
+                <default>false</default>
+                <label>MEA</label>
+            </value>
+            <value>
+                <fullName>NAL</fullName>
+                <default>false</default>
+                <label>NAL</label>
+            </value>
+            <value>
+                <fullName>NAO</fullName>
+                <default>false</default>
+                <label>NAO</label>
+            </value>
+            <value>
+                <fullName>RCA</fullName>
+                <default>false</default>
+                <label>RCA</label>
+            </value>
+            <value>
+                <fullName>SAM</fullName>
+                <default>false</default>
+                <label>SAM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

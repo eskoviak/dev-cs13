@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tax_Exemption_Reason__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Available in Business Partner Community</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select Tax Exemption Reason if the Account is Tax Exempt.</inlineHelpText>
+    <label>Tax Exemption Reason</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Tax_Exemption_Reason__c.Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Tax_Exemption_Reason__c</referenceTo>
+    <relationshipLabel>Accounts claiming Exemption</relationshipLabel>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transfer_Group_Number__c</fullName>
+    <description>This is the RIMS Parent Store.
+Field Type: Store Data
+Integrated: Y - SF&gt;Xstore</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the RIMS Parent Store in this field.
+
+Responsible Owner: Dealer Operations and Store Operations</inlineHelpText>
+    <label>Transfer Group Number</label>
+    <length>10</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

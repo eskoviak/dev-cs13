@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Status_Message__c</fullName>
+    <description>IA to SF Integration Status set by the the IA Service and CastIron. 
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <label>IA Status Message</label>
+    <length>256</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

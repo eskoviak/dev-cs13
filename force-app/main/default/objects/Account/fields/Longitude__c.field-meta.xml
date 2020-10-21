@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Longitude__c</fullName>
+    <description>This is the longitude value base off the physical location.
+Field Type: Store Data
+Integrated: Y - SF&gt;Xstore</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the longitude value base off the physical location.
+
+Responsible Owner: M3 Integration</inlineHelpText>
+    <label>Longitude</label>
+    <precision>9</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

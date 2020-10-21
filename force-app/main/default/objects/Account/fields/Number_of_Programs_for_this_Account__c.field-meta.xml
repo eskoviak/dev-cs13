@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Programs_for_this_Account__c</fullName>
+    <description>The number of programs in IA for this account. 
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Since salesforce only shows information for 1 program, you must go to IA for accurate information regarding programs and pricing if there is more than 1 program. Sent to Salesforce by IA.</inlineHelpText>
+    <label>Number of Programs for this Account</label>
+    <precision>11</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

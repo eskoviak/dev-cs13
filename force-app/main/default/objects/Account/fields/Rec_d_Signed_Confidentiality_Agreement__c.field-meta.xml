@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rec_d_Signed_Confidentiality_Agreement__c</fullName>
+    <description>Date we received signed Confidentiality agreement
+Field Type: Busdev
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date we received signed Confidentiality agreement</inlineHelpText>
+    <label>Rec&apos;d Signed Confidentiality Agreement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

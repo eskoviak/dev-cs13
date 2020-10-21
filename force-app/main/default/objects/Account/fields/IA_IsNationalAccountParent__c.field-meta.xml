@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_IsNationalAccountParent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to designate the Account as the National Account Parent where programs, pricing, and billing are managed internally by sales and accounting. 
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Designates this account as a National Account &quot;parent&quot; managed by the National Account sales &amp; support teams. Data is only in Salesforce.</inlineHelpText>
+    <label>National Account Parent</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

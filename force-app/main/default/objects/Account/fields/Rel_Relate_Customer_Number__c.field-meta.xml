@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rel_Relate_Customer_Number__c</fullName>
+    <description>This is the Customer Number from Relate.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Customer Number from Relate.</inlineHelpText>
+    <label>Relate Customer Number</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

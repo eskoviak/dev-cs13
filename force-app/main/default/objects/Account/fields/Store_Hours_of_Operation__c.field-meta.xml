@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store_Hours_of_Operation__c</fullName>
+    <description>The hours of operation for this store.
+Field Type: Store Data
+Integrated: Y - SF&gt;Xstore</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The hours of operation for this store.
+
+Responsible Owner: None</inlineHelpText>
+    <label>Store Hours of Operation</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

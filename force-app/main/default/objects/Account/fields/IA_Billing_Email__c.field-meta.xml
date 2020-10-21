@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Billing_Email__c</fullName>
+    <description>This is the email address for sending invoices to the account
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Required if Invoice Delivery Option is Email. This is the Invoice Email Address. Data is only in Salesforce.</inlineHelpText>
+    <label>Bill-to Email Address</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

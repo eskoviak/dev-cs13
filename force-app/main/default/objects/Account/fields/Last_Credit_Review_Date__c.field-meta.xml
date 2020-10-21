@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Credit_Review_Date__c</fullName>
+    <description>Credit Team edits this field based on their review date. Used to notify the team that the account is due for a credit review.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Credit Team edits this field based on their review date. Used to notify the team that the account is due for a credit review.</inlineHelpText>
+    <label>Last Credit Review Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

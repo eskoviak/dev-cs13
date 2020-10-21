@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VC_Marketing_Funds__c</fullName>
+    <description>For Vendor Compliance
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Type of Marketing Funds on accounts that require Vendor Compliance</inlineHelpText>
+    <label>Marketing Funds</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2%</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>2%</label>
+            </value>
+            <value>
+                <fullName>3%</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>3%</label>
+            </value>
+            <value>
+                <fullName>5%</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>5%</label>
+            </value>
+            <value>
+                <fullName>7%</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>7%</label>
+            </value>
+            <value>
+                <fullName>9%</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>9%</label>
+            </value>
+            <value>
+                <fullName>2% rebate quarterly</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>2% rebate quarterly</label>
+            </value>
+            <value>
+                <fullName>3% off invoice</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>3% off invoice</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

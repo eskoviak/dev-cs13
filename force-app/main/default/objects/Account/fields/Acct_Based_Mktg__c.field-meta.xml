@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acct_Based_Mktg__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Account Based Marketing Indicator</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Account Based Marketing Indicator.  Maintained by Sales Enablement and Marketing</inlineHelpText>
+    <label>Acct Based Mktg(ABM)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

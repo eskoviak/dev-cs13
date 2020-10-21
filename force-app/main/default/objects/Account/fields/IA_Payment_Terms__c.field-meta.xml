@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Payment_Terms__c</fullName>
+    <description>The payment terms specific to Industrial Accounts. 
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Payment Terms specific to Industrial Accounts.Data is only in Salesforce.</inlineHelpText>
+    <label>Industrial Account Payment Terms</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Net 30 Days</fullName>
+                <default>false</default>
+                <label>Net 30 Days</label>
+            </value>
+            <value>
+                <fullName>Net 10 Days</fullName>
+                <default>false</default>
+                <label>Net 10 Days</label>
+            </value>
+            <value>
+                <fullName>Net 20 Days</fullName>
+                <default>false</default>
+                <label>Net 20 Days</label>
+            </value>
+            <value>
+                <fullName>Net 28 Days</fullName>
+                <default>false</default>
+                <label>Net 28 Days</label>
+            </value>
+            <value>
+                <fullName>Net 45 Days</fullName>
+                <default>false</default>
+                <label>Net 45 Days</label>
+            </value>
+            <value>
+                <fullName>Net 60 Days</fullName>
+                <default>false</default>
+                <label>Net 60 Days</label>
+            </value>
+            <value>
+                <fullName>Net 90 Days</fullName>
+                <default>false</default>
+                <label>Net 90 Days</label>
+            </value>
+            <value>
+                <fullName>Net 30 1% 15</fullName>
+                <default>false</default>
+                <label>Net 30 1% 15</label>
+            </value>
+            <value>
+                <fullName>Net 30 2% 15</fullName>
+                <default>false</default>
+                <label>Net 30 2% 15</label>
+            </value>
+            <value>
+                <fullName>Net 60 1% 15</fullName>
+                <default>false</default>
+                <label>Net 60 1% 15</label>
+            </value>
+            <value>
+                <fullName>Net 60 2% 15</fullName>
+                <default>false</default>
+                <label>Net 60 2% 15</label>
+            </value>
+            <value>
+                <fullName>Net 75 3% 25</fullName>
+                <default>false</default>
+                <label>Net 75 3% 25</label>
+            </value>
+            <value>
+                <fullName>Net 90 1% 15</fullName>
+                <default>false</default>
+                <label>Net 90 1% 15</label>
+            </value>
+            <value>
+                <fullName>Net 90 2% 15</fullName>
+                <default>false</default>
+                <label>Net 90 2% 15</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

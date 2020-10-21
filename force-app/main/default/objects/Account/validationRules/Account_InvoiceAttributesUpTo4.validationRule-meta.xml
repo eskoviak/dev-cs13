@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_InvoiceAttributesUpTo4</fullName>
+    <active>true</active>
+    <description>Only allow for the selection of up to 4 Invoice Attributes Required. Directly dependent on the Invoice_Atributes_Required__c values.</description>
+    <errorConditionFormula>IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Authform&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;AuthorizerManager&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Branch&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;BusinessUnit&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Certificate&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;ChargeCode&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Company&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;CostCenter&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Department&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;District&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Division&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;EmployeeID&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Entity&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;GL&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Group&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Job&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Location&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Plant&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Project&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Purchaseorder&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Region&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Site&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;Store&quot;),1,0) + 
+IF(INCLUDES( Invoice_Atributes_Required__c, &quot;TicketReceipt&quot;),1,0) &gt; 4</errorConditionFormula>
+    <errorMessage>You can only select up to 4 Invoice Attributes Required.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_BillingContactCreditApplication</fullName>
+    <active>true</active>
+    <description>Ensure a Billing Contact or Primary &amp; Billing Contact with applicable fields is present when sending an Credit Application.</description>
+    <errorConditionFormula>AND( 
+    isPickVal(Send_Credit_Application__c, &apos;Send&apos;),
+    HasBillingContact_BPC__c = False)
+
+/* HasBillingContact_BPC__C is maintained by Contact_Update BPC Account Has Billing Contact Field process build. It&apos;s Record Type Dependent */</errorConditionFormula>
+    <errorMessage>Without a Billing Contact you cannot send a Credit Application for this Account. Billing Contacts must have a complete Mailing Address and be identified as Contact Identifier of &quot;Billing&quot; or &quot;Primary &amp; Billing&quot;.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source__c</fullName>
+    <description>This is the source of a prospective or current customer account and is pushed when a lead is converted. It can also be entered on the account page. 
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How RWSC got this account; the source of the referral.</inlineHelpText>
+    <label>Lead Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Referral</fullName>
+                <default>false</default>
+                <label>Account Referral</label>
+            </value>
+            <value>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+                <label>Advertisement</label>
+            </value>
+            <value>
+                <fullName>Affiliate/Partner</fullName>
+                <default>false</default>
+                <label>Affiliate/Partner</label>
+            </value>
+            <value>
+                <fullName>BB-FranNet</fullName>
+                <default>false</default>
+                <label>BB-FranNet</label>
+            </value>
+            <value>
+                <fullName>BB-Murphy</fullName>
+                <default>false</default>
+                <label>BB-Murphy</label>
+            </value>
+            <value>
+                <fullName>BB-Sunbelt</fullName>
+                <default>false</default>
+                <label>BB-Sunbelt</label>
+            </value>
+            <value>
+                <fullName>BB-VR</fullName>
+                <default>false</default>
+                <label>BB-VR</label>
+            </value>
+            <value>
+                <fullName>Cold Call</fullName>
+                <default>false</default>
+                <label>Cold Call</label>
+            </value>
+            <value>
+                <fullName>Direct Mail Campaign</fullName>
+                <default>false</default>
+                <label>Direct Mail Campaign</label>
+            </value>
+            <value>
+                <fullName>Email Campaign</fullName>
+                <default>false</default>
+                <label>Email Campaign</label>
+            </value>
+            <value>
+                <fullName>EZ Select</fullName>
+                <default>false</default>
+                <label>EZ Select</label>
+            </value>
+            <value>
+                <fullName>Fitting Stool Lead</fullName>
+                <default>false</default>
+                <label>Fitting Stool Lead</label>
+            </value>
+            <value>
+                <fullName>Fitting Stool Survey</fullName>
+                <default>false</default>
+                <label>Fitting Stool Survey</label>
+            </value>
+            <value>
+                <fullName>Form Submit</fullName>
+                <default>false</default>
+                <label>Form Submit</label>
+            </value>
+            <value>
+                <fullName>Franchise Website-Gator</fullName>
+                <default>false</default>
+                <label>Franchise Website-Gator</label>
+            </value>
+            <value>
+                <fullName>General Phone Inquiry</fullName>
+                <default>false</default>
+                <label>General Phone Inquiry</label>
+            </value>
+            <value>
+                <fullName>Henning</fullName>
+                <default>false</default>
+                <label>Henning</label>
+            </value>
+            <value>
+                <fullName>International Lead</fullName>
+                <default>false</default>
+                <label>International Lead</label>
+            </value>
+            <value>
+                <fullName>Investor</fullName>
+                <default>false</default>
+                <label>Investor</label>
+            </value>
+            <value>
+                <fullName>ISM</fullName>
+                <default>false</default>
+                <label>ISM</label>
+            </value>
+            <value>
+                <fullName>ISM Lead</fullName>
+                <default>false</default>
+                <label>ISM Lead</label>
+            </value>
+            <value>
+                <fullName>Jigsaw</fullName>
+                <default>false</default>
+                <label>Jigsaw</label>
+            </value>
+            <value>
+                <fullName>Non-Industrial Sources</fullName>
+                <default>false</default>
+                <label>Non-Industrial Sources</label>
+            </value>
+            <value>
+                <fullName>Online Data Tool</fullName>
+                <default>false</default>
+                <label>Online Data Tool</label>
+            </value>
+            <value>
+                <fullName>Paid EMail List</fullName>
+                <default>false</default>
+                <label>Paid EMail List</label>
+            </value>
+            <value>
+                <fullName>Paid Search (SEM Campaign)</fullName>
+                <default>false</default>
+                <label>Paid Search (SEM Campaign)</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Retail Store</fullName>
+                <default>false</default>
+                <label>Retail Store</label>
+            </value>
+            <value>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+                <label>Telemarketing</label>
+            </value>
+            <value>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+                <label>Trade Show</label>
+            </value>
+            <value>
+                <fullName>Website</fullName>
+                <default>false</default>
+                <label>Website</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

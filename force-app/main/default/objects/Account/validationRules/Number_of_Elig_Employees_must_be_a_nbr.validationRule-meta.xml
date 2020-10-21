@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Elig_Employees_must_be_a_nbr</fullName>
+    <active>true</active>
+    <description>Number of eligible employees on Industrial Accounts must be a number for IA integration.</description>
+    <errorConditionFormula>AND(RecordType.Name = &apos;Industrial Account Sales&apos;, 
+     SF_Data_Sent_to_IA__c = True, 
+    NOT(ISNUMBER(Number_of_Eligible_Employees__c ))  
+   )</errorConditionFormula>
+    <errorDisplayField>Number_of_Eligible_Employees__c</errorDisplayField>
+    <errorMessage>Number of Eligible Employees must be a numeric; characters are not allowed. Please enter numbers only.</errorMessage>
+</ValidationRule>

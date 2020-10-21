@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_to_IA_fields_required</fullName>
+    <active>true</active>
+    <description>Fields required when Send to IA is checked for National Accounts</description>
+    <errorConditionFormula>AND(
+OR (Credit_Approval_Indicator__c  = False,
+     ISNULL(Sales_Opportunity_Pairs__c),
+     ISBLANK( NAM_Name__c ),
+     ISBLANK( National_Account_Specialist_Name__c ),
+     ISBLANK( Number_of_Eligible_Employees__c ),
+     ISBLANK( Sales_Opportunity_Dollars__c ),
+     ISPICKVAL(IA_Account_Category__c ,&apos;Local or Major Account&apos;)),
+RecordType.Name  = &apos;Industrial Account Sales&apos;,
+SF_Data_Sent_to_IA__c = True
+ )</errorConditionFormula>
+    <errorMessage>National Account, the Number of Eligible Employees, Sales Opportunity Pairs, Sales Opportunity Dollars, and  Credit Approved are required when Send Account to IA is checked. NAM Name and National Account Specialist Name is also required.</errorMessage>
+</ValidationRule>

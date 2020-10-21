@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Buying_Group__c</fullName>
+    <description>Need this field because it is in the xml, but no value is passed and it is not on page layouts
+Field Type: M3
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <label>Buying Group from M3</label>
+    <length>30</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

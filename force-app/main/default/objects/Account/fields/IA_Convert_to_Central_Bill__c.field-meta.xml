@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Convert_to_Central_Bill__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to designate an account that was converted to central bill as part of the IA 2.0 reconciliation process
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is used to designate an account that was converted to central bill as part of the IA 2.0 reconciliation process</inlineHelpText>
+    <label>Convert to Central Bill</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

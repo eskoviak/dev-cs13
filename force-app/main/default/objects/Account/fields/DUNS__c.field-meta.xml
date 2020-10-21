@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DUNS__c</fullName>
+    <description>Global field - (Data Universal Numbering System ) is a number that is assigned to each of our locations.  For use in credit decisions.  Also referred to as D&amp;B Nbr.  Currently used by Store Data and IA.
+Field Type: GBL
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the 9-digit DUNS Number aka D&amp;B Number. 
+
+Responsible Owner: Retail Accounting and Credit</inlineHelpText>
+    <label>DUNS Nbr (D&amp;B Nbr)</label>
+    <length>9</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

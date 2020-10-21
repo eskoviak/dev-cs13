@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>National_Accounts_Owned_by_Ali_Wehrman</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ACCOUNT_NUMBER</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.ADDRESS1_STREET</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.ADDRESS1_ZIP</columns>
+    <columns>ACCOUNT.ADDRESS1_COUNTRY</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Industrial_Account_Sales,Account.Industrial_Account_Sales_Locked</value>
+    </filters>
+    <filters>
+        <field>NAM_Name__c</field>
+        <operation>contains</operation>
+        <value>Wehrman</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>Wehrman</value>
+    </filters>
+    <label>National Accounts Owned by Ali Wehrman</label>
+    <sharedTo>
+        <group>National_Account_Specialists</group>
+        <role>System_Administrators</role>
+    </sharedTo>
+</ListView>

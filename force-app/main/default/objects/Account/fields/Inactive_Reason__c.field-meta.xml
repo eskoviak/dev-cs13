@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inactive_Reason__c</fullName>
+    <description>Reason for the Account no longer being set to Active.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select a Reason as to why the Account is no longer Active.</inlineHelpText>
+    <label>Inactive Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Change in Program Requirements</fullName>
+                <default>false</default>
+                <label>Change in Program Requirements</label>
+            </value>
+            <value>
+                <fullName>Credit Denied/Exceeded</fullName>
+                <default>false</default>
+                <label>Credit Denied/Exceeded</label>
+            </value>
+            <value>
+                <fullName>Discontinued Program</fullName>
+                <default>false</default>
+                <label>Discontinued Program</label>
+            </value>
+            <value>
+                <fullName>GSD Deactivation - See Case</fullName>
+                <default>false</default>
+                <label>GSD Deactivation - See Case</label>
+            </value>
+            <value>
+                <fullName>List Pending</fullName>
+                <default>false</default>
+                <label>List Pending</label>
+            </value>
+            <value>
+                <fullName>Lost Account to Competition</fullName>
+                <default>false</default>
+                <label>Lost Account to Competition</label>
+            </value>
+            <value>
+                <fullName>Out of Business</fullName>
+                <default>false</default>
+                <label>Out of Business</label>
+            </value>
+            <value>
+                <fullName>Stop-Ship</fullName>
+                <default>false</default>
+                <label>Stop-Ship</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

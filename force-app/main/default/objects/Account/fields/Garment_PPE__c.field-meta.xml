@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Garment_PPE__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Store&apos;s inventory includes PPE Garments</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Store&apos;s inventory includes PPE Garments 
+Responsible for data: Store Dev, Dealer Operations</inlineHelpText>
+    <label>Garment (PPE)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>M3_Mailing_Address__c</fullName>
+    <description>M3 Mailing Address. M3 is the system of record for this field.
+Field Type: M3
+Integrated: Y - M3&gt;SF&gt;Xstore</description>
+    <externalId>false</externalId>
+    <formula>M3_Mailing_Street__c &amp; BR() &amp;
+M3_Mailing_City__c &amp; BR() &amp;
+M3_Mailing_State_Province__c &amp; BR() &amp;
+M3_Mailing_ZIP_Postal_Code__c &amp; BR() &amp;
+M3_Mailing_Country__c</formula>
+    <inlineHelpText>This is the mailing address for this account.</inlineHelpText>
+    <label>Mailing Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

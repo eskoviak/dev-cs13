@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_BPC_ChangeOwnershipRestrictions</fullName>
+    <active>true</active>
+    <description>Only the Account Owner, System Administrator or RWS_RetailAccountingNationalAccount Profile Users can change Account Ownership.  Only applies to Business Partner Community Accounts</description>
+    <errorConditionFormula>/* Only Applies to Business Partner Community Accounts */
+
+AND( 
+RecordType.Name = &apos;Business Partner Community&apos;,
+isChanged(OwnerId),
+PriorValue(OwnerId) &lt;&gt; $User.Id,
+NOT($Profile.Name = &apos;RWS Retail Acctg - National Accounts&apos;),
+NOT($Profile.Name = &apos;System Administrator&apos;), 
+NOT(OwnerId = $User.Id))</errorConditionFormula>
+    <errorMessage>Only the Account Owner, System Administrator or an Accounting User can change an Account Owner.</errorMessage>
+</ValidationRule>

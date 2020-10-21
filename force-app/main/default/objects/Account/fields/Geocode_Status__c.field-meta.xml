@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Geocode_Status__c</fullName>
+    <description>This is the Geocode status regarding the &quot;GET&quot; of the latitude and longitude fields by the service. 
+Field Type: M3
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Geocode Status corresponding to the latitude and longitude fields. 
+
+Responsible Owner: M3 Integration</inlineHelpText>
+    <label>Geocode Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ignore</fullName>
+                <default>false</default>
+                <label>Ignore</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Success</fullName>
+                <default>false</default>
+                <label>Success</label>
+            </value>
+            <value>
+                <fullName>Failed</fullName>
+                <default>false</default>
+                <label>Failed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

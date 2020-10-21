@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Tax_Exempt_Certificate_Nbr__c</fullName>
+    <description>If the tax method designates and exemption then an exemption certificate # is needed. 
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Tax Exemption certificate number needed if there is a tax exemption requested as indicated in the Tax Method. Data is only in Salesforce.</inlineHelpText>
+    <label>Tax Exempt Certificate Nbr</label>
+    <length>40</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

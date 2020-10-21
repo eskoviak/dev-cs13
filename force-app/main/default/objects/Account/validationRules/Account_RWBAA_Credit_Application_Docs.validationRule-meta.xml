@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_RWBAA_Credit_Application_Docs</fullName>
+    <active>false</active>
+    <description>For non-RWBAA Credit Application, Credit Application documents are required</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( RWBAA_Standard_Application__c , &apos;No&apos;),
+NOT(ISBLANK(TEXT( Credit_Status__c ))),
+OR(
+ISBLANK( Documents_for_Credit_Application__c),
+Documents_for_Credit_Application__c = &apos;None&apos;)
+)</errorConditionFormula>
+    <errorMessage>You cannot send a non-Standard RWBAA Credit Application until you identify a RWfB Attachment as the Document for Credit Application.</errorMessage>
+</ValidationRule>

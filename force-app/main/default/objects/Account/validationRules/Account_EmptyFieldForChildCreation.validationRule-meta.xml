@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_EmptyFieldForChildCreation</fullName>
+    <active>true</active>
+    <description>List of fields which must be blank if the Account is a child account.</description>
+    <errorConditionFormula>AND( 
+Not($Profile.Name = &apos;RWS Business Partner Community&apos;),
+RecordType.Name = &apos;Business Partner Community&apos;, 
+isBlank(ParentId), 
+Not(isBlank(Text(Invoice_Parent_Account__c))))</errorConditionFormula>
+    <errorDisplayField>Invoice_Parent_Account__c</errorDisplayField>
+    <errorMessage>You cannot Invoice the Parent Account without a Parent Account. Populate the Parent Account field.</errorMessage>
+</ValidationRule>

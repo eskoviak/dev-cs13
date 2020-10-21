@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Channel_Code__c</fullName>
+    <description>The code assigned to a Customer Grouping or how product is distibuted to consumers.  Used to classify accounts into logical groupings. 
+Field Type:M3
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>M3 Customer Group Code</inlineHelpText>
+    <label>Distribution Channel Code</label>
+    <length>3</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

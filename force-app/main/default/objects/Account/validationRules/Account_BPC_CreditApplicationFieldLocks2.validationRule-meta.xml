@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_BPC_CreditApplicationFieldLocks2</fullName>
+    <active>true</active>
+    <description>Locks fields necessary for a Credit Application after Credit Status is populated. Excludes community profiles. Apex handles those validations. If additional Community profiles are added, be sure to append this validation rule.</description>
+    <errorConditionFormula>AND(
+    Not($Profile.Name = &apos;RWS Business Partner Community&apos;),
+    Not($Profile.Name = &apos;System Administrator&apos;),
+    Not($Profile.Name = &apos;RWS GSD Team&apos;),
+    Not(isBlank(Text(Credit_Status__c))),
+    Not(isPickVal(Credit_Status__c, &apos;Rejected&apos;)),
+OR(
+	isChanged(RWfB_Billing_Address_City__c),
+	isChanged(RWfB_Billing_Address_Country__c),
+	isChanged(RWfB_Billing_Address_Line_1__c),
+	isChanged(RWfB_Billing_Address_Line_2__c),
+	isChanged(RWfB_Billing_Address_Line_3__c),
+	isChanged(RWfB_Billing_Address_State_Province__c),
+	isChanged(RWfB_Billing_Address_ZIP_Postal_Code__c),
+	isChanged(RWfB_same_as_Physical_Address__c)
+       	)
+	)</errorConditionFormula>
+    <errorMessage>A Credit Application has been processed for this Account. All RWfB Address, Payment and Billing fields are locked.</errorMessage>
+</ValidationRule>

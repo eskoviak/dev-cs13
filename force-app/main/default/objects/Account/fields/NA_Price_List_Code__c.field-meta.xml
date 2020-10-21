@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Price_List_Code__c</fullName>
+    <description>The initial proposed Price List when working with a prospect.
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The initial proposed Price List when working with a prospect. Data is only in Salesforce.</inlineHelpText>
+    <label>Proposed Price List</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IPL-A (20%)</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>IPL-A (20%)</label>
+            </value>
+            <value>
+                <fullName>IPL-B (17%)</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>IPL-B (17%)</label>
+            </value>
+            <value>
+                <fullName>IPL-C (15%)</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>IPL-C (15%)</label>
+            </value>
+            <value>
+                <fullName>IPL-D (13%)</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>IPL-D (13%)</label>
+            </value>
+            <value>
+                <fullName>IPL-E (12%)</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>IPL-E (12%)</label>
+            </value>
+            <value>
+                <fullName>IPL-F (10%)</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>IPL-F (10%)</label>
+            </value>
+            <value>
+                <fullName>IPL-G (8%)</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>IPL-G (8%)</label>
+            </value>
+            <value>
+                <fullName>IPL-H (7%)</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>IPL-H (7%)</label>
+            </value>
+            <value>
+                <fullName>IPL-I (5%)</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>IPL-I (5%)</label>
+            </value>
+            <value>
+                <fullName>IPL$65-10</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>IPL$65-10</label>
+            </value>
+            <value>
+                <fullName>IPL$65-15</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>IPL$65-15</label>
+            </value>
+            <value>
+                <fullName>IPL$70-10</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>IPL$70-10</label>
+            </value>
+            <value>
+                <fullName>IPL$70-15</fullName>
+                <color>#2F5D85</color>
+                <default>false</default>
+                <label>IPL$70-15</label>
+            </value>
+            <value>
+                <fullName>IPL$75-10</fullName>
+                <color>#AFCADF</color>
+                <default>false</default>
+                <label>IPL$75-10</label>
+            </value>
+            <value>
+                <fullName>IPL$75-15</fullName>
+                <color>#8F6429</color>
+                <default>false</default>
+                <label>IPL$75-15</label>
+            </value>
+            <value>
+                <fullName>IPL$80-10</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>IPL$80-10</label>
+            </value>
+            <value>
+                <fullName>IPL$80-15</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>IPL$80-15</label>
+            </value>
+            <value>
+                <fullName>IPL$85-10</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>IPL$85-10</label>
+            </value>
+            <value>
+                <fullName>IPL$85-15</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>IPL$85-15</label>
+            </value>
+            <value>
+                <fullName>IPL$90-10</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>IPL$90-10</label>
+            </value>
+            <value>
+                <fullName>IPL$90-15</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>IPL$90-15</label>
+            </value>
+            <value>
+                <fullName>IPL$100-10</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>IPL$100-10</label>
+            </value>
+            <value>
+                <fullName>IPL$100-15</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>IPL$100-15</label>
+            </value>
+            <value>
+                <fullName>IPL$110-10</fullName>
+                <default>false</default>
+                <label>IPL$110-10</label>
+            </value>
+            <value>
+                <fullName>IPL$110-15</fullName>
+                <default>false</default>
+                <label>IPL$110-15</label>
+            </value>
+            <value>
+                <fullName>IPL$120-10</fullName>
+                <default>false</default>
+                <label>IPL$120-10</label>
+            </value>
+            <value>
+                <fullName>IPL$120-15</fullName>
+                <default>false</default>
+                <label>IPL$120-15</label>
+            </value>
+            <value>
+                <fullName>MSRP</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>MSRP</label>
+            </value>
+            <value>
+                <fullName>GSA Only</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>GSA Only</label>
+            </value>
+            <value>
+                <fullName>GSA &amp; Off Schedule</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>GSA &amp; Off Schedule</label>
+            </value>
+            <value>
+                <fullName>Bid Pricing</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Bid Pricing</label>
+            </value>
+            <value>
+                <fullName>Other - See Price List Notes</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+                <label>Other - See Price List Notes</label>
+            </value>
+            <value>
+                <fullName>Other (See Special Pricing Details)</fullName>
+                <color>#F96FB7</color>
+                <default>false</default>
+                <label>Other (See Special Pricing Details)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

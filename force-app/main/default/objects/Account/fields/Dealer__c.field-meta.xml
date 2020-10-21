@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dealer__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This is a lookup to the related Dealer. 
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a lookup to the related Dealer.
+
+Responsible Owner: Dealer Operations and Store Operations</inlineHelpText>
+    <label>Dealer</label>
+    <referenceTo>Dealer__c</referenceTo>
+    <relationshipLabel>Accounts</relationshipLabel>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

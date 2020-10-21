@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>This a description of the status of the industrial account and is set in the IA to SF integration if the account was created in IA. 
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The status that corresponds to the type of account.</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Converted from Lead</fullName>
+                <default>false</default>
+                <label>Converted from Lead</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Current Customer</fullName>
+                <default>false</default>
+                <label>Current Customer</label>
+            </value>
+            <value>
+                <fullName>Previous Customer</fullName>
+                <default>false</default>
+                <label>Previous Customer</label>
+            </value>
+            <value>
+                <fullName>Follow-up at a later date</fullName>
+                <default>false</default>
+                <label>Follow-up at a later date</label>
+            </value>
+            <value>
+                <fullName>Competitor&apos;s Account</fullName>
+                <default>false</default>
+                <label>Competitor&apos;s Account</label>
+            </value>
+            <value>
+                <fullName>Delete Account</fullName>
+                <default>false</default>
+                <label>Delete Account</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Delete Account Record</controllingFieldValue>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>Delete Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>Converted from Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>In Progress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>Previous Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>Follow-up at a later date</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>Competitor&apos;s Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <valueName>Current Customer</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

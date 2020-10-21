@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_BPC_CreditApplicationFieldLocks</fullName>
+    <active>true</active>
+    <description>Locks fields necessary for a Credit Application after Credit Status is populated. Excludes community profiles. Apex handles those validations. If additional Community profiles are added, be sure to append this validation rule.</description>
+    <errorConditionFormula>AND(
+    Not($Profile.Name = &apos;RWS Business Partner Community&apos;),
+    Not($Profile.Name = &apos;System Administrator&apos;),
+    Not(isBlank(Text(Credit_Status__c))),
+    Not(isPickVal(Credit_Status__c, &apos;Rejected&apos;)),
+OR(
+	/*isChanged(RWfB_Billing_Address_City__c),*/
+	/*isChanged(RWfB_Billing_Address_Country__c),*/
+	/*isChanged(RWfB_Billing_Address_Line_1__c),*/
+	/*isChanged(RWfB_Billing_Address_Line_2__c),*/
+	/*isChanged(RWfB_Billing_Address_Line_3__c),*/
+	/*isChanged(RWfB_Billing_Address_State_Province__c),*/
+	/*isChanged(RWfB_Billing_Address_ZIP_Postal_Code__c),*/
+	/*isChanged(RWfB_same_as_Physical_Address__c),*/
+        isChanged(IA_Federal_ID_Nbr__c),
+	isChanged(Billing_Frequency__c),
+	isChanged(Requested_Credit_Limi__c),
+	isChanged(Email_Application_To__c),
+	isChanged(Company_Type__c),
+        isChanged(Invoice_Type__c),
+	/*isChanged(Invoice_Delivery_Method__c),
+  	/*isChanged(Group_Invoice_By__c),*/
+	/*isChanged(Invoice_Atributes_Required__c),*/
+	isChanged(BPC_Payment_Terms__c),
+	isChanged(MultiService_Credit_Application_ID__c),
+	isChanged(MSTS_ID__c),
+        isChanged(RWBAA_Standard_Application__c)
+        /*isChanged(Legal_Name__c)*/
+	)
+	)</errorConditionFormula>
+    <errorMessage>A Credit Application has been processed for this Account. All RWfB Address, Invoice,Payment, and Billing fields are locked.</errorMessage>
+</ValidationRule>

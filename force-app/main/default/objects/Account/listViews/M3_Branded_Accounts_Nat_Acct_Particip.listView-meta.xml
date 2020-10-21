@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>M3_Branded_Accounts_Nat_Acct_Particip</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ACCOUNT_NUMBER</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.M3_Wholesale_Accounts,Account.M3_Store_Parent_Account</value>
+    </filters>
+    <filters>
+        <field>Customer_Status__c</field>
+        <operation>equals</operation>
+        <value>20</value>
+    </filters>
+    <filters>
+        <field>Store_Ownership_Type__c</field>
+        <operation>equals</operation>
+        <value>Branded</value>
+    </filters>
+    <filters>
+        <field>Tier_Level__c</field>
+        <operation>equals</operation>
+        <value>2,3,4</value>
+    </filters>
+    <filters>
+        <field>National_Account_Participant__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>M3 Branded Accounts_Nat Acct Particip</label>
+    <sharedTo>
+        <role>System_Administrators</role>
+    </sharedTo>
+</ListView>

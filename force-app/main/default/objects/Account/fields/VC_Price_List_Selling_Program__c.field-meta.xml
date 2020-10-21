@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VC_Price_List_Selling_Program__c</fullName>
+    <description>Used for Vendor Compliance</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only for accounts that require Vendor Compliance</inlineHelpText>
+    <label>Obsolete VC Price List / Selling Program</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Current</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Current</label>
+            </value>
+            <value>
+                <fullName>Discount Model</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Discount Model</label>
+            </value>
+            <value>
+                <fullName>DTI - Price List (SL)</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>DTI - Price List (SL)</label>
+            </value>
+            <value>
+                <fullName>Midstates Buying Group</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Midstates Buying Group</label>
+            </value>
+            <value>
+                <fullName>Online Discount Model</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Online Discount Model</label>
+            </value>
+            <value>
+                <fullName>Price List - 1/1-7/15, July-Dec</fullName>
+                <color>#A53711</color>
+                <default>false</default>
+                <label>Price List - 1/1-7/15, July-Dec</label>
+            </value>
+            <value>
+                <fullName>Selling Program</fullName>
+                <color>#66E9BD</color>
+                <default>false</default>
+                <label>Selling Program</label>
+            </value>
+            <value>
+                <fullName>Special PL</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Special PL</label>
+            </value>
+            <value>
+                <fullName>Whole Discount Model</fullName>
+                <color>#419249</color>
+                <default>false</default>
+                <label>Whole Discount Model</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <color>#B6E32E</color>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

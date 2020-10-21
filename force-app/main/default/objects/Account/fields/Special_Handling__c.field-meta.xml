@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Handling__c</fullName>
+    <description>Not Used - not on any business page layout 
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Special handling instructions</inlineHelpText>
+    <label>Obsolete Special Handling</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

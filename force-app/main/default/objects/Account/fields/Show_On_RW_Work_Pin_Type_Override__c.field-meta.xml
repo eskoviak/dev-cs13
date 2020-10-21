@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_On_RW_Work_Pin_Type_Override__c</fullName>
+    <description>Allows users to override the pin type determined based on system rules for previous 12 months purchases</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Allows users to override the pin type determined based on system rules for previous 12 months purchases</inlineHelpText>
+    <label>RW Work Pin Attribute Override</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mens</fullName>
+                <default>false</default>
+                <label>Mens</label>
+            </value>
+            <value>
+                <fullName>Womens</fullName>
+                <default>false</default>
+                <label>Womens</label>
+            </value>
+            <value>
+                <fullName>Both</fullName>
+                <default>false</default>
+                <label>Both</label>
+            </value>
+            <value>
+                <fullName>No Override</fullName>
+                <default>false</default>
+                <label>No Override</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

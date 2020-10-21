@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Web_Shoe_Search__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is to indicate store participates in the internal store program. 
+Field Type: Store Data
+Integrated: Y - SF&gt;Shoe Search</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is to indicate store participates in the internal store program to find shoes at other stores.
+
+Responsible Owner: Store Operations</inlineHelpText>
+    <label>Web Shoe Search</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

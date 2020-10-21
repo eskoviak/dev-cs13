@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Delivery_Method_Check_or_Email</fullName>
+    <active>true</active>
+    <description>This validation rule checks for an email address if &quot;Email&quot; is selected in the picklist.</description>
+    <errorConditionFormula>AND ( 
+OR ( 
+ISPICKVAL(IA_Delivery_Options_of_Invoice__c, &quot;Email&quot;)), 
+ISBLANK(IA_Billing_Email__c) 
+)</errorConditionFormula>
+    <errorDisplayField>IA_Billing_Email__c</errorDisplayField>
+    <errorMessage>Please enter a valid Email address when Invoice Delivery Options of Invoice = Email.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>National_Account_Specialist_Name__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The National Account Specialist that has been assigned to this account 
+Field Type: IA 
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>National Account Specialist assigned to this account</inlineHelpText>
+    <label>National Account Specialist Name</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$UserRole.Name</field>
+            <operation>startsWith</operation>
+            <value>Customer Experience Rep - National Accounts</value>
+        </filterItems>
+        <infoMessage>Enter a National Account Specialist Name</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Accounts2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

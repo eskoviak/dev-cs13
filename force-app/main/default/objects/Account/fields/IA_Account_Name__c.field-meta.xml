@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Account_Name__c</fullName>
+    <description>This is the name of the account in IA. Account names in RIMS and IA will not be the full company name. SFDC will retain the full company in the standard Account Name field.
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Company Account Name in IA. Sent to Salesforce by IA.</inlineHelpText>
+    <label>IA Account Name</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

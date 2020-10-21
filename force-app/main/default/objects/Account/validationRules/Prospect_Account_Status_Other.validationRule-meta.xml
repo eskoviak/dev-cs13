@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospect_Account_Status_Other</fullName>
+    <active>true</active>
+    <description>If &quot;Other&quot; is selected in the Prospect Account Status picklist, a value must be added in the Prospect Status Notes field</description>
+    <errorConditionFormula>AND(
+           INCLUDES(Prospect_Account_Status__c, &apos;Other (Add Prospect Status Notes)&apos;),
+           ISBLANK( Prospect_Status_Notes__c ) 
+)</errorConditionFormula>
+    <errorDisplayField>Prospect_Status_Notes__c</errorDisplayField>
+    <errorMessage>If you select &quot;Other&quot; in the Prospect Account Status picklist, please describe the status in the Prospect Status Notes field.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_BPC_NoNullValueRequestedCredit</fullName>
+    <active>true</active>
+    <description>Requested Credit Limit cannot be null if the Account requires invoicing.</description>
+    <errorConditionFormula>AND( 
+    ISPICKVAL( Requires_Invoicing__c , &apos;Yes&apos;), 
+    isBlank(Text(Requested_Credit_Limi__c)))</errorConditionFormula>
+    <errorDisplayField>Requested_Credit_Limi__c</errorDisplayField>
+    <errorMessage>You cannot have an empty value for Requested Credit Limit.</errorMessage>
+</ValidationRule>

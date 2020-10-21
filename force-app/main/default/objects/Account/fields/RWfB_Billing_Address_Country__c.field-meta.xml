@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RWfB_Billing_Address_Country__c</fullName>
+    <description>Identification of the RWfB Billing Address Country for MSTS, Credit Application process for Community and &apos;Same as Physical Address&apos; logic.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Identification of the RWfB Billing Address Country for MSTS, Credit Application process</inlineHelpText>
+    <label>RWfB Billing Address Country</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>GBL_Country_List</valueSetName>
+    </valueSet>
+</CustomField>

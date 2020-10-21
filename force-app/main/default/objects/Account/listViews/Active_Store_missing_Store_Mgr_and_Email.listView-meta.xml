@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Store_missing_Store_Mgr_and_Email</fullName>
+    <columns>Store_Number__c</columns>
+    <columns>ACCOUNT.ACCOUNT_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Store_Manager__c</columns>
+    <columns>Store_Email__c</columns>
+    <columns>Region_Name__c</columns>
+    <columns>Dealer__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.M3_Store_Parent_Account</value>
+    </filters>
+    <filters>
+        <field>Customer_Status__c</field>
+        <operation>equals</operation>
+        <value>20</value>
+    </filters>
+    <filters>
+        <field>Store_Manager__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Active Store missing Store Mgr and Email</label>
+    <sharedTo>
+        <group>Store_Data_Users</group>
+        <group>Store_Retail_Accounting_Group</group>
+    </sharedTo>
+</ListView>

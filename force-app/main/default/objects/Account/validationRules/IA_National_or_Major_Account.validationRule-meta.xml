@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_National_or_Major_Account</fullName>
+    <active>false</active>
+    <description>IA Account must be checked as either National or Major.</description>
+    <errorConditionFormula>OR(AND( RecordTypeId=&quot;012F0000000qHdf&quot;, IsNationalAccount__c=FALSE, IsMajorAccount__c=FALSE),AND( RecordTypeId=&quot;012F0000000qHdf&quot;, IsNationalAccount__c=TRUE, IsMajorAccount__c=TRUE))</errorConditionFormula>
+    <errorDisplayField>IsNationalAccount__c</errorDisplayField>
+    <errorMessage>IA Account must be checked as either National or Major.</errorMessage>
+</ValidationRule>

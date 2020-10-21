@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Physical_Location_Address_Line_1__c</fullName>
+    <description>Community field. Referenced in Duplicate &amp; Matching Rules</description>
+    <externalId>false</externalId>
+    <label>IA Physical Location Address Line 1</label>
+    <length>64</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

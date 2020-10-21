@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sells_Outside_Lines__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If checked (TRUE) the store sells outside lines and the outside lines tab will be available for product selection in the IA2.0 Community.  If unchecked (FALSE) the store cannot add outside lines to their programs.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If checked (TRUE) the store sells outside lines and the outside lines tab will be available for product selection in the IA2.0 Community.  If unchecked (FALSE) the store cannot add outside lines to their programs.</inlineHelpText>
+    <label>Sells Outside Lines</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

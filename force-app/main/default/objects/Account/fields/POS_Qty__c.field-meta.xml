@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POS_Qty__c</fullName>
+    <description>This is the quantity at the Point of Sale.
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains the Point of Sale quantity.
+
+Responsible Owner: Retail Accounting</inlineHelpText>
+    <label>Store POS Qty</label>
+    <precision>7</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

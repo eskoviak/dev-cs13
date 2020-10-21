@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Account_Eligibility_Expires</fullName>
+    <active>true</active>
+    <description>If eligibility expires, then a redemption period or expiration date is required</description>
+    <errorConditionFormula>AND( 
+        ISBLANK( IA_Elig_Expiration_Date__c ),   
+          ISBLANK(IA_Redempt_Nbr_of_Days__c  ), 
+        ISPICKVAL(IA_Eligibility_Expires__c, &quot;Yes&quot;) 
+    )</errorConditionFormula>
+    <errorDisplayField>IA_Redempt_Nbr_of_Days__c</errorDisplayField>
+    <errorMessage>When Eligibity Expires is checked you must enter Eligibity Expiration Date or Redemption Period (days)</errorMessage>
+</ValidationRule>

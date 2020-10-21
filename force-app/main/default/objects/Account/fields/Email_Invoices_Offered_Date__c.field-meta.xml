@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Invoices_Offered_Date__c</fullName>
+    <description>The last time customer service offered to update the email address for sending invoices.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The last time customer service offered to update the email address for sending invoices.</inlineHelpText>
+    <label>Email:Invoices Offered Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

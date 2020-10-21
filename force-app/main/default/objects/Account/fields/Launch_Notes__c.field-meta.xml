@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Launch_Notes__c</fullName>
+    <description>Additional information regarding launching the account 
+Field Type: IA 
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Additional information in regards to launching the account.This data is only in Salesforce</inlineHelpText>
+    <label>Launch Notes</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

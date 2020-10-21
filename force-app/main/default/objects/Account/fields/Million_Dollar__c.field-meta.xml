@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Million_Dollar__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>These are stores that belong to the million dollar retail club. 
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This indicates if the store belongs to the million dollar retail club.
+
+Responsible Owner: Store Operations</inlineHelpText>
+    <label>Million Dollar Club</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

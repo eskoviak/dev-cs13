@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VC_New_Store_Payment_Terms__c</fullName>
+    <description>For Vendor Compliance
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only for accounts that require Vendor Compliance</inlineHelpText>
+    <label>New Store Payment Terms</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Net 90</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Net 90</label>
+            </value>
+            <value>
+                <fullName>Net 120</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Net 120</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

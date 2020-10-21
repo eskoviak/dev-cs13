@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Xstore_Time_Zone_Code__c</fullName>
+    <description>Xstore time zone code updated through a workflow 
+Field Type: Store Data 
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Xstore code for the time zone for this store</inlineHelpText>
+    <label>Xstore Time Zone Code</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Status__c</fullName>
+    <description>Account Status Code used in M3; 20 (Active) or 90 (Inactive), 10 is filtered out
+Field Type: M3
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The status code of the account in M3. See Account Status Description for the corresponding status name.</inlineHelpText>
+    <label>Account Status Code</label>
+    <length>2</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

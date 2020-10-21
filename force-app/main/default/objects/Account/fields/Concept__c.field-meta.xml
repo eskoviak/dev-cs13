@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Concept__c</fullName>
+    <description>Store Data field to describe the type of retail store design. 
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the retail store design for this store.
+
+Responsible Owner: Dealer Operations and Store Development</inlineHelpText>
+    <label>Store Concept</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Metal Outrigger (American worker)</fullName>
+                <default>false</default>
+                <label>Metal Outrigger (American worker)</label>
+            </value>
+            <value>
+                <fullName>Sawtooth</fullName>
+                <default>false</default>
+                <label>Sawtooth</label>
+            </value>
+            <value>
+                <fullName>Shingle</fullName>
+                <default>false</default>
+                <label>Shingle</label>
+            </value>
+            <value>
+                <fullName>Slatwall Bays</fullName>
+                <default>false</default>
+                <label>Slatwall Bays</label>
+            </value>
+            <value>
+                <fullName>Slatwall Combo</fullName>
+                <default>false</default>
+                <label>Slatwall Combo</label>
+            </value>
+            <value>
+                <fullName>Slatwall Flat</fullName>
+                <default>false</default>
+                <label>Slatwall Flat</label>
+            </value>
+            <value>
+                <fullName>Wood Outrigger (Multi brand)</fullName>
+                <default>false</default>
+                <label>Wood Outrigger (Multi brand)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

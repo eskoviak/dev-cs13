@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Alert_Notes</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+        ISBLANK(Account_Alert_Notes__c), 
+        Account_Alert_Active__c = True 
+        )</errorConditionFormula>
+    <errorDisplayField>Account_Alert_Notes__c</errorDisplayField>
+    <errorMessage>When the Account Alert Active box is checked, information on how to handle the Account must be included in the Account Alert Notes field.</errorMessage>
+</ValidationRule>

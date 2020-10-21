@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HasInsideSalesRep__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This indicates whether the account should be shared with the inside Sales Rep</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Account has an Inside Sales Rep</inlineHelpText>
+    <label>Has Inside Sales Rep</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

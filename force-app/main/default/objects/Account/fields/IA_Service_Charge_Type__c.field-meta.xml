@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Service_Charge_Type__c</fullName>
+    <description>Accounts that are National Account &amp; Central Bill are charged a service charge in most cases. This field indicates the type of service charge. 
+Field Type: IA 
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The type of service charge applied to the Central Bill National Account.</inlineHelpText>
+    <label>Service Charge Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>NA_Billing_Preference__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Per Pair</fullName>
+                <default>false</default>
+                <label>Per Pair</label>
+            </value>
+            <value>
+                <fullName>No Service Charge</fullName>
+                <default>false</default>
+                <label>No Service Charge</label>
+            </value>
+            <value>
+                <fullName>Per Accessory</fullName>
+                <default>false</default>
+                <label>Per Accessory</label>
+            </value>
+            <value>
+                <fullName>Per Item Purchased</fullName>
+                <default>false</default>
+                <label>Per Item Purchased</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Local Bill</controllingFieldValue>
+            <controllingFieldValue>Central Bill</controllingFieldValue>
+            <controllingFieldValue>Central Bill by Location</controllingFieldValue>
+            <valueName>No Service Charge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Central Bill</controllingFieldValue>
+            <controllingFieldValue>Central Bill by Location</controllingFieldValue>
+            <valueName>Per Pair</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

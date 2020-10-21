@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment__c</fullName>
+    <defaultValue>&quot;S4&quot;</defaultValue>
+    <description>Industrial customers designated segment based on actual or anticipated sales volume.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Industrial customers designated segment based on actual or anticipated sales volume.</inlineHelpText>
+    <label>Segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>S1</fullName>
+                <default>false</default>
+                <label>S1</label>
+            </value>
+            <value>
+                <fullName>S2</fullName>
+                <default>false</default>
+                <label>S2</label>
+            </value>
+            <value>
+                <fullName>S3</fullName>
+                <default>false</default>
+                <label>S3</label>
+            </value>
+            <value>
+                <fullName>S4</fullName>
+                <default>true</default>
+                <label>S4</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

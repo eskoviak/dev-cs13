@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Terms_Description__c</fullName>
+    <description>The Payment Terms description from M3
+Field Type: M3
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <label>Payment Terms Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

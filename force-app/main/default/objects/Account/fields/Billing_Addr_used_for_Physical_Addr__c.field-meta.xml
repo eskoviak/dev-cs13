@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Addr_used_for_Physical_Addr__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that a Billing Address was used to populate Physical Address because there was no Physical Address available upon conversion</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that a Billing Address was used to populate Physical Address because there was no Physical Address available upon conversion</inlineHelpText>
+    <label>Billing Addr used for Physical Addr</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

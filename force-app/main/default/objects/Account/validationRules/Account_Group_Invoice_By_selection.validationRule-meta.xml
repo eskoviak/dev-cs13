@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Group_Invoice_By_selection</fullName>
+    <active>true</active>
+    <description>Validate Group Invoice By against Invoice Attributes Required</description>
+    <errorConditionFormula>RecordType.Name = &apos;Business Partner Community&apos; &amp;&amp;
+NOT(ISBLANK(TEXT(Group_Invoice_By__c))) &amp;&amp;
+$User.LastName != &apos;Punauakee&apos; &amp;&amp;
+$User.LastName != &apos;Shoe Company (do not reply)&apos; &amp;&amp;
+$User.LastName != &apos;Soft&apos; &amp;&amp;
+$User.LastName != &apos;API&apos; &amp;&amp;
+$User.LastName != &apos;AMP&apos; &amp;&amp;
+$User.LastName != &apos;Eloqua&apos; &amp;&amp;
+$User.LastName != &apos;CallPopUp&apos; &amp;&amp;
+
+((NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Authform&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Authform&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;AuthorizerManager&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;AuthorizerManager&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Branch&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Branch&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;BusinessUnit&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;BusinessUnit&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Certificate&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Certificate&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;ChargeCode&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;ChargeCode&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Company&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Company&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;CostCenter&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;CostCenter&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Department&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Department&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;District&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;District&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Division&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Division&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;EmployeeID&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;EmployeeID&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Entity&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Entity&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;GL&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;GL&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Group&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Group&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Job&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Job&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Location&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Location&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Plant&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Plant&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Project&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Project&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Purchaseorder&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Purchaseorder&quot;)) ||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Region&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Region&quot;))||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Site&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Site&quot;))||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;Store&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;Store&quot;))||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;TicketReceipt&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;TicketReceipt&quot;))||
+(NOT(INCLUDES(Invoice_Atributes_Required__c,&quot;VendorNumber&quot;))&amp;&amp;
+ISPICKVAL(Group_Invoice_By__c,&quot;VendorNumber&quot;)))</errorConditionFormula>
+    <errorDisplayField>Group_Invoice_By__c</errorDisplayField>
+    <errorMessage>Group Invoice By field must match a selection in Invoice Attributes Required</errorMessage>
+</ValidationRule>

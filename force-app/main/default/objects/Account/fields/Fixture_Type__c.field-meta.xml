@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fixture_Type__c</fullName>
+    <description>This is the display type at the store.
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the display type at the Store.
+
+Responsible Owner: Dealer Operations and Store Development</inlineHelpText>
+    <label>Obsolete Fixture Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Metal Outriggers</fullName>
+                <default>false</default>
+                <label>Metal Outriggers</label>
+            </value>
+            <value>
+                <fullName>Metal Outriggers/Slatwall</fullName>
+                <default>false</default>
+                <label>Metal Outriggers/Slatwall</label>
+            </value>
+            <value>
+                <fullName>Sawtooth</fullName>
+                <default>false</default>
+                <label>Sawtooth</label>
+            </value>
+            <value>
+                <fullName>Slatwall Flat</fullName>
+                <default>false</default>
+                <label>Slatwall Flat</label>
+            </value>
+            <value>
+                <fullName>Slatwall with bays</fullName>
+                <default>false</default>
+                <label>Slatwall with bays</label>
+            </value>
+            <value>
+                <fullName>Slatwall with bays/ Wood Outriggers</fullName>
+                <default>false</default>
+                <label>Slatwall with bays/ Wood Outriggers</label>
+            </value>
+            <value>
+                <fullName>Wood Outriggers</fullName>
+                <default>false</default>
+                <label>Wood Outriggers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

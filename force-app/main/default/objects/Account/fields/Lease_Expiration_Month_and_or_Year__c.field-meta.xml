@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease_Expiration_Month_and_or_Year__c</fullName>
+    <description>This field is to capture Lease Expiration dates when not all the information is known
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Best approximation of the Lease Expiration date when the full date is unknown
+
+Responsible Owner: Dealer Operations (DO)</inlineHelpText>
+    <label>Lease Expiration Month and/or Year</label>
+    <length>20</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

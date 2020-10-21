@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location_List_Availability_in_SF__c</fullName>
+    <description>This information is included in the New National Account email announcement.  The ISM’s need this data to determine if the new account impacts any of their retail stores or mobile operations.
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is used to determine if the new account impacts any retail stores or mobile operations that Industrial Sales Managers are responsible for.This data is only in Salesforce.</inlineHelpText>
+    <label>Location List Availability in SF</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Available for Review with Contact info</fullName>
+                <default>false</default>
+                <label>Available for Review with Contact info</label>
+            </value>
+            <value>
+                <fullName>Available for Review without Contact info</fullName>
+                <default>false</default>
+                <label>Available for Review without Contact info</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Not Available for Review</fullName>
+                <default>false</default>
+                <label>Not Available for Review</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

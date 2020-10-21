@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_BPC_InvPymtPortalName_Req</fullName>
+    <active>true</active>
+    <description>Invoice Payment Portal Name cannot be null if the Invoice Payment Portal is Yes</description>
+    <errorConditionFormula>ISPICKVAL(  Invoice_Payment_Portal__c , &apos;Yes&apos;)&amp;&amp;
+      ISBLANK(Text( Invoice_Payment_Portal_Name__c ))</errorConditionFormula>
+    <errorDisplayField>Invoice_Payment_Portal_Name__c</errorDisplayField>
+    <errorMessage>When Invoice Payment Portal is Yes, Invoice Payment Portal Name is required.</errorMessage>
+</ValidationRule>

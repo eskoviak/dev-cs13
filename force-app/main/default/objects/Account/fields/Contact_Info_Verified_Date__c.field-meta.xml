@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Info_Verified_Date__c</fullName>
+    <description>The date the contact information on the Account was verified (phone, fax, order confirmation email)
+Field Type: GBL
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Phone, Fax, Email for  Order Confirmation verified date</inlineHelpText>
+    <label>Contact Info Verified Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

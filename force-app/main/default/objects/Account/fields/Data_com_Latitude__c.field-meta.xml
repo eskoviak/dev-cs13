@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_com_Latitude__c</fullName>
+    <description>Latitude retrieved from free Data.com Geocoding functionality</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Latitude retrieved from free Data.com Geocoding feature</inlineHelpText>
+    <label>Data.com Latitude</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>7</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Payment_Portal__c</fullName>
+    <description>Company uses a Invoice Payment Portal to upload and pay invoices</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Company uses a Invoice Payment Portal to upload and pay invoices</inlineHelpText>
+    <label>Invoice Payment Portal</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No</fullName>
+                <default>true</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

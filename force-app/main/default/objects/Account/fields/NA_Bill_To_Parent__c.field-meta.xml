@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Bill_To_Parent__c</fullName>
+    <description>NOT USED - not on any page layouts except, obsolete, system admin, or master 
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>**For National Accounts Only** - store &quot;parent account&quot; billing information temporarily until parent account setup can be accomplished in RIMS.</inlineHelpText>
+    <label>Obsolete IA Bill_To_Parent</label>
+    <length>5000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

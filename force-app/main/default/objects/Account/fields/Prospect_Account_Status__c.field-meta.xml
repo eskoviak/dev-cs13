@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospect_Account_Status__c</fullName>
+    <description>Used to indicate the initial status (interest level) of the prospective wholesale account. Used on both International and Domestic prospects.
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to indicate the initial status (interest level) of the prospect.</inlineHelpText>
+    <label>Prospect Account Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Interested</fullName>
+                <default>false</default>
+                <label>Interested</label>
+            </value>
+            <value>
+                <fullName>Competitor&apos;s Account</fullName>
+                <default>false</default>
+                <label>Competitor&apos;s Account</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Other (Add Prospect Status Notes)</fullName>
+                <default>false</default>
+                <label>Other (Add Prospect Status Notes)</label>
+            </value>
+            <value>
+                <fullName>Delete Account</fullName>
+                <default>false</default>
+                <label>Delete Account</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

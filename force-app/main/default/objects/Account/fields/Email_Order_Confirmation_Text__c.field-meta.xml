@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Order_Confirmation_Text__c</fullName>
+    <description>Email address used for order Confirmations. Replaces &quot;Email: Order Confirmation&quot; email field.
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The email address for order confirmations. Sent from M3.</inlineHelpText>
+    <label>Email: Order Confirmation</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

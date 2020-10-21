@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Industrial_Accounts_W_Dollars</fullName>
+    <columns>Open_Date__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.INDUSTRY</columns>
+    <columns>ACCOUNT.ADDRESS2_STREET</columns>
+    <columns>ACCOUNT.ADDRESS2_STATE</columns>
+    <columns>ACCOUNT.ADDRESS2_ZIP</columns>
+    <columns>SIC_DESC</columns>
+    <columns>Sales_Opportunity_Dollars__c</columns>
+    <columns>Sales_Opportunity_Pairs__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Responsible_Biller_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Store</value>
+    </filters>
+    <label>My Accounts with Open Date and $</label>
+    <sharedTo>
+        <group>ISM_Industrial_Sales_Managers</group>
+        <group>ISM_TSM</group>
+        <group>National_Accounts</group>
+        <group>RD_Region_Directors</group>
+        <role>VP_NA_Sales_Ops_Work_Hunt</role>
+    </sharedTo>
+</ListView>

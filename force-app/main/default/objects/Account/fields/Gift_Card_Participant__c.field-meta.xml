@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gift_Card_Participant__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field indicates of the store is participates in the gift card program. 
+Field Type: Store Data
+Integrated: Y - SF&gt;Xstore</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field indicates of the store is participates in the gift card program.
+
+Responsible Owner: Retail Accounting</inlineHelpText>
+    <label>Gift Card Participant</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

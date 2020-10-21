@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NAS_Responsible_Name__c</fullName>
+    <description>For Industrial Account Sales record type and page layout only; reps will manually update the field with the National Account Specialist assigned to the account.
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>National Account Specialist assigned to the account. Data is only in Salesforce.</inlineHelpText>
+    <label>Obsolete NAS Responsible Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Charitey Hemphill x6543</fullName>
+                <default>false</default>
+                <label>Charitey Hemphill x6543</label>
+            </value>
+            <value>
+                <fullName>Heidi Frazier x1143</fullName>
+                <default>false</default>
+                <label>Heidi Frazier x1143</label>
+            </value>
+            <value>
+                <fullName>Jennifer Sprout x1342</fullName>
+                <default>false</default>
+                <label>Jennifer Sprout x1342</label>
+            </value>
+            <value>
+                <fullName>Lisa Greseth x6755</fullName>
+                <default>false</default>
+                <label>Lisa Greseth x6755</label>
+            </value>
+            <value>
+                <fullName>Missy Stewart x5020</fullName>
+                <default>false</default>
+                <label>Missy Stewart x5020</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

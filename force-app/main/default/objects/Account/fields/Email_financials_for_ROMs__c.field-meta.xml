@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_financials_for_ROMs__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Email financials for ROMs
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please check this box if the finance team must Email financials for ROMs.</inlineHelpText>
+    <label>Email financials for ROMs</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

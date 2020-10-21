@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Distribution_Method__c</fullName>
+    <description>Designates the multiple service types for the account as defined in the picklist.
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the type of service requested by the account. Data is only in Salesforce</inlineHelpText>
+    <label>Service Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Shoemobile</fullName>
+                <default>false</default>
+                <label>Shoemobile</label>
+            </value>
+            <value>
+                <fullName>Mail Order</fullName>
+                <default>false</default>
+                <label>Mail Order</label>
+            </value>
+            <value>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+                <label>E-Commerce</label>
+            </value>
+            <value>
+                <fullName>Direct-to-Industry</fullName>
+                <default>false</default>
+                <label>Direct-to-Industry</label>
+            </value>
+            <value>
+                <fullName>Commissary</fullName>
+                <default>false</default>
+                <label>Commissary</label>
+            </value>
+            <value>
+                <fullName>Consignment</fullName>
+                <default>false</default>
+                <label>Consignment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

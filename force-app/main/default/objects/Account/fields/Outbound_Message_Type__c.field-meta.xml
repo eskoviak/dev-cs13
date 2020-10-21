@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outbound_Message_Type__c</fullName>
+    <description>Outbound Message Type</description>
+    <externalId>false</externalId>
+    <label>Outbound Message Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Credit Application</fullName>
+                <default>false</default>
+                <label>Credit Application</label>
+            </value>
+            <value>
+                <fullName>Active Account</fullName>
+                <default>false</default>
+                <label>Active Account</label>
+            </value>
+            <value>
+                <fullName>Update Account</fullName>
+                <default>false</default>
+                <label>Update Account</label>
+            </value>
+            <value>
+                <fullName>Deactivate</fullName>
+                <default>false</default>
+                <label>Deactivate Account</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FYI_Notes__c</fullName>
+    <description>Additional information and tidbits from the person who works the account on a regular basis
+Field Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field contains additional tidbits or details about the customer that may help when servicing the account.</inlineHelpText>
+    <label>FYI Notes</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

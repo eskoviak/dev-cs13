@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Authorization_Form_Indicator__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Authorization Form indicator in IA 
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Authorization Form indicator in IA. Sent to Salesforce by IA.</inlineHelpText>
+    <label>Obsolete IA Authorization Form Indicator</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

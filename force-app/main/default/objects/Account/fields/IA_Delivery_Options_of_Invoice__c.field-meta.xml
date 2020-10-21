@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Delivery_Options_of_Invoice__c</fullName>
+    <description>These are the different ways an industrial account can receive an invoice
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the preferred option for the account to receive an invoice. Data is only in Salesforce.</inlineHelpText>
+    <label>Invoice Delivery Options</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mail</fullName>
+                <default>false</default>
+                <label>Mail</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Invoice Online</fullName>
+                <default>false</default>
+                <label>Invoice Online</label>
+            </value>
+            <value>
+                <fullName>3rd Party Vendor</fullName>
+                <default>false</default>
+                <label>3rd Party Vendor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

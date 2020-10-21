@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Payment_Terms_Notes__c</fullName>
+    <description>This field is for additional information regarding the account Payment Terms for Industrial Accounts
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Additional details about the Payment Terms for this account. Data is only in Salesforce.</inlineHelpText>
+    <label>Industrial Account Payment Terms Notes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

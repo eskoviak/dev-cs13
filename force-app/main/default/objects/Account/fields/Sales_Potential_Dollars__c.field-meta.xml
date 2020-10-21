@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Potential_Dollars__c</fullName>
+    <description>The sales potential for this account in terms of dollars. 
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The estimated sales potential for this account in terms of dollars. Entered initially in Salesforce and sent to IA. IA will override SF if different.</inlineHelpText>
+    <label>&gt;Sales Potential Dollars - not used</label>
+    <length>256</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

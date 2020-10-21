@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_SendApplicationRollBackPrevent</fullName>
+    <active>true</active>
+    <description>Prevent an Application from being sent twice. Limits the ability to resend a credit application if the prior values of Send_Credit_Application__C was Sent to Send. An Administrative user can bypass this validation rule.</description>
+    <errorConditionFormula>AND(
+Not($Profile.Name = &apos;System Administrator&apos;),
+isPickVal(Credit_Status__c,&apos;Active/Approved&apos;),
+isPickVal(Send_Credit_Application__c, &apos;Sent&apos;),
+isChanged(Send_Credit_Application__c))</errorConditionFormula>
+    <errorDisplayField>Send_Credit_Application__c</errorDisplayField>
+    <errorMessage>A Credit Application has already been sent for this Account. Contact an Administrator if you need to resend the application.</errorMessage>
+</ValidationRule>

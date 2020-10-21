@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Delivery_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Obsolete Invoice Delivery Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Both</fullName>
+                <default>true</default>
+                <label>Both PDF and CSV</label>
+            </value>
+            <value>
+                <fullName>PDF</fullName>
+                <default>false</default>
+                <label>Email with PDF file</label>
+            </value>
+            <value>
+                <fullName>CSV</fullName>
+                <default>false</default>
+                <label>Email with CSV file</label>
+            </value>
+            <value>
+                <fullName>Special</fullName>
+                <default>false</default>
+                <label>Special Invoice Handling</label>
+            </value>
+            <value>
+                <fullName>EDI</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>EDI</label>
+            </value>
+            <value>
+                <fullName>Integration - EDI, XML and cXML</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Integration - EDI, XML and cXML</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Invoice Payment Portal</label>
+            </value>
+            <value>
+                <fullName>Mail</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mail</label>
+            </value>
+            <value>
+                <fullName>Portal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Portal e.g., Ariba</label>
+            </value>
+            <value>
+                <fullName>PortalSpecHand</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Portal with Special Handling</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

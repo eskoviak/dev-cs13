@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pickup_Available_Flag__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This indicates of the store is available for pickup.
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This indicates of the store is available for pickup.
+
+Responsible Owner: None</inlineHelpText>
+    <label>Pickup Available</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

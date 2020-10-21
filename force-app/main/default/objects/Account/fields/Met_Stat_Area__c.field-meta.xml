@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Met_Stat_Area__c</fullName>
+    <description>This field stores the Metropolitan Statistical Area. 
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field stores the Metropolitan Statistical Area.
+
+Responsible Owner: Store Development</inlineHelpText>
+    <label>Met Stat Area (MSA)</label>
+    <length>254</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

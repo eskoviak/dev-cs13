@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Shipping_Instruction_Notes__c</fullName>
+    <description>Additional information regarding the special shipping instructions for this account
+Field Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is used to provide information regarding the special shipping instructions for this customers orders</inlineHelpText>
+    <label>Special Shipping Instruction Notes</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

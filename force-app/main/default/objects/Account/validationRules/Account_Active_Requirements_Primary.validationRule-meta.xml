@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Active_Requirements_Primary</fullName>
+    <active>true</active>
+    <description>To activate an Account, various fields are required.</description>
+    <errorConditionFormula>AND(
+Active__c = TRUE,
+OR(
+ISBLANK( Primary_Contact_Email__c ),
+ISBLANK( Primary_Contact_Last_Name__c ),
+ISBLANK( Primary_Contact_First_Name__c )
+/*ISBLANK( Primary_Contact_Mailing_Street__c ),*/
+/*ISBLANK( Primary_Contact_Mailing_State_Province__c ),*/
+/*ISBLANK( Primary_Contact_Mailing_Country__c ),*/
+/*ISBLANK( Primary_Contact_Mailing_Zip_Postal_Code__c )*/
+))</errorConditionFormula>
+    <errorMessage>To activate an Account, a Primary Contact is required.</errorMessage>
+</ValidationRule>

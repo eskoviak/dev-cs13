@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dunning__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>M3 Account receives Dunning Letters</description>
+    <externalId>false</externalId>
+    <inlineHelpText>M3 Account can receive Dunning Letters</inlineHelpText>
+    <label>Dunning</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

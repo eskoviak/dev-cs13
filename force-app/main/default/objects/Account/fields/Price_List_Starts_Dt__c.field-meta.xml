@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_List_Starts_Dt__c</fullName>
+    <description>The date the Price List starts 
+Type: IA 
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date the Price List Starts. The data is only in Salesforce.</inlineHelpText>
+    <label>Price List Starts</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

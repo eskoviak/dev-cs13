@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Prospect_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STREET</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_ZIP</columns>
+    <columns>ACCOUNT.ADDRESS2_CITY</columns>
+    <columns>ACCOUNT.ADDRESS2_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Prospect_Wholesale_Domestic_Account,Account.Prospect_Wholesale_International_Account</value>
+    </filters>
+    <label>My Prospect Accounts</label>
+    <sharedTo>
+        <group>B2B_Region_Africa_Asia_MEast</group>
+        <group>B2B_Region_Latin_America</group>
+        <group>B2B_Region_North_America</group>
+        <group>B2B_Region_Outfitters_Europe</group>
+        <role>VP_B2B_Global_Sales_Ops_Work</role>
+        <roleAndSubordinates>VP_Heritage</roleAndSubordinates>
+        <roleAndSubordinates>VP_Vasque</roleAndSubordinates>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MultiService_Credit_Application_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Integration Y</description>
+    <externalId>true</externalId>
+    <inlineHelpText>External ID of Credit Application present in MultiService System</inlineHelpText>
+    <label>MultiService Credit Application ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

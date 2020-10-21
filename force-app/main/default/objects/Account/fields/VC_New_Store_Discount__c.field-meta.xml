@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VC_New_Store_Discount__c</fullName>
+    <description>For Vendor Compliance
+Type: M3
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only for accounts that require Vendor Compliance</inlineHelpText>
+    <label>New Store Discount</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10%</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>10%</label>
+            </value>
+            <value>
+                <fullName>15%</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>15%</label>
+            </value>
+            <value>
+                <fullName>20%</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>20%</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Separate_Invoice__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that a separate invoice as opposed to a consolidated invoice has been requested.
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that a separate invoice as opposed to a consolidated invoice has been requested.
+Data is only in Salesforce.</inlineHelpText>
+    <label>Obsolete Separate Invoice</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

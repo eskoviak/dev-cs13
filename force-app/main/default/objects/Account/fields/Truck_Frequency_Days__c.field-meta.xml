@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Truck_Frequency_Days__c</fullName>
+    <description>Number of days between truck runs.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the number of days between truck runs.</inlineHelpText>
+    <label>Truck Frequency (Days)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

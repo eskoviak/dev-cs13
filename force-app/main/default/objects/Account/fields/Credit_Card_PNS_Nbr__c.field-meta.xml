@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Card_PNS_Nbr__c</fullName>
+    <description>Store data field. Credit Card PNS# is assigned to each store that we use in a Paymentech website called Iterminal.  We use this number in the website to charge or refund credit cards.
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the Credit Card PNS number used in the Paymentech website.
+
+Responsible Owner: Retail Accounting</inlineHelpText>
+    <label>Credit Card PNS Nbr</label>
+    <length>32</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

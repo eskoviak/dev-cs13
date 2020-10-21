@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailing_DB_Qty__c</fullName>
+    <description>This is the mailing database quantity (the number of people we mail for this account).
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the mailing database quantity (the number of people we mail for this account).
+
+Responsible Owner: Marketing</inlineHelpText>
+    <label>Mailing DB Qty</label>
+    <precision>7</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

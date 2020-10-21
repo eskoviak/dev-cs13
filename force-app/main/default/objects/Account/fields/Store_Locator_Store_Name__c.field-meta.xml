@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store_Locator_Store_Name__c</fullName>
+    <description>Populated from M3&apos;s Address 2.  OPCUNM</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Store Name that displays on the store locator websites.</inlineHelpText>
+    <label>Store Locator Store Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

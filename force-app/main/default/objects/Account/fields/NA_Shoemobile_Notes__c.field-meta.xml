@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Shoemobile_Notes__c</fullName>
+    <description>Additional details regarding the Shoemobile Service Frequency.
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is used to provide additional details when &quot;Other (see notes)&quot; is selected in the Shoemobile Service Frequency field. Data is only in Salesforce.</inlineHelpText>
+    <label>Shoemobile Notes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

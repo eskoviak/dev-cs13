@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BTB_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is this an account that the B2B team manages</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is this an account that the B2B team manages</inlineHelpText>
+    <label>BTB Account</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

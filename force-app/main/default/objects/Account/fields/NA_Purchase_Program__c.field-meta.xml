@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NA_Purchase_Program__c</fullName>
+    <description>The type of program under which an employee of this company location would purchase shoes 
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The type of program under which an employee of this company location would purchase shoes. Data is only in Salesforce.</inlineHelpText>
+    <label>Purchase Program</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cash-N-Carry</fullName>
+                <default>false</default>
+                <label>Cash-N-Carry</label>
+            </value>
+            <value>
+                <fullName>Payroll Deduction</fullName>
+                <default>false</default>
+                <label>Payroll Deduction</label>
+            </value>
+            <value>
+                <fullName>Pre-Paid Certificate</fullName>
+                <default>false</default>
+                <label>Pre-Paid Certificate</label>
+            </value>
+            <value>
+                <fullName>Subsidy</fullName>
+                <default>false</default>
+                <label>Subsidy</label>
+            </value>
+            <value>
+                <fullName>Subsidy &amp; Payroll Deduction</fullName>
+                <default>false</default>
+                <label>Subsidy &amp; Payroll Deduction</label>
+            </value>
+            <value>
+                <fullName>Other (See Notes)</fullName>
+                <default>false</default>
+                <label>Other (See Notes)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

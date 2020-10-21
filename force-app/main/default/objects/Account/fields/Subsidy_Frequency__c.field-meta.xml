@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subsidy_Frequency__c</fullName>
+    <description>The frequency of the subsidy
+Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the frequency of the subsidy. Data is only in Salesforce.</inlineHelpText>
+    <label>Subsidy Frequency</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Annually</fullName>
+                <default>false</default>
+                <label>Annually</label>
+            </value>
+            <value>
+                <fullName>Anniversary Date</fullName>
+                <default>false</default>
+                <label>Anniversary Date</label>
+            </value>
+            <value>
+                <fullName>2x / yr</fullName>
+                <default>false</default>
+                <label>2x / yr</label>
+            </value>
+            <value>
+                <fullName>As Needed</fullName>
+                <default>false</default>
+                <label>As Needed</label>
+            </value>
+            <value>
+                <fullName>Every other Year</fullName>
+                <default>false</default>
+                <label>Every other Year</label>
+            </value>
+            <value>
+                <fullName>Other (See Subsidy Notes)</fullName>
+                <default>false</default>
+                <label>Other (See Subsidy Notes)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

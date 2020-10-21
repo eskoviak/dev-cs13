@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Site</fullName>
+    <inlineHelpText>Headquarters/Parent indicates that a company is a legal entity with other locations.
+Branch is a location, division, or region of a headquarters or parent company.
+Single location indicates that a company is a headquarters with no other locations.</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+</CustomField>

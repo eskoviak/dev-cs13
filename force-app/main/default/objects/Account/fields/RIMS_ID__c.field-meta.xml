@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RIMS_ID__c</fullName>
+    <description>Legacy RIMS Account ID associated to the industrial account in IA and Salesforce. Not all accounts have a RIMS ID. This was intended for the Data Migration. Since manual entry was used, RIMS ID did not pass in the integration from IA to SF.
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the RIMS ID associated to this account.</inlineHelpText>
+    <label>RIMS ID</label>
+    <length>10</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

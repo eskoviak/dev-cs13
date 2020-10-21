@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store_Ownership_Type__c</fullName>
+    <description>Type of store; Dealership, Company Owned, or Branded
+Field Type: Store Data - Automatically populated based on M3 Customer Group
+Integrated: Y - SF&gt;Xstore pricing portal</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the type of store - used in reporting &amp; list views to separate Company Owned, Dealer, and Branded stores.
+
+Responsible Owner: M3</inlineHelpText>
+    <label>Store Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Branded</fullName>
+                <default>false</default>
+                <label>Branded</label>
+            </value>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>Dealer</fullName>
+                <default>false</default>
+                <label>Dealer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responsible_Biller_Store_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Store Account (M3 Account) responsible for billing the Industrial Account, when the Responsible Biller Type = Store 
+Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Store (M3 Account) responsible for billing the Industrial Account, when the Responsible Biller Type = Store. Sent to Salesforce by IA.</inlineHelpText>
+    <label>Responsible Biller Store Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Accounts (Responsible Biller Store Account)</relationshipLabel>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

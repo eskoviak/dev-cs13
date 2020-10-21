@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Irish_Setter_Hunt_Agency__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>DO NOT USE: There are no agencies representing the Irish Setter brands. Field is obsolete but may have code associated to it. Some Account records have this field populated. This field should be considered for deletion.</description>
+    <externalId>false</externalId>
+    <label>Obsolete Irish Setter Hunt Agency</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Accounts (Irish Setter Hunt Agency)</relationshipLabel>
+    <relationshipName>Irish_Setter_Hunt_Agency</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

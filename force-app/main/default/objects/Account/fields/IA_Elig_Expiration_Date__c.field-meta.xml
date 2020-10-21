@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Elig_Expiration_Date__c</fullName>
+    <description>The date that eligibility expires if it expires
+Field Type: IA 
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date that eligibility expires if it expires.Data is only in salesforce.</inlineHelpText>
+    <label>Eligibility Expiration Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

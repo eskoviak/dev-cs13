@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Date__c</fullName>
+    <description>This holds the account open date.
+Field Type: GLBL
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the date the Account was opened. This could be a retail store or an industrial account.
+
+Responsible for maintenance on Stores: Store Operations 
+Responsible for maintenance on Industrial Accounts: Account Owner</inlineHelpText>
+    <label>Open Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

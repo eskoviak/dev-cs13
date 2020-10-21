@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Cannot_Resend_Approved_Credit</fullName>
+    <active>true</active>
+    <description>The Credit Application cannot be resent when Credit Status is Active / Approved.</description>
+    <errorConditionFormula>AND(
+    Not($Profile.Name = &apos;System Administrator&apos;),
+    isPickVal(Credit_Status__c, &apos;Approved/Active&apos;),
+OR(
+	isChanged(Send_Credit_Application__c)
+	)
+	)</errorConditionFormula>
+    <errorMessage>The Credit Status is already Active/ Approved. You cannot resend the Credit Application.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_State_Province__c</fullName>
+    <description>Legacy State</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Legacy State from Act/Outook.</inlineHelpText>
+    <label>Legacy State/Province</label>
+    <length>40</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
