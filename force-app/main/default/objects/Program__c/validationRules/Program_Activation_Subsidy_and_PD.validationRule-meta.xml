@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Activation_Subsidy_and_PD</fullName>
+    <active>true</active>
+    <description>Requirements to activate a Subsidy and Payroll Deduction program</description>
+    <errorConditionFormula>AND(
+Active__c = TRUE,
+ISPICKVAL(Type__c,&apos;SubsidyandPayrollDeduction&apos;),
+OR(
+ISBLANK(Name),
+ISBLANK( Account__c ),
+ISBLANK( Text(Servicing_Level__c )),
+ISBLANK( Text(Subsidy_Tax__c )),
+HasPricebook__c = FALSE,
+Expiration_Date__c &lt; Today(),
+ISBLANK( Activation_Date__c ),
+
+/*Type Specific Requirements*/
+
+ISBLANK( Text(Eligibility_Option__c)),
+ISBLANK( Text(Subsidy_Type__c )),
+ISBLANK( Text(Accessories_Allowed_on_Subsidy__c )),
+ISBLANK( Text(Number_of_Pairs_Allowed__c )),
+ISBLANK( Text(Mandatory__c )),
+ISBLANK( Text(Accessories_Allowed_on_Payroll_Deduction__c ))
+))</errorConditionFormula>
+    <errorMessage>Your Subsidy and Payroll Deduction Program cannot be Activated until you populate the necessary information.</errorMessage>
+</ValidationRule>

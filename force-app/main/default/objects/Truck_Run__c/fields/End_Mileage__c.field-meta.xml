@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_Mileage__c</fullName>
+    <description>The mileage of the truck after returning to the store, or arriving at your destination for the truck run.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the mileage on the odometer upon arrival at the account location or return to the store.</inlineHelpText>
+    <label>End Mileage</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

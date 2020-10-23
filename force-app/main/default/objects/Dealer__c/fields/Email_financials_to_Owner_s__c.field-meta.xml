@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_financials_to_Owner_s__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Email financials to Owner(s)
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please check this box if the finance team must Email financials to Owner(s).</inlineHelpText>
+    <label>*Delete* Email financials to Owner(s)</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

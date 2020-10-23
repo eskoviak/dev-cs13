@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Ready_Text__c</fullName>
+    <description>eMail Ready Text that can be copied &amp; pasted</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Email ready text. If replying via email, copy and paste this text.</inlineHelpText>
+    <label>Email Ready Text</label>
+    <length>32768</length>
+    <trackHistory>true</trackHistory>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

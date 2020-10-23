@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard Object</fullName>
+                <default>true</default>
+                <label>Standard Object</label>
+            </value>
+            <value>
+                <fullName>Custom Object</fullName>
+                <default>false</default>
+                <label>Custom Object</label>
+            </value>
+            <value>
+                <fullName>System Setting</fullName>
+                <default>false</default>
+                <label>System Setting</label>
+            </value>
+            <value>
+                <fullName>Business Process</fullName>
+                <default>false</default>
+                <label>Business Process</label>
+            </value>
+            <value>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+                <label>Data Migration</label>
+            </value>
+            <value>
+                <fullName>System Integration</fullName>
+                <default>false</default>
+                <label>System Integration</label>
+            </value>
+            <value>
+                <fullName>App Exchange Product</fullName>
+                <default>false</default>
+                <label>App Exchange Product</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

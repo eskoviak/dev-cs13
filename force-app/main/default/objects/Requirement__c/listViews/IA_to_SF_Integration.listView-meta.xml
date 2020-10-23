@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_to_SF_Integration</fullName>
+    <columns>NAME</columns>
+    <columns>Requirement_Name__c</columns>
+    <columns>Requirement_Description__c</columns>
+    <columns>Parent_Requirement__c</columns>
+    <columns>Cross_Function__c</columns>
+    <columns>Configuration_Status__c</columns>
+    <columns>Development_Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Requirement_Name__c</field>
+        <operation>contains</operation>
+        <value>IA to SF Integration</value>
+    </filters>
+    <label>IA to SF Integration</label>
+    <sharedTo>
+        <group>Internal_RWSC_QA_Testing</group>
+        <group>SF_Integration_Team</group>
+        <role>National_Account_Mgr</role>
+        <role>Retail_Accounting_Manager</role>
+    </sharedTo>
+</ListView>

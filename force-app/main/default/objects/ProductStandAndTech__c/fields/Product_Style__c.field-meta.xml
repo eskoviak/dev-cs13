@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Style__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is updated from DMS Style Attributes service.</description>
+    <externalId>false</externalId>
+    <label>Product Style</label>
+    <referenceTo>Product2</referenceTo>
+    <relationshipLabel>Product Standards and Technologies</relationshipLabel>
+    <relationshipName>ProductsStandAndTechs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

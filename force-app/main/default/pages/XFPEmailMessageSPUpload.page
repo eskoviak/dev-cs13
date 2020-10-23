@@ -1,0 +1,5 @@
+<apex:page standardController="EmailMessage" showHeader="false">
+<apex:pageBlock title="Attach File" tabStyle="EmailMessage" mode="edit">
+<XFILES:XFileUpload />
+</apex:pageBlock>
+</apex:page>

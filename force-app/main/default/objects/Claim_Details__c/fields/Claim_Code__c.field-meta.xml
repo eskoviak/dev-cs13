@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Claim_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Claim Code</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>305 - Metatarsal Guard - Loose, broken, crooked</fullName>
+                <default>false</default>
+                <label>305 - Metatarsal Guard - Loose, broken, crooked</label>
+            </value>
+            <value>
+                <fullName>306 - Heel Counter or Counter Pocket</fullName>
+                <default>false</default>
+                <label>306 - Heel Counter or Counter Pocket</label>
+            </value>
+            <value>
+                <fullName>309 - Hook/Eyelet/Zipper/Buckle</fullName>
+                <default>false</default>
+                <label>309 - Hook/Eyelet/Zipper/Buckle</label>
+            </value>
+            <value>
+                <fullName>323 - Tongue/Gusset - Crooked/Torn</fullName>
+                <default>false</default>
+                <label>323 - Tongue/Gusset - Crooked/Torn</label>
+            </value>
+            <value>
+                <fullName>324 - Upper, Leather, Torn, Crooked, Scars, Odor</fullName>
+                <default>false</default>
+                <label>324 - Upper, Leather, Torn, Crooked, Scars, Odor</label>
+            </value>
+            <value>
+                <fullName>328 - Upper Stitching</fullName>
+                <default>false</default>
+                <label>328 - Upper Stitching</label>
+            </value>
+            <value>
+                <fullName>331 - Lining: Wrinkled, Loose, Worn, Torn</fullName>
+                <default>false</default>
+                <label>331 - Lining: Wrinkled, Loose, Worn, Torn</label>
+            </value>
+            <value>
+                <fullName>334 - Toe box or Safety Cap</fullName>
+                <default>false</default>
+                <label>334 - Toe box or Safety Cap</label>
+            </value>
+            <value>
+                <fullName>338 - Leaking</fullName>
+                <default>false</default>
+                <label>338 - Leaking</label>
+            </value>
+            <value>
+                <fullName>350 - Defective Welt</fullName>
+                <default>false</default>
+                <label>350 - Defective Welt</label>
+            </value>
+            <value>
+                <fullName>301 - Squeak or click in sole or shank</fullName>
+                <default>false</default>
+                <label>301 - Squeak or click in sole or shank</label>
+            </value>
+            <value>
+                <fullName>304 - Sole Defect: Cracking/Holes/Leadlag/Too Soft</fullName>
+                <default>false</default>
+                <label>304 - Sole Defect: Cracking/Holes/Leadlag/Too Soft</label>
+            </value>
+            <value>
+                <fullName>321 - Boot Insole: Lump or Bump</fullName>
+                <default>false</default>
+                <label>321 - Boot Insole: Lump or Bump</label>
+            </value>
+            <value>
+                <fullName>335 - Sole Adhesion to upper or Midsole</fullName>
+                <default>false</default>
+                <label>335 - Sole Adhesion to upper or Midsole</label>
+            </value>
+            <value>
+                <fullName>104 - Order entry error</fullName>
+                <default>false</default>
+                <label>104 - Order entry error</label>
+            </value>
+            <value>
+                <fullName>105 - Garment does not fit</fullName>
+                <default>false</default>
+                <label>105 - Garment does not fit</label>
+            </value>
+            <value>
+                <fullName>109 - Customization Error</fullName>
+                <default>false</default>
+                <label>109 - Customization Error</label>
+            </value>
+            <value>
+                <fullName>112 - OK Customer Service</fullName>
+                <default>false</default>
+                <label>112 - OK Customer Service</label>
+            </value>
+            <value>
+                <fullName>114 - OK Sales Rep</fullName>
+                <default>false</default>
+                <label>114 - OK Sales Rep</label>
+            </value>
+            <value>
+                <fullName>117 - Delivery Refused</fullName>
+                <default>false</default>
+                <label>117 - Delivery Refused</label>
+            </value>
+            <value>
+                <fullName>310 - Shrinkage</fullName>
+                <default>false</default>
+                <label>310 - Shrinkage</label>
+            </value>
+            <value>
+                <fullName>313 - Miscellaneous</fullName>
+                <default>false</default>
+                <label>313 - Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>333 - Zipper</fullName>
+                <default>false</default>
+                <label>333 - Zipper</label>
+            </value>
+            <value>
+                <fullName>313 - Miscellaneous defect</fullName>
+                <default>false</default>
+                <label>313 - Miscellaneous defect</label>
+            </value>
+            <value>
+                <fullName>375 - Voluntary Recall</fullName>
+                <default>false</default>
+                <label>375 - Voluntary Recall</label>
+            </value>
+            <value>
+                <fullName>030 - 30 Day Comfort</fullName>
+                <default>false</default>
+                <label>030 - 30 Day Comfort</label>
+            </value>
+            <value>
+                <fullName>A13 - Defective Accessories (use for non-footwear)</fullName>
+                <default>false</default>
+                <label>A13 - Defective Accessories (use for non-footwear)</label>
+            </value>
+            <value>
+                <fullName>CRRW - In warranty repair charge</fullName>
+                <default>false</default>
+                <label>CRRW - In warranty repair charge</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

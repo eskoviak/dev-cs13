@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rate_Overall_Performance_Comments__c</fullName>
+    <description>Survey Question: How would you rate the overall performance?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Survey Question: How would you rate the overall performance?</inlineHelpText>
+    <label>Rate Overall Performance - Comments</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

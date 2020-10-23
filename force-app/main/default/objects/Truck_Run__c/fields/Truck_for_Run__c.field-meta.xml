@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Truck_for_Run__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The truck that will be servicing the account on the truck run.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the truck assigned to the run.</inlineHelpText>
+    <label>Truck for Run</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Truck_for_Store__c.Truck_Is_Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Truck_for_Store__c</referenceTo>
+    <relationshipLabel>Truck Runs</relationshipLabel>
+    <relationshipName>Truck_Runs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

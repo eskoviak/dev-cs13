@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_financials_to_CPA__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Email financials to CPA
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please check this box if the finance team must Email financials to the CPA .</inlineHelpText>
+    <label>*Delete* Email financials to CPA</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Define the Type of the Attachment.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Define the Type of the Attachment.</inlineHelpText>
+    <label>Type</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Document_for_Credit_Application__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Company Voucher</fullName>
+                <default>false</default>
+                <label>Company Voucher</label>
+            </value>
+            <value>
+                <fullName>Customer Bid Document</fullName>
+                <default>false</default>
+                <label>Customer Bid Document</label>
+            </value>
+            <value>
+                <fullName>Customer Master Service Agreement</fullName>
+                <default>false</default>
+                <label>Customer Master Service Agreement</label>
+            </value>
+            <value>
+                <fullName>Customer Purchase Order</fullName>
+                <default>false</default>
+                <label>Customer Purchase Order</label>
+            </value>
+            <value>
+                <fullName>Customer Trade Reference</fullName>
+                <default>false</default>
+                <label>Customer Trade Reference</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+                <label>Proposal</label>
+            </value>
+            <value>
+                <fullName>Red Wing Program Agreement</fullName>
+                <default>false</default>
+                <label>Red Wing Program Agreement</label>
+            </value>
+            <value>
+                <fullName>Signed Contract</fullName>
+                <default>false</default>
+                <label>Signed Contract</label>
+            </value>
+            <value>
+                <fullName>Tax Exempt Certificate</fullName>
+                <default>false</default>
+                <label>Tax Exempt Certificate</label>
+            </value>
+            <value>
+                <fullName>W-9</fullName>
+                <default>false</default>
+                <label>W-9</label>
+            </value>
+            <value>
+                <fullName>Customer Application</fullName>
+                <default>false</default>
+                <label>Customer Application</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Company Voucher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Customer Bid Document</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Customer Master Service Agreement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Customer Purchase Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Customer Trade Reference</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Proposal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Red Wing Program Agreement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Signed Contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Tax Exempt Certificate</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

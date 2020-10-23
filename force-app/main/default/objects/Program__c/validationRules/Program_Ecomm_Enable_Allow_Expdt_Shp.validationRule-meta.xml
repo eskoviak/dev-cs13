@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Ecomm_Enable_Allow_Expdt_Shp</fullName>
+    <active>false</active>
+    <description>If Ecomm Enabled = Yes, Allow Expedited Shipping is required</description>
+    <errorConditionFormula>AND(
+isPickVal(Ecomm_Enabled__c, &apos;Yes&apos;),
+isBlank(TEXT( Allow_Expedited_Shipping__c )))</errorConditionFormula>
+    <errorMessage>You must select either Yes or No when Ecomm Enabled = Yes</errorMessage>
+</ValidationRule>

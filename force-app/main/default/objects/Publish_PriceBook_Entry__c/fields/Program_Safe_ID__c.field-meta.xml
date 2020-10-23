@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Safe_ID__c</fullName>
+    <description>Program 18 character unique system assigned Id related to PBE and related PPBE</description>
+    <externalId>false</externalId>
+    <formula>Publish_PriceBook__r.Program__r.Program_Safe_ID__c</formula>
+    <inlineHelpText>Program 18 character unique system assigned Id related to PBE and related PPBE</inlineHelpText>
+    <label>Program Safe ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

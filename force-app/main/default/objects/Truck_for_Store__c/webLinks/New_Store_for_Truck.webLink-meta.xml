@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Store_for_Truck</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>New Store for Truck</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/a18/e?CF00NJ0000000duxQ=1234&amp;CF00NJ0000000duxQ_lkid=a14J0000000EVxD&amp;saveURL=%2Fa14J0000000EVxD&amp;retURL=%2Fa14J0000000EVxD</url>
+</WebLink>

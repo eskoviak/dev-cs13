@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Process_30_Day_Comfort_and_Defects__c</fullName>
+    <description>Process 30 Day Comfort and Defects</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Process 30 Day Comfort and Defects</inlineHelpText>
+    <label>Process 30 Day Comfort and Defects</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>NA_Yes_No</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MKT_Email_Engagement_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( MKT_Marketing_Email_Engagement__c , 
+&quot;70%&quot;,10, 
+&quot;60%&quot;,7, 
+&quot;40%&quot;,5, 
+&quot;30%&quot;,3, 
+&quot;&lt;29%&quot;,1, 
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>MKT - Email Engagement Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

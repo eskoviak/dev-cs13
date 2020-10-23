@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_National_Account_Critical</fullName>
+    <columns>NAME</columns>
+    <columns>Requirement_Name__c</columns>
+    <columns>Release_Build_Number__c</columns>
+    <columns>Status__c</columns>
+    <columns>Complexity__c</columns>
+    <columns>Development_Status__c</columns>
+    <columns>High_Level_Requirement__c</columns>
+    <columns>Number_of_Test_Cases__c</columns>
+    <columns>Number_of_Use_Cases__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Iteration__c</field>
+        <operation>equals</operation>
+        <value>IA-NA</value>
+    </filters>
+    <label>IA - National Account Critical</label>
+    <sharedTo>
+        <group>Industrial_Accounts_Solution_RWSC_User</group>
+        <group>Internal_RWSC_QA_Testing</group>
+    </sharedTo>
+</ListView>

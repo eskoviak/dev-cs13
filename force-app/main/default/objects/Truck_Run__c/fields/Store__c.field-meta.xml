@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The store that will be servicing the account on the truck run.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the store associated with the truck run.</inlineHelpText>
+    <label>Store</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>M3 Store Parent Account</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Truck Runs (Store)</relationshipLabel>
+    <relationshipName>Truck_Runs_Store</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

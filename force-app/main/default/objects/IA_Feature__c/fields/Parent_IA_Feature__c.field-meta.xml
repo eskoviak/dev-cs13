@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_IA_Feature__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Used to associate an IA Feature with a Parent IA Feature.  Lookup within the same IA Feature object.
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to associate an IA Feature with a Parent IA Feature.  Lookup within the same IA Feature object.</inlineHelpText>
+    <label>Red Wing Parent ID</label>
+    <referenceTo>IA_Feature__c</referenceTo>
+    <relationshipLabel>IA Feature</relationshipLabel>
+    <relationshipName>IA_Feature</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

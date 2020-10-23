@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IA_Requirements_Reviewed_and_Approved</fullName>
+    <columns>High_Level_Requirement__c</columns>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Parent_Requirement__c</columns>
+    <columns>Requirement_Name__c</columns>
+    <columns>Number_of_Test_Cases__c</columns>
+    <columns>Iteration__c</columns>
+    <columns>Reviewed_by_Business__c</columns>
+    <columns>Reviewed_by_Project_Team__c</columns>
+    <columns>Reviewed_by_Vendor__c</columns>
+    <columns>Release_Build_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project__c</field>
+        <operation>equals</operation>
+        <value>Industrial Accounts Solution</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <label>IA Requirements Reviewed and Approved</label>
+    <sharedTo>
+        <group>Industrial_Accounts_Solution_Intershop</group>
+        <group>Industrial_Accounts_Solution_RWSC_User</group>
+        <group>Internal_RWSC_QA_Testing</group>
+    </sharedTo>
+</ListView>

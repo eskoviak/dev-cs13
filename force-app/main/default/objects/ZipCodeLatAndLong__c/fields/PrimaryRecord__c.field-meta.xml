@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrimaryRecord__c</fullName>
+    <description>USPS file: Character ‘P’ denoting if this row is a Primary Record or not. Absence of character denotes a non-primary record.</description>
+    <externalId>false</externalId>
+    <label>PrimaryRecord</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>P</fullName>
+                <default>false</default>
+                <label>P</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

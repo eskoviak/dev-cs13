@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Debug_Accordions__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When TRUE, Accordions are clickable and a user can &apos;jump&apos; sections of the Wizard and Program Summary. When FALSE (default), Accordions are not clickable and a user must user buttons for navigation.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When TRUE, Accordions are clickable and a user can &apos;jump&apos; sections of the Wizard and Program Summary. When FALSE (default), Accordions are not clickable and a user must user buttons for navigation.</inlineHelpText>
+    <label>Debug Accordions</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

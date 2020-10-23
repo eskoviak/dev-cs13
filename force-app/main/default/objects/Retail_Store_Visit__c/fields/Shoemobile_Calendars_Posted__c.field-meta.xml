@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shoemobile_Calendars_Posted__c</fullName>
+    <description>Shoemobile Calendars posted to Outlook including account profile, contact, and forecasted pairs. Each store post 3 wall calendars to show 3 months worth of bookings, updated regularly</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Shoemobile Calendars posted to Outlook including account profile, contact, and forecasted pairs. Each store post 3 wall calendars to show 3 months worth of bookings, updated regularly</inlineHelpText>
+    <label>Shoemobile Calendars Posted</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No</valueSetName>
+    </valueSet>
+</CustomField>

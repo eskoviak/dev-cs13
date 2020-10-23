@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Defect_Open</fullName>
+    <columns>Defect_Title__c</columns>
+    <columns>NAME</columns>
+    <columns>Project__c</columns>
+    <columns>Assigned_to__c</columns>
+    <columns>Defect_Status__c</columns>
+    <columns>Test_Type__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Defect_Status__c</field>
+        <operation>contains</operation>
+        <value>Open,In Progress,Reopened,Retest,Deferred</value>
+    </filters>
+    <filters>
+        <field>Assigned_to__c</field>
+        <operation>notContain</operation>
+        <value>larson,samala,miller,clemen,paige,nesbitt</value>
+    </filters>
+    <label>Defect - Open</label>
+</ListView>

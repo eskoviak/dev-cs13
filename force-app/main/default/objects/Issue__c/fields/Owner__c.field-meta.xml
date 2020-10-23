@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The manager of the issue</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field will be set automatically based on the status of the issue. Please do not change this setting, as the system will control its assignment.</inlineHelpText>
+    <label>Owner</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Issues</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

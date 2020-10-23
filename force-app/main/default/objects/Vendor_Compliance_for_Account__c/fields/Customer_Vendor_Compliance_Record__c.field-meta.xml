@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Vendor_Compliance_Record__c</fullName>
+    <externalId>false</externalId>
+    <label>Customer Vendor Compliance Record</label>
+    <referenceTo>Vendor_Compliance__c</referenceTo>
+    <relationshipLabel>Accounts with Vendor Compliance</relationshipLabel>
+    <relationshipName>Vendor_Compliance_for_Account</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

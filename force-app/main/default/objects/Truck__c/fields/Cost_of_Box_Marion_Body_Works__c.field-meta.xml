@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_of_Box_Marion_Body_Works__c</fullName>
+    <description>Dollar Cost of Box creation, refresh or remodel
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Dollar cost of box creation, refresh or remodel</inlineHelpText>
+    <label>Cost of Box (Marion Body Works)</label>
+    <precision>9</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

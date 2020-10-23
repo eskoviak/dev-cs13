@@ -1,0 +1,314 @@
+<!-- ************FOR COMMUNITY*******************
+*Name          :  RWS_TruckControllerCalendar
+*Description   :  Calendar to View and Schedule Truck
+*Author        :  Rajani D Cheruku
+*Modification Log
+
+********************************************************************* -->
+
+
+<apex:page controller="TravelCalendar_Controller" action="{!pageLoad}" showHeader="false" sidebar="false"
+           applyBodyTag="false" applyHtmlTag="false"
+           standardStylesheets="false">    
+<html lang="en">
+    <head>
+        <c:HeadTagComponent />
+        
+    <apex:relatedList list="TravelCalendar_Controller" />    
+    <link href="{!$Resource.fullCalendarCSS}" rel="stylesheet" />    
+    <link href="{!$Resource.fullCalendarPrintCSS}" rel="stylesheet" media="print" />    
+    <apex:includeScript value="{!$Resource.moment_min_js}"  /> 
+        <apex:includeScript value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquerydataTables.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/logout.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/bootstrap.min.js')}"/>    
+        
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="{!$Resource.fullCalendarMinJS}"></script>
+        
+    <script>
+        //We need to wrap everything in a doc.ready function so that the code fires after the DOM is loaded
+        $(document).ready(function() {  
+        //Call the fullCallendar method. You can replace the '#calendar' with the ID of the dom element where you want the calendar to go. 
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            editable: true,
+            selectable: true,
+            events:
+            [
+                //At run time, this APEX Repeat will reneder the array elements for the events array
+                <apex:repeat value="{!events}" var="e">
+                {
+                	title: "{!e.title}",
+                    start: '{!e.startString}',
+                    end: '{!e.endString}',
+                    url: '{!e.url}',
+                    eId: '{!e.eId}',
+                    allDay: {!e.allDay},
+                    className: '{!e.className}',
+                    backgroundColor: '{!e.colorCode}',
+                    textColor: 'black'
+                },
+                </apex:repeat>
+            ],
+        eventMouseover: function (data, event, view) {
+            tooltip = '<div class="tooltiptopicevent" style="width:auto;height:auto;background:#feb811;position:absolute;z-index:10001;padding:10px 10px 10px 10px ;  line-height: 200%;">' + data.title + '</div>';
+            $("body").append(tooltip);
+            $(this).mouseover(function (e) {
+                $(this).css('z-index', 10000);
+                $('.tooltiptopicevent').fadeIn('500');
+                $('.tooltiptopicevent').fadeTo('10', 1.9);
+            }).mousemove(function (e) {
+                $('.tooltiptopicevent').css('top', e.pageY + 10);
+                $('.tooltiptopicevent').css('left', e.pageX + 20);
+            });
+        },
+        eventMouseout: function (data, event, view) {
+            $(this).css('z-index', 8);
+            $('.tooltiptopicevent').remove();
+        },
+            //change
+        eventDrop: function(event, delta, revertFunc) {
+            if (!confirm("Apply changes to this appointment?")) {
+                 revertFunc();
+            }
+            else{
+                update(event.eId,event.start.format(),event.end.format());
+                setTimeout(function(){
+                    location.reload();
+                    
+                },1000);
+            }
+        } ,
+        eventResize: function(event, delta, revertFunc) {
+            if (!confirm("Apply changes to this appointment?")) {
+                 revertFunc();
+            }
+            else{
+                update(event.eId,event.start.format(),event.end.format());
+                setTimeout(function(){
+                    location.reload();
+                },1000);
+            }
+        } ,
+
+       dayClick: function (start,end, delta,revertFunc) {    	 
+                   
+         if (!confirm("Create New Truck Run?")) {
+                 revertFunc();
+            }
+            else{
+                update('false',moment(start).format(),moment(end).format());
+            }
+		}       
+        });
+        });
+    function openTruckRun(Id,url){
+        /*if(Id == '')
+            {
+                location.reload(); 
+                }
+        else{*/
+        var uri = url + '/redwingforbusinessportal/RWS_NewTruckRun?id=' + Id;
+            window.open(uri);
+            location.reload(); 
+        //}
+        }
+   </script>
+    
+    <!--some styling. Modify this to fit your needs-->
+    <style>
+        #cal-options {float:left;}
+        <!--#cal-legend { float:right;}
+        #cal-legend ul {margin:0;padding:0;list-style:none;}
+        #cal-legend ul li {margin:0;padding:5px;float:left;}
+        #cal-legend ul li span {display:block; height:16px; width:16px; margin-right:4px; float:left; border-radius:4px;}-->
+        #calendar {margin-top:20px; height: auto; width: auto;background-color: white;}
+        #calendar a:hover {color:#fff !important;}
+        .fc-event-inner {padding:3px;}
+        .event-personal {background:#1797c0;border-color:#1797c0;}
+        .event-mytravel {background:#00447b;border-color:#00447b;}
+        .event-sbtravel {background:#FCB514;border-color:#FCB514;}
+        .event-trtravel {background:#00A5DB;border-color:#00A5DB;}
+        .event-ottravel {background:#676C74;border-color:#676C74;}
+		.no-close .ui-dialog-titlebar-close { display: none;}
+        .calendarWindow {
+          width: auto;
+          height: auto;
+          border-radius: 15px;
+          background-color: white;
+          position: sticky;          
+          display: inline;
+          z-index: 1; 
+          margin:0 auto;
+        }
+        .dayClickWindow {
+          width: auto;
+          height: auto;
+          border-radius: 15px;
+          background-color: gray;
+          position: absolute;          
+          display: none;
+          z-index: 1;
+          left: 75%;
+          top: 75%;
+          margin-top: -250px;
+          margin-left: -250px;
+          padding:10px 10px 10px 10px ;  
+          line-height: auto;
+        }
+         .custPopup{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+            displays in the center of the screen. First set the width. Then set 
+            margin-left to negative half of what the width is. You can add 
+            the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+        top:100px;
+        }
+        .popupBackground{
+        background-color:black;
+        opacity: 0.20;
+        filter: alpha(opacity = 20);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 9998;
+        }
+        </style>
+        
+    </head>
+    <body class="accounts">
+        <div class="fluid-container">
+            <c:RWS_Header />            
+            <apex:form id="accountListForm">
+                <apex:actionFunction name="update" action="{!updateEvent}" rerender="out" oncomplete="openTruckRun('{!newTruckRunId}','{!truckRunURL}');">
+                    <apex:param id="eId" name="eventID" value="" />
+                    <apex:param id="sDate" name="startDate" value="" />
+                    <apex:param id="eDate" name="endDate" value="" />
+                </apex:actionFunction> 
+                <apex:pageBlock >
+                    <div class="wrapper row site-content">
+                        <div class="form-horizontal form_bg col-sm-12">
+                            <div class="row summary-header">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-3">&nbsp;</div>
+                                    <div class="col-sm-6 pad_lft0">
+                                        <h2 class=" text-uppercase fancy white"><span>Truck Scheduling for Store Community</span></h2> 
+                                        <!-- <apex:image id="truckImage" value="{!$Resource.Truck}" alt="Truck image"/>-->
+                                    </div>                                    
+                                    <div class="col-sm-3 txt_right">
+                                        <!--  <a id="newAccount"  class="btn btn-danger mrg_top20 mrg_btm20 mrg_rgt0" onClick="resetAttachmentSessionVar(); window.location='RWS_Account_CreationV2?tab=account'; return false;">New Truck Run</a> 
+<span id="newAccountDisabled"  class="btn btn-danger btn-outline disabled mrg_top20 mrg_btm20 mrg_rgt0 ">New Truck Run</span> -->
+                                        <div class="btn btn-danger mrg_top20 mrg_btm20 mrg_rgt0" >
+                                            <apex:commandButton style="color: black;" value="All Truck Runs" action="{!allTruckRunsUrl}"/>
+                                            &nbsp;&nbsp;&nbsp;
+                                        </div>
+                                        <div class="btn btn-danger mrg_top20 mrg_btm20 mrg_rgt0">
+                                            <apex:commandButton style="color: black;" value="New Truck Run" action="{!updateEvent}" rerender="out" oncomplete="openTruckRun('{!newTruckRunId}','{!truckRunURL}');" >
+                                                <apex:param id="eId" name="eventID" value="false" />
+                                                <apex:param id="sDate" name="startDate" value="" />
+                                                <apex:param id="eDate" name="endDate" value="" />
+                                                <apex:param id="community" name="endDate" value="Yes" />
+                                            </apex:commandButton>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 pannel_bg">
+                                    <div class="col-sm-6">
+                                        <div>
+                                          <apex:outputLabel style="color: white;" value="Store Selection: " for="accountSelect"/>
+                                            <apex:selectList styleClass="solutionLine form-control my-1"  id="accountSelect" value="{!SelectedAccountId}" size="1" title="Account Selection">
+                                                <apex:actionSupport event="onchange" action="{!pageLoad}" />
+                                                <apex:selectOptions value="{!Accounts}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        
+                                        <apex:pageBlockSection rendered="{!ShowTruckSection}">
+                                            <apex:outputLabel style="color: white;" value="Truck Selection:" for="truckSelect"/>
+                                            <apex:selectList styleClass="solutionLine form-control my-1" id="truckSelect" value="{!SelectedTruckId}" size="1" title="Truck Selection" >
+                                                <apex:actionSupport event="onchange"  action="{!pageLoad}"/>
+                                                <apex:selectOptions value="{!Trucks}"></apex:selectOptions>
+                                            </apex:selectList>
+                                            <apex:outputLabel style="color: white;" value="Driver Selection:" for="driverSelect"/>
+                                            <apex:selectList styleClass="solutionLine form-control my-1" id="driverSelect" value="{!SelectedDriverId}" size="1" title="Driver Selection" >
+                                                <apex:actionSupport event="onchange" action="{!pageLoad}" />
+                                                <apex:selectOptions value="{!Drivers}"></apex:selectOptions>
+                                            </apex:selectList>
+                                        </apex:pageBlockSection>
+                                            </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            
+                            <apex:outputPanel id="detail">
+                                <!-- <div class="display" style="clear:both;"><!--fix floats</div> -->
+                                <div id="calendar"></div> 
+                                <div id="newEvent" onclick="window.location='http://google.com';"></div>
+                                <div class="dayClickWindow" > 
+                                    <field>
+                                        <label for="Id">Id</label>
+                                        <input type="text" name="name" id="name" /> 
+                                        <label for="Id">Title</label>
+                                        <input type="text" name="title" id="title" />
+                                        <button id="Cancel">
+                                            Cancel
+                                        </button>
+                                    </field>
+                                </div> 
+                            </apex:outputPanel>
+                        </div>
+                    </div>
+                </apex:pageBlock>
+            </apex:form>
+            <c:RWS_Footer />
+        </div>
+        
+            <!-- <apex:form >
+<apex:commandButton value="Show Pop up" action="{!showPopup}" rerender="popup"/> 
+<apex:outputPanel id="popup">
+<apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+<apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopUp}">
+Store: &nbsp;
+<apex:selectList id="accountSelect" value="{!newStore}" size="1">
+<apex:selectOptions value="{!Accounts}"></apex:selectOptions>
+</apex:selectList> <br/>
+Truck: &nbsp;
+<apex:selectList id="truckSelect" value="{!newTruck}" size="1">
+<apex:selectOptions value="{!Trucks}"></apex:selectOptions>
+</apex:selectList> <br/>
+Driver: &nbsp;
+<apex:selectList id="driverSelect" value="{!newDriver}" size="1">
+<apex:selectOptions value="{!Drivers}"></apex:selectOptions>
+</apex:selectList> <br/>
+Start Time: &nbsp;
+
+<apex:commandButton value="Cancel" action="{!closePopup}" rerender="popup"/>
+<apex:commandButton value="Save" action="{!saveAndClosePopup}" rerender="popup" style="float: right;"/>
+</apex:outputPanel>
+<apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayError}"/>
+<apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayError}">
+<a>You must select a Store before creating a new Truck Run.</a> <br/>
+<apex:commandButton value="Ok" action="{!closePopup}" rerender="popup"/>
+</apex:outputPanel>
+</apex:outputPanel>
+</apex:form>          -->
+
+     <c:RWS_Modals />
+    </body>
+</html>
+</apex:page>

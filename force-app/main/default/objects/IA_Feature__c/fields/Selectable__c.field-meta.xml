@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Selectable__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If checked (TRUE) this feature can be selected in the product selection visualforce page (it has a checkbox).
+If unchecked (FALSE) the feature cannot be selected (i.e. a header / parent)
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If checked (TRUE) this feature can be selected in the product selection visualforce page.
+If unchecked (FALSE) the feature cannot be selected (i.e. a header / parent)</inlineHelpText>
+    <label>Selectable</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

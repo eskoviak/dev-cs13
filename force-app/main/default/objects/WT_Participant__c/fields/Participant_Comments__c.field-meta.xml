@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Participant_Comments__c</fullName>
+    <description>A long text area field for comments about the tester.
+Renamed from Tester Comments</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Comments about the participant.</inlineHelpText>
+    <label>Participant Comments</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

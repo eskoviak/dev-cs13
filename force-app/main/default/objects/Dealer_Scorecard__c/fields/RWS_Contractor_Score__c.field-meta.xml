@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RWS_Contractor_Score__c</fullName>
+    <description>Calculates the score for using RWS contractors on the Build or Remodel.</description>
+    <externalId>false</externalId>
+    <formula>CASE(  RWS_Contractors_Used__c  , 
+&quot;All&quot;,10, 
+&quot;Some&quot;,5, 
+&quot;None&quot;,0, 
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>RWS Contractor Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

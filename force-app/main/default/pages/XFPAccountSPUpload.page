@@ -1,0 +1,5 @@
+<apex:page standardController="Account" showHeader="false">
+<apex:pageBlock title="Attach File to {!Account.Name}" tabStyle="Account" mode="edit">
+<XFILES:XFileUpload />
+</apex:pageBlock>
+</apex:page>

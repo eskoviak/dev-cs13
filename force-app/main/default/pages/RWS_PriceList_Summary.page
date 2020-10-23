@@ -1,0 +1,343 @@
+<apex:page controller="RWS_PriceList_Summary_Controller" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false">
+    
+   
+  <html lang="en">
+    <head>
+        <c:HeadTagComponent />
+        <!--<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <apex:includeScript value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquery.js')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquerydataTablesmin.css')}"/>
+        
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/bootstrap.min.css')}" rel="stylesheet" /> 
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/font-awesome.css')}" rel="stylesheet" />
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/styles.css')}" rel="stylesheet" />
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/menus.css')}" rel="stylesheet" />-->
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/pricelist.css')}" rel="stylesheet" />
+        <apex:includeScript value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquerydataTables.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/logout.js')}" />
+            
+    </head>
+    
+
+    <body>
+    <div class="fluid-container">
+    <c:RWS_Header />
+    <style>
+        .col-sm-2 {
+            width: 31.6667%;
+        }
+
+        .col-sm-5 {
+            width: 25.6667%;
+        }
+    </style>
+
+    <apex:form >
+        
+        <apex:actionFunction name="removeRecord" action="{!removeEntry}" reRender="" oncomplete="alert('Remove message logic goes here.')">
+            <apex:param name="eId" assignTo="{!entryId}" value="msgs" />
+        </apex:actionFunction>
+        <apex:actionFunction name="updateRecords" action="{!updateEntries}" reRender="msgs" oncomplete="alert('Update message goes here')">
+            <apex:param name="uJson" assignTo="{!updateJson}" value="" />
+        </apex:actionFunction>
+
+        
+
+         <div class="col-sm-12">
+            <div class="form-horizontal form_bg col-sm-12">
+                <div class="col-sm-12 mrg_btm20">
+                    <div class="flt_lft cursor">
+                        <i class="fa fa-fw group_icon" aria-hidden="true" title=""></i>
+                    </div>
+                    <div class="col-sm-9 pad_lft0">
+                        <h4 class="group_title text-uppercase">Set Up A New Industrial <br/> Account for Your Store</h4>
+                    </div>
+                    <div class="cursor flt_rgt mrg_top15 mrg_rgt10" onClick="">
+                        <a class="go-back" href="ProgramSummary?tab=program&proid={!programId}">&#60; BACK</a>
+                    </div>
+                    <div class="bottom-grey col-sm-12">
+                        <br/>
+                    </div>                                                           
+                </div>                              
+                <div class="col-sm-5">
+                    <br/>
+                    <span class="text-uppercase table-title">Name of Product Added</span>
+                </div> 
+                <div class="col-sm-2 col-sm-offset-2"> 
+                    <br/>                        
+                    <a role="button" href="RWS_Product_Selection?tab=program&proid={!programId}" class="navx pull-right">
+                        <span class="pad_rgt5 fnt16">Add More</span> 
+                        <i class="fa fa-fw fa-plus fa-2x middle-vert" aria-hidden="true" title=""></i>         
+                    </a>
+                    <a class="btn btn-danger" onclick="updatePriceList()">Update Price</a>
+                </div>
+                <div class="col-sm-3 flt_rgt">
+                    <input class="myinput form-control myinput_search" placeholder="Search for style" type="text" id="searchbox" onkeyup="searchProduct(this.value);"/>
+                    <span class="glyphicon glyphicon-search search_icons mrg_top_neg"></span>
+                </div>
+                <div class="col-sm-12">
+                    <br/>
+                    <apex:pageMessages id="msgs"/>
+                </div>                   
+                <div class="col-sm-12">
+                    <table id="device-grid-list" class="list col-sm-12 display dataTable no-footer ">
+                        <thead>
+                            <tr>
+                                <th><span class="fnt16"><span class="glyphicon glyphicon-sort"></span> Category</span></th>
+                                <th><span class="fnt16"><span class="glyphicon glyphicon-sort"></span> Style</span></th>
+                                <th><span class="fnt16"><span class="glyphicon glyphicon-sort"></span> Product Name</span></th>
+                                <th><span class="fnt16"><span class="glyphicon glyphicon-sort"></span> MSRP</span></th>
+                                <th><span class="fnt16">Discount &#37;</span></th>
+                                <th><span class="fnt16">Program Price</span></th>
+                                <th><span class="fnt16">Edit</span></th>
+                                <th class="cursor wid6 txt_center"><span class="fnt16">Remove</span></th>
+                                <th style="display:none;"> <span class="glyphicon glyphicon-sort"></span> Product Id</th>
+                            </tr>
+                         </thead>                       
+                     </table>  
+                </div>
+                <div class="col-sm-12">
+                    <br/>
+                    <br/>
+                </div>
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="col-sm-6">
+                    <apex:outputPanel rendered="{!NOT(ISNULL(accountId))}" styleClass="btn btn-danger btn-outline btn-xl flt_rgt wid100" onclick="window.location ='AccountSummary?tab=account&id={!accountId}';">View Account Summary</apex:outputPanel>
+                    <!--
+                    <span class="btn btn-danger btn-outline btn-xl flt_rgt wid100"
+                        onclick="window.location ='AccountSummary?tab=account&id={!accountId}';">View Account Summary</span>
+                    -->
+                    </div>
+                    <div class="col-sm-6">
+                        <a class="btn btn-danger btn-xl wid100"
+                        onclick="window.location ='ProgramSummary?tab=program&proid={!programId}';">View Program Summary</a>
+                    </div>                
+                </div>
+                <div class="col-sm-12">
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>           
+            </div>                  
+        </div>     
+    
+    </apex:form>
+
+    <c:RWS_Footer />
+    </div>
+    
+    <script>
+    
+    
+    
+    
+    $(document).ready( function () {
+        var loadData = '{!loadEntriesJSON}';
+        var jsonData = $.parseJSON('{!entriesJSON}');
+        console.log(jsonData);
+        
+        
+        table = $('#device-grid-list').DataTable({
+            "pageLength": 25,    
+            "data": jsonData,
+            "columns": [
+               
+                { 
+                 "searchable": true,
+                 "data": "ProdPriceObj.Product2.Category__c",
+                 "render": function ( data, type, row ) {
+                     return checkEmptyData(data);
+                 }
+                },
+                { 
+                 "searchable": true,
+                 "data": "ProdPriceObj.Product2.ProductCode",
+                 "render": function ( data, type, row ) {
+                     return checkEmptyData(data);
+                 }
+                },
+                
+                {
+                 "searchable": true,
+                 "data": "ProdPriceObj.Product2.Name",
+                 "render": function ( data, type, row ) {
+                     return checkEmptyData(data);
+                 }
+                },
+                {
+                 "searchable": false,
+                 "data": "MSRP",
+                 "render": function ( data, type, row ) {
+                     return checkEmptyData(data);
+                 }
+                },
+                {
+                 "searchable": false,
+                 "data": "ProdPriceObj.Discount__c",
+                 "render": function ( data, type, row ) {
+                    return '<input class="form-control discount ovrl_dis_in" id="discountAll" type="text" value="' +checkEmptyData(data) + '" disabled="true" onkeyup="calPrice(getRowIndex(this))"/><input type="hidden" value="' +checkEmptyData(data) + '" />';
+                 }
+                },
+                {
+                 "searchable": false,
+                 "data": "ProdPriceObj.UnitPrice",
+                 "render": function ( data, type, row ) {
+                    return '<input class="form-control discount ovrl_dis_in" id="discountAll" type="text" value="' +checkEmptyData(data) + '" disabled="true" onkeyup="calDisc(getRowIndex(this))"/><input type="hidden" value="' +checkEmptyData(data) + '" />';
+                 }
+                },  
+                {
+                    "className": "pr_td cursor wid6 ref_icon",
+                    "data": "ProdPriceObj.Id",
+                    "render": function(data, type, full, meta) {
+                        return '<a class="navx" onclick="var idx = getRowIndex(this); disableEnable(idx);"><i aria-hidden="true" class="fa fa-fw" title="Copy to use edit"></i></a>';
+                    }
+                },  
+                {
+                    "className": "pr_td cursor wid6 ref_icon",
+                    "data": "ProdPriceObj.Id",
+                    "render": function(data, type, full, meta) {
+                        return '<a class="navx" onclick="deletePrice(getRowIndex(this), \'' +  data + '\');" ><i aria-hidden="true" class="fa fa-fw" title="Copy to use remove"></i></a>';
+                    }
+                },  
+                {
+                    "className": "hideclass",
+                    "data": "ProdPriceObj.Id",
+                    "render": function(data, type, full, meta) {
+                        return data;
+                    }
+                }
+                
+                               
+                
+            ],
+            "order": [[1, 'asc']]
+        } );
+        
+        
+     
+        
+    });
+
+
+    function checkEmptyData(data){
+        var dataValue = '&mdash;' ;
+        if(data!=null){
+            dataValue = data;
+        } 
+        return dataValue;
+        
+    }
+    
+    
+    function searchProduct(searchValue) {
+            
+        var dataTable = $hp('#device-grid-list').dataTable();
+                
+        dataTable.fnFilter(searchValue);
+                
+    }
+            
+    
+    function calDisc(idx){
+                
+        var programPrice = document.getElementById("device-grid-list").rows[idx].cells[5].children[0].value;
+        var MSRP = document.getElementById("device-grid-list").rows[idx].cells[3].innerHTML;
+        var calc =100-((programPrice/MSRP) * 100);
+        document.getElementById("device-grid-list").rows[idx].cells[4].children[0].value = calc.toPrecision(4);
+                
+    }
+    
+    
+    function calPrice(idx){
+                
+        var discount = document.getElementById("device-grid-list").rows[idx].cells[4].children[0].value;
+        if (discount>100){
+            alert ('Please enter a discount that is less than or equal to 100')
+        }
+        else{
+            var MSRP = document.getElementById("device-grid-list").rows[idx].cells[3].innerHTML;
+            var calc = (MSRP - ((discount/100)*MSRP));
+            document.getElementById("device-grid-list").rows[idx].cells[5].children[0].value = calc.toPrecision(4);
+        }
+    }  
+
+
+    function disableEnable(idx){
+
+        if(document.getElementById("device-grid-list").rows[idx].cells[4].children[0].disabled == true){
+            document.getElementById("device-grid-list").rows[idx].cells[4].children[0].disabled = false;
+            document.getElementById("device-grid-list").rows[idx].cells[5].children[0].disabled = false;
+
+            if(document.getElementById("device-grid-list").rows[idx].cells[4].children[0].value == '—'){ 
+                document.getElementById("device-grid-list").rows[idx].cells[4].children[0].value = '';
+            }
+            
+            if(document.getElementById("device-grid-list").rows[idx].cells[5].children[0].value == '—'){
+                document.getElementById("device-grid-list").rows[idx].cells[5].children[0].value = '';
+            }
+                
+        } else{
+            document.getElementById("device-grid-list").rows[idx].cells[4].children[0].disabled = true;
+            document.getElementById("device-grid-list").rows[idx].cells[5].children[0].disabled = true;
+            document.getElementById("device-grid-list").rows[idx].cells[4].children[0].value = document.getElementById("device-grid-list").rows[idx].cells[4].children[1].value;
+            document.getElementById("device-grid-list").rows[idx].cells[5].children[0].value = document.getElementById("device-grid-list").rows[idx].cells[5].children[1].value;
+        }
+    }
+
+
+    function getRowIndex( el ) {
+        while( (el = el.parentNode) && el.nodeName.toLowerCase() !== 'tr' );
+                
+        if( el ) {
+            return el.rowIndex;
+        }    
+    }
+
+
+    function deletePrice(idx, eId) {
+    
+        removeRecord(eId);
+        document.getElementById("device-grid-list").deleteRow(idx);
+    }
+
+
+    function updatePriceList(){
+    
+        var table = document.getElementById("device-grid-list");
+        var myArray = [];
+        
+        for (var i = 1, row; row = table.rows[i]; i++) {
+            var myInnerArray={};
+            var bool = table.rows[i].cells[4].children[0].disabled;
+            
+            if(bool == false){
+                var msrp1= table.rows[i].cells[3].innerHTML;
+                var disc = table.rows[i].cells[4].children[0].value;
+                var prc = table.rows[i].cells[5].children[0].value;
+                var prodid = table.rows[i].cells[8].innerHTML;
+                    
+                    if(disc == null || disc == '' || disc == '—') {
+                        disc = 0.0;
+                        prc = msrp1;
+                    }
+                    
+                 myInnerArray["Discount__c"] = parseFloat(disc);
+                 myInnerArray["UnitPrice"] = parseFloat(prc); 
+                 myInnerArray["Id"] = String(prodid);                 
+                 myArray.push(myInnerArray);
+             }
+
+            document.getElementById("device-grid-list").rows[i].cells[4].children[0].disabled = true;
+            document.getElementById("device-grid-list").rows[i].cells[5].children[0].disabled = true;
+                
+        } 
+        var convJSON = JSON.stringify(myArray);
+        updateRecords(convJSON);        
+   }  
+           
+    </script>
+    </body>
+</html>
+</apex:page>

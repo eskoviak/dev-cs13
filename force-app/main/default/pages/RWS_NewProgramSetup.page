@@ -1,0 +1,803 @@
+<apex:page id="AdvancedProgramSetup" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false" docType="html-5.0" controller="RWS_ProgramSetUpController">
+    <html lang="en">
+
+    <head>
+        <c:HeadTagComponent />
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/popup.css')}" rel="stylesheet" />
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/bootstrap.min.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquerydataTables.js')}" />
+        <style type="text/css">
+                        
+        .error,
+        label.error {
+            color: #c31e38;
+            font-weight: normal;
+        }
+        
+        
+        
+        .has-feedback label~.form-control-feedback {
+            top: 12px;
+        }
+        
+        .has-error .form-control {
+            border-color: #c31e38;
+            /*background-color: #eeb6bf;*/
+        }
+        
+        .form-horizontal .has-feedback .form-control-feedback {
+            /* right: 15px; 
+                float: left;*/
+            left: 15px;
+        }
+        
+        .has-feedback .form-control {
+            padding-right: 12px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            padding-left: 42.5px;
+        }
+        .ui-accordion .ui-accordion-content {
+            padding: 1em 0; 
+            border-top: 0;
+            overflow: auto;
+        }
+        .ui-widget {
+            font-family: 'TSTAR',sans-serif; 
+            font-size: 1em;
+        }
+        
+        
+             
+        
+
+      </style>
+    </head>
+
+    <body class="programs">
+        <style>
+        .make_div_inline {
+            display: inline-block;
+        }
+        
+        .AllSections {
+            display: none;
+        }
+        
+        /*.no-radius {
+            border-radius: 0px;
+        }
+        
+        .modal-header-text {
+            font-family: "MFred";
+            font-size: 30px !important;
+        }
+        
+        .modal-body-text {
+            color: black;
+            font-family: "TSTAR";
+            font-size: 25px !important;
+        }
+        
+        .modal-bg {
+            background-color: #EDE8DD !important;
+        }
+        
+        .header-border {
+            border-bottom: 3px solid #DCD3BF !important;
+        }
+        
+        .footer-border {
+            border-top: 3px solid #DCD3BF !important;
+        }
+        
+        .sub-type-text {
+            color: black;
+            font-family: "TSTAR";
+            font-size: 15px !important;
+        }*/
+        
+        .hgt20 {
+            height: 20px;
+        }
+        </style>
+        <script>
+        var saving = 'no';
+        var firedBySave = false;        
+        
+        function addProgramInfoPopUp() {
+            $("#add-program").show();
+        }
+
+        function hideProgramInfoPopUp() {
+            $("#add-program").hide();
+        } 
+        </script>
+        <script>
+        function HideOrShowSubsidyType(t) {
+            //alert(t.value);
+            if (t.value == 'dollar') {
+                document.getElementById("amountId").style.display = 'block';
+                document.getElementById("openId").style.display = 'none';
+                document.getElementById("percentId").style.display = 'none';
+              //  document.getElementById("amountId2").style.display = 'block';
+              //  document.getElementById("breakLine1").style.display = 'none';
+
+                
+            } else if (t.value == "percentage") {
+                document.getElementById("openId").style.display = 'block';
+                document.getElementById("percentId").style.display = 'block';
+                document.getElementById("amountId").style.display = 'none';
+             //  document.getElementById("amountId2").style.display = 'block';
+             //  document.getElementById("breakLine1").style.display = 'block';
+                
+            } else if (t.value == "open") {
+                document.getElementById("amountId").style.display = 'none';
+                document.getElementById("percentId").style.display = 'none';
+                document.getElementById("openId").style.display = 'block';
+             //  document.getElementById("amountId2").style.display = 'block';
+             //  document.getElementById("breakLine1").style.display = 'none';
+
+            } else {
+                document.getElementById("amountId").style.display = 'none';
+                document.getElementById("percentId").style.display = 'none';
+                document.getElementById("openId").style.display = 'none';
+            //   document.getElementById("amountId2").style.display = 'none';
+            //   document.getElementById("breakLine1").style.display = 'none';
+                
+            }
+        }
+
+        $(document).ready(function() {
+            
+             
+            if ({!hasBeenActive}){
+                document.getElementById("AdvancedProgramSetup:MyProgram:pname").focus(); 
+            } else {
+                 document.getElementById("AdvancedProgramSetup:MyProgram:progType").focus();
+            }
+        
+            $(function() { // sets up and formats the datepicker for date input fields.
+                $('input.activation-datepicker').datepicker().datepicker("setDate", new Date("{!displayactivationDate}"));
+
+                $('input.expiration-datepicker').datepicker();
+                if ('{!expirationDate}' !== "") {
+                    $('input.expiration-datepicker').datepicker("setDate", "{!displayexpirationDate}");
+                }
+            });
+            
+                    
+            // Update dropdown based on Invoice Data (START) //
+            var $selectOptions = $('select[id="AdvancedProgramSetup:MyProgram:progType"]');
+            var $selectOptionsB = $('select[id="AdvancedProgramSetup:MyProgram:progTypeB"]');
+            
+            if ('{!accRequiresInvoicing}' === 'No') {
+                $selectOptions.children('option').each(function(i) {
+                    if($(this).val() != 'CashandCarry' && $(this).val() != 'SubsidywithPcard') {
+                        $(this).remove();
+                    }
+                    
+                });
+              
+            }
+
+            $(window).keydown(function(event){
+                if(event.keyCode == 13) {
+                  event.preventDefault();
+                  return false;
+                }
+            });
+            // Update dropdown based on Invoice Data (END) //
+            // Hides create template checkbox if Edit Mode//
+            
+            if ('{!EditMode}' == 'true'){
+                $("#selectProducts").show();
+                            
+            }
+            
+           <!-- if ('{!selectsubsidyType}' != null) {   -->                    
+                if('{!selectsubsidyType}' == 'dollar') {
+                    document.getElementById("amountId").style.display = 'block';
+                } else if ('{!selectsubsidyType}' == 'percentage') {
+                    document.getElementById("percentId").style.display = 'block';
+                    document.getElementById("openId").style.display = 'block';                
+                } else if ('{!selectsubsidyType}' == 'open') {
+                    document.getElementById("openId").style.display = 'block';                
+                } 
+         <!--   }   -->
+            //show/hide voucher type dependent on eligibility tool on page load//
+                
+           
+                if ('{!selecteligibilityOption}' == 'True') {
+                    $("#voucherTypeDiv").removeClass("dis_none"); 
+                    $("#requireVoucherUploadDiv").addClass("dis_none2");
+                    $("#requireVoucherUploadToolTipDiv").addClass("dis_none2"); 
+                } else if ('{!selecteligibilityOption}' == 'False'){
+                    $("#voucherTypeDiv").addClass("dis_none"); 
+                    $("#requireVoucherUploadDiv").removeClass("dis_none2");
+                    $("#requireVoucherUploadToolTipDiv").removeClass("dis_none2");
+                } else {
+                    $("#voucherTypeDiv").addClass("dis_none"); 
+                    $("#requireVoucherUploadDiv").addClass("dis_none2");
+                    $("#requireVoucherUploadToolTipDiv").addClass("dis_none2");
+                }
+             
+        });
+
+        </script>
+        <apex:outputpanel id="AfterInsert">
+            <script>
+            function ProgramCreatedPopUp() {
+                var SavedPgm = '{!ProgramSaved}';
+
+                if (SavedPgm != 'ERROR') {
+                    confirmModal('PROGRAM CREATED!', 'Thank you for creating a program. Please add products to this program.', null, 'showProductSelection()', null, 'OKAY');
+                }
+            }
+
+            function ClosePopUp() {
+                $('#ProgramCreatedMessage').hide();
+            }
+            </script>
+                      
+        </apex:outputpanel>
+
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/jquery-ui-1.12.1/jquery-ui.min.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/jquery.maskedinput.min.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/back_next.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/modal.js')}"></script>
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/jquery.validate.min.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/additional-methods.min.js')}" />
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/validation.js')}"></script>
+        
+        <div class="fluid-container">
+            <c:RWS_HeaderComponent />
+                <div class="wrapper row site-content">
+                    <div class="form-horizontal form_bg">
+                        
+                                              
+                        
+                        <div class="col-sm-12 summary-header">                            
+                              
+                                <h2 class="text-uppercase fancy white mrg_top20 mrg_btm20"><span>CREATE A PURCHASING PROGRAM</span></h2>
+                            
+                        
+                        </div>
+                        <div class="clear"></div>
+                                
+                        <div id="accordion">
+                            
+                             
+                                <h4 class="uppercase"><apex:outputPanel rendered="{!EditMode}">EDIT</apex:outputPanel><apex:outputPanel rendered="{!!EditMode}">CREATE NEW</apex:outputPanel> PURCHASING PROGRAM</h4>
+                            
+                            <div style="padding-top:0px">
+                            
+                                
+                                <apex:pagemessages id="showProgramError" ></apex:pagemessages>
+                                
+                                
+                                
+                                <apex:form id="MyProgram">
+                                    <apex:actionStatus onstart="$('#splashscreen').modal({backdrop: 'static', keyboard: false});" onstop="$('#splashscreen').modal('hide');" id="loadSplashScreen"/>
+                                                                                                  
+                                    <div class="col-sm-12 brd_btm txt_center pad_top20 pad_btm5 mrg_btm20">
+                                        <h4 class="section-title clr_blk">PAYMENT TERMS &#38; INVOICE PREFERENCES</h4>
+                                    </div>
+                                        <div class="row">
+                                            <label class="form control-label col-xs-2 pad_rgt0"></label>
+                                            <div class="pl-0 col-xs-8">
+                                                <p class="rw-grey mrg_btm0 pad_lft5">Determines options for Subsidy, Eligibility, and Payroll Deduction.</p>
+                                            </div>                                           
+                                        </div>                                       
+                                         <div class="form-group">
+                                            <div id="progTypeDiv">
+                                                <label class="form control-label col-xs-2  pad_rgt0" for="type">Type</label>
+                                                <apex:outputPanel rendered="{!hasBeenActive}">
+                                                    <div class="col-xs-3 pad_top7" >
+                                                        <apex:outputText value="{!displaySelectType}"/>
+                                                    </div>    
+                                                </apex:outputPanel>
+                                                <apex:outputPanel rendered="{!!hasBeenActive}">                                                
+                                                    <div class="col-xs-3" >                                                    
+                                                         <apex:selectList id="progType" value="{!selectType}" styleClass="form-control req-prog-type create-program" multiselect="false" size="1" onchange="renderOthers(this.value);" title="The type of program under which an employee of this company location would purchase shoes." >
+                                                             <apex:selectOptions value="{!Type}" />
+                                                         </apex:selectList>
+                                                         <!--
+                                                         <apex:selectList id="progTypeB" value="{!selectTypeB}" styleClass="form-control req-prog-type create-program-b" multiselect="false" size="1" style="display:none;" >
+                                                             <apex:selectOptions value="{!Type}" />
+                                                         </apex:selectList>
+                                                         -->
+                                                     </div>                                                                                                         
+                                                </apex:outputPanel>                                       
+                                            </div>
+                                            <div id="pnameDiv">
+                                                <label class="form control-label col-xs-2 pad_rgt0">Program Name</label>
+                                                <div class="col-xs-3">
+                                                     <apex:inputtext id="pname" styleClass="form-control req-prog-name create-program" value="{!programName}" />
+                                                </div>
+                                            </div>
+                                        </div>                                  
+                                       <div class="row">
+                                            <label class="form control-label col-xs-2 pad_rgt0"></label>
+                                            <div class="pl-0 col-xs-3">
+                                                <p class="rw-grey mrg_btm0 pad_lft5">&nbsp;</p>
+                                            </div>
+                                            <label class="form control-label col-xs-2 pad_rgt0"></label>
+                                            <div class="pl-0 col-xs-3">
+                                                <p class="rw-grey mrg_btm0 pad_lft20">Programs do not require an expiration date.</p>
+                                            </div>                                                  
+                                        </div>                                
+                                         <div class="form-group">
+                                            <div id="effectiveDateDiv">
+                                                <label class="form control-label col-xs-2  pad_rgt0" for="DateValue">Program Effective Date</label>
+                                                <div class="col-xs-3" >
+                                                    <apex:input id="DateValue" type="text" html-placeholder="mm/dd/yyyy" styleClass="form-control {!IF(ProgramActive,'req-prog-active-check', '')} req-prog-effect-date create-program activation-datepicker" value="{!activationDate}" html-maxlength="10"/>                                                      
+                                                </div>
+                                            </div>
+                                            <div id="exDateDiv">
+                                                <label class="form control-label col-xs-2 pad_rgt0" for="exdate">Expiration Date</label>
+                                                <div class="col-xs-3">
+                                                    <apex:input id="exdate" type="text" html-placeholder="mm/dd/yyyy" styleClass="form-control {!IF(ProgramActive,'req-future-exp-date', '')} req-active-greater-expired-date create-program expiration-datepicker" title="The program's expiration date. A program will become inactive if the expiration date is less than today." value="{!expirationDate}" html-maxlength="10"/>
+                                                </div>
+                                            </div>
+                                        </div>                                   
+                                    
+                                    
+                                    
+                                  
+                                    
+                                    <div class=" form-group">
+                                        <label class="form control-label col-xs-2 pad_rgt0 pad_btm10" for="status">Program Notes</label>
+                                        <div class="col-xs-8">
+                                            <apex:inputtextarea id="pnotes" style="max-width:1000px;" styleclass="form-control" value="{!programNotes}" html-maxlength="255" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form control-label col-xs-2 pad_rgt0">P-Card</label>
+                                        <div class="col-xs-8 radio pad_top0">
+                                            <apex:selectRadio id="pCard" value="{!selectedPCardOption}" styleClass="radio_btn2" > 
+                                                <apex:selectOptions value="{!pCardOptions}"/>
+                                            </apex:selectRadio>    
+                                        </div>                
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form control-label col-xs-2 pad_rgt0">Sales Contract</label>
+                                        <div class="col-xs-8 radio pad_top0">
+                                            <apex:selectList id="salesContract" value="{!selectedSalesContract}" styleClass="form-control" multiselect="false" size="1" onChange="setContractRefOptions(); contractRefHideShow(this)">
+                                                <apex:selectOptions value="{!salesContractOptions}" />
+                                            </apex:selectList>        
+                                        </div>                
+                                    </div>
+                                    <div class="form-group" id="contractRef" >
+                                         <apex:outputPanel id="contractRefPanel">
+                                        <label class="form control-label col-xs-2 pad_rgt0">Sales Contract Reference</label>
+                                        <div class="col-xs-8 radio pad_top0">                    
+                                            <apex:selectList id="salesContractRef" value="{!selectedContractReason}" styleClass="form-control" multiselect="false" size="1">
+                                                <apex:selectOptions value="{!contractReasonOptions}" />
+                                            </apex:selectList>    
+                                        </div> 
+                                        </apex:outputPanel>               
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    <div class="form-group">
+                                        <label class="form control-label col-xs-2 pad_rgt0" for="subtax">Tax Method</label>
+                                        <div class="col-xs-8">
+                                            <apex:selectList id="subTax" value="{!selectSubsidyTax}" styleClass="form-control" multiselect="false" size="1">
+                                                <apex:selectOptions value="{!SubsidyTax}" />
+                                            </apex:selectList>
+                                        </div>
+                                    </div> 
+                                    <div class=" form-group">
+                                        <label class="form control-label col-xs-2 pad_rgt0 pad_btm10" for="status">Service Level</label>
+                                        <div class="col-xs-8 pad_btm10">
+                                            <apex:selectList id="serviceLevel" style="max-width:1000px;" styleclass="form-control" value="{!selectedServiceLevel}" styleClass="form-control create-program" multiselect="false" size="1"  >
+                                                <apex:selectOptions value="{!serviceLevel}" />
+                                            </apex:selectList>
+                                        </div>
+                                    </div>                        
+                                    
+                                    <div id="subsidyBase" class="subsidyBase dis_none"> 
+                                        <div class="col-sm-12 mrg_btm20 mrg_top20">
+                                            <div class="col-sm-12 brd_btm txt_center pad_top20 pad_btm5 mrg_btm20">
+                                                <h4 class="section-title clr_blk">SUBSIDY</h4>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form control-label col-xs-2 pad_rgt0 mrg_lft0" for="stype">Subsidy Type</label>
+                                            <div class="col-xs-3">
+                                                <apex:selectList id="subType" value="{!selectsubsidyType}" styleClass="form-control sTypeVal" multiselect="false" size="1" onChange="HideOrShowSubsidyType(this)">
+                                                    <apex:selectOptions value="{!subsidyType}" />
+                                                </apex:selectList>
+                                            </div>
+                                        </div>                               
+                                        <div class="form-group">
+                                            <div id="amountId" class="dis_none">
+                                                <label class="form control-label col-xs-2 pad_rgt0" for="subsidy">Subsidy &#40;&#36;&#41;</label>
+                                                <div class="col-xs-3">
+                                                    <apex:input id="subAmt" type="number" styleClass="form-control Sbidy pos-only" value="{!subsidyAmount}" />
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div id="percentId" class="dis_none">
+                                                <label class="form control-label col-xs-2 pad_rgt0" for="subsidypercentage">Subsidy &#40;&#37;&#41;</label>
+                                                <div class="col-xs-3">
+                                                    <apex:input type="number" id="subPercent" value="{!subsidyPercent}" styleClass="form-control pos-only" />
+                                                </div>
+                                            </div>
+                                            
+                                     
+                                                                 
+                                                                                                                      
+                                            <div id="openId" class="dis_none">
+                                                <label class="form control-label col-xs-2 pad_rgt0" for="maxamount">Max Amount</label>
+                                                <div class="col-xs-3">
+                                                    <apex:input id="maxAmt" type="number" styleClass="form-control pos-only" value="{!maxAmount}" />
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <!-- form group div -->
+                                        
+                                        
+                                        <div class="row">
+                                            <label class="form control-label col-xs-2 pad_rgt0"></label>
+                                            <div class="pl-0 col-xs-3">
+                                                <p class="rw-grey mrg_btm0 pad_lft5">Per Voucher</p>
+                                            </div>                                          
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="form control-label col-xs-2 pad_rgt0" for="aparis">Allowed &#35; of Pairs</label>
+                                            <div class="col-xs-3">
+                                                <apex:input id="allowedPairs" styleClass="form-control pos-only-no-zero" type="number" value="{!numberPairsAllow}" />
+                                            </div>
+                                             <label class="form control-label col-xs-2 pad_rgt0 ">Accessories Allowed</label>
+                                            <div class="col-lg-3 col-xs-5 radio with-validation pad_top0">
+                                                <apex:selectRadio id="accessoriesAllowed" value="{!selectaccessallowsubsidy}" styleClass="radio_btn">
+                                                    <apex:selectOptions value="{!accessallowsubsidy}" />
+                                                </apex:selectRadio>
+                                                <span class="pad_lft0" id="errorIcon3"></span>
+                                                <span class="pad_lft0" id="errorMessage2"></span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="eligibility dis_none" id="eligibility">
+                                        <div class="col-sm-12 mrg_btm20 mrg_top20">
+                                            <div class="col-sm-12 brd_btm txt_center pad_top20 pad_btm5 mrg_btm20">
+                                                <h4 class="section-title clr_blk">ELIGIBILITY</h4>
+                                            </div>
+                                        </div>
+                                     <div class="requireVoucherUploadClass">            
+                                        <div class="row" id="requireVoucherUploadToolTipDiv">
+                                            <label class="form control-label col-xs-7 pad_rgt0"></label>
+                                            <div class="pl-0 col-xs-3">
+                                                <p class="rw-grey mrg_btm0 pad_lft5">Contact your ROM if required.</p>
+                                            </div>                                          
+                                        </div>
+                                     </div>                
+                                                   
+                                        <div class="form-group">
+                                            <label class="form control-label col-xs-2 pad_rgt0">Use Eligibility Tool</label>
+                                            <div class="col-xs-3 radio pad_top0">
+                                                <apex:selectRadio id="eligibleOption" value="{!selecteligibilityOption}" styleClass="radio_btn9" onchange="enableVoucherType(this, false)">
+                                                    <apex:selectOptions value="{!eligibilityOption}"/>
+                                                </apex:selectRadio>
+                                            </div>
+                                            <div id="voucherTypeDiv">
+                                                <label class="form control-label col-xs-2 pad_rgt0">Voucher Type</label>
+                                                <div class="col-xs-5 radio with-validation pad_top0">
+                                                    <apex:selectRadio id="voucherType" value="{!selectAnnualResetorRollover}" styleClass="radio_btn2">
+                                                        <apex:selectOptions value="{!AnnualResetorRollover}" html-class="voucher-type"/>
+                                                    </apex:selectRadio>
+                                                    <span class="pad_lft0" id="errorIcon"></span>
+                                                    <span class="pad_lft0 errorMessage"></span>
+                                                </div>    
+                                            </div>
+                                            
+                                            <div id="requireVoucherUploadDiv" class="requireVoucherUploadClass">
+                                                   
+                                                <label class="form control-label col-xs-2 pad_rgt0">Require Upload of Voucher</label>
+                                                <div class="col-xs-5 radio with-validation pad_top0">
+                                                    <apex:selectRadio id="requireVoucherUpload" value="{!selectRequireUpload}" styleClass="radio_btn9">
+                                                        <apex:selectOptions value="{!RequireUpload}" html-class="require-upload"/>
+                                                    </apex:selectRadio>
+                                                    <span class="pad_lft0" id="errorIcon2"></span>
+                                                    <span class="pad_lft0 errorMessage"></span>
+                                                </div>    
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                        <script>
+                                            
+                                            
+                                        </script>
+                               
+                                    </div>
+                                    <div class="payroll dis_none" id="payroll">
+                                        <div class="col-sm-12 mrg_btm20 mrg_top20">
+                                            <div class="col-sm-12 brd_btm txt_center pad_top20 pad_btm5 mrg_btm20">
+                                                <h4 class="section-title clr_blk">PAYROLL DEDUCTIONS</h4>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form control-label col-xs-2 pad_rgt0">Mandatory</label>
+                                            <div class="col-xs-3 radio pad_top0">
+                                                <apex:selectRadio value="{!selectMandatory}" styleClass="radio_btn2">
+                                                    <apex:selectOptions value="{!Mandatory}" />
+                                                </apex:selectRadio>
+                                            </div>
+                                            <label class="form control-label col-xs-2 pad_rgt0">Accessories Allowed</label>
+                                            <div class="col-lg-3 col-xs-5 radio pad_top0">
+                                                <apex:selectRadio value="{!selectAccessAllowPayrollDeduction}" styleClass="radio_btn">
+                                                    <apex:selectOptions value="{!accessAllowPayrollDeduction}" />
+                                                </apex:selectRadio>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-sm-12 subsidy_content_section saveProgramBtn">
+                                        <div class="col-xs-12 pad_btm15" align="center">
+                                            <!--  ************** New Mode Only *************** -->
+                                            <apex:outputPanel rendered="{!NOT(EditMode)}" styleclass="tabHeaderSection cb">
+                                                <apex:commandButton id="btn_Cancel" styleClass="btn btn-danger btn-outline btn-xl program_clear_btn" value="Clear" onclick="this.form.reset(); return false;"/>
+                                            <!--    <input type="reset" class="btn btn-danger btn-outline btn-xl" value="Clear" id="" />   -->
+                                            </apex:outputPanel>
+                                            <!--  ************** New Mode Only *************** -->
+                                            <apex:outputPanel rendered="{!EditMode}" styleclass="tabHeaderSection cb">
+                                                <apex:commandButton id="btn_Cancel_Program" styleClass="btn btn-danger btn-outline btn-xl" value="Clear" action="{!cancel}" />
+                                            </apex:outputPanel>
+                                            <!--  ************** Edit Mode Only *************** -->
+                                            <apex:outputPanel rendered="{!AND(EditMode, task != 'clone')}" styleclass="tabHeaderSection cb">
+                                                <a id="program-setup-validate-update" data-dismiss="modal" class=" btn btn-danger btn-xl ">Update</a>
+                                            </apex:outputpanel>
+                                            <!--  ************** Clone or Save Mode *************** -->
+                                            <apex:outputPanel rendered="{!OR(NOT(EditMode), task == 'clone')}" styleclass="tabHeaderSection cb">
+                                                <input type="hidden" id="saving" value="no" name="saving" />
+                                                <a id="program-setup-validate-save" class=" btn btn-danger btn-xl ">Save</a>
+                                            </apex:outputpanel>
+                                            <apex:actionFunction name="saveProgram" action="{!SaveProgramDetails}" oncomplete="ProgramCreatedPopUp();" reRender="duplicate, AfterInsert, showProgramError" status="loadSplashScreen" />
+                                            <apex:actionfunction name="rerenderReview" action="{!reloadProductsReview}" rerender="reviewProductsPanel" />
+                                            <apex:actionfunction name="setContractRefOptions" action="{!getContractReason}" rerender="contractRefPanel" />
+
+                                        </div>
+                                        <div id="selectProducts" class="dis_none">
+                                            <div class="col-xs-12 pb-2">
+                                            <c:RWS_Production_Selection id="ProductSelection"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </apex:form>
+                            </div>
+                            <h4>REVIEW PRODUCTS AND SUBMIT</h4>
+                            <div class="form_bg">
+                                <apex:outputPanel id="reviewProductsPanel">
+                                    <c:RWS_Review_Products id="ReviewProductsSection" recordId="{!programId}" fLoad="true" />
+                                </apex:outputPanel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <c:RWS_Modals />
+            <c:RWS_Footer />
+        </div>
+            <script type="text/javascript">
+
+            function rerenderReview() { 
+                rerenderReviewInternal();
+            }
+            $(document).ready(function(){
+                // $("[id='ProductSelectionPage:reviewProductsPanel']").hide();
+                // $(".btn_addprogram").on('click', function(){
+                //     $("[id='ProductSelectionPage:reviewProductsPanel']").show();
+                // });
+                             
+                
+                $('.program_clear_btn').click(function() {
+                    $('input.activation-datepicker').datepicker().datepicker("setDate", new Date("{!displayactivationDate}"));
+                    document.getElementById('subsidyBase').style.display = 'none';
+                    document.getElementById('eligibility').style.display = 'none';
+                    document.getElementById('payroll').style.display = 'none';             
+                });                
+                
+                
+                $( "#accordion" ).accordion({
+
+                    icons: false, /* { 
+                        "header": false, 
+                        "activeHeader": false 
+                    },*/
+                    heightStyle: "content",
+                      /*classes: {
+                        "ui-accordion": "highlight"
+                      },*/
+                    create: function (event, ui) {
+                    },
+
+                    beforeActivate: function (event, ui) {
+                    },
+
+                    activate: function (event, ui) {
+                    }
+                });
+            });
+            </script>
+        <script>
+        function renderOthers(programType) {
+            
+            //var programType = document.getElementById("AdvancedProgramSetup:MyProgram:progType").value;
+            if( programType == '' || programType == '--None--' ) {
+                $('.saveProgramBtn').hide();                    
+                $('.subsidyBase').hide();
+                $('.eligibility').hide();
+                $('.payroll').hide();
+                $("#requireVoucherUploadDiv").addClass("dis_none2");
+                document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").disabled = false;
+                //document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:1").disabled = false;
+                document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").checked = false;
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:0").checked = false;
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:1").style.display = 'block';                   
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:1").nextSibling.style.display = 'block';
+                                                         
+           } else if( programType == 'CashandCarry' ) {
+                $('.saveProgramBtn').show();                    
+                $('.subsidyBase').hide();
+                $('.eligibility').hide();
+                $('.payroll').hide();
+                $("#requireVoucherUploadDiv").removeClass("dis_none2");
+                //document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").disabled = true;
+                //document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:1").disabled = true;
+                //document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").checked = true;                
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:0").checked = false;
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:1").style.display = 'block';
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:1").nextSibling.style.display = 'block';
+                                 
+            } else if( programType == 'PayrollDeduction' ) {
+                $('.saveProgramBtn').show();                    
+                $('.subsidyBase').hide();
+                $('.eligibility').show();
+                $('.payroll').show();
+                $("#requireVoucherUploadDiv").addClass("dis_none2");
+                document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").disabled = false;
+                //document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:1").disabled = false;
+                document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").checked = false;
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:0").checked = false;
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:1").style.display = 'block';
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:1").nextSibling.style.display = 'block'; 
+                
+            } else if( programType == 'Subsidy' ){
+                $('.saveProgramBtn').show();                    
+                $('.subsidyBase').show();
+                $('.eligibility').show();
+                $('.payroll').hide();
+                $("#requireVoucherUploadDiv").addClass("dis_none2");         
+                document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").disabled = false;
+                //document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:1").disabled = false;
+                document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").checked = false;
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:0").checked = false;
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:1").style.display = 'block';
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:1").nextSibling.style.display = 'block'; 
+                
+            } else if( programType == 'SubsidyandPayrollDeduction' ){
+                $('.saveProgramBtn').show();                    
+                $('.subsidyBase').show();
+                $('.eligibility').show();
+                $('.payroll').show();
+                $("#requireVoucherUploadDiv").addClass("dis_none2");                                
+                document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").disabled = false;
+                //document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:1").disabled = false;
+                document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").checked = false;
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:0").checked = false; 
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:1").style.display = 'block';
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:1").nextSibling.style.display = 'block'; 
+               
+            } else if( programType == 'SubsidywithPcard' ){
+                $('.saveProgramBtn').show();                    
+                $('.subsidyBase').show();
+                $('.eligibility').hide();
+                $('.payroll').hide();
+                $("#requireVoucherUploadDiv").removeClass("dis_none2");                                
+                document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").disabled = true;
+                //document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:1").disabled = true;
+                document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").checked = true;
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:0").checked = true; 
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:1").style.display = 'none';
+                document.getElementById("AdvancedProgramSetup:MyProgram:pCard:1").nextSibling.style.display = 'none'; 
+                               
+
+            }        
+        }
+
+
+        $(".dropbtn").click(function(e) {
+            $("#options").show();
+            e.stopPropagation();
+        });
+        $(document).click(function() {
+            $("#options").hide();
+        });
+        
+        function showProductSelection() {
+            $("#selectProducts").show();
+        }
+        
+        function showProductReview() {
+            if (typeof showProductReviewExecute == 'function') { 
+                showProductReviewExecute(); 
+            }
+        }
+        
+        function showProductReviewExecute() {
+            $("#reviewProducts").show();
+            //$("#selectProducts").hide();
+            
+        }
+                    
+        function addMoreProductsExecute() {
+            $("#reviewProducts").hide();
+            $("#selectProducts").show();
+            
+        }
+        
+        $(document).ready(function() {
+            
+            
+            if ('{!EditMode}' == 'true'){
+                                
+                //alert("{!selectType}");
+                renderOthers("{!selectType}"); 
+                
+                if ("{!selectType}" == "SubsidywithPcard"){
+                    document.getElementById("AdvancedProgramSetup:MyProgram:pCard:0").checked = true;                 
+                }
+                
+                console.log("This: {!selecteligibilityOption}");
+                if("{!selecteligibilityOption}" == "False"){
+                    document.getElementById("AdvancedProgramSetup:MyProgram:eligibleOption:0").checked = true;
+                    enableVoucherType("{!selecteligibilityOption}");
+                }
+                
+                //BW - this line hides the sales contract reference field based upon the value of the sales contract field in edit mode
+                if ("{!selectedSalesContract}" != "TXMAS"){
+                    $('#contractRef').hide();
+
+                }
+                    
+            } else {
+                 //BW - this line hides the sales contract reference field on page load for new records
+                 $('#contractRef').hide();
+            }           
+           
+        });
+        
+        //BW - this function hides and shows the sales contract reference field based upon the value of the sales contract field - called from onchange of element
+        function contractRefHideShow(t){
+            console.log(t.value);
+            if (t.value == 'TXMAS'){
+                $('#contractRef').show();                   
+            } else {
+                $('#contractRef').hide();
+            }
+        }
+
+        
+        window.onbeforeunload = function (e){
+            if(firedBySave == false)
+                return 'Are you sure you want to leave the page without Saving?';
+        }; 
+
+                  
+        </script>
+    </body>
+
+    </html>
+</apex:page>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AreaCodeUSPS__c</fullName>
+    <description>USPS file:The telephone area codes available in this ZIP Code.</description>
+    <externalId>false</externalId>
+    <label>AreaCodeUSPS</label>
+    <length>55</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

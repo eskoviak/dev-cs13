@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shoe_Size_Gender__c</fullName>
+    <description>For shoe size, specify if a men&apos;s or women&apos;s size.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For shoe size, specify if a men&apos;s or women&apos;s size.</inlineHelpText>
+    <label>Shoe Size Gender</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Men&apos;s</fullName>
+                <default>false</default>
+                <label>Men&apos;s</label>
+            </value>
+            <value>
+                <fullName>Women&apos;s</fullName>
+                <default>false</default>
+                <label>Women&apos;s</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

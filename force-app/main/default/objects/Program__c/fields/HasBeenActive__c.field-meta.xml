@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HasBeenActive__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This flag will be updated by the Program - Has been Active workflow to stay checked once the Program has been activated. Once activated, the Program Type cannot be changed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Once activated, the Program Type cannot be changed.</inlineHelpText>
+    <label>HasBeenActive</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

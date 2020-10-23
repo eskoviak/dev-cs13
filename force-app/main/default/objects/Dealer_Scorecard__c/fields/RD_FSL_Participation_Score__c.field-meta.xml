@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RD_FSL_Participation_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( RD_Fitting_Stool_Lead_Participation__c , 
+&quot;No Issues&quot;,10, 
+&quot;Moderate Issues&quot;,5, 
+&quot;Significant Issues&quot;,1, 
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>RD - FSL Participation Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

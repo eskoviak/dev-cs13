@@ -1,0 +1,25 @@
+<apex:page standardController="Document_Version__c" extensions="DocumentVersionExtension">
+    
+        <apex:form >
+        
+        <apex:pageBlock title="Document Version Edit">
+
+            <apex:pageBlockSection columns="1">
+
+                <apex:inputField value="{!Document_Version__c.Version_Date__c}"/>
+                <apex:inputField value="{!Document_Version__c.Current_Active_Version__c}"/>
+                <apex:inputField value="{!Document_Version__c.Document_Text__c}"/>
+
+            </apex:pageBlockSection>
+
+
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+            </apex:pageBlockButtons>
+
+
+        </apex:pageBlock>
+        
+    </apex:form>
+    
+</apex:page>

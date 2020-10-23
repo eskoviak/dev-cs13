@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Defective_Allowance_Processing__c</fullName>
+    <description>Used to indicate the type of processing for handling defective allowance customers.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to indicate the type of processing for handling defective allowance customers.</inlineHelpText>
+    <label>Defective Allowance Processing</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Deduct from Invoice</fullName>
+                <default>false</default>
+                <label>Deduct from Invoice</label>
+            </value>
+            <value>
+                <fullName>Discount Included in Price</fullName>
+                <default>false</default>
+                <label>Discount Included in Price</label>
+            </value>
+            <value>
+                <fullName>They Invoice Us(We Issue Credit)</fullName>
+                <default>false</default>
+                <label>They Invoice Us(We Issue Credit)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

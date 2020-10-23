@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <description>Picklist field to allow Vasque to categorize their testers</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Categorize the Vasque testers.</inlineHelpText>
+    <label>Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Backpacking</fullName>
+                <default>false</default>
+                <label>Backpacking</label>
+            </value>
+            <value>
+                <fullName>Hiking</fullName>
+                <default>false</default>
+                <label>Hiking</label>
+            </value>
+            <value>
+                <fullName>Performance Hiking</fullName>
+                <default>false</default>
+                <label>Performance Hiking</label>
+            </value>
+            <value>
+                <fullName>Trail Running</fullName>
+                <default>false</default>
+                <label>Trail Running</label>
+            </value>
+            <value>
+                <fullName>Winter Hiking</fullName>
+                <default>false</default>
+                <label>Winter Hiking</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

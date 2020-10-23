@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Category__c</fullName>
+    <description>This is to capture the wear test category.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the wear test category.</inlineHelpText>
+    <label>Test Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Food processing</fullName>
+                <default>false</default>
+                <label>Food processing</label>
+            </value>
+            <value>
+                <fullName>Gas &amp; Oil</fullName>
+                <default>false</default>
+                <label>Gas &amp; Oil</label>
+            </value>
+            <value>
+                <fullName>Mining</fullName>
+                <default>false</default>
+                <label>Mining</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

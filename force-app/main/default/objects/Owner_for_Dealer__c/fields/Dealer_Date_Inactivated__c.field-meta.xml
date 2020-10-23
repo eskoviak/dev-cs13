@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dealer_Date_Inactivated__c</fullName>
+    <description>This is the Date the Dealer was inactivated.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the Date the Dealer was inactivated.</inlineHelpText>
+    <label>Dealer Date Inactivated</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

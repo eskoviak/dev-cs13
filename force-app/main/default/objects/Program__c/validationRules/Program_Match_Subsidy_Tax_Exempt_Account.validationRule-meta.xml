@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Match_Subsidy_Tax_Exempt_Account</fullName>
+    <active>false</active>
+    <description>Ensure Tax Exempt Accounts have the proper Subsidy Tax.</description>
+    <errorConditionFormula>OR(
+    AND(
+        isPickVal(Account__r.Tax_Exempt__c, &apos;Yes&apos;),
+        isPickVal(Subsidy_Tax__c, &apos;SubsidyTaxed&apos;)),
+    AND(
+        isPickVal(Account__r.Tax_Exempt__c, &apos;No&apos;),
+        isPickVal(Subsidy_Tax__c, &apos;Subsidy Taxed(Tax Exempt    Account)&apos;)))</errorConditionFormula>
+    <errorMessage>Subsidy Tax field is invalid. Update Subsidy Tax to reflect if the Account is Tax Exempt or Not</errorMessage>
+</ValidationRule>

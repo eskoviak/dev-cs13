@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store_Owners_Active_Inactive</fullName>
+    <columns>NAME</columns>
+    <columns>IsActive__c</columns>
+    <columns>Dealer_Owner_Name__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Date_Inactivated__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Store Owners (Active and Inactive)</label>
+</ListView>

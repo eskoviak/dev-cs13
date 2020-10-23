@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Use_Eligibility_Requires_Upload</fullName>
+    <active>true</active>
+    <description>If Use EligibilityTool is No, please identify if Upload of Company Voucher is Required</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Eligibility_Option__c,&apos;False&apos;),
+ISBLANK(TEXT(Require_Upload_of_Company_Voucher__c)),
+NOT(ISPICKVAL(Type__c,&apos;SubsidywithPcard&apos;)),
+NOT(ISPICKVAL(Type__c,&apos;CashandCarry&apos;))
+)</errorConditionFormula>
+    <errorMessage>If Use EligibilityTool is No, please identify if Upload of Company Voucher is Required</errorMessage>
+</ValidationRule>

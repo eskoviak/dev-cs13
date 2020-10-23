@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Collection_Status_Active__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Credit is the only team that has access to this checkbox; activates red flag on the account record for Sales only. Customer Call Center cannot see the flag or the checkbox.</description>
+    <externalId>false</externalId>
+    <label>Pre-Collection Status Active</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

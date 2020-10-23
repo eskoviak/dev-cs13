@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dependency__c</fullName>
+    <externalId>false</externalId>
+    <label>Dependency</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Action Item - Business</fullName>
+                <default>false</default>
+                <label>Action Item - Business</label>
+            </value>
+            <value>
+                <fullName>Action Item - Business Process Modified</fullName>
+                <default>false</default>
+                <label>Action Item - Business Process Modified</label>
+            </value>
+            <value>
+                <fullName>Action Item - Project Team</fullName>
+                <default>false</default>
+                <label>Action Item - Project Team</label>
+            </value>
+            <value>
+                <fullName>Additional Details Needed</fullName>
+                <default>false</default>
+                <label>Additional Details Needed</label>
+            </value>
+            <value>
+                <fullName>App Exchange product</fullName>
+                <default>false</default>
+                <label>App Exchange product</label>
+            </value>
+            <value>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+                <label>Data Migration</label>
+            </value>
+            <value>
+                <fullName>Data Sample</fullName>
+                <default>false</default>
+                <label>Data Sample</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>Requirements Workshop</fullName>
+                <default>false</default>
+                <label>Requirements Workshop</label>
+            </value>
+            <value>
+                <fullName>Technical Decision</fullName>
+                <default>false</default>
+                <label>Technical Decision</label>
+            </value>
+            <value>
+                <fullName>Third Party Tool</fullName>
+                <default>false</default>
+                <label>Third Party Tool</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

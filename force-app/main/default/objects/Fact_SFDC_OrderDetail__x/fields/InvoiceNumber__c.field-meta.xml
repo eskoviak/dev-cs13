@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InvoiceNumber__c</fullName>
+    <description>InvoiceNumber</description>
+    <externalDeveloperName>InvoiceNumber</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>InvoiceNumber</label>
+    <length>10</length>
+    <referenceTo>Fact_SFDC_OrderHeader__x</referenceTo>
+    <relationshipLabel>Customer Invoice Details</relationshipLabel>
+    <relationshipName>Customer_Invoice_Details</relationshipName>
+    <type>ExternalLookup</type>
+</CustomField>

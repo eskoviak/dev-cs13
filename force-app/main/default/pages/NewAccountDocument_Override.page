@@ -1,0 +1,28 @@
+<apex:page standardController="Account_Document__c" extensions="NewAccountDocumentExtension">
+<apex:sectionHeader title="Account Document Edit" subtitle="New Account Document" />
+        <apex:form >
+        
+        <apex:pageBlock title="Account Document Edit" id="pbmain">
+        <apex:pageMessages ></apex:pageMessages>
+
+            <apex:pageBlockSection columns="1">
+
+                <apex:inputField value="{!Account_Document__c.Document_Version__c}"/>                
+                <apex:inputField value="{!Account_Document__c.Account_Contact__c}"/>
+                <apex:inputField value="{!Account_Document__c.Send_Document__c}"/>
+                <apex:inputField value="{!Account_Document__c.Account__c}"/>
+                
+
+            </apex:pageBlockSection>
+
+
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save" rerender="pbmain"/>
+            </apex:pageBlockButtons>
+
+
+        </apex:pageBlock>
+        
+    </apex:form>
+    
+</apex:page>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Number_of_Pairs_cannot_be_0</fullName>
+    <active>true</active>
+    <description>Number of Pairs cannot be &lt;= 0</description>
+    <errorConditionFormula>AND(Number_of_Pairs_Allowed__c  &lt;= 0,
+NOT(ISPICKVAL(Type__c,&apos;CashandCarry&apos;)))</errorConditionFormula>
+    <errorMessage>Number of Pairs cannot be less than or equal to 0</errorMessage>
+</ValidationRule>

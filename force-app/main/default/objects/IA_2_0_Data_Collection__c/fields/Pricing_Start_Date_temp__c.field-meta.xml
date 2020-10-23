@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricing_Start_Date_temp__c</fullName>
+    <description>Temp field for IA 2.0 conversion</description>
+    <externalId>false</externalId>
+    <label>Pricing Start Date - temp</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

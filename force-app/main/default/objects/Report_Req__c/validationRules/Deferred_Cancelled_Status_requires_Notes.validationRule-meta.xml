@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deferred_Cancelled_Status_requires_Notes</fullName>
+    <active>true</active>
+    <description>If a status is changes to Deferred or Cancelled, the report requirement must have notes.</description>
+    <errorConditionFormula>OR
+(AND(ISPICKVAL(Status__c , &quot;Deferred&quot;) ,   ISBLANK(Status_Notes__c )), AND(ISPICKVAL(Status__c , &quot;Cancelled&quot;) ,   ISBLANK(Status_Notes__c )))</errorConditionFormula>
+    <errorDisplayField>Status_Notes__c</errorDisplayField>
+    <errorMessage>Please Enter Status Noes</errorMessage>
+</ValidationRule>

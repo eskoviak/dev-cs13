@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Revenue_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ROUND(Annual_Revenue__c /  Dealer__r.Buxton_Score__c ,2) &gt;= 1.20,10,
+ IF(AND(ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &gt;= 1.10,ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &lt;= 1.19),9,
+  IF(AND(ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &gt;= 1.01,ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &lt;= 1.09),8,
+   IF(AND(ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &gt; 0.99,ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &lt; 1.01),7,
+    IF(AND(ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &gt;= 0.95,ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &lt;= 0.99),6,
+     IF(AND(ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &gt;= 0.90,ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &lt;= 0.94),5,
+      IF(AND(ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &gt;= 0.85,ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &lt;= 0.89),4,
+       IF(AND(ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &gt;= 0.80,ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &lt;= 0.84),3,
+        IF(AND(ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &gt;= 0.75,ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &lt;= 0.79),2,
+         IF(AND(ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &gt;= 0.70,ROUND(Annual_Revenue__c / Dealer__r.Buxton_Score__c,2) &lt;= 0.74),1,0 
+         )
+        )
+       )
+      )
+     )
+    )
+   )
+  )
+ )
+)</formula>
+    <label>Annual Revenue Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

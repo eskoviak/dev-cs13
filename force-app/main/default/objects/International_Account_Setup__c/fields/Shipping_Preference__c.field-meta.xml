@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipping_Preference__c</fullName>
+    <externalId>false</externalId>
+    <label>Shipping Preference</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Best Way (Prepaid and Add)</fullName>
+                <default>false</default>
+                <label>Best Way (Prepaid and Add)</label>
+            </value>
+            <value>
+                <fullName>UPS (Prepaid and Add)</fullName>
+                <default>false</default>
+                <label>UPS (Prepaid and Add)</label>
+            </value>
+            <value>
+                <fullName>FedEx (Prepaid and Add)</fullName>
+                <default>false</default>
+                <label>FedEx (Prepaid and Add)</label>
+            </value>
+            <value>
+                <fullName>Collect (provide account number below)</fullName>
+                <default>false</default>
+                <label>Collect (provide account number below)</label>
+            </value>
+            <value>
+                <fullName>Other (provide detail below)</fullName>
+                <default>false</default>
+                <label>Other (provide detail below)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

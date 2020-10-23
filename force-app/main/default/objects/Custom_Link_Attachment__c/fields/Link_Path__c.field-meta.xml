@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_Path__c</fullName>
+    <description>This is the path (outside of salesforce) where the document is located. For example: The path to the folder and document on a Share Drive</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the field used to capture the path (outside of salesforce) where a document is located. For example: The path to the folder and document on a Share Drive</inlineHelpText>
+    <label>Link Path</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,10 @@
+<apex:page id="AdvancedSetup" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false" docType="html-5.0" controller="RWS_AccountSetupController">
+    <html lang="en">
+
+   <head>
+       <body>
+           
+       </body>
+    </head>
+    </html>
+</apex:page>

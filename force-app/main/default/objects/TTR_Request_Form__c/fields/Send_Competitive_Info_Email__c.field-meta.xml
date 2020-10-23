@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Competitive_Info_Email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to trigger an email regarding TTR Competitive Information entered in the TTR report</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is used to trigger an email regarding TTR Competitive Information entered in the TTR report</inlineHelpText>
+    <label>Send Competitive Info Email</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

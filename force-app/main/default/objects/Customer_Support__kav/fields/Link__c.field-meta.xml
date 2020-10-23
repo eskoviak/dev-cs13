@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link__c</fullName>
+    <description>This is a link included in an article. Currently 2,083 is what can display in some browsers.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Link</inlineHelpText>
+    <label>Link</label>
+    <length>3000</length>
+    <trackHistory>false</trackHistory>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

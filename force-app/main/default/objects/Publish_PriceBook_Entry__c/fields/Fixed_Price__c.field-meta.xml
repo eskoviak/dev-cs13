@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fixed_Price__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If checked (TRUE) it indicates the price for this product is fixed and will not be impacted by the price update batch job which runs for all Programs where Auto Update Prices = TRUE. Only applies to price book entries created for programs.
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If checked (TRUE) it indicates the price for this product is fixed and will not be impacted by the price update batch job which runs for all Programs where Auto Update Prices = TRUE. Only applies to price book entries created for programs.</inlineHelpText>
+    <label>Fixed Price</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

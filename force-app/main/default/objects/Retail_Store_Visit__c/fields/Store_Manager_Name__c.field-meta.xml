@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Store_Manager_Name__c</fullName>
+    <description>Store manager name during the visit</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Store manager name during the visit</inlineHelpText>
+    <label>Store Manager Name</label>
+    <length>100</length>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

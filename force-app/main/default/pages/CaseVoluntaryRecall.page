@@ -1,0 +1,260 @@
+<apex:page standardController="Case" extensions="CaseVoluntaryRecallController" title="Voluntary Recall Product Entry Form" id="pgMain" showHeader="false" sidebar="false" docType="html-5.0"> 
+<body onload="moveTo(0,0); resizeTo(1100,1000);">
+	<apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/js/jquery-1.8.0.min.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/js/jquery-ui-1.8.23.custom.min.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/corners/jquery.corner.js')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.jQueryDCS,'/css/redmond/jquery-ui-1.10.3.custom.min.css')}" />
+
+<style>
+	th {
+		font-size: large;
+		width: 100px;
+		text-align: center;
+		background-color: #1797C0;
+		color: #ffffff;
+		margin: 0px;
+	}
+	
+	tr {
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	td {
+		text-align: center;
+		border-style:solid;
+		border-width:1px;
+		margin: 0px;
+		padding: 1px;
+	}
+	
+	.shoeTable {
+		border: 0px;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.header {
+		margin-top: 5px;
+		margin-bottom: 5px;
+		font-size: x-large;
+		text-align: center;
+	}
+	
+	.subHeader {
+		font-size: large;
+	}
+	
+	.blockedSize {
+		background-color: #d3d3d3;
+	}
+	
+	.sizeEntry {
+		width: 40px;
+	}
+	
+	.inputDisplay {
+		background-color: #E31836;
+		color: #ffffff;
+		font-weight:bold;
+	}
+	
+	.inputNew {
+		background-color: #DBFFB8;
+	}
+	
+	.inputWorn {
+		background-color: #FFCCCC;	
+	}
+
+</style>
+
+<script>
+
+	/////////////////////////////
+	// jQuery
+	/////////////////////////////
+	j$ = jQuery.noConflict();
+	
+	j$(document).ready(function() {
+	
+		j$('input[value!=""]').each(function() {
+		    if(j$(this).attr('id') != 'btnClose') {
+			    j$(this).parent().addClass("inputDisplay");
+			    j$(this).parent().prevAll("td.widthCell").addClass("inputDisplay");
+			}
+		});
+		
+		j$("#btnClose").click(function() {
+			window.close();		
+		});
+	
+		j$( ".sizeEntry" ).blur(function() {
+		
+			this.value = this.value.replace(/[^0-9\.]/g,'');
+		
+			var strCondition = j$(this).data("condition");
+			var strRecordId = j$(this).data("recordId");
+			var strStyle = j$(this).parent().data("style");
+			var strWidth = j$(this).parent().data("width");
+			var strSize = j$(this).parent().data("size");
+			var intQuantity = j$(this).val(); 
+			
+			if(strRecordId == null) {
+				strRecordId = '';
+			}
+			
+			if((parseFloat(intQuantity) == parseInt(intQuantity)) && !isNaN(intQuantity)){
+			    // GOOD!
+			} else { 
+			    intQuantity = '0';
+			} 
+		  	
+		  	if(parseInt(intQuantity) == 0) {
+		  		deleteEntry(strCondition,strStyle,strWidth,strSize)
+		  		j$(this).parent().removeClass("inputDisplay");
+		  		j$(this).parent().prevAll("td.widthCell").removeClass("inputDisplay");
+		  	} 
+		  	
+		  	if(parseInt(intQuantity) > 0) {
+				saveEntry(strCondition,strRecordId,strStyle,strWidth,strSize,intQuantity);
+				j$(this).parent().addClass("inputDisplay");
+				j$(this).parent().prevAll("td.widthCell").addClass("inputDisplay");
+			}
+
+		});
+	    
+	});
+
+	
+	
+
+	
+	/////////////////////////////
+	// Javascript
+	/////////////////////////////
+	function deleteEntry(strCondition,strStyle,strWidth,strSize) {
+	
+		Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.CaseVoluntaryRecallController.deleteData}',
+			'{!idRecord}',
+			strCondition,
+			strStyle,
+			strWidth,
+			strSize,
+			function(result){
+				if(result != 'success') {
+					alert(result);
+				}
+			}
+		);
+	
+	}
+
+
+	function saveEntry(strCondition, strRecordId, strStyle, strWidth, strSize, intQuantity) {
+
+		Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.CaseVoluntaryRecallController.processData}',
+			'{!idRecord}',
+			strCondition,
+			strRecordId,
+			strStyle,
+			strWidth,
+			strSize,
+			intQuantity,
+			function(result){
+				if(result != 'success') {
+					alert(result);
+				}
+			}
+		);
+	}
+
+
+</script>
+
+	<div class="header">
+		Red Wing October 2013 Voluntary Product Recall SKUs&nbsp;
+		<input type="button" id="btnClose" name="btnClose" value="Save and Close" />
+		<div class="subHeader">
+			{!Case.Account.Name} / {!Case.Contact.Name} / Case {!Case.CaseNumber}
+		</div>
+	</div>
+	
+	<table class="shoeTable" cellspacing="0" width="100%">
+		<tr class="tableHeader">
+			<th>Style</th>
+			<th>Width</th>
+			<th>11</th>
+			<th>11.5</th>
+			<th>12</th>
+			<th>13</th>
+			<th>14</th>
+			<th>15</th>
+			<th>16</th>
+			<th>17</th>
+			<th>18</th>
+		</tr>
+		
+		<apex:repeat value="{!lstStyles}" var="s">
+		
+			<apex:outputPanel rendered="{!s.bolSepBar}">
+				<tr class="tableHeader">
+					<th>Style</th>
+					<th>Width</th>
+					<th>11</th>
+					<th>11.5</th>
+					<th>12</th>
+					<th>13</th>
+					<th>14</th>
+					<th>15</th>
+					<th>16</th>
+					<th>17</th>
+					<th>18</th>
+				</tr>
+			</apex:outputPanel>
+		
+			<tr>
+				<td rowSpan="{!s.intWidthCount + 1}" class="styCell">{!s.strStyle}<br /><i>New / Worn</i></td>
+			</tr>	
+			
+			<apex:repeat value="{!s.mapWidths}" var="w">
+				
+				<tr>
+				
+					<td class="widthCell">{!s.mapWidths[w].strWidth}</td>
+					
+					<apex:repeat value="{!s.mapWidths[w].mapSizes}" var="size">
+						
+						<apex:outputPanel rendered="{!s.mapWidths[w].mapSizes[size].bolAvailable}">
+							<td class="availableSize" data-style="{!s.strStyle}" data-width="{!s.mapWidths[w].strWidth}" data-size="{!s.mapWidths[w].mapSizes[size].strSize}">
+								<input placeholder="New" type="text" class="sizeEntry inputNew" value="{!s.mapWidths[w].mapSizes[size].intQuantityNew}" data-condition="new" data-recordId="{!s.mapWidths[w].mapSizes[size].idExistingRecordNew}" />
+								<input placeholder="Worn" type="text" class="sizeEntry inputWorn" value="{!s.mapWidths[w].mapSizes[size].intQuantityWorn}" data-condition="worn" data-recordId="{!s.mapWidths[w].mapSizes[size].idExistingRecordWorn}" />
+							</td>
+						</apex:outputPanel>
+						
+						<apex:outputPanel rendered="{!NOT(s.mapWidths[w].mapSizes[size].bolAvailable)}">
+							<td class="blockedSize">X</td>
+						</apex:outputPanel>
+						
+					</apex:repeat>
+				</tr>
+				
+			</apex:repeat>
+		</apex:repeat>
+	
+		<tr class="tableFooter">
+			<th>Style</th>
+			<th>Width</th>
+			<th>11</th>
+			<th>11.5</th>
+			<th>12</th>
+			<th>13</th>
+			<th>14</th>
+			<th>15</th>
+			<th>16</th>
+			<th>17</th>
+			<th>18</th>
+		</tr>
+	</table>
+</body>
+</apex:page>

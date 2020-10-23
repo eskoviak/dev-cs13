@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cross_Functional_Requirements</fullName>
+    <columns>NAME</columns>
+    <columns>High_Level_Requirement__c</columns>
+    <columns>Parent_Requirement__c</columns>
+    <columns>Requirement_Name__c</columns>
+    <columns>Requirement_Description__c</columns>
+    <columns>Scope__c</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Business_Unit__c</field>
+        <operation>equals</operation>
+        <value>All</value>
+    </filters>
+    <label>Cross Functional Requirements</label>
+</ListView>

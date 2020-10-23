@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tandem__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If Tandem, an additional Filter that is not flagged as Tandem must be selected. This is used for filters that will return large number of Products.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If Tandem, an additional Filter that is not flagged as Tandem must be selected. This is used for filters that will return large number of Products.</inlineHelpText>
+    <label>Tandem</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

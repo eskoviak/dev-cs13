@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Book_ID__c</fullName>
+    <description>Formula field which returns the ID from a Price Book (standard object).  Used in outbound messaging.
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <formula>IF( Historic_Pricebook_ID__c != NULL, Historic_Pricebook_ID__c, CASESAFEID(Id))</formula>
+    <inlineHelpText>Formula field which returns the ID from a Price Book (standard object)  Used in outbound messaging.</inlineHelpText>
+    <label>Price Book ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Receivables__c</fullName>
+    <description>Accounts Receivables collection efforts Accounts Receivables collection efforts Accounts Receivables collection efforts recorded in A/R notes. A/R’s over 90 days with balances of $5,000+.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Accounts Receivables collection efforts recorded in A/R notes. A/R’s over 90 days with balances of $5,000+.</inlineHelpText>
+    <label>Account Receivables</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No</valueSetName>
+    </valueSet>
+</CustomField>

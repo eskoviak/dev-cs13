@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overall_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>To be set by Project Manager</inlineHelpText>
+    <label>Overall Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Green - Progressing as planned; on schedule, no critical path/impacting issues identified.</fullName>
+                <default>true</default>
+                <label>Green - Progressing as planned; on schedule, no critical path/impacting issues identified.</label>
+            </value>
+            <value>
+                <fullName>Yellow - Factors exist that threaten to impact the schedule.  The plan could be impacted if appropriate remediation is not agreed to by responsible parties within the stated timeframe.</fullName>
+                <default>false</default>
+                <label>Yellow - Factors exist that threaten to impact the schedule.  The plan could be impacted if appropriate remediation is not agreed to by responsible parties within the stated timeframe.</label>
+            </value>
+            <value>
+                <fullName>Red - Progress is being impacted.  Items require immediate remediation or resolution by the responsible parties within the stated timeframes.</fullName>
+                <default>false</default>
+                <label>Red - Progress is being impacted.  Items require immediate remediation or resolution by the responsible parties within the stated timeframes.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

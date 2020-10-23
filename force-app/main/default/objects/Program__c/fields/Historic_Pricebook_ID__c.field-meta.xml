@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Historic_Pricebook_ID__c</fullName>
+    <description>Contains the Historic Pricebook ID for reference during the migration of the new PPB / PPBE data model</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contains the Historic Pricebook ID for reference during the migration of the new PPB / PPBE data model</inlineHelpText>
+    <label>Historic Pricebook ID</label>
+    <length>18</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

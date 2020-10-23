@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integrations</fullName>
+    <columns>High_Level_Requirement__c</columns>
+    <columns>NAME</columns>
+    <columns>Requirement_Name__c</columns>
+    <columns>Requirement_Description__c</columns>
+    <columns>Activity_Number__c</columns>
+    <columns>Status__c</columns>
+    <columns>RWS_Comments__c</columns>
+    <columns>Iteration__c</columns>
+    <columns>Data_Integration__c</columns>
+    <columns>Cross_Function__c</columns>
+    <columns>Development_Status__c</columns>
+    <columns>Primary_Object__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project__c</field>
+        <operation>equals</operation>
+        <value>integrations</value>
+    </filters>
+    <filters>
+        <field>Phase__c</field>
+        <operation>notEqual</operation>
+        <value>2</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled</value>
+    </filters>
+    <label>Integrations</label>
+</ListView>

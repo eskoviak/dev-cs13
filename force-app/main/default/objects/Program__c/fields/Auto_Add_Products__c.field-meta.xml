@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auto_Add_Products__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>If TRUE your price book is automatically updated with new products that meet stored filter criteria. EXAMPLE: a program for Red Wing &amp; Steel Toe and a new product product is manufactured that is Red Wing &amp; Steel Toe it will be added to your price book.
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If TRUE your price book is automatically updated with new products that meet stored filter criteria. EXAMPLE: a program for Red Wing &amp; Steel Toe and a new product product is manufactured that is Red Wing &amp; Steel Toe it will be added to your price book.</inlineHelpText>
+    <label>Auto Add Products</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

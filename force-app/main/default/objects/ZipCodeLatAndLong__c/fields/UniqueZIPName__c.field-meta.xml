@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UniqueZIPName__c</fullName>
+    <description>file: Field that specifies whether the City State Record contains the organization name for a unique ZIP Code.</description>
+    <externalId>false</externalId>
+    <label>UniqueZIPName</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Y</fullName>
+                <default>false</default>
+                <label>Y</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

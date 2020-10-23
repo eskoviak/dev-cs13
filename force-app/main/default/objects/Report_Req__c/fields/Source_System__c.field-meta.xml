@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_System__c</fullName>
+    <description>What systems have the data?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What systems have the data?</inlineHelpText>
+    <label>Source System</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Balance</fullName>
+                <default>false</default>
+                <label>Balance</label>
+            </value>
+            <value>
+                <fullName>DMS</fullName>
+                <default>false</default>
+                <label>DMS</label>
+            </value>
+            <value>
+                <fullName>Enfinity</fullName>
+                <default>false</default>
+                <label>Enfinity</label>
+            </value>
+            <value>
+                <fullName>M3</fullName>
+                <default>false</default>
+                <label>M3</label>
+            </value>
+            <value>
+                <fullName>PaymenTech</fullName>
+                <default>false</default>
+                <label>PaymenTech</label>
+            </value>
+            <value>
+                <fullName>RWSC BI</fullName>
+                <default>false</default>
+                <label>RWSC BI</label>
+            </value>
+            <value>
+                <fullName>SalesForce</fullName>
+                <default>false</default>
+                <label>SalesForce</label>
+            </value>
+            <value>
+                <fullName>Vertex</fullName>
+                <default>false</default>
+                <label>Vertex</label>
+            </value>
+            <value>
+                <fullName>XBR</fullName>
+                <default>false</default>
+                <label>XBR</label>
+            </value>
+            <value>
+                <fullName>Xcenter</fullName>
+                <default>false</default>
+                <label>Xcenter</label>
+            </value>
+            <value>
+                <fullName>Xstore</fullName>
+                <default>false</default>
+                <label>Xstore</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,158 @@
+<apex:page controller="ZipAssignManagerController" showHeader="true" sidebar="true" title="Area Assignment Manager" id="pgMain" tabStyle="User">
+<!--
+
+	<apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/js/jquery-1.8.0.min.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/js/jquery-ui-1.8.23.custom.min.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/corners/jquery.corner.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/tablesorter/jquery.tablesorter.min.js')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.jQueryDCS,'/css/redmond/jquery-ui-1.10.3.custom.min.css')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.jQueryDCS,'/tablesorter/tablesorter.css')}" />
+
+	<style>
+		.tblAssignments {
+			width: 100%;
+		}
+	</style>
+
+<apex:outputPanel id="opScripts">
+
+	<script>
+
+		/////////////////////////////
+		// jQuery
+		/////////////////////////////
+		j$ = jQuery.noConflict();
+		
+		j$(document).ready(function() {
+
+			// Modal Events and Methods
+            j$( "#dialog-modal" ).dialog({
+                autoOpen: false,
+                height: 150,
+                width: 400,
+                modal: true,
+                resizable: false,
+                draggable: false
+            });
+
+			var elResource = document.getElementById('{!$Component.pgMain:frmMain:pbMain:pbsAssignments:dtAssign}');
+            j$(elResource).tablesorter({
+				widgets: ['zebra']
+			});
+
+		});
+
+		function statusShow() {
+            j$( "#dialog-modal" ).dialog( "open" );
+        }
+    
+        function statusHide() {
+            j$( "#dialog-modal" ).dialog( "close" );
+        }
+
+        function stopRKey(evt) {
+		   var evt = (evt) ? evt : ((event) ? event : null);
+		   var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+		   if ((evt.keyCode == 13) && (node.type=="text")) {return false;}
+		}
+
+		document.onkeypress = stopRKey;
+
+	</script>
+
+</apex:outputPanel>
+
+<apex:form id="frmMain">
+	<apex:actionStatus id="asShowInterstitial" onstart="statusShow();" onstop="statusHide();" />
+	<apex:sectionHeader title="Sales Rep Assignment" subtitle="Area Assignment Search" />
+	<apex:pageMessages />
+	<apex:pageBlock id="pbMain" title="Search for criteria and view results">
+		<apex:pageBlockButtons location="top">
+			<apex:commandButton id="btnNew" value="New Assignment" action="{!newAssignment}" />
+		</apex:pageBlockButtons>
+
+		<apex:tabPanel switchType="client">
+			<apex:tab label="Search Assignments" name="tabSearch" id="tabSearch">
+				<apex:pageBlockSection columns="2" id="pbsSearch" title="Search for Reps and Areas">
+					<apex:pageblocksectionitem >
+						<apex:outputLabel value="City (*)" />
+						<apex:inputField value="{!clsSearch.zcSearch.City__c}" />
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputText value="County (*)" />
+						<apex:inputField value="{!clsSearch.zcSearch.County__c}" />
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputText value="State Abbreviation" />
+						<apex:inputField value="{!clsSearch.zcSearch.State__c}" />
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputText value="Zip/Postal Code (*)" />
+						<apex:inputText value="{!clsSearch.strZipCode}" />
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputText value="Owner" />
+						<apex:inputField value="{!clsSearch.zaSearch.OwnerId}" required="false"/>
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputText value="Role" />
+						<apex:inputField value="{!clsSearch.zaSearch.Role__c}" />
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputText value=" " />
+						<apex:outputText value=" " />
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputText value=" " />
+						<apex:commandButton id="cmdSearch" value="Search Assignments" action="{!validateCriteria}" rerender="frmMain,opScripts" status="asShowInterstitial"/>
+					</apex:pageblocksectionitem>	
+				</apex:pageBlockSection>
+				<apex:pageBlockSection id="pbsAssignments" title="Areas and Assignments (Limit 1000)" columns="1">
+					<apex:pageBlockTable id="dtAssign" styleClass="tblAssignments" value="{!lstAssign}" var="a" rendered="{!lstAssign.size != null}">
+						<apex:column >
+							<a href="/{!a.Id}">View</a>
+						</apex:column>
+						<apex:column value="{!a.Zip_Code_Lookup__r.Name}" />
+						<apex:column value="{!a.Zip_Code_Lookup__r.City__c}" />
+						<apex:column value="{!a.Zip_Code_Lookup__r.County__c}" />
+						<apex:column value="{!a.Zip_Code_Lookup__r.State__c}" />
+						<apex:column headerValue="Lead Owner" value="{!a.Owner.Name}" />
+						<apex:column headerValue="Account Owner" value="{!a.Account_Owner__r.Name}" />
+						<apex:column value="{!a.Role__c}" />
+						<apex:column value="{!a.Assignment_Effective_Date__c}" />
+					</apex:pageBlockTable>
+				</apex:pageBlockSection>
+			</apex:tab>
+			<apex:tab label="Unassigned Zip Codes" name="tabUnassigned" id="tabUnassigned">
+				<apex:pageBlockSection columns="1" title="All zips without an active assignment (Limit 1000)">
+					<apex:pageBlockTable styleClass="tblAssignments" value="{!lstUnassigned}" var="z">
+						<apex:column >
+							<a href="/{!z.Id}">View Zip</a>
+						</apex:column>
+						<apex:column value="{!z.Name}" />
+					</apex:pageBlockTable>
+				</apex:pageBlockSection>
+			</apex:tab>
+			<apex:tab label="Frozen Records" name="tabFrozen" id="tabFrozen">
+				<apex:pageBlockSection columns="1" title="All frozen leads and accounts (Limit 1000)">
+					<apex:pageBlockTable styleClass="tblAssignments" value="{!lstFrozenRecords}" var="fr">
+						<apex:column >
+							<a href="/{!fr.idRecord}">View</a>
+						</apex:column>
+						<apex:column headerValue="Name" value="{!fr.strName}" />
+						<apex:column headerValue="Type of Record" value="{!fr.strType}" />
+					</apex:pageBlockTable>
+				</apex:pageBlockSection>
+			</apex:tab>
+		</apex:tabPanel>
+
+	</apex:pageBlock>
+</apex:form>
+
+    <div id="dialog-modal" title="Processing...">
+        <p align="center">
+        	<img src="{!URLFOR($Resource.jQueryDCS,'/images/ajax-loader.gif')}" border="0" />
+        </p>
+    </div>
+-->
+</apex:page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Sales_Contract_Require_Reference</fullName>
+    <active>true</active>
+    <description>For specific Sales Contract, identification of the Reference is required</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( Sales_Contract__c , &apos;TXMAS&apos;),
+ISBLANK(Sales_Contract_Reference__c )
+)</errorConditionFormula>
+    <errorMessage>For the selected Sales Contract, Sales Contract Reference is required.</errorMessage>
+</ValidationRule>

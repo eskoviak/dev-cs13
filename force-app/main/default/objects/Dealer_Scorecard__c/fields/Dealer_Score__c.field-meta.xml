@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dealer_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>( Annual_Revenue_Score__c + xStore_for_POS__c + RD_Score__c + TSM_Score__c + ROM_Score__c + ISM_Score__c +  MKT_Score__c  ) / 7</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Dealer Annual Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Tax_Exempt__c</fullName>
+    <externalId>false</externalId>
+    <formula>If( isPickVal(Account__r.Tax_Exempt__c, &apos;Yes&apos;), &apos;Account is Tax Exempt&apos;, &apos;Account is not Tax Exempt&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Account Tax Exempt</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

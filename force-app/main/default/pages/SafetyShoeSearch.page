@@ -1,0 +1,386 @@
+<apex:page controller="SafetyShoeSearchController" showHeader="true" sidebar="true" title="Retail Store Locator ">
+
+    <apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/js/jquery-1.8.0.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/js/jquery-ui-1.8.23.custom.min.js')}" />
+    <apex:includeScript value="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" />
+    <apex:includeScript value="//cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js" />
+    <apex:includeScript value="//cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js" />
+    <apex:includeScript value="//cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js" />
+    <apex:includeScript value="//cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js" />
+    <apex:includeScript value="//cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js" />
+    <apex:stylesheet value="{!URLFOR($Resource.SLDSv203, 'assets/styles/salesforce-lightning-design-system.min.css')}"/>
+    <apex:styleSheet value="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+    <apex:styleSheet value="//cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" />
+
+    <!-- Here is the css styles that will be used for the progress bars -->
+    <style>
+        .progressBar{
+            background-color: #f8f8f8;
+            border:1px solid #DDDDDD;
+            height: 19px;
+            width: 300px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+        .progress{
+            background-color: #F7B64B;
+            border:1px solid #E78F08;
+            height: 100%;
+            margin: -1px;
+            text-align: center;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            line-height: 18px;
+        }
+    </style>
+
+    <apex:sectionHeader title="Retail Store Locator" subtitle="Participant Search" />
+
+    <apex:form >
+        <apex:pageMessages id="messages" />
+        <fieldset class="slds-form--compound">
+            <div class="form-element__group slds-size--4-of-6">
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="input-01">{!$Label.StoreLocatory_SearchCriteriaLabel}</label>
+                        <textarea id="input-01" class="slds-textarea zipsOrCities"></textarea>
+                    </div>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="input-02">Distance Within:</label>
+                        <apex:selectList value="{!radius}" id="input-02" multiselect="false" size="1" style="width: 100%;" styleClass="selDistance">
+                            <apex:selectOption itemValue="10" itemLabel="10 miles"/>
+                            <apex:selectOption itemValue="25" itemLabel="25 miles" />
+                            <apex:selectOption itemValue="50" itemLabel="50 miles"/>
+                            <apex:selectOption itemValue="75" itemLabel="75 miles"/>
+                            <apex:selectOption itemValue="100" itemLabel="100 miles"/>
+                        </apex:selectList>
+                    </div>
+                </div>
+
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size--1-of-1">
+                        <button class="slds-button slds-button--brand" type="button" onclick="searchAccounts(); return false;">Search</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </apex:form>
+
+    <div class="slds-spinner_container" id="loadingSpinner">
+      <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+        <div class="slds-spinner__dot-a"></div>
+        <div class="slds-spinner__dot-b"></div>
+      </div>
+    </div>
+
+    <div id="tableParent">
+        <table id="example" class="display" width="100%"></table>
+    </div>
+
+    <script type="text/javascript">
+        j$ = jQuery.noConflict();
+
+        j$(document).ready(function() {
+                // Modal Events and Methods
+            j$( "#loadingSpinner" ).dialog({
+                autoOpen: false,
+                modal: true,
+                resizable: false,
+                draggable: false
+            });
+        });
+
+        function emptyStringIfUndefined(x){
+            if(typeof x == 'undefined' || x == null){
+                return '';
+            }else{
+                return x;
+            }
+        }
+
+        function getYesOrNo(boolVal){
+            return boolVal ? 'Yes' : 'No';
+        }
+
+        function roundDistance(x){
+            if(typeof x == 'undefined' || x == null){
+                return '';
+            }else{
+                var num = Math.round(parseFloat(x));
+                //num = (Math.round(num * 100) / 100);
+                return num + '';
+            }
+        }
+
+        function handleResult(zipcodeResult,event){
+            var R = 3971.183; // miles
+
+            var accountsToDisplay = [];
+            var accountMap = {};
+            var zipsOrCitiesResult = getZipsOrCitiesArr(searchBy);
+            var searchBy = zipsOrCitiesResult.searchBy;
+            var arr = zipsOrCitiesResult.arr;
+
+            for(var i=0; i < zipcodeResult.accountResults.length; i++){
+                var acctResult = zipcodeResult.accountResults[i];
+                var lon1 = acctResult.Longitude__c;
+                var lat1 = acctResult.Latitude__c;
+
+                for(var j=0; j < zipcodeResult.zipResults.length; j++){
+                    var zipResult = zipcodeResult.zipResults[j];
+                    var lon2 = zipResult.Location__Longitude__s;
+                    var lat2 = zipResult.Location__Latitude__s;
+
+                    var x1 = lat2 - lat1;
+                    var x2 = lon2 - lon1;
+                    var dLat = toRad(x1);
+                    var dLon = toRad(x2)
+
+                    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+                        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+
+                    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+                    var calculatedDistance = R * c;
+
+                    if(calculatedDistance <= zipcodeResult.distance){
+                        var acct = accountMap[acctResult.Id];
+                        var zipColumn = (searchBy == "zipcode" ? zipResult.Name : zipResult.City_State__c);
+                        if(acct == null || typeof acct === 'undefined'){
+                            var zips = {};
+                            zips[zipColumn] = calculatedDistance;
+                            accountMap[acctResult.Id] = {
+                                account:acctResult
+                                ,distance:calculatedDistance
+                                ,checked:false
+                                ,zips : zips
+                            }
+                        }else{
+                            if(acct.zips[zipColumn] == null || acct.zips[zipColumn] === 'undefined'                 || acct.zips[zipColumn] > calculatedDistance){
+                                acct.zips[zipColumn] = calculatedDistance;
+                            }
+                        }
+                    }
+                }
+            }
+
+            var results = [];
+
+            var zips = {};
+            var zipCols = [];
+            var columnFilterHtml = '';
+
+            arr.sort();
+
+            for(i=0; i < arr.length; i++){
+                var currentZip = ((searchBy == "city" && arr[i] !== null && typeof arr[i] !== "undefined") ? arr[i].toUpperCase() : arr[i]);
+                if(!zips.hasOwnProperty(currentZip)){
+                    zips[currentZip] = currentZip;
+                    zipCols.push({title:currentZip,className:'zipheader'});
+                    columnFilterHtml += '<th><input type="checkbox" data-filter="zip"/></th>';
+                }
+            }
+
+            var cols = [
+                {title:"Store Name"}
+                ,{title:"Street"}
+                ,{title:"City"}
+                ,{title:"State/Province"}
+                ,{title:"Postal Code"}
+                ,{title:"Phone"}
+            ].concat(zipCols).concat([
+                {title:"Email"}
+                ,{title:"Store has Shoemobile"}
+                ,{title:"Store Type"}
+                ,{title:"Store Number"}
+                ,{title:"Account Number"}
+            ]);
+
+            var headerHtml = '<tr><th colspan="6"></th><th colspan="' + zipCols.length + '">Distance (Miles)</th><th colspan="5"></th></tr>';
+
+
+            var filterHtml = '<tr class="filterrow" role="filter"><th><input type="text" placeholder="Search Store Name" /></th>' +
+            '<th><input type="text" placeholder="Search Street" /></th>' +
+            '<th><input type="text" placeholder="Search City" /></th>' +
+            '<th><input type="text" placeholder="Search State/Province" /></th>' +
+            '<th><input type="text" placeholder="Search Postal Code" /></th>' +
+            '<th><input type="text" placeholder="Phone" /></th>' +
+            columnFilterHtml +
+            '<th><input type="text" placeholder="Search Email" /></th>' +
+            '<th><input type="checkbox" data-filter="truck" /></th>' +
+            '<th><input type="text" placeholder="Search Store Type" /></th>' +
+            '<th><input type="text" placeholder="Search Store Number" /></th>' +
+            '<th><input type="text" placeholder="Search Account Number" /></th></tr>' +
+            
+            Object.keys(accountMap).forEach(function(key,index){
+                var current = accountMap[key];
+                var currentAcct = current.account;
+                var acct = [
+                    emptyStringIfUndefined(currentAcct.Name)
+                    ,emptyStringIfUndefined(currentAcct.M3_Location_Street__c)
+                    ,emptyStringIfUndefined(currentAcct.M3_Location_City__c)
+                    ,emptyStringIfUndefined(currentAcct.M3_Location_State_Province__c)
+                    ,emptyStringIfUndefined(currentAcct.M3_Location_ZIP_Postal_Code__c)
+                    ,emptyStringIfUndefined(currentAcct.Phone)];
+
+                //JWL: Fix for random values showing up in wrong zip code columns for multiple zip code search. (added call to sort())
+                Object.keys(zips).sort().forEach(function(zipKey,zipIndex){
+                    acct.push(roundDistance(current.zips[zipKey]));
+                });
+
+                acct = acct.concat([
+                    emptyStringIfUndefined(currentAcct.Store_Email__c)
+                    ,getYesOrNo(currentAcct.Mobile_Truck__c)
+                    ,emptyStringIfUndefined(currentAcct.Store_Ownership_Type__c)
+                    ,emptyStringIfUndefined(currentAcct.Store_Number__c)
+                    ,emptyStringIfUndefined(currentAcct.AccountNumber)
+                ]);
+                results.push(acct);
+            });
+
+            if(typeof datatable !== "undefined" && datatable !== null){
+                j$('#example').dataTable().fnDestroy({remove: true});
+                j$('#tableParent').append('<table id="example"></table>');
+            }
+
+            datatable = j$('#example').DataTable( {
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend:'csv'
+                        ,text:'Export CSV (All Columns)'
+                        ,exportOptions:{
+                            format: {
+                                header: function ( data, column, row, node ) {
+                                    //Add mile description to header for zipcodes only and on full export only
+                                    if(j$(row).hasClass('zipheader')){
+                                        data = 'Miles from ' + data;
+                                    }
+                                    return data;
+                                }
+                            }
+                        }
+                    }
+                    ,{
+                        extend:'csv'
+                        ,text: 'Export CSV (Mailing List)'
+                        ,exportOptions:{columns:[1,2,3,4,5]}
+                    }
+                ],
+                columns : cols
+                ,data : results
+                ,sDom : 'Blrtip'
+            });
+
+            j$('#example thead').prepend(headerHtml);
+            j$('#example thead').append(filterHtml);
+
+            j$("#example thead input:text").on( 'keyup change', function () {
+                datatable
+                    .column(j$(this).parent().index())
+                    .search(this.value)
+                    .draw();
+            });
+
+            j$("#example thead input:checkbox[data-filter='zip']").on('change', function() {
+                if(this.checked) {
+                    datatable
+                        .column(j$(this).parent().index())
+                        .search('.+$',true,false)
+                        .draw();
+                }else{
+                    datatable
+                        .column(j$(this).parent().index())
+                        .search('')
+                        .draw();
+                }
+            });
+
+            j$("#example thead input:checkbox[data-filter='truck']").on('change', function() {
+                if(this.checked) {
+                    datatable
+                        .column(j$(this).parent().index())
+                        .search('Yes',true,false)
+                        .draw();
+                }else{
+                    datatable
+                        .column(j$(this).parent().index())
+                        .search('')
+                        .draw();
+                }
+            });
+
+            j$("#loadingSpinner").dialog("close");
+        }
+
+        function searchAccounts(){
+            var dialog = j$("#loadingSpinner").dialog("open");
+
+            //var searchBy = j$('input[name=criteriaRadio]:checked').val();
+            var dist = j$('.selDistance').val();
+            var type = j$('.selStoreType').val();
+
+            var zipsOrCitiesResult = getZipsOrCitiesArr(searchBy);
+            var searchBy = zipsOrCitiesResult.searchBy;
+            var arr = zipsOrCitiesResult.arr;
+
+            var accountsToDisplay = [];
+
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.SafetyShoeSearchController.getZipcodeInformation}'
+                ,arr
+                ,searchBy
+                ,dist
+                ,handleResult
+            );
+        }
+
+        function getZipsOrCitiesArr(){
+            var result = {};
+
+            var arr = [];
+            var zipsOrCities = j$(".zipsOrCities").val();
+            var searchBy = "zipcode";
+            if(zipsOrCities.includes('"')){
+                searchBy = "city";
+                if(zipsOrCities != null && zipsOrCities.length > 1){
+                    zipsOrCities = zipsOrCities.slice(1,zipsOrCities.length-1);
+                }
+                arr = zipsOrCities.split('","');
+            }else{
+                arr = zipsOrCities.split(',');
+            }
+
+            return {arr : arr, searchBy : searchBy};
+        }
+
+        function toRad(x) {
+            return x * Math.PI / 180;
+        }
+
+        function haversineDistance(coords1, coords2) {
+
+            var lon1 = coords1.longitude;
+            var lat1 = coords1.latitude;
+
+            var lon2 = coords2.longitude;
+            var lat2 = coords2.latitude;
+
+            var R = 3971.183; // miles
+
+            var x1 = lat2 - lat1;
+            var dLat = toRad(x1);
+            var x2 = lon2 - lon1;
+            var dLon = toRad(x2)
+            var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            var d = R * c;
+
+            //Convert to miles
+            d /= 1.60934;
+            return d;
+        }
+    </script>
+</apex:page>

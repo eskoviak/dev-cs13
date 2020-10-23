@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hunt_Requested__c</fullName>
+    <description>This field is used to capture the hunting product information.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the hunting product information in this field.</inlineHelpText>
+    <label>*Delete* Hunt Requested</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

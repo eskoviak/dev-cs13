@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROM_Overall_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>( ROM_Program_Compliance_Score__c  + ROM_SOP_Compliance_Score__c + ROM_Store_Visit_Reports_Score__c + ROM_Employee_Training_Score__c + ROM_Regional_Cooperation_Score__c + ROM_Regional_Meeting_Attendance_Score__c + ROM_Regional_Call_Attendance_Score__c + ROM_Industrial_Account_Sharing_Score__c + ROM_FSL_Participation_Score__c + ROM_Red_Wing_Marketing_Score__c + ROM_Marketing_Meeting_Score__c  ) / 11</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ROM - Overall Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

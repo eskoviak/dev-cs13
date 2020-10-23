@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Used by the 201311 Voluntary Recall effort - this object feeds the rapid-entry grid within the Case object.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Voluntary Recall Rules</label>
+    <visibility>Protected</visibility>
+</CustomObject>

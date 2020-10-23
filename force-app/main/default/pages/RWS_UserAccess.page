@@ -1,0 +1,5 @@
+<apex:page standardController="Contact" extensions="RWS_UserAccess_Controller" sidebar="false" showHeader="false" action="{!updateSharing}">
+	<div style="display: none;">
+		{!Contact.AccountId}
+	</div>
+</apex:page>

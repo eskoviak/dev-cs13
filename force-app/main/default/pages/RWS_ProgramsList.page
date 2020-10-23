@@ -1,0 +1,94 @@
+<apex:page controller="RWS_AccountSetupController" docType="html-5.0" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false">
+    <html lang="en">
+        <head>
+            <c:HeadTagComponent />
+            <apex:includeScript value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquerydataTables.js')}"/>
+            <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/logout.js')}" />
+            
+            <style type="text/css">
+                        .big-text {
+                            margin: 20px 15px;
+                            padding: 0px 0px 20px 0px;
+                            border-bottom: 1px solid #4c4c4c;
+                            font-size: 1.9em;
+                            text-transform: uppercase;
+                            vertical-align: bottom;
+                            line-height: 30px;
+                        }
+                        .account-name {
+                            padding: 0px;
+                            margin-bottom: 20px;
+                        }
+                        .dataTable th {
+                            background-color: #ccc !important;
+                        }
+                        table.dataTable.display tbody tr td {
+                            font-weight: bold;
+                        }
+            </style>
+        </head>
+        <body class="accounts">
+            <div class="fluid-container">
+                <c:RWS_Header />
+                <div class="row site-content form_bg">
+                    <div class="col-sm-12 header">
+                        <h2 class="text-uppercase fancy white"><span>Program Templates</span></h2>
+                    </div>
+                    <div class="col-xs-12 big-text">ASSIGN PROGRAM TEMPLATE</div>
+                    <apex:form id="programForm">
+                        <apex:actionStatus onstart="$('#splashscreen').modal({backdrop: 'static', keyboard: false});" onstop="$('#splashscreen').modal('hide');" id="loadSplashScreen"/>
+                        <apex:actionfunction name="AddSelectedPgm" action="{!AddProgramToAccount}" status="loadSplashScreen" reRender="test"/>
+                        <div class="col-xs-12">
+                            
+                           <label class="form control-label col-xs-12 account-name">ACCOUNT NAME&nbsp;&nbsp;&nbsp; <b><apex:outputText value="{!accountName}"/></b></label>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <apex:pageblock >
+                                <apex:pageblocktable columnClasses="table-striped" styleClass="col-sm-12 display dataTable no-footer pad_top10 pad_btm10 pad_lft10" value="{!ListOfProgramWrap}" var="PgmLst">
+                                    <apex:column styleClass="text-bold" value="{!PgmLst.PgmObj.Name}" >
+                                        <apex:facet name="header">Name</apex:facet>
+                                    </apex:column>
+                                    <apex:column styleClass="bold" value="{!PgmLst.PgmObj.Type__c}"  >
+                                        <apex:facet name="header">Type</apex:facet>
+                                    </apex:column>
+                                    <apex:column styleClass="bold" value="{!PgmLst.PgmObj.Activation_Date__c}"  >
+                                        <apex:facet name="header">Effective Date</apex:facet>
+                                    </apex:column>
+                                    <apex:column styleClass="bold" value="{!PgmLst.PgmObj.Expiration_Date__c}"  >
+                                        <apex:facet name="header">Expiration Date</apex:facet>
+                                    </apex:column>
+                                    <apex:column styleClass="bold" value="{!PgmLst.PgmObj.Program_Notes_Trimmed__c}"  >
+                                        <apex:facet name="header">Notes</apex:facet>
+                                    </apex:column>
+                                    <apex:column styleClass="pad_top10 pad_btm10 bold text-center">
+                                        <apex:facet name="header"></apex:facet>
+                                        <apex:inputCheckbox value="{!PgmLst.Selected}" styleClass="check-program" />
+                                    </apex:column>
+                                </apex:pageblocktable>
+                            </apex:pageblock>
+                        </div>
+                        <div class="col-sm-12 txt_right pb-3">
+                            <a class="btn btn-danger btn-outline" href='{!$Label.Community_Name}AccountSummary?tab=account&id={!accountId}'>Cancel</a>
+                            <button id="AddToPgm" class="btn btn-danger add_to_program" onclick="AddTemp();return false;">Save</button>
+                        </div>
+                    </apex:form>
+                </div>
+            </div>
+            <apex:outputPanel id="test">
+                <c:RWS_Modals />
+                <c:RWS_Footer />
+            <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/bootstrap.min.js')}"></script>
+            <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/modal.js')}"></script>
+            <script>
+                function AddTemp() {
+                    if ($("input[type='checkbox'].check-program").is(':checked')) {
+                        confirmModal('PROGRAM TEMPLATE', 'The Program Template(s) will be added to the Account.', 'AddSelectedPgm();', null, 'Continue');
+                    } else {
+                        confirmModal('PROGRAM TEMPLATE', 'You must select a Program Template to add Program to the Account.', '', null, 'Close');
+                    }
+                }
+            </script>
+            </apex:outputPanel>
+        </body>
+    </html>
+</apex:page>

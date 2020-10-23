@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_l_Address_Notes__c</fullName>
+    <description>From &quot;Combined Contact Requirements for Review 3-26&quot; spreadsheet</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If &quot;Other&quot; is selected in the Additional Address Type field, provide details here.  Use this field to enter any other Additional Address notes necessary.</inlineHelpText>
+    <label>Add&apos;l Address Notes</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

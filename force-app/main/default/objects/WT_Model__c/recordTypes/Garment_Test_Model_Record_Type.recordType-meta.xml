@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Garment_Test_Model_Record_Type</fullName>
+    <active>true</active>
+    <description>Garment Test Models</description>
+    <label>Garment Test Model Record Type</label>
+</RecordType>

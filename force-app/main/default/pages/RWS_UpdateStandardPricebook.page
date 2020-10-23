@@ -1,0 +1,3 @@
+<apex:page sidebar="false" showHeader="false" controller="RWS_UpdateStandardPricebookController" action="{!updateStandardPricebook}" >
+	<apex:pageMessages />
+</apex:page>

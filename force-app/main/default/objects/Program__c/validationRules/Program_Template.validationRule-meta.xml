@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Template</fullName>
+    <active>true</active>
+    <description>If a program is a template it cannot be associated with an account</description>
+    <errorConditionFormula>NOT(ISBLANK(Account__c)) &amp;&amp;  Template__c == TRUE</errorConditionFormula>
+    <errorMessage>Program templates cannot be attached to accounts.  Please clone the template and attach the clone to your account.</errorMessage>
+</ValidationRule>

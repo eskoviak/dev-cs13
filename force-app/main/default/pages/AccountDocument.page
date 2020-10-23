@@ -1,0 +1,35 @@
+<apex:page standardController="Account_Document__c" extensions="accountDocumentExtension" sidebar="false" showHeader="false">
+
+    <p>
+        &nbsp;
+    </p>
+
+    <p>
+        <b>Please review the document below. If you accept the document, enter your name in the text box and click the "Accept" button.</b>
+    </p>
+
+    <p>
+        <apex:outputText value="{!Account_Document__c.Document_Version__r.Document_Text__c}" escape="false"/>
+    </p>
+
+    <p>
+        &nbsp; 
+    </p>
+
+    <p>
+  
+        <apex:form >
+            <b>Enter your name: </b>&nbsp;&nbsp;        
+            <apex:inputField value="{!Account_Document__c.Document_Accepted_Contact_Name__c}"/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+            <apex:commandButton action="{!save}" value="Accept" />            
+        </apex:form>    
+
+    </p>
+
+    <p>
+        &nbsp;
+    </p>
+    
+</apex:page>

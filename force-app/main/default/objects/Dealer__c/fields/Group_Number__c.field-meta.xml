@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Number__c</fullName>
+    <description>This is a system generated field
+Field Type: Store Data
+Integrated: Y - SF&gt;pricing portal</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a system generated number</inlineHelpText>
+    <label>Group Number</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

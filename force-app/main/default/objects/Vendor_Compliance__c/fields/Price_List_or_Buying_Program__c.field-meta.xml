@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_List_or_Buying_Program__c</fullName>
+    <externalId>false</externalId>
+    <label>Price List or Buying Program</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adventure Discount Model</fullName>
+                <default>false</default>
+                <label>Adventure Discount Model</label>
+            </value>
+            <value>
+                <fullName>Buying Program</fullName>
+                <default>false</default>
+                <label>Buying Program</label>
+            </value>
+            <value>
+                <fullName>Current</fullName>
+                <default>false</default>
+                <label>Current</label>
+            </value>
+            <value>
+                <fullName>Current / Canada</fullName>
+                <default>false</default>
+                <label>Current / Canada</label>
+            </value>
+            <value>
+                <fullName>DTI - price list (SL)</fullName>
+                <default>false</default>
+                <label>DTI - price list (SL)</label>
+            </value>
+            <value>
+                <fullName>Hudson Discount Model</fullName>
+                <default>false</default>
+                <label>Hudson Discount Model</label>
+            </value>
+            <value>
+                <fullName>Midstates Buying Group Program</fullName>
+                <default>false</default>
+                <label>Midstates Buying Group Program</label>
+            </value>
+            <value>
+                <fullName>Mountain Discount Model</fullName>
+                <default>false</default>
+                <label>Mountain Discount Model</label>
+            </value>
+            <value>
+                <fullName>Special Price List</fullName>
+                <default>false</default>
+                <label>Special Price List</label>
+            </value>
+            <value>
+                <fullName>Wheatbelt Buying Group Program</fullName>
+                <default>false</default>
+                <label>Wheatbelt Buying Group Program</label>
+            </value>
+            <value>
+                <fullName>Whole Discount Model</fullName>
+                <default>false</default>
+                <label>Whole Discount Model</label>
+            </value>
+            <value>
+                <fullName>Worlldwide Buying Group Program</fullName>
+                <default>false</default>
+                <label>Worlldwide Buying Group Program</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

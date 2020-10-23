@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Document__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox that triggers the workflow to update Date/Time Document Sent and sends email to account contact with the document to &quot;sign&quot;.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box to send the electronic document to the account to be accepted.</inlineHelpText>
+    <label>Send Document</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

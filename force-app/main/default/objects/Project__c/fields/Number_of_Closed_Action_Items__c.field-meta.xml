@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Closed_Action_Items__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Count of all Closed Action Items</inlineHelpText>
+    <label>Closed Action Items</label>
+    <summaryFilterItems>
+        <field>Action_Item__c.Status__c</field>
+        <operation>equals</operation>
+        <value>3 - Closed</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Action_Item__c.Project__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Solution_Test_Cases</fullName>
+    <columns>NAME</columns>
+    <columns>Test_Case_Name__c</columns>
+    <columns>Description__c</columns>
+    <columns>Project__c</columns>
+    <columns>testStatus__c</columns>
+    <columns>Test_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project__c</field>
+        <operation>contains</operation>
+        <value>Contact</value>
+    </filters>
+    <label>Contact Solution Test Cases</label>
+    <sharedTo>
+        <group>AllRWSPublicGroup</group>
+        <group>Internal_RWSC_QA_Testing</group>
+        <group>SF_Integration_Team</group>
+    </sharedTo>
+</ListView>

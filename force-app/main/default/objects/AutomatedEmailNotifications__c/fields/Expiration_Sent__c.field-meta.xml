@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expiration_Sent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used specifically by the Mobile Expiration process, this field indicates to the process to include/exclude the Truck__c.IsExpirationEmailSent__c field.</description>
+    <externalId>false</externalId>
+    <label>Expiration Sent</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

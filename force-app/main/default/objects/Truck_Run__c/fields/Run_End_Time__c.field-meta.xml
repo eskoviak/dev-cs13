@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Run_End_Time__c</fullName>
+    <description>Used to capture the scheduled ending time of the truck run.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the ending time for the truck run.</inlineHelpText>
+    <label>Run End Time</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

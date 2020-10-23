@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Objective__c</fullName>
+    <externalId>false</externalId>
+    <label>Project Objective</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Red Wing customer information is accessible through a single system</fullName>
+                <default>false</default>
+                <label>Red Wing customer information is accessible through a single system</label>
+            </value>
+            <value>
+                <fullName>Red Wing B2B customers can obtain anything they need whenever they need it</fullName>
+                <default>false</default>
+                <label>Red Wing B2B customers can obtain anything they need whenever they need it</label>
+            </value>
+            <value>
+                <fullName>&quot;Voice of the Customer&quot; feedback is integrated into the Customer WOW program</fullName>
+                <default>false</default>
+                <label>&quot;Voice of the Customer&quot; feedback is integrated into the Customer WOW program</label>
+            </value>
+            <value>
+                <fullName>Customers experience premium Red Wing service at all distribution points</fullName>
+                <default>false</default>
+                <label>Customers experience premium Red Wing service at all distribution points</label>
+            </value>
+            <value>
+                <fullName>Provide a 360-degree view of the customer</fullName>
+                <default>false</default>
+                <label>Provide a 360-degree view of the customer</label>
+            </value>
+            <value>
+                <fullName>Maximize adoption and the user experience</fullName>
+                <default>false</default>
+                <label>Maximize adoption and the user experience</label>
+            </value>
+            <value>
+                <fullName>Provide actionable information via reporting</fullName>
+                <default>false</default>
+                <label>Provide actionable information via reporting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

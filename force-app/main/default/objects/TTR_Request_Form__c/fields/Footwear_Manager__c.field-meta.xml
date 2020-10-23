@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Footwear_Manager__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This is for the Footwear Manager.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the Footwear Manager name in this field.</inlineHelpText>
+    <label>Footwear Manager</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Contact.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>TTR Request Form (Contact Supervisor)</relationshipLabel>
+    <relationshipName>TTR_Request_Form1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

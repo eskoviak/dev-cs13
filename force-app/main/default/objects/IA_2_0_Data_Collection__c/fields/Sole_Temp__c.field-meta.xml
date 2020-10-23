@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sole_Temp__c</fullName>
+    <description>Temp field for IA 2.0 conversion</description>
+    <externalId>false</externalId>
+    <label>Sole - Temp</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>#N/A</fullName>
+                <default>false</default>
+                <label>#N/A</label>
+            </value>
+            <value>
+                <fullName>#REF!</fullName>
+                <default>false</default>
+                <label>#REF!</label>
+            </value>
+            <value>
+                <fullName>Aztec SuperSole® 2.0</fullName>
+                <default>false</default>
+                <label>Aztec SuperSole® 2.0</label>
+            </value>
+            <value>
+                <fullName>Bid Rubber Cup</fullName>
+                <default>false</default>
+                <label>Bid Rubber Cup</label>
+            </value>
+            <value>
+                <fullName>Black Cushion Crepe Wedge</fullName>
+                <default>false</default>
+                <label>Black Cushion Crepe Wedge</label>
+            </value>
+            <value>
+                <fullName>Chevron SuperSole®</fullName>
+                <default>false</default>
+                <label>Chevron SuperSole®</label>
+            </value>
+            <value>
+                <fullName>Chore</fullName>
+                <default>false</default>
+                <label>Chore</label>
+            </value>
+            <value>
+                <fullName>Dante</fullName>
+                <default>false</default>
+                <label>Dante</label>
+            </value>
+            <value>
+                <fullName>Decathlon</fullName>
+                <default>false</default>
+                <label>Decathlon</label>
+            </value>
+            <value>
+                <fullName>Diamond Back SuperSole®</fullName>
+                <default>false</default>
+                <label>Diamond Back SuperSole®</label>
+            </value>
+            <value>
+                <fullName>Diamond Lug SuperSole®</fullName>
+                <default>false</default>
+                <label>Diamond Lug SuperSole®</label>
+            </value>
+            <value>
+                <fullName>Direct Attach StarGrip®</fullName>
+                <default>false</default>
+                <label>Direct Attach StarGrip®</label>
+            </value>
+            <value>
+                <fullName>Dual Density Mini Lug II</fullName>
+                <default>false</default>
+                <label>Dual Density Mini Lug II</label>
+            </value>
+            <value>
+                <fullName>Dual Density PU Tri Tred</fullName>
+                <default>false</default>
+                <label>Dual Density PU Tri Tred</label>
+            </value>
+            <value>
+                <fullName>Dual Density PU V-Grip</fullName>
+                <default>false</default>
+                <label>Dual Density PU V-Grip</label>
+            </value>
+            <value>
+                <fullName>Dual Density TPU/PU Galaxy</fullName>
+                <default>false</default>
+                <label>Dual Density TPU/PU Galaxy</label>
+            </value>
+            <value>
+                <fullName>ENDURANCE Arrowhead</fullName>
+                <default>false</default>
+                <label>ENDURANCE Arrowhead</label>
+            </value>
+            <value>
+                <fullName>ENDURANCE Arrowhead - Black</fullName>
+                <default>false</default>
+                <label>ENDURANCE Arrowhead - Black</label>
+            </value>
+            <value>
+                <fullName>ENDURANCE Cross Wire</fullName>
+                <default>false</default>
+                <label>ENDURANCE Cross Wire</label>
+            </value>
+            <value>
+                <fullName>EXTENSITY RUBBER</fullName>
+                <default>false</default>
+                <label>EXTENSITY RUBBER</label>
+            </value>
+            <value>
+                <fullName>Extensity rubber - red</fullName>
+                <default>false</default>
+                <label>Extensity rubber - red</label>
+            </value>
+            <value>
+                <fullName>Flathead Bob sole</fullName>
+                <default>false</default>
+                <label>Flathead Bob sole</label>
+            </value>
+            <value>
+                <fullName>Forager (Black)</fullName>
+                <default>false</default>
+                <label>Forager (Black)</label>
+            </value>
+            <value>
+                <fullName>Forager (Brown)</fullName>
+                <default>false</default>
+                <label>Forager (Brown)</label>
+            </value>
+            <value>
+                <fullName>GRIP-TEC</fullName>
+                <default>false</default>
+                <label>GRIP-TEC</label>
+            </value>
+            <value>
+                <fullName>GUM RUBBER</fullName>
+                <default>false</default>
+                <label>GUM RUBBER</label>
+            </value>
+            <value>
+                <fullName>Horizon DL Supersole</fullName>
+                <default>false</default>
+                <label>Horizon DL Supersole</label>
+            </value>
+            <value>
+                <fullName>Mini Lug RBR</fullName>
+                <default>false</default>
+                <label>Mini Lug RBR</label>
+            </value>
+            <value>
+                <fullName>Mini Lug SuperSole®</fullName>
+                <default>false</default>
+                <label>Mini Lug SuperSole®</label>
+            </value>
+            <value>
+                <fullName>Mini Lug Supersole - black</fullName>
+                <default>false</default>
+                <label>Mini Lug Supersole - black</label>
+            </value>
+            <value>
+                <fullName>Nitrile Cork</fullName>
+                <default>false</default>
+                <label>Nitrile Cork</label>
+            </value>
+            <value>
+                <fullName>ODYSSEY SUPERSOLE</fullName>
+                <default>false</default>
+                <label>ODYSSEY SUPERSOLE</label>
+            </value>
+            <value>
+                <fullName>Pathfinder™ SuperSole®</fullName>
+                <default>false</default>
+                <label>Pathfinder™ SuperSole®</label>
+            </value>
+            <value>
+                <fullName>PU Cascade 1</fullName>
+                <default>false</default>
+                <label>PU Cascade 1</label>
+            </value>
+            <value>
+                <fullName>PU Clean Tred</fullName>
+                <default>false</default>
+                <label>PU Clean Tred</label>
+            </value>
+            <value>
+                <fullName>PU ENDURANCE Arrowhead Sole</fullName>
+                <default>false</default>
+                <label>PU ENDURANCE Arrowhead Sole</label>
+            </value>
+            <value>
+                <fullName>PU Tri Tred</fullName>
+                <default>false</default>
+                <label>PU Tri Tred</label>
+            </value>
+            <value>
+                <fullName>PU V-Grip Sole</fullName>
+                <default>false</default>
+                <label>PU V-Grip Sole</label>
+            </value>
+            <value>
+                <fullName>Quest-Green</fullName>
+                <default>false</default>
+                <label>Quest-Green</label>
+            </value>
+            <value>
+                <fullName>Quest-Olive</fullName>
+                <default>false</default>
+                <label>Quest-Olive</label>
+            </value>
+            <value>
+                <fullName>Quest-Orange</fullName>
+                <default>false</default>
+                <label>Quest-Orange</label>
+            </value>
+            <value>
+                <fullName>Quest-Rust</fullName>
+                <default>false</default>
+                <label>Quest-Rust</label>
+            </value>
+            <value>
+                <fullName>Rubber/Blown Rubber Traction Tred</fullName>
+                <default>false</default>
+                <label>Rubber/Blown Rubber Traction Tred</label>
+            </value>
+            <value>
+                <fullName>RUBBER/EVA EPLORER</fullName>
+                <default>false</default>
+                <label>RUBBER/EVA EPLORER</label>
+            </value>
+            <value>
+                <fullName>RUBBER/EVA MOTILITY-BLACK-GRAY</fullName>
+                <default>false</default>
+                <label>RUBBER/EVA MOTILITY-BLACK-GRAY</label>
+            </value>
+            <value>
+                <fullName>RUBBER/EVA TRACTION TRED WEDGE</fullName>
+                <default>false</default>
+                <label>RUBBER/EVA TRACTION TRED WEDGE</label>
+            </value>
+            <value>
+                <fullName>Rubber/EVA Treker</fullName>
+                <default>false</default>
+                <label>Rubber/EVA Treker</label>
+            </value>
+            <value>
+                <fullName>RUBBER/EVA VIPER</fullName>
+                <default>false</default>
+                <label>RUBBER/EVA VIPER</label>
+            </value>
+            <value>
+                <fullName>RUBBER/EVA XPLORER</fullName>
+                <default>false</default>
+                <label>RUBBER/EVA XPLORER</label>
+            </value>
+            <value>
+                <fullName>Rubber/EVA Xplorer Sole</fullName>
+                <default>false</default>
+                <label>Rubber/EVA Xplorer Sole</label>
+            </value>
+            <value>
+                <fullName>RUBBER/PU AUGER</fullName>
+                <default>false</default>
+                <label>RUBBER/PU AUGER</label>
+            </value>
+            <value>
+                <fullName>Rubber/PU Comfort Trek Sole</fullName>
+                <default>false</default>
+                <label>Rubber/PU Comfort Trek Sole</label>
+            </value>
+            <value>
+                <fullName>Rubber/PU Falcon Black</fullName>
+                <default>false</default>
+                <label>Rubber/PU Falcon Black</label>
+            </value>
+            <value>
+                <fullName>Rubber ComfortFlex</fullName>
+                <default>false</default>
+                <label>Rubber ComfortFlex</label>
+            </value>
+            <value>
+                <fullName>Rubber EVA motility</fullName>
+                <default>false</default>
+                <label>Rubber EVA motility</label>
+            </value>
+            <value>
+                <fullName>Rubber-EVA Motility - Black-Gray</fullName>
+                <default>false</default>
+                <label>Rubber-EVA Motility - Black-Gray</label>
+            </value>
+            <value>
+                <fullName>Rubber-eva stealth-BLACK</fullName>
+                <default>false</default>
+                <label>Rubber-eva stealth-BLACK</label>
+            </value>
+            <value>
+                <fullName>Rubber-eva stealth-blue</fullName>
+                <default>false</default>
+                <label>Rubber-eva stealth-blue</label>
+            </value>
+            <value>
+                <fullName>Rubber-EVA Stealth - Dark Gray</fullName>
+                <default>false</default>
+                <label>Rubber-EVA Stealth - Dark Gray</label>
+            </value>
+            <value>
+                <fullName>Rubber-eva stealth-green</fullName>
+                <default>false</default>
+                <label>Rubber-eva stealth-green</label>
+            </value>
+            <value>
+                <fullName>Rubber-EVA Stealth - Olive Green</fullName>
+                <default>false</default>
+                <label>Rubber-EVA Stealth - Olive Green</label>
+            </value>
+            <value>
+                <fullName>Rubber-EVA Stealth - Orange</fullName>
+                <default>false</default>
+                <label>Rubber-EVA Stealth - Orange</label>
+            </value>
+            <value>
+                <fullName>Rubber-eva stealth-PINK</fullName>
+                <default>false</default>
+                <label>Rubber-eva stealth-PINK</label>
+            </value>
+            <value>
+                <fullName>Rubber-eva stealth-red</fullName>
+                <default>false</default>
+                <label>Rubber-eva stealth-red</label>
+            </value>
+            <value>
+                <fullName>Rubber-EVA Stealth - Seafoam</fullName>
+                <default>false</default>
+                <label>Rubber-EVA Stealth - Seafoam</label>
+            </value>
+            <value>
+                <fullName>Rubber-EVA Traction Tred</fullName>
+                <default>false</default>
+                <label>Rubber-EVA Traction Tred</label>
+            </value>
+            <value>
+                <fullName>Rubber -EVA Viper</fullName>
+                <default>false</default>
+                <label>Rubber -EVA Viper</label>
+            </value>
+            <value>
+                <fullName>Rubber-EVA Viper-Gray</fullName>
+                <default>false</default>
+                <label>Rubber-EVA Viper-Gray</label>
+            </value>
+            <value>
+                <fullName>RUBBER EVA XPLORER BROWN</fullName>
+                <default>false</default>
+                <label>RUBBER EVA XPLORER BROWN</label>
+            </value>
+            <value>
+                <fullName>Rubber-EVA Xplorer - Gray</fullName>
+                <default>false</default>
+                <label>Rubber-EVA Xplorer - Gray</label>
+            </value>
+            <value>
+                <fullName>RUBBER FORAGER BLACK</fullName>
+                <default>false</default>
+                <label>RUBBER FORAGER BLACK</label>
+            </value>
+            <value>
+                <fullName>RUBBER FORAGER Brown</fullName>
+                <default>false</default>
+                <label>RUBBER FORAGER Brown</label>
+            </value>
+            <value>
+                <fullName>Rubber PU Auger - Black</fullName>
+                <default>false</default>
+                <label>Rubber PU Auger - Black</label>
+            </value>
+            <value>
+                <fullName>Rubber-PU Comfort Trek</fullName>
+                <default>false</default>
+                <label>Rubber-PU Comfort Trek</label>
+            </value>
+            <value>
+                <fullName>Rubber PU Falcon</fullName>
+                <default>false</default>
+                <label>Rubber PU Falcon</label>
+            </value>
+            <value>
+                <fullName>Rubber-PU Shredder</fullName>
+                <default>false</default>
+                <label>Rubber-PU Shredder</label>
+            </value>
+            <value>
+                <fullName>Rubber-PU Talon</fullName>
+                <default>false</default>
+                <label>Rubber-PU Talon</label>
+            </value>
+            <value>
+                <fullName>RUBBER RANGER</fullName>
+                <default>false</default>
+                <label>RUBBER RANGER</label>
+            </value>
+            <value>
+                <fullName>Rubber Resister</fullName>
+                <default>false</default>
+                <label>Rubber Resister</label>
+            </value>
+            <value>
+                <fullName>Rubber RPM diamond tread-brown</fullName>
+                <default>false</default>
+                <label>Rubber RPM diamond tread-brown</label>
+            </value>
+            <value>
+                <fullName>Rubber RPM diamond tread-GRAY</fullName>
+                <default>false</default>
+                <label>Rubber RPM diamond tread-GRAY</label>
+            </value>
+            <value>
+                <fullName>Rubber-RPM diamond tred-brown</fullName>
+                <default>false</default>
+                <label>Rubber-RPM diamond tred-brown</label>
+            </value>
+            <value>
+                <fullName>Rubber-RPM diamond tred-TAN</fullName>
+                <default>false</default>
+                <label>Rubber-RPM diamond tred-TAN</label>
+            </value>
+            <value>
+                <fullName>Rubber RPM roper-black/rust</fullName>
+                <default>false</default>
+                <label>Rubber RPM roper-black/rust</label>
+            </value>
+            <value>
+                <fullName>Rubber RPM roper-black/tan</fullName>
+                <default>false</default>
+                <label>Rubber RPM roper-black/tan</label>
+            </value>
+            <value>
+                <fullName>Rubber-RPM Roper - Black-Brick</fullName>
+                <default>false</default>
+                <label>Rubber-RPM Roper - Black-Brick</label>
+            </value>
+            <value>
+                <fullName>Rubber-RPM Roper RD - Black-Navy</fullName>
+                <default>false</default>
+                <label>Rubber-RPM Roper RD - Black-Navy</label>
+            </value>
+            <value>
+                <fullName>Rubber-RPM Roper RD - BLACK-Orange</fullName>
+                <default>false</default>
+                <label>Rubber-RPM Roper RD - BLACK-Orange</label>
+            </value>
+            <value>
+                <fullName>Rubber-RPM Roper RD - BLACK-PINK</fullName>
+                <default>false</default>
+                <label>Rubber-RPM Roper RD - BLACK-PINK</label>
+            </value>
+            <value>
+                <fullName>Rubber-RPM Roper RD - Black-Rust</fullName>
+                <default>false</default>
+                <label>Rubber-RPM Roper RD - Black-Rust</label>
+            </value>
+            <value>
+                <fullName>Rubber-RPM Roper RD - Tan-Orange</fullName>
+                <default>false</default>
+                <label>Rubber-RPM Roper RD - Tan-Orange</label>
+            </value>
+            <value>
+                <fullName>Rubber-RPM Roper Sole</fullName>
+                <default>false</default>
+                <label>Rubber-RPM Roper Sole</label>
+            </value>
+            <value>
+                <fullName>Rubber RPM roper-tan/brown</fullName>
+                <default>false</default>
+                <label>Rubber RPM roper-tan/brown</label>
+            </value>
+            <value>
+                <fullName>Snow Zone</fullName>
+                <default>false</default>
+                <label>Snow Zone</label>
+            </value>
+            <value>
+                <fullName>SSRT - Black</fullName>
+                <default>false</default>
+                <label>SSRT - Black</label>
+            </value>
+            <value>
+                <fullName>SSRT Diamond</fullName>
+                <default>false</default>
+                <label>SSRT Diamond</label>
+            </value>
+            <value>
+                <fullName>SSRT Diamond - Black</fullName>
+                <default>false</default>
+                <label>SSRT Diamond - Black</label>
+            </value>
+            <value>
+                <fullName>SSRT MINI LUG SUPERSOLE</fullName>
+                <default>false</default>
+                <label>SSRT MINI LUG SUPERSOLE</label>
+            </value>
+            <value>
+                <fullName>SSRT Sure - Tech</fullName>
+                <default>false</default>
+                <label>SSRT Sure - Tech</label>
+            </value>
+            <value>
+                <fullName>STARGRIP MENS</fullName>
+                <default>false</default>
+                <label>STARGRIP MENS</label>
+            </value>
+            <value>
+                <fullName>Stars and Bars-Amber</fullName>
+                <default>false</default>
+                <label>Stars and Bars-Amber</label>
+            </value>
+            <value>
+                <fullName>Stars and Bars Logger</fullName>
+                <default>false</default>
+                <label>Stars and Bars Logger</label>
+            </value>
+            <value>
+                <fullName>TEMPO</fullName>
+                <default>false</default>
+                <label>TEMPO</label>
+            </value>
+            <value>
+                <fullName>TPU/PU Galaxy</fullName>
+                <default>false</default>
+                <label>TPU/PU Galaxy</label>
+            </value>
+            <value>
+                <fullName>TPU/PU Galaxy BROWN</fullName>
+                <default>false</default>
+                <label>TPU/PU Galaxy BROWN</label>
+            </value>
+            <value>
+                <fullName>Traction Tred Cushion Crepe Wedge</fullName>
+                <default>false</default>
+                <label>Traction Tred Cushion Crepe Wedge</label>
+            </value>
+            <value>
+                <fullName>TUFFY SD URETHANE</fullName>
+                <default>false</default>
+                <label>TUFFY SD URETHANE</label>
+            </value>
+            <value>
+                <fullName>VibramGalactic Fire and Ice-Black-Brown</fullName>
+                <default>false</default>
+                <label>VibramGalactic Fire and Ice-Black-Brown</label>
+            </value>
+            <value>
+                <fullName>Vibram Rubber-PU XClaim TC-4 Plus - Red</fullName>
+                <default>false</default>
+                <label>Vibram Rubber-PU XClaim TC-4 Plus - Red</label>
+            </value>
+            <value>
+                <fullName>Vibram Summit TC-4 Compound</fullName>
+                <default>false</default>
+                <label>Vibram Summit TC-4 Compound</label>
+            </value>
+            <value>
+                <fullName>VIBRAM ALPHA TC-4 PLUS</fullName>
+                <default>false</default>
+                <label>VIBRAM ALPHA TC-4 PLUS</label>
+            </value>
+            <value>
+                <fullName>VIBRAM ALPHA WEDGE TC-4</fullName>
+                <default>false</default>
+                <label>VIBRAM ALPHA WEDGE TC-4</label>
+            </value>
+            <value>
+                <fullName>VIBRAM GALACTIC, Fire &amp; Ice</fullName>
+                <default>false</default>
+                <label>VIBRAM GALACTIC, Fire &amp; Ice</label>
+            </value>
+            <value>
+                <fullName>Vibram Galactic Fire &amp; Ice</fullName>
+                <default>false</default>
+                <label>Vibram Galactic Fire &amp; Ice</label>
+            </value>
+            <value>
+                <fullName>Vibram Galactic TC-4 Plus-Black-Gray</fullName>
+                <default>false</default>
+                <label>Vibram Galactic TC-4 Plus-Black-Gray</label>
+            </value>
+            <value>
+                <fullName>Vibram Laramie TC-4/344</fullName>
+                <default>false</default>
+                <label>Vibram Laramie TC-4/344</label>
+            </value>
+            <value>
+                <fullName>VIBRAM Logger</fullName>
+                <default>false</default>
+                <label>VIBRAM Logger</label>
+            </value>
+            <value>
+                <fullName>VIBRAM LOGGER FIRE &amp; ICE</fullName>
+                <default>false</default>
+                <label>VIBRAM LOGGER FIRE &amp; ICE</label>
+            </value>
+            <value>
+                <fullName>Vibram Lug</fullName>
+                <default>false</default>
+                <label>Vibram Lug</label>
+            </value>
+            <value>
+                <fullName>Vibram Lug Fire &amp; Ice</fullName>
+                <default>false</default>
+                <label>Vibram Lug Fire &amp; Ice</label>
+            </value>
+            <value>
+                <fullName>Vibram Lug Olympica</fullName>
+                <default>false</default>
+                <label>Vibram Lug Olympica</label>
+            </value>
+            <value>
+                <fullName>Vibram Montana</fullName>
+                <default>false</default>
+                <label>Vibram Montana</label>
+            </value>
+            <value>
+                <fullName>Vibram Montana TC-4 Plus</fullName>
+                <default>false</default>
+                <label>Vibram Montana TC-4 Plus</label>
+            </value>
+            <value>
+                <fullName>Vibram Rubber/PU Apex Fire &amp; Ice</fullName>
+                <default>false</default>
+                <label>Vibram Rubber/PU Apex Fire &amp; Ice</label>
+            </value>
+            <value>
+                <fullName>Vibram Rubber-PU Apex Fire and Ice EH</fullName>
+                <default>false</default>
+                <label>Vibram Rubber-PU Apex Fire and Ice EH</label>
+            </value>
+            <value>
+                <fullName>Vibram Rubber-PU Xclaim</fullName>
+                <default>false</default>
+                <label>Vibram Rubber-PU Xclaim</label>
+            </value>
+            <value>
+                <fullName>Vibram rubber PU Xclaim TC-4 plus-Brown</fullName>
+                <default>false</default>
+                <label>Vibram rubber PU Xclaim TC-4 plus-Brown</label>
+            </value>
+            <value>
+                <fullName>Vibram Rubber-PU Xclaim TC-4 Plus-Brown</fullName>
+                <default>false</default>
+                <label>Vibram Rubber-PU Xclaim TC-4 Plus-Brown</label>
+            </value>
+            <value>
+                <fullName>Vibram Rubber-PU Xclaim TC-4 Plus-Red</fullName>
+                <default>false</default>
+                <label>Vibram Rubber-PU Xclaim TC-4 Plus-Red</label>
+            </value>
+            <value>
+                <fullName>VIBRAM SUMMIT</fullName>
+                <default>false</default>
+                <label>VIBRAM SUMMIT</label>
+            </value>
+            <value>
+                <fullName>VIBRAM SUMMIT TC-4</fullName>
+                <default>false</default>
+                <label>VIBRAM SUMMIT TC-4</label>
+            </value>
+            <value>
+                <fullName>VIBRAM TACOMA Fire &amp; Ice</fullName>
+                <default>false</default>
+                <label>VIBRAM TACOMA Fire &amp; Ice</label>
+            </value>
+            <value>
+                <fullName>Victoria</fullName>
+                <default>false</default>
+                <label>Victoria</label>
+            </value>
+            <value>
+                <fullName>WOTF StarGrip® Black-Black</fullName>
+                <default>false</default>
+                <label>WOTF StarGrip® Black-Black</label>
+            </value>
+            <value>
+                <fullName>WOTF StarGrip® Brown-Black</fullName>
+                <default>false</default>
+                <label>WOTF StarGrip® Brown-Black</label>
+            </value>
+            <value>
+                <fullName>WOTF StarGrip® Gray-Black</fullName>
+                <default>false</default>
+                <label>WOTF StarGrip® Gray-Black</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

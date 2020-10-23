@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_Added_Service_Detail__c</fullName>
+    <externalId>false</externalId>
+    <label>Value Added Service Detail</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Value_Added_Service_Name__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>After Order is Picked/Packed/Not Shipped (if possible)</fullName>
+                <default>false</default>
+                <label>After Order is Picked/Packed/Not Shipped (if possible)</label>
+            </value>
+            <value>
+                <fullName>ASN&apos;s</fullName>
+                <default>false</default>
+                <label>ASN&apos;s</label>
+            </value>
+            <value>
+                <fullName>Attach Provided Customer Label</fullName>
+                <default>false</default>
+                <label>Attach Provided Customer Label</label>
+            </value>
+            <value>
+                <fullName>Charge Per Pallet</fullName>
+                <default>false</default>
+                <label>Charge Per Pallet</label>
+            </value>
+            <value>
+                <fullName>Create, Print, Attach Label</fullName>
+                <default>false</default>
+                <label>Create, Print, Attach Label</label>
+            </value>
+            <value>
+                <fullName>Customer Provided - Inside Unit</fullName>
+                <default>false</default>
+                <label>Customer Provided - Inside Unit</label>
+            </value>
+            <value>
+                <fullName>Customer Provided - Outside Unit</fullName>
+                <default>false</default>
+                <label>Customer Provided - Outside Unit</label>
+            </value>
+            <value>
+                <fullName>Heat Treated Pallet Requirements</fullName>
+                <default>false</default>
+                <label>Heat Treated Pallet Requirements</label>
+            </value>
+            <value>
+                <fullName>Holding Weekly Shipments for Consolidation</fullName>
+                <default>false</default>
+                <label>Holding Weekly Shipments for Consolidation</label>
+            </value>
+            <value>
+                <fullName>Inside - Insert entire packing list in each carton</fullName>
+                <default>false</default>
+                <label>Inside - Insert entire packing list in each carton</label>
+            </value>
+            <value>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>One Time Setup/Maintenance</fullName>
+                <default>false</default>
+                <label>One Time Setup/Maintenance</label>
+            </value>
+            <value>
+                <fullName>Outside - Insert entire packing list in packing list attachment envelope to each carton</fullName>
+                <default>false</default>
+                <label>Outside - Insert entire packing list in packing list attachment envelope to each carton</label>
+            </value>
+            <value>
+                <fullName>Packing List</fullName>
+                <default>false</default>
+                <label>Packing List</label>
+            </value>
+            <value>
+                <fullName>Per Carton</fullName>
+                <default>false</default>
+                <label>Per Carton</label>
+            </value>
+            <value>
+                <fullName>Per Shipping Carton</fullName>
+                <default>false</default>
+                <label>Per Shipping Carton</label>
+            </value>
+            <value>
+                <fullName>Place Customer Provided Insert in Individual Carton</fullName>
+                <default>false</default>
+                <label>Place Customer Provided Insert in Individual Carton</label>
+            </value>
+            <value>
+                <fullName>PO Number, Customer Name, Weight, # of Pallets</fullName>
+                <default>false</default>
+                <label>PO Number, Customer Name, Weight, # of Pallets</label>
+            </value>
+            <value>
+                <fullName>PO Numbers</fullName>
+                <default>false</default>
+                <label>PO Numbers</label>
+            </value>
+            <value>
+                <fullName>Provide and Wrap Bands Around Show Box</fullName>
+                <default>false</default>
+                <label>Provide and Wrap Bands Around Show Box</label>
+            </value>
+            <value>
+                <fullName>Purchase, Create, Print and Attach Label</fullName>
+                <default>false</default>
+                <label>Purchase, Create, Print and Attach Label</label>
+            </value>
+            <value>
+                <fullName>Purchase, Create, Print and Sew Importer Specialty Labels</fullName>
+                <default>false</default>
+                <label>Purchase, Create, Print and Sew Importer Specialty Labels</label>
+            </value>
+            <value>
+                <fullName>Purchase, Create, Print Importer Specialty Labels</fullName>
+                <default>false</default>
+                <label>Purchase, Create, Print Importer Specialty Labels</label>
+            </value>
+            <value>
+                <fullName>Purchase and Attach - Inside Unit</fullName>
+                <default>false</default>
+                <label>Purchase and Attach - Inside Unit</label>
+            </value>
+            <value>
+                <fullName>Purchase and Attach Label</fullName>
+                <default>false</default>
+                <label>Purchase and Attach Label</label>
+            </value>
+            <value>
+                <fullName>Purchase and Attach - Outside Unit</fullName>
+                <default>false</default>
+                <label>Purchase and Attach - Outside Unit</label>
+            </value>
+            <value>
+                <fullName>Special Format, Text, Logo, Information - Current Manual Download</fullName>
+                <default>false</default>
+                <label>Special Format, Text, Logo, Information - Current Manual Download</label>
+            </value>
+            <value>
+                <fullName>Strapping - Per Strap</fullName>
+                <default>false</default>
+                <label>Strapping - Per Strap</label>
+            </value>
+            <value>
+                <fullName>Taping of Individual Carton (1 Strip of Tape)</fullName>
+                <default>false</default>
+                <label>Taping of Individual Carton (1 Strip of Tape)</label>
+            </value>
+            <value>
+                <fullName>Taping of Shipping Case - Special Sourced Tape - Customer Supplied</fullName>
+                <default>false</default>
+                <label>Taping of Shipping Case - Special Sourced Tape - Customer Supplied</label>
+            </value>
+            <value>
+                <fullName>Tracking Information</fullName>
+                <default>false</default>
+                <label>Tracking Information</label>
+            </value>
+            <value>
+                <fullName>Weekly Fee for Non-Pickup After Routing is Assigned</fullName>
+                <default>false</default>
+                <label>Weekly Fee for Non-Pickup After Routing is Assigned</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Placards</controllingFieldValue>
+            <valueName>PO Number, Customer Name, Weight, # of Pallets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rubber Banding Boxes</controllingFieldValue>
+            <valueName>Provide and Wrap Bands Around Show Box</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Security Tags</controllingFieldValue>
+            <valueName>Customer Provided - Inside Unit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Security Tags</controllingFieldValue>
+            <valueName>Customer Provided - Outside Unit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Security Tags</controllingFieldValue>
+            <valueName>Purchase and Attach - Inside Unit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Security Tags</controllingFieldValue>
+            <valueName>Purchase and Attach - Outside Unit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Storage Fees</controllingFieldValue>
+            <valueName>Holding Weekly Shipments for Consolidation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Storage Fees</controllingFieldValue>
+            <valueName>Weekly Fee for Non-Pickup After Routing is Assigned</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing - Specific Packing Instructions per Customer Requirement</controllingFieldValue>
+            <valueName>Per Carton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branded Packing List - Drop Ships</controllingFieldValue>
+            <controllingFieldValue>EDI</controllingFieldValue>
+            <valueName>One Time Setup/Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branded Packing List - Drop Ships</controllingFieldValue>
+            <valueName>Special Format, Text, Logo, Information - Current Manual Download</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellations</controllingFieldValue>
+            <valueName>After Order is Picked/Packed/Not Shipped (if possible)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Website Entry</controllingFieldValue>
+            <valueName>ASN&apos;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Website Entry</controllingFieldValue>
+            <valueName>Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Website Entry</controllingFieldValue>
+            <valueName>Packing List</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Website Entry</controllingFieldValue>
+            <valueName>PO Numbers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Website Entry</controllingFieldValue>
+            <valueName>Tracking Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inserts</controllingFieldValue>
+            <valueName>Place Customer Provided Insert in Individual Carton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels - Case (Shipping) Unit</controllingFieldValue>
+            <controllingFieldValue>Labels - Individual Unit</controllingFieldValue>
+            <valueName>Attach Provided Customer Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels - Case (Shipping) Unit</controllingFieldValue>
+            <valueName>Create, Print, Attach Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels - Case (Shipping) Unit</controllingFieldValue>
+            <valueName>Purchase and Attach Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels - Case (Shipping) Unit</controllingFieldValue>
+            <valueName>Taping of Shipping Case - Special Sourced Tape - Customer Supplied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels - Individual Unit</controllingFieldValue>
+            <valueName>Purchase, Create, Print and Attach Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels - Individual Unit</controllingFieldValue>
+            <valueName>Purchase, Create, Print and Sew Importer Specialty Labels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels - Individual Unit</controllingFieldValue>
+            <valueName>Purchase, Create, Print Importer Specialty Labels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels - Individual Unit</controllingFieldValue>
+            <valueName>Taping of Individual Carton (1 Strip of Tape)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Overpack</controllingFieldValue>
+            <valueName>Per Shipping Carton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing List (Int&apos;l Shipments)</controllingFieldValue>
+            <valueName>Inside - Insert entire packing list in each carton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packing List (Int&apos;l Shipments)</controllingFieldValue>
+            <valueName>Outside - Insert entire packing list in packing list attachment envelope to each carton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Palletize</controllingFieldValue>
+            <valueName>Charge Per Pallet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Palletize</controllingFieldValue>
+            <valueName>Heat Treated Pallet Requirements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Palletize</controllingFieldValue>
+            <valueName>Strapping - Per Strap</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

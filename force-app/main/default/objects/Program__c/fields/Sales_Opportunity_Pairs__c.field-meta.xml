@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Opportunity_Pairs__c</fullName>
+    <description>The estimated sales potential in pairs of footwear for this Industrial Account Program in terms of number of pairs.
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The estimated sales potential in pairs of footwear for this Industrial Account Program in terms of number of pairs.</inlineHelpText>
+    <label>Sales Opportunity Pairs</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

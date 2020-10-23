@@ -1,0 +1,3 @@
+<apex:page standardController="EmailMessage" standardStylesheets="false" showHeader="false">
+<XFILES:XfilesProBiSync />
+</apex:page>

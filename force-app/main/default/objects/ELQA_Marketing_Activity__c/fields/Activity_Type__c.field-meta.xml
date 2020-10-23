@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Activity Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Email Sent</fullName>
+                <default>false</default>
+                <label>Email Sent</label>
+            </value>
+            <value>
+                <fullName>Email Opened</fullName>
+                <default>false</default>
+                <label>Email Opened</label>
+            </value>
+            <value>
+                <fullName>Website Visit</fullName>
+                <default>false</default>
+                <label>Website Visit</label>
+            </value>
+            <value>
+                <fullName>Form Submit</fullName>
+                <default>false</default>
+                <label>Form Submit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

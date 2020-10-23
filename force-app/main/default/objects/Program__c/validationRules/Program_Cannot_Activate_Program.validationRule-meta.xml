@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Cannot_Activate_Program</fullName>
+    <active>false</active>
+    <errorConditionFormula>Active__c = TRUE &amp;&amp;  Activation_Date__c &gt; TODAY()</errorConditionFormula>
+    <errorMessage>You cannot activate a program with an activation date in the future</errorMessage>
+</ValidationRule>

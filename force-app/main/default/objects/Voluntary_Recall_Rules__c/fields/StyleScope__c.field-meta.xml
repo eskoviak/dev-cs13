@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StyleScope__c</fullName>
+    <description>	Format = Width1:size1,size2,siuze3,size4,size5|Width2:size1,siuze2,size3,size4
+	Example:  D:13,14,15|E2:11,11.5,12,13,14|H:11,11.5,12,13</description>
+    <externalId>false</externalId>
+    <label>Style Scope</label>
+    <length>255</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

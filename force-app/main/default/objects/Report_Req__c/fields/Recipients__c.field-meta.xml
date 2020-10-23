@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recipients__c</fullName>
+    <description>Who is to receive this report?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Who is to receive this report?</inlineHelpText>
+    <label>Recipients</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corporate Office</fullName>
+                <default>false</default>
+                <label>Corporate Office</label>
+            </value>
+            <value>
+                <fullName>External User</fullName>
+                <default>false</default>
+                <label>External User</label>
+            </value>
+            <value>
+                <fullName>ISM</fullName>
+                <default>false</default>
+                <label>ISM</label>
+            </value>
+            <value>
+                <fullName>RD</fullName>
+                <default>false</default>
+                <label>RD</label>
+            </value>
+            <value>
+                <fullName>ROM</fullName>
+                <default>false</default>
+                <label>ROM</label>
+            </value>
+            <value>
+                <fullName>Store Employee</fullName>
+                <default>false</default>
+                <label>Store Employee</label>
+            </value>
+            <value>
+                <fullName>Store Manager</fullName>
+                <default>false</default>
+                <label>Store Manager</label>
+            </value>
+            <value>
+                <fullName>TSM</fullName>
+                <default>false</default>
+                <label>TSM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

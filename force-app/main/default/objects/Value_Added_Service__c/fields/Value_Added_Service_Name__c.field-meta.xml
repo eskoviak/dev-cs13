@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_Added_Service_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>Value Added Service Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Branded Packing List - Drop Ships</fullName>
+                <default>false</default>
+                <label>Branded Packing List - Drop Ships</label>
+            </value>
+            <value>
+                <fullName>Cancellations</fullName>
+                <default>false</default>
+                <label>Cancellations</label>
+            </value>
+            <value>
+                <fullName>Customer Website Entry</fullName>
+                <default>false</default>
+                <label>Customer Website Entry</label>
+            </value>
+            <value>
+                <fullName>EDI</fullName>
+                <default>false</default>
+                <label>EDI</label>
+            </value>
+            <value>
+                <fullName>Inserts</fullName>
+                <default>false</default>
+                <label>Inserts</label>
+            </value>
+            <value>
+                <fullName>Labels - Case (Shipping) Unit</fullName>
+                <default>false</default>
+                <label>Labels - Case (Shipping) Unit</label>
+            </value>
+            <value>
+                <fullName>Labels - Individual Unit</fullName>
+                <default>false</default>
+                <label>Labels - Individual Unit</label>
+            </value>
+            <value>
+                <fullName>Overpack</fullName>
+                <default>false</default>
+                <label>Overpack</label>
+            </value>
+            <value>
+                <fullName>Packing List (Int&apos;l Shipments)</fullName>
+                <default>false</default>
+                <label>Packing List (Int&apos;l Shipments)</label>
+            </value>
+            <value>
+                <fullName>Packing - Specific Packing Instructions per Customer Requirement</fullName>
+                <default>false</default>
+                <label>Packing - Specific Packing Instructions per Customer Requirement</label>
+            </value>
+            <value>
+                <fullName>Palletize</fullName>
+                <default>false</default>
+                <label>Palletize</label>
+            </value>
+            <value>
+                <fullName>Placards</fullName>
+                <default>false</default>
+                <label>Placards</label>
+            </value>
+            <value>
+                <fullName>Rubber Banding Boxes</fullName>
+                <default>false</default>
+                <label>Rubber Banding Boxes</label>
+            </value>
+            <value>
+                <fullName>Security Tags</fullName>
+                <default>false</default>
+                <label>Security Tags</label>
+            </value>
+            <value>
+                <fullName>Storage Fees</fullName>
+                <default>false</default>
+                <label>Storage Fees</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

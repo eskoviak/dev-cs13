@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POP_and_Additional_Comments__c</fullName>
+    <description>This field is for Merchandising and Point of Purchase comments.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter your Merchandising and Point of Purchase discussion points..</inlineHelpText>
+    <label>Merchandising/POP</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

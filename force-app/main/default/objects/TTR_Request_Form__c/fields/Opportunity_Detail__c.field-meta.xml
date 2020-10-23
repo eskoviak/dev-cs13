@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Detail__c</fullName>
+    <description>Additional Comments for TAM/CAM visit</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter any additional comments regarding your customer contact.</inlineHelpText>
+    <label>Comments</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

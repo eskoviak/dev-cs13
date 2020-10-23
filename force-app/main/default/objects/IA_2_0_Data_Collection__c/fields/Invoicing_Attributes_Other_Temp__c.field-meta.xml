@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoicing_Attributes_Other_Temp__c</fullName>
+    <description>Temp field for IA 2.0 conversion</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Describe the Invoicing Attribute not included in the List for 1 thru 12</inlineHelpText>
+    <label>Invoicing Attributes Other - Temp</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

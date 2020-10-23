@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Truck_Run_Type__c</fullName>
+    <description>Used to identify the purpose of the time slot for the truck.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the type of run.</inlineHelpText>
+    <label>Truck Run Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Industrial Account</fullName>
+                <default>true</default>
+                <label>Industrial Account</label>
+            </value>
+            <value>
+                <fullName>Local Event</fullName>
+                <default>false</default>
+                <label>Local Event</label>
+            </value>
+            <value>
+                <fullName>Planned Maintenance</fullName>
+                <default>false</default>
+                <label>Planned Maintenance</label>
+            </value>
+            <value>
+                <fullName>Unplanned Maintenance</fullName>
+                <default>false</default>
+                <label>Unplanned Maintenance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

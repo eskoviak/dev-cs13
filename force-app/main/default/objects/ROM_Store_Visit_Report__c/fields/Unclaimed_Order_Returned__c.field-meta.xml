@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unclaimed_Order_Returned__c</fullName>
+    <description>Unclaimed special orders returned to Red Wing prior to 30 days deadline.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Unclaimed special orders returned to Red Wing prior to 30 days deadline.</inlineHelpText>
+    <label>Unclaimed Order Returned</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>true</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

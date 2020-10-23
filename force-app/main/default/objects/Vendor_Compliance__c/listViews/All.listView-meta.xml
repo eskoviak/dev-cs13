@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Brand__c</columns>
+    <columns>Price_List_or_Buying_Program__c</columns>
+    <columns>Volume_Discount__c</columns>
+    <columns>Terms__c</columns>
+    <columns>Price_Increase_Notification_Period__c</columns>
+    <columns>New_Price_Communication__c</columns>
+    <columns>New_Store_Discount__c</columns>
+    <columns>New_Store_Terms__c</columns>
+    <columns>Marketing_Funds_if__c</columns>
+    <columns>Defective_Allowance__c</columns>
+    <columns>EDI_yes_no__c</columns>
+    <columns>Comments__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

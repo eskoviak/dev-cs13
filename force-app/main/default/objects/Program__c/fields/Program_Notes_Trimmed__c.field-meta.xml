@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Notes_Trimmed__c</fullName>
+    <description>A short (trimmed) version of Purchase Program Notes used in Community list views. Formula Field
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Purchase_Program_Notes__c)), LEFT(Purchase_Program_Notes__c, 55) + &quot;...&quot;, &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>A short (trimmed) version of Purchase Program Notes used in Community list views. Formula Field</inlineHelpText>
+    <label>Program Notes Trimmed</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

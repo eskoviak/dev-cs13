@@ -1,0 +1,221 @@
+<apex:page controller="RWS_ProgramHomeController" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false">
+    
+   
+  <html lang="en">
+    <head>
+      <c:HeadTagComponent />
+        <!--<c:RWS_HeaderComponent />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <apex:includeScript value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquery.js')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquerydataTablesmin.css')}"/>
+        
+         <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/bootstrap.min.css')}" rel="stylesheet" /> 
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/font-awesome.css')}" rel="stylesheet" />
+         <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/styles.css')}" rel="stylesheet" />
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/menus.css')}" rel="stylesheet" /> -->
+       
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/logout.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquerydataTables.js')}"/>
+        <style>
+        table.dataTable thead th, table.dataTable thead td{padding:10px !important}th{font-size:12px !important}
+        
+                .dataTables_filter {
+                    display: none;
+                }
+                .search-form-control-feedback {
+                    padding-left:20px;
+                    position: absolute;
+                    top: -3px;
+                    left: 0;
+                    /*z-index: 2;*/
+                    display: block;
+                    width: 34px;
+                    height: 34px;
+                    line-height: 34px;
+                    text-align: center;
+                    pointer-events: none;
+                    color: rgb(204, 204, 204);
+                    margin-right: 1.5rem;
+                }
+                .search-has-feedback {
+                    position: relative;
+                    padding-right: 36px;
+                    border-radius: 10px;
+                    height: 30px;
+                }
+                select.form-control.solutionLine,
+                select.form-control.solutionLine option {
+                    max-width: 300px;
+                    height: 30px;
+                }
+        </style>
+       
+    </head>
+    <body class="programs">
+      <div class="container-fluid">
+      <c:RWS_Header />
+    <apex:form id="theForm" >
+        
+        <apex:pageBlock id="thePageBlock" > 
+        
+        <div class="wrapper row site-content">
+                     <div class="form-horizontal form_bg col-sm-12">
+                         <div class="row summary-header">
+                             <div class="col-sm-12">
+                                <div class="col-sm-3">&nbsp;</div>
+                                <div class="col-sm-6">
+                                    <h2 class=" text-uppercase fancy white"><span>Program Templates</span></h2> 
+                                </div>
+                                <div class="col-sm-3  txt_right">
+                                    <a id="newProgram"  class="btn btn-danger mrg_top20 mrg_btm20 mrg_rgt0" onclick="resetSessVar();" href="RWS_NewProgramSetup?tab=program" >New Program Template</a>
+                                   
+                                </div>
+                            </div>
+                         </div>
+                         <div class="row">
+                            <div class="col-sm-12 pannel_bg">
+                                <div class="col-sm-6">
+                                <!--
+                                    <apex:selectList styleClass="solutionLine form-control my-1" value="{!selectedProgramViews}" size="1" multiselect="false"  >
+                                        <apex:actionSupport event="onchange" action="{!getPrograms}" reRender="details" oncomplete="loadData('{!jsonResult}');" />
+                                        <apex:selectOptions value="{!programViews}" />
+                                    </apex:selectList> -->
+                                </div> 
+                                    <!-- this needs to be commented out for now, see story RWCP-912 -->
+                                    <!-- <div class="flt_lft mrg_top15 editMenu">
+                                        <a href="#">Edit</a><a href="#">|</a>
+                                        <a href="#">Delete</a><a href="#">|</a>
+                                        <a href="#">Create New View</a> 
+                                    </div> -->
+                                <div class="col-xs-6 col-md-offset-3 col-md-3 my-1 text-right">
+                                    <input class="form-control search-has-feedback pad_lft25" placeholder="Search" type="text" onkeypress="onEnter(event, this.value)"/>
+                                    <span class="glyphicon glyphicon-search search-form-control-feedback"></span>
+                                </div>
+                            </div>
+                         </div>
+                         <apex:outputPanel id="details">
+                             <div class="row">
+                                 <div class="col-sm-12 mrg_btm20">  
+                                     <table id="device-grid-list" class="display" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="rw-grey pad_lft10"><span class="glyphicon glyphicon-sort"></span> Name</th>  
+                                                <th class="rw-grey pad_lft10"><span class="glyphicon glyphicon-sort"></span> Type </th> 
+                                                <th class="rw-grey pad_lft10"><span class="glyphicon glyphicon-sort"></span> Effective Date</th> 
+                                                <th class="rw-grey pad_lft10"><span class="glyphicon glyphicon-sort"></span> Expiration Date </th> 
+
+                                                <!--<th class="rw-grey pad_lft10"><span class="glyphicon glyphicon-sort"></span> Account Name</th>-->                                      
+                                                <th class="rw-grey pad_lft10"><span class="glyphicon glyphicon-sort"></span> Notes </th>
+                                                
+                                            </tr>
+                                        </thead> 
+                                     </table>
+                                 </div>
+                             </div>
+                         </apex:outputPanel>
+                     </div>
+        </div>
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+    <c:RWS_Modals />
+    <c:RWS_Footer />
+    </div>
+    <script>
+    
+     
+    
+    function onEnter(e, t){
+        if(e.keyCode === 13){
+            e.preventDefault(); // Ensure it is only this code that runs
+            searchProgram(t);
+        }
+    }
+    
+    
+        function searchProgram(searchValue) {
+            var dataTable = $('#device-grid-list').dataTable();
+            
+            dataTable.fnFilter(searchValue);
+            
+        } 
+    
+    function loadData(json)
+    {
+        //alert('data load');
+        var jsonData = $.parseJSON(json);
+        console.log(jsonData);
+        
+        $("#device-grid-list").dataTable().fnDestroy();
+        table = $('#device-grid-list').DataTable({
+            "data": jsonData,
+            "columns": [
+                
+                /*{ 
+                 "data": "URLSummary",
+                 "render": function ( data, type, row ) {
+                      return '<a name="Summery"  href="'+data+'" >View</a>';
+                 }
+                },*/
+                {
+                 "className":      'rw-dark-red', 
+                 "data": "ProObj.Name",
+                 "render": function ( data, type, row ) {
+                      return '<a name="Summery" class="rw-dark-red"  href="'+row.URLSummary+'" >'+ checkEmptyData(data) +'</a>';
+                      //return checkEmptyData(data);
+                 }
+                },
+                {
+                 "data": "ProObj.Type__c",
+                 "render": function ( data, type, row ) {
+                     return checkEmptyData(data);
+                 }
+                },
+                {
+                 "data": "ProObj.Activation_Date__c",                 
+                 "render": function ( data, type, row ) {                  
+                     return checkEmptyData(data);
+                    
+                 }
+                },
+                {
+                 "data": "ProObj.Expiration_Date__c",
+                 "render": function ( data, type, row ) {
+                     return checkEmptyData(data);
+                 }
+                },
+                {
+                 "data": "ProObj.Program_Notes_Trimmed__c",
+                 "render": function ( data, type, row ) {
+                     return checkEmptyData(data);
+                 }
+                }
+                
+            ],
+            "order": [[1, 'asc']]
+        } );
+        
+    }
+
+
+    $(document).ready( function () 
+    {
+        loadData('{!jsonResult}');
+        
+    });
+    
+    function checkEmptyData(data){
+        var dataValue = '&mdash;' ;
+        if(data!=null){
+            dataValue = data;
+        } 
+        return dataValue;
+        
+    }
+    </script>
+    </body>
+</html>
+</apex:page>

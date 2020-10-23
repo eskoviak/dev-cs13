@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POS_AR_AP</fullName>
+    <columns>Primary_Object__c</columns>
+    <columns>NAME</columns>
+    <columns>Iteration__c</columns>
+    <columns>High_Level_Requirement__c</columns>
+    <columns>Parent_Requirement__c</columns>
+    <columns>Requirement_Name__c</columns>
+    <columns>Requirement_Description__c</columns>
+    <columns>Status__c</columns>
+    <columns>Gap__c</columns>
+    <columns>Activity_Number__c</columns>
+    <columns>Reviewed_by_Project_Team__c</columns>
+    <columns>Reviewed_by_Vendor__c</columns>
+    <columns>Number_of_Test_Cases__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project__c</field>
+        <operation>startsWith</operation>
+        <value>Retail</value>
+    </filters>
+    <filters>
+        <field>High_Level_Requirement__c</field>
+        <operation>startsWith</operation>
+        <value>POS A</value>
+    </filters>
+    <filters>
+        <field>Phase__c</field>
+        <operation>notEqual</operation>
+        <value>2</value>
+    </filters>
+    <label>POS Accounts Receivable and Payable</label>
+</ListView>

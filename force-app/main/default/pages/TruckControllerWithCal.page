@@ -1,0 +1,52 @@
+<apex:page controller="TruckControllerWithCal">
+    <script>
+var win1=null;
+    /*function chkwinopen()
+{
+   if(win1==null)
+    {
+      win1=window.open('/apex/TruckControllerCal','','width=200,height=100');
+        win1.focus();
+        win1=true;
+    }
+    else
+	{
+		alert('window allready open');
+	}
+	return false;
+} */
+</script>
+    <apex:form > 
+        <apex:outputLabel value="Account Selection: " for="accountSelect"/>
+        <apex:selectList id="accountSelect" value="{!SelectedAccountId}" size="1" title="Account Selection">
+			<apex:selectOptions value="{!Accounts}"></apex:selectOptions>
+            <apex:actionSupport event="onchange" action="{!PopulateMapForAccount}" />
+            <apex:actionSupport reRender="map" />
+		</apex:selectList>
+        <apex:outputLabel value="Truck Selection: " for="truckSelect"/>
+		<apex:selectList id="truckSelect" value="{!SelectedTruckId}" size="1" title="Truck Selection" label="Truck Selection:">
+			<apex:selectOptions value="{!TruckList}"></apex:selectOptions>
+            <apex:actionSupport event="onchange" action="{!PopulateMapForAccount}" />
+            <apex:actionSupport reRender="map" />
+		</apex:selectList>
+        <!--
+		<apex:selectList size="1">
+			<apex:selectOptions value="{!UserList}"></apex:selectOptions>
+		</apex:selectList>
+		-->
+        <Apex:commandButton value="View Calendar" action="{!openCal}"/> 
+        
+        <!--onclick=" return chkwinopen()"/>  -->
+  <!--  	<form id="browserpost" method="POST" action="Page2RecievePost">
+        <input type="hidden" name="payloadbase64" value="{!strInputFld}"/>
+        <button type="submit" >
+            Schedule Truck
+        </button>        
+    </form>-->
+
+	</apex:form>
+    
+    <apex:map id="map" rendered="{!MapVisible}" width="600px" height="400px" mapType="roadmap" center="{latitude:{!ParentAccount.Latitude__c},longitude:{!ParentAccount.Longitude__c}}" showOnlyActiveInfoWindow="false">
+        
+    </apex:map>
+</apex:page>

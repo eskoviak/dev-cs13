@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Attributes_Required__c</fullName>
+    <description>Text field to be populated by the related Account Invoice Attributes Required value when Type is not Cash and Carry.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is controlled by the Account and populated when Type is not Cash and Carry</inlineHelpText>
+    <label>Invoice Attributes Required</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

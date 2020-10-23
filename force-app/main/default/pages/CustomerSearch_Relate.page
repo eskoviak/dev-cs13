@@ -1,0 +1,239 @@
+<apex:page showHeader="true" sidebar="true" controller="CustomerSearch_Relate_Controller" title="RELATE Customer Search" tabStyle="Account">
+
+    <apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/js/jquery-1.8.0.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/js/jquery-ui-1.8.23.custom.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/corners/jquery.corner.js')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryDCS,'/css/redmond/jquery-ui-1.10.3.custom.min.css')}" />
+
+<style>
+    .lineitemclick {
+        cursor: pointer;
+    }
+</style>
+
+<script>
+
+    /////////////////////////////
+    // jQuery
+    /////////////////////////////
+    j$ = jQuery.noConflict();
+    
+    j$(document).ready(function() {
+
+        // Modal Events and Methods
+        j$( "#dialog-modal" ).dialog({
+            autoOpen: false,
+            height: 150,
+            width: 400,
+            modal: true,
+            resizable: false,
+            draggable: false
+        });
+
+        j$( "#dialog-line-items" ).dialog({
+            autoOpen: false,
+            height: 400,
+            width: 600,
+            modal: true,
+            resizable: true,
+            draggable: true,
+            buttons: {
+                Close: function() {
+                    j$( this ).dialog( "close" );
+                }
+            }
+        });
+
+        j$(document).on("click", '.lineitemclick', function() {
+            var objString = j$(this).attr('html-data-lineitem');
+            console.log(objString);
+
+            // var jsonObj = j$.parseJSON('[' + objString + ']');
+            var jsonObj = j$.parseJSON(objString);
+            console.log(jsonObj);
+            
+            strHTML = '<table width="90%" cellpadding="2" cellSpacing="2">';
+            strHTML+= '<tr><th>Item Id</th><th>Quantity</th><th>Amount ($)</th><tr>';
+
+            for(var d in jsonObj) {
+                strHTML+= '<tr><td>'+jsonObj[d].strItemId+'</td><td>'+jsonObj[d].intQuantity+'</td><td>$'+jsonObj[d].decExtendedAmount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')+'</td></tr>';
+            }
+
+            strHTML+= '<table>';
+            strHTML+= '<legend>Transaction Line Items</legend>';
+
+            j$('#fsLineItems').empty();
+            j$('#fsLineItems').append(strHTML);
+
+            j$( "#dialog-line-items" ).dialog( "open" );
+        });
+
+    });
+
+    function statusShow() {
+        j$( "#dialog-modal" ).dialog( "open" );
+    }
+
+    function statusHide() {
+        j$( "#dialog-modal" ).dialog( "close" );
+    }
+
+    function showLineItems() {
+
+    }
+
+</script>
+
+<apex:sectionHeader title="ECOMM Consumer Accounts" subtitle="Search eCommerce Accounts" />
+
+<apex:form >
+    <apex:actionStatus id="asShowInterstitial" onstart="statusShow();" onstop="statusHide();" />
+    <apex:pageBlock >
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton id="btnSearch" action="{!searchRelate}" value="Search RELATE" rerender="pbResults" status="asShowInterstitial" />
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection id="pbCriteria" title="Step 1:  Define Search Criteria">
+            <apex:pageBlockSectionItem >
+                <apex:outputText value="First Name" />
+                <apex:inputText value="{!clsCriteria.strFirstName}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputText value="Last Name" />
+                <apex:inputText value="{!clsCriteria.strLastName}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputText value="Telephone" />
+                <apex:inputText value="{!clsCriteria.strTelephone}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputText value="Email" />
+                <apex:inputText value="{!clsCriteria.strEmail}" />
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection id="pbResults" title="Step 2:  Review Search Results" columns="1">
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlocktable id="pbtResults" value="{!lstResults}" var="r">
+                <apex:column headerValue="" style="width: 100px;">
+                    <apex:commandButton action="{!retrieveCustomerTransactionHistory}" value="Transactions" rerender="opTransactions" status="asShowInterstitial" >
+                        <apex:param name="chosenCustomerId" value="{!r.strCustomerId}" assignTo="{!clsCriteria.strChosenCustomerId}"/>
+                    </apex:commandButton>
+                </apex:column>
+                <apex:column headerValue="First Name">
+                    <apex:outputText value="{!r.strFirstName}" />
+                </apex:column>
+                <apex:column headerValue="Last Name">
+                    <apex:outputText value="{!r.strLastName}" />
+                </apex:column>
+                <apex:column headerValue="Email">
+                    <apex:outputText value="{!r.strEmailAddress}" />
+                </apex:column>
+                <apex:column headerValue="Telephone">
+                    <apex:outputText value="{!r.strTelephone}" />
+                </apex:column>
+                <apex:column headerValue="Address">
+                    <apex:outputText value="{!r.strAddressLine1}" />
+                </apex:column>
+                <apex:column headerValue="City">
+                    <apex:outputText value="{!r.strCity}" />
+                </apex:column>
+                <apex:column headerValue="Territory">
+                    <apex:outputText value="{!r.strTerritory}" />
+                </apex:column>
+                <apex:column headerValue="Postal Code">
+                    <apex:outputText value="{!r.strPostalCode}" />
+                </apex:column>
+                <apex:column headerValue="Country">
+                    <apex:outputText value="{!r.strCountry}" />
+                </apex:column>
+                <apex:column headerValue="Customer Id">
+                    <apex:outputText value="{!r.strCustomerId}" />
+                </apex:column>
+                <apex:column headerValue="Select">
+                    <apex:commandButton action="{!findSalesforceContacts}" value="Select" rerender="opSFDCRecords" status="asShowInterstitial" >
+                        <apex:param name="chosenCustomerId" value="{!r.strCustomerId}" assignTo="{!clsCriteria.strChosenCustomerId}"/>
+                        <apex:param name="strChosenFN" value="{!r.strFirstName}" assignTo="{!clsCriteria.strChosenFN}"/>
+                        <apex:param name="strChosenLN" value="{!r.strLastName}" assignTo="{!clsCriteria.strChosenLN}"/>
+                    </apex:commandButton>
+                </apex:column>
+            </apex:pageBlocktable>
+        </apex:pageBlockSection>
+        <apex:outputPanel id="opTransactions">
+            <apex:pageBlockSection columns="1" title="Info:  Review Transaction Details" rendered="{!lstTransactions.size > 0}">
+                <apex:pageBlockTable value="{!lstTransactions}" var="t">
+                    <apex:column headerValue="Transaction Date">
+                        {!t.strTransDate}
+                    </apex:column>
+                    <apex:column headerValue="Invoice Number">
+                        {!t.strSequenceNumber}
+                    </apex:column>
+                    <apex:column headerValue="Retail Store Id">
+                        {!t.strRetailStoreId}
+                    </apex:column>
+                    <apex:column headerValue="Operator Id">
+                        {!t.strOperatorId}
+                    </apex:column>
+                    <apex:column headerValue="Channel">
+                        {!t.strChannel}
+                    </apex:column>
+                    <apex:column headerValue="Order Type">
+                        {!t.strOrderType}
+                    </apex:column>
+                    <apex:column headerValue="Source">
+                        {!t.strSourceCode}
+                    </apex:column>
+                    <apex:column headerValue="Amount">
+                        <apex:outputText value="{0, number,$###,###,##0.00}">
+                            <apex:param value="{!t.decExtendedAmount}" />
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="Line Items">
+                        <div class="lineitemclick" html-data-lineitem="{!t.strLineItemArray}">
+                            {!t.lstLineItems.size} Line Items
+                        </div>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:outputPanel>
+    </apex:pageBlock>
+
+    <apex:outputPanel id="opSFDCRecords">
+        <apex:pageBlock id="pbSFDCRecords" rendered="{!clsCriteria.strChosenCustomerId != ''}">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton id="btnNewContact" action="{!createNewContact}" value="Create New Contact" status="asShowInterstitial" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1" title="Step 3:  Link to Salesforce Contact">
+                <apex:outputPanel rendered="{!lstAccounts.size = 0}">
+                    No Salesforce records were found for {!clsCriteria.strChosenFN} {!clsCriteria.strChosenLN}!
+                </apex:outputPanel>
+                <apex:pageBlockTable value="{!lstAccounts}" var="a" rendered="{!lstAccounts.size > 0}">
+                    <apex:column headerValue="">
+                        <apex:commandButton action="{!updateExistingContact}" value="Associate" status="asShowInterstitial" rerender="null">
+                            <apex:param name="idSFDCIdUpdate" value="{!a.Id}" assignTo="{!idSFDCIdUpdate}"/>
+                        </apex:commandButton>
+                    </apex:column>
+                    <apex:column headerValue="First Name">
+                        <apex:outputLink value="/{!a.Id}" target="_blank">{!a.FirstName}</apex:outputLink>
+                    </apex:column>
+                    <apex:column headerValue="Last Name">
+                        <apex:outputLink value="/{!a.Id}" target="_blank">{!a.LastName}</apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!a.PersonEmail}" />
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:outputPanel>
+
+</apex:form>
+
+
+    <div id="dialog-modal" title="Processing...">
+        <p align="center">
+            <img src="{!URLFOR($Resource.jQueryDCS,'/images/ajax-loader.gif')}" border="0" />
+        </p>
+    </div>
+
+    <div id="dialog-line-items" title="Transaction Line Items">
+        <fieldset id="fsLineItems"></fieldset>
+    </div>
+
+</apex:page>

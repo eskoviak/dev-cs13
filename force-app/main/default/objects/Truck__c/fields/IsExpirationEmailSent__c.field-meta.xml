@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsExpirationEmailSent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox is &quot;hidden&quot; from page layouts and will be set in two ways.  The field will be CHECKED by a scheduled APEX job that looks for 120 days from the Truck.Mobile Expiration Date field and after the notification email is successfully sent.  The field will be UNCHECKED by a Workflow Field Update when the Truck.Mobile Expiration Date is updated by the user.</description>
+    <externalId>false</externalId>
+    <label>*Delete*Expiration Email Sent</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

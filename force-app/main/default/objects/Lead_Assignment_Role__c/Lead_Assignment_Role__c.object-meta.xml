@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Used by Lead trigger for determining precedence when assigning domestic leads based on zip code territories</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Lead Assignment Role</label>
+    <visibility>Protected</visibility>
+</CustomObject>

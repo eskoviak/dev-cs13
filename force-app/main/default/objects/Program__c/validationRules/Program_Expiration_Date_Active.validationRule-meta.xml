@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Expiration_Date_Active</fullName>
+    <active>false</active>
+    <description>You cannot have an active program with an expiration date in the past.</description>
+    <errorConditionFormula>Active__c = TRUE &amp;&amp; Expiration_Date__c &lt; TODAY()</errorConditionFormula>
+    <errorMessage>You cannot have an active program with an expiration date in the past.</errorMessage>
+</ValidationRule>

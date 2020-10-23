@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Participants__c</fullName>
+    <description>Updated from Number of Testers.</description>
+    <externalId>false</externalId>
+    <label>Number of Participants</label>
+    <summaryForeignKey>WT_Wear_Test_Participant__c.Wear_Test__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Feature_Name__c</fullName>
+    <description>Formula field to display the feature name from the Features object. 
+Field Type: IA
+Integrated: N/A</description>
+    <externalId>false</externalId>
+    <formula>Feature__r.Feature_Name__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Formula field to display the feature name from the Features object.</inlineHelpText>
+    <label>Feature Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

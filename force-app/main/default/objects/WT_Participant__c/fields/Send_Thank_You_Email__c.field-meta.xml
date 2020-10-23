@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Thank_You_Email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this box to send a Thank You Email</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box to send a Thank You Email</inlineHelpText>
+    <label>Send Thank You Email</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

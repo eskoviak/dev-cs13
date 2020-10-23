@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Budget__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Total budget for project from Service Code 001</inlineHelpText>
+    <label>Project Budget</label>
+    <summarizedField>Burn_Report__c.Budgeted_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>Burn_Report__c.Name</field>
+        <operation>startsWith</operation>
+        <value>BR-0014</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Burn_Report__c.Project__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

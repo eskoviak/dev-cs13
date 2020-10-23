@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>POS_Employee_Admin</fullName>
+    <booleanFilter>(1 AND 3 ) AND (2 OR 4)</booleanFilter>
+    <columns>High_Level_Requirement__c</columns>
+    <columns>Parent_Requirement__c</columns>
+    <columns>NAME</columns>
+    <columns>Primary_Object__c</columns>
+    <columns>Activity_Number__c</columns>
+    <columns>Requirement_Name__c</columns>
+    <columns>Requirement_Description__c</columns>
+    <columns>Status__c</columns>
+    <columns>Reviewed_by_Project_Team__c</columns>
+    <columns>Reviewed_by_Vendor__c</columns>
+    <columns>Number_of_Test_Cases__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project__c</field>
+        <operation>startsWith</operation>
+        <value>R</value>
+    </filters>
+    <filters>
+        <field>High_Level_Requirement__c</field>
+        <operation>startsWith</operation>
+        <value>POS Employee</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <filters>
+        <field>High_Level_Requirement__c</field>
+        <operation>equals</operation>
+        <value>RWBO Time &amp; Attendance</value>
+    </filters>
+    <label>POS Employee Admin</label>
+</ListView>

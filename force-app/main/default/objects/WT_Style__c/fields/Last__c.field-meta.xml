@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last__c</fullName>
+    <description>Last is the name of the field in WEATT. Records information about the mold of shoe.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Mold information about the shoe.</inlineHelpText>
+    <label>Last</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Arc Tempo</fullName>
+                <default>false</default>
+                <label>Arc Tempo</label>
+            </value>
+            <value>
+                <fullName>Equalizer</fullName>
+                <default>false</default>
+                <label>Equalizer</label>
+            </value>
+            <value>
+                <fullName>Immerse 360</fullName>
+                <default>false</default>
+                <label>Immerse 360</label>
+            </value>
+            <value>
+                <fullName>Perpetuum</fullName>
+                <default>false</default>
+                <label>Perpetuum</label>
+            </value>
+            <value>
+                <fullName>Summit</fullName>
+                <default>false</default>
+                <label>Summit</label>
+            </value>
+            <value>
+                <fullName>Sundowner</fullName>
+                <default>false</default>
+                <label>Sundowner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Irish_Setter_Hunt_Store_Requested__c</fullName>
+    <description>Irish Setter Hunt Products.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the Irish Setter Hunt products for the Store.</inlineHelpText>
+    <label>*Delete* Irish Sett Hunt Store Requested</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>02822 | TRAIL PHANTOM  9&quot;  600G</fullName>
+                <default>false</default>
+                <label>02822 | TRAIL PHANTOM  9&quot;  600G</label>
+            </value>
+            <value>
+                <fullName>02820 | GRIZZLY TRACKER  9&quot; 1000G</fullName>
+                <default>false</default>
+                <label>02820 | GRIZZLY TRACKER  9&quot; 1000G</label>
+            </value>
+            <value>
+                <fullName>04870 | RUTMASTER  17&quot; RUBBER  RT-APG</fullName>
+                <default>false</default>
+                <label>04870 | RUTMASTER  17&quot; RUBBER  RT-APG</label>
+            </value>
+            <value>
+                <fullName>04862 | TASKMASTER  15&quot; RUBBER  CAMO</fullName>
+                <default>false</default>
+                <label>04862 | TASKMASTER  15&quot; RUBBER  CAMO</label>
+            </value>
+            <value>
+                <fullName>03858 | SHADOW TREK  GTX  CAMO  3858</fullName>
+                <default>false</default>
+                <label>03858 | SHADOW TREK  GTX  CAMO  3858</label>
+            </value>
+            <value>
+                <fullName>02819 | GRIZZLY TRACKER  9&quot; 400G</fullName>
+                <default>false</default>
+                <label>02819 | GRIZZLY TRACKER  9&quot; 400G</label>
+            </value>
+            <value>
+                <fullName>02852 | TRAIL PHANTOM II  10&quot; 400G INF</fullName>
+                <default>false</default>
+                <label>02852 | TRAIL PHANTOM II  10&quot; 400G INF</label>
+            </value>
+            <value>
+                <fullName>00818 | GUNFLINT  11&quot;  1000G  UDRY</fullName>
+                <default>false</default>
+                <label>00818 | GUNFLINT  11&quot;  1000G  UDRY</label>
+            </value>
+            <value>
+                <fullName>01892 | SOFT PAW  CHUKKA  BROWN  1892</fullName>
+                <default>false</default>
+                <label>01892 | SOFT PAW  CHUKKA  BROWN  1892</label>
+            </value>
+            <value>
+                <fullName>02866 | MOUNTAIN CLAW  10&quot; 800G  2866</fullName>
+                <default>false</default>
+                <label>02866 | MOUNTAIN CLAW  10&quot; 800G  2866</label>
+            </value>
+            <value>
+                <fullName>01820 | RIDGE TOPPER  9&quot; RT XTRA  800G</fullName>
+                <default>false</default>
+                <label>01820 | RIDGE TOPPER  9&quot; RT XTRA  800G</label>
+            </value>
+            <value>
+                <fullName>02828 | TRAIL PHANTOM  9&quot;  UDRY</fullName>
+                <default>false</default>
+                <label>02828 | TRAIL PHANTOM  9&quot;  UDRY</label>
+            </value>
+            <value>
+                <fullName>01859 | KANGAROO CASUAL OXFORD  1859</fullName>
+                <default>false</default>
+                <label>01859 | KANGAROO CASUAL OXFORD  1859</label>
+            </value>
+            <value>
+                <fullName>04872 | RUTMASTER  17&quot; RUBBER  800G</fullName>
+                <default>false</default>
+                <label>04872 | RUTMASTER  17&quot; RUBBER  800G</label>
+            </value>
+            <value>
+                <fullName>01891 | SOFT PAW  OXFORD  BROWN  1891</fullName>
+                <default>false</default>
+                <label>01891 | SOFT PAW  OXFORD  BROWN  1891</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

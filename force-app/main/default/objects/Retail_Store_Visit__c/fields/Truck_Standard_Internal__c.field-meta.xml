@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Truck_Standard_Internal__c</fullName>
+    <description>Inside of truck maintained - Verify cab is clutter free. Truck box aisles clean and boot displays organized. Truck is adequately stocked for each truck run. Display items properly tethered</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Inside of truck maintained - Verify cab is clutter free. Truck box aisles clean and boot displays organized. Truck is adequately stocked for each truck run. Display items properly tethered.</inlineHelpText>
+    <label>Truck Standard Internal</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No</valueSetName>
+    </valueSet>
+</CustomField>

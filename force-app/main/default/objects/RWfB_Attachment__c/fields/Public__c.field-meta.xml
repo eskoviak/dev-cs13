@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Public__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Determines if the RWfB Attachment should be public facing. The default is FALSE, not public.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Determines if the RWfB Attachment should be public facing. The default is FALSE, not public.</inlineHelpText>
+    <label>Public</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Style__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup field to the Product Style object. Used to associate a Product Style to a Feature. Maintained by apex. 
+Field Type: IA 
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Lookup field to the Product Style object. Used to associate a Product Style to a Feature.</inlineHelpText>
+    <label>Product Style</label>
+    <referenceTo>Product_Style__c</referenceTo>
+    <relationshipLabel>Product Style Features</relationshipLabel>
+    <relationshipName>Product_Style_Features</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

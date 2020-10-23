@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disable_Credit_Applications__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When TRUE, Send Credit Applications functionality is disabled for the Community. When FALSE (default), Send Credit Applications are enabled for the Community.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When TRUE, Send Credit Applications functionality is disabled for the Community. When FALSE (default), Send Credit Applications are enabled for the Community.</inlineHelpText>
+    <label>Disable Credit Applications</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

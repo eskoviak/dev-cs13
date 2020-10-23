@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Climate__c</fullName>
+    <externalId>false</externalId>
+    <label>Climate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Extreme Cold</fullName>
+                <default>false</default>
+                <label>Extreme Cold</label>
+            </value>
+            <value>
+                <fullName>Hot and humid</fullName>
+                <default>false</default>
+                <label>Hot and humid</label>
+            </value>
+            <value>
+                <fullName>Insulated</fullName>
+                <default>false</default>
+                <label>Insulated</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

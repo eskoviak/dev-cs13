@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Filter_Number__c</fullName>
+    <description>Used to associate filter criteria records with one another.  (i.e. if 3 filter criteria records have the same filter number they all go together and make up a &quot;price rule&quot;)
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to associate filter criteria records with one another.  (i.e. if 3 filter criteria records have the same filter number they all go together and make up a &quot;price rule&quot;)</inlineHelpText>
+    <label>Filter Number</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

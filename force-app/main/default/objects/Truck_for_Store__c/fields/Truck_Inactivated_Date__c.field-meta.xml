@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Truck_Inactivated_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>Truck__r.Date_Truck_Inactivated__c</formula>
+    <label>Truck Inactivated Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dealer_Operations</fullName>
+    <active>true</active>
+    <label>Dealer Operations</label>
+    <picklistValues>
+        <picklist>Dealer_Org_Type__c</picklist>
+        <values>
+            <fullName>dealer_group_ca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>dealer_group_us</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Legal_Entity_Type__c</picklist>
+        <values>
+            <fullName>Corporation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LLC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LLP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S-Corp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sole Proprietor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

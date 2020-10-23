@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compensation__c</fullName>
+    <description>Identifies if the tester wants compensation.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Identifies if the tester wants compensation.</inlineHelpText>
+    <label>Compensation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Employee</fullName>
+                <default>false</default>
+                <label>Employee</label>
+            </value>
+            <value>
+                <fullName>Keeping Footwear</fullName>
+                <default>false</default>
+                <label>Keeping Footwear</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Send Check</fullName>
+                <default>false</default>
+                <label>Send Check</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

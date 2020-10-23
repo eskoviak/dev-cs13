@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Reason__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Closed Reason</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Deactivated</fullName>
+                <default>true</default>
+                <label>Account Deactivated</label>
+            </value>
+            <value>
+                <fullName>Account Suspended/Deactivated</fullName>
+                <default>false</default>
+                <label>Account Suspended/Deactivated</label>
+            </value>
+            <value>
+                <fullName>Account Updated</fullName>
+                <default>false</default>
+                <label>Account Updated</label>
+            </value>
+            <value>
+                <fullName>Acct Validation Complete</fullName>
+                <default>false</default>
+                <label>Acct Validation Complete</label>
+            </value>
+            <value>
+                <fullName>Applied</fullName>
+                <default>false</default>
+                <label>Applied</label>
+            </value>
+            <value>
+                <fullName>Charged Back</fullName>
+                <default>false</default>
+                <label>Charged Back</label>
+            </value>
+            <value>
+                <fullName>Closed Per Customer Request</fullName>
+                <default>false</default>
+                <label>Closed Per Customer Request</label>
+            </value>
+            <value>
+                <fullName>Collected/Paid Invoice</fullName>
+                <default>false</default>
+                <label>Collected/Paid Invoice</label>
+            </value>
+            <value>
+                <fullName>Customer Retained</fullName>
+                <default>false</default>
+                <label>Customer Retained</label>
+            </value>
+            <value>
+                <fullName>Customer Returned Full</fullName>
+                <default>false</default>
+                <label>Customer Returned Full</label>
+            </value>
+            <value>
+                <fullName>Dealer Rejected Assistance</fullName>
+                <default>false</default>
+                <label>Dealer Rejected Assistance</label>
+            </value>
+            <value>
+                <fullName>Dispute</fullName>
+                <default>false</default>
+                <label>Dispute</label>
+            </value>
+            <value>
+                <fullName>No Action Required/Informational</fullName>
+                <default>false</default>
+                <label>No Action Required/Informational</label>
+            </value>
+            <value>
+                <fullName>Pricelist Updated</fullName>
+                <default>false</default>
+                <label>Pricelist Updated</label>
+            </value>
+            <value>
+                <fullName>Program Updated</fullName>
+                <default>false</default>
+                <label>Program Updated</label>
+            </value>
+            <value>
+                <fullName>Rebated Excessive Losses</fullName>
+                <default>false</default>
+                <label>Rebated Excessive Losses</label>
+            </value>
+            <value>
+                <fullName>Re-Enroll Successful</fullName>
+                <default>false</default>
+                <label>Re-Enroll Successful</label>
+            </value>
+            <value>
+                <fullName>Refunded to Corp</fullName>
+                <default>false</default>
+                <label>Refunded to Corp</label>
+            </value>
+            <value>
+                <fullName>Refunded to Dealer</fullName>
+                <default>false</default>
+                <label>Refunded to Dealer</label>
+            </value>
+            <value>
+                <fullName>RWBAA Account Closed</fullName>
+                <default>false</default>
+                <label>RWBAA Account Closed</label>
+            </value>
+            <value>
+                <fullName>RWfB Only, no RWBAA</fullName>
+                <default>false</default>
+                <label>RWfB Only, no RWBAA</label>
+            </value>
+            <value>
+                <fullName>SH - Bus Case Approved</fullName>
+                <default>false</default>
+                <label>SH - Bus Case Approved</label>
+            </value>
+            <value>
+                <fullName>SH - Bus Case Rejected</fullName>
+                <default>false</default>
+                <label>SH - Bus Case Rejected</label>
+            </value>
+            <value>
+                <fullName>Underwritten by RWBAA</fullName>
+                <default>false</default>
+                <label>Underwritten by RWBAA</label>
+            </value>
+            <value>
+                <fullName>Updated Billing Attributes</fullName>
+                <default>false</default>
+                <label>Updated Billing Attributes</label>
+            </value>
+            <value>
+                <fullName>Updated Billing Method</fullName>
+                <default>false</default>
+                <label>Updated Billing Method</label>
+            </value>
+            <value>
+                <fullName>Updated Contact Information</fullName>
+                <default>false</default>
+                <label>Updated Contact Information</label>
+            </value>
+            <value>
+                <fullName>Updated Remittance Information</fullName>
+                <default>false</default>
+                <label>Updated Remittance Information</label>
+            </value>
+            <value>
+                <fullName>Updated Terms</fullName>
+                <default>false</default>
+                <label>Updated Terms</label>
+            </value>
+            <value>
+                <fullName>Written Off</fullName>
+                <default>false</default>
+                <label>Written Off</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

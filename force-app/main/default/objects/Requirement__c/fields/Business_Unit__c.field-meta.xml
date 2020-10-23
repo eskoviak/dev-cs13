@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Business units or groups that requested the requirement</inlineHelpText>
+    <label>Business Group</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All</fullName>
+                <default>true</default>
+                <label>All</label>
+            </value>
+            <value>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+                <label>Call Center</label>
+            </value>
+            <value>
+                <fullName>Customer Relations</fullName>
+                <default>false</default>
+                <label>Customer Relations</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Corporate IT</fullName>
+                <default>false</default>
+                <label>Corporate IT</label>
+            </value>
+            <value>
+                <fullName>Global Sales B2B</fullName>
+                <default>false</default>
+                <label>Global Sales B2B</label>
+            </value>
+            <value>
+                <fullName>Key Accounts</fullName>
+                <default>false</default>
+                <label>Key Accounts</label>
+            </value>
+            <value>
+                <fullName>National Accounts</fullName>
+                <default>false</default>
+                <label>National Accounts</label>
+            </value>
+            <value>
+                <fullName>Retail Accounts</fullName>
+                <default>false</default>
+                <label>Retail Accounts</label>
+            </value>
+            <value>
+                <fullName>Region Sales</fullName>
+                <default>false</default>
+                <label>Region Sales</label>
+            </value>
+            <value>
+                <fullName>Territory Sales</fullName>
+                <default>false</default>
+                <label>Territory Sales</label>
+            </value>
+            <value>
+                <fullName>ROMS</fullName>
+                <default>false</default>
+                <label>ROMS</label>
+            </value>
+            <value>
+                <fullName>ARMS</fullName>
+                <default>false</default>
+                <label>ARMS</label>
+            </value>
+            <value>
+                <fullName>Shoe Repair</fullName>
+                <default>false</default>
+                <label>Shoe Repair</label>
+            </value>
+            <value>
+                <fullName>Undetermined</fullName>
+                <default>false</default>
+                <label>Undetermined</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

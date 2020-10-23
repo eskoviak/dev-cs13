@@ -1,0 +1,10 @@
+<apex:page standardController="Account" extensions="RWS_StoreCommUserCreatorCtrl">
+    <apex:form >
+        <apex:pageMessages id="msgs" escape="false" />
+        <apex:commandButton styleClass="slds-button slds-button_brand slds-not-selected"
+            value="Create Community User"
+            action="{!createCommunityUser}"
+            rerender="msgs"
+         />
+    </apex:form>
+</apex:page>

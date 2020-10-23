@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Level__c</fullName>
+    <description>What data levels are needed?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What data levels are needed?</inlineHelpText>
+    <label>Data Level</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Detailed Transaction</fullName>
+                <default>false</default>
+                <label>Detailed Transaction</label>
+            </value>
+            <value>
+                <fullName>Daily Summary</fullName>
+                <default>false</default>
+                <label>Daily Summary</label>
+            </value>
+            <value>
+                <fullName>Weekly Summary</fullName>
+                <default>false</default>
+                <label>Weekly Summary</label>
+            </value>
+            <value>
+                <fullName>Period Summary</fullName>
+                <default>false</default>
+                <label>Period Summary</label>
+            </value>
+            <value>
+                <fullName>Yearly Summary</fullName>
+                <default>false</default>
+                <label>Yearly Summary</label>
+            </value>
+            <value>
+                <fullName>Combination (Drill-Up/Down Capabilities)</fullName>
+                <default>false</default>
+                <label>Combination (Drill-Up/Down Capabilities)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

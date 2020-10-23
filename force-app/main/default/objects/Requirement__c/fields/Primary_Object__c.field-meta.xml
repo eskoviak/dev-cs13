@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Object__c</fullName>
+    <externalId>false</externalId>
+    <label>Primary Object</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account</fullName>
+                <default>false</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>Account Set-up</fullName>
+                <default>false</default>
+                <label>Account Set-up</label>
+            </value>
+            <value>
+                <fullName>Accounts Payable</fullName>
+                <default>false</default>
+                <label>Accounts Payable</label>
+            </value>
+            <value>
+                <fullName>Addresses</fullName>
+                <default>false</default>
+                <label>Addresses</label>
+            </value>
+            <value>
+                <fullName>Calendar</fullName>
+                <default>false</default>
+                <label>Calendar</label>
+            </value>
+            <value>
+                <fullName>Case</fullName>
+                <default>false</default>
+                <label>Case</label>
+            </value>
+            <value>
+                <fullName>Catalog</fullName>
+                <default>false</default>
+                <label>Catalog</label>
+            </value>
+            <value>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+                <label>Chatter</label>
+            </value>
+            <value>
+                <fullName>Console</fullName>
+                <default>false</default>
+                <label>Console</label>
+            </value>
+            <value>
+                <fullName>Contact</fullName>
+                <default>false</default>
+                <label>Contact</label>
+            </value>
+            <value>
+                <fullName>Contact Preferences</fullName>
+                <default>false</default>
+                <label>Contact Preferences</label>
+            </value>
+            <value>
+                <fullName>Content</fullName>
+                <default>false</default>
+                <label>Content</label>
+            </value>
+            <value>
+                <fullName>Contracts</fullName>
+                <default>false</default>
+                <label>Contracts</label>
+            </value>
+            <value>
+                <fullName>CTI</fullName>
+                <default>false</default>
+                <label>CTI</label>
+            </value>
+            <value>
+                <fullName>Dashboard</fullName>
+                <default>false</default>
+                <label>Dashboard</label>
+            </value>
+            <value>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+                <label>Data Migration</label>
+            </value>
+            <value>
+                <fullName>Employees</fullName>
+                <default>false</default>
+                <label>Employees</label>
+            </value>
+            <value>
+                <fullName>Event</fullName>
+                <default>false</default>
+                <label>Event</label>
+            </value>
+            <value>
+                <fullName>General System Setting</fullName>
+                <default>false</default>
+                <label>General System Setting</label>
+            </value>
+            <value>
+                <fullName>Help</fullName>
+                <default>false</default>
+                <label>Help</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>Knowledge</fullName>
+                <default>false</default>
+                <label>Knowledge</label>
+            </value>
+            <value>
+                <fullName>Lead</fullName>
+                <default>false</default>
+                <label>Lead</label>
+            </value>
+            <value>
+                <fullName>Levels</fullName>
+                <default>false</default>
+                <label>Levels</label>
+            </value>
+            <value>
+                <fullName>Microsite sales</fullName>
+                <default>false</default>
+                <label>Microsite sales</label>
+            </value>
+            <value>
+                <fullName>New Account Request</fullName>
+                <default>false</default>
+                <label>New Account Request</label>
+            </value>
+            <value>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+                <label>Opportunity</label>
+            </value>
+            <value>
+                <fullName>Orders</fullName>
+                <default>false</default>
+                <label>Orders</label>
+            </value>
+            <value>
+                <fullName>Outlook</fullName>
+                <default>false</default>
+                <label>Outlook</label>
+            </value>
+            <value>
+                <fullName>Payment</fullName>
+                <default>false</default>
+                <label>Payment</label>
+            </value>
+            <value>
+                <fullName>Payroll Deduct</fullName>
+                <default>false</default>
+                <label>Payroll Deduct</label>
+            </value>
+            <value>
+                <fullName>POS</fullName>
+                <default>false</default>
+                <label>POS</label>
+            </value>
+            <value>
+                <fullName>Prepaid Certificates</fullName>
+                <default>false</default>
+                <label>Prepaid Certificates</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>Purchase orders</fullName>
+                <default>false</default>
+                <label>Purchase orders</label>
+            </value>
+            <value>
+                <fullName>Rebates</fullName>
+                <default>false</default>
+                <label>Rebates</label>
+            </value>
+            <value>
+                <fullName>Report</fullName>
+                <default>false</default>
+                <label>Report</label>
+            </value>
+            <value>
+                <fullName>Retail Accounting</fullName>
+                <default>false</default>
+                <label>Retail Accounting</label>
+            </value>
+            <value>
+                <fullName>Retail Operations</fullName>
+                <default>false</default>
+                <label>Retail Operations</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>Subsidy</fullName>
+                <default>false</default>
+                <label>Subsidy</label>
+            </value>
+            <value>
+                <fullName>system</fullName>
+                <default>false</default>
+                <label>system</label>
+            </value>
+            <value>
+                <fullName>System Integration</fullName>
+                <default>false</default>
+                <label>System Integration</label>
+            </value>
+            <value>
+                <fullName>Task</fullName>
+                <default>false</default>
+                <label>Task</label>
+            </value>
+            <value>
+                <fullName>Tax</fullName>
+                <default>false</default>
+                <label>Tax</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>User</fullName>
+                <default>false</default>
+                <label>User</label>
+            </value>
+            <value>
+                <fullName>Authorization Form</fullName>
+                <default>false</default>
+                <label>Authorization Form</label>
+            </value>
+            <value>
+                <fullName>Accounts Receivable</fullName>
+                <default>false</default>
+                <label>Accounts Receivable</label>
+            </value>
+            <value>
+                <fullName>Inventory</fullName>
+                <default>false</default>
+                <label>Inventory</label>
+            </value>
+            <value>
+                <fullName>Transactions</fullName>
+                <default>false</default>
+                <label>Transactions</label>
+            </value>
+            <value>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+                <label>Shipping</label>
+            </value>
+            <value>
+                <fullName>Receiving</fullName>
+                <default>false</default>
+                <label>Receiving</label>
+            </value>
+            <value>
+                <fullName>Trucks</fullName>
+                <default>false</default>
+                <label>Trucks</label>
+            </value>
+            <value>
+                <fullName>POS IA</fullName>
+                <default>false</default>
+                <label>POS IA</label>
+            </value>
+            <value>
+                <fullName>commisions</fullName>
+                <default>false</default>
+                <label>commisions</label>
+            </value>
+            <value>
+                <fullName>Receipts</fullName>
+                <default>false</default>
+                <label>Receipts</label>
+            </value>
+            <value>
+                <fullName>Tenders</fullName>
+                <default>false</default>
+                <label>Tenders</label>
+            </value>
+            <value>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+                <label>Consumer</label>
+            </value>
+            <value>
+                <fullName>Relate</fullName>
+                <default>false</default>
+                <label>Relate</label>
+            </value>
+            <value>
+                <fullName>special orders</fullName>
+                <default>false</default>
+                <label>special orders</label>
+            </value>
+            <value>
+                <fullName>FIFO</fullName>
+                <default>false</default>
+                <label>FIFO</label>
+            </value>
+            <value>
+                <fullName>Replenishments</fullName>
+                <default>false</default>
+                <label>Replenishments</label>
+            </value>
+            <value>
+                <fullName>Returns</fullName>
+                <default>false</default>
+                <label>Returns</label>
+            </value>
+            <value>
+                <fullName>Store</fullName>
+                <default>false</default>
+                <label>Store</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

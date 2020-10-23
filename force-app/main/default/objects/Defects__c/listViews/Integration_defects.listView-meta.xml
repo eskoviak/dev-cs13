@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integration_defects</fullName>
+    <columns>NAME</columns>
+    <columns>Defect_Title__c</columns>
+    <columns>Test_Type__c</columns>
+    <columns>Assigned_to__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Defect_Status__c</columns>
+    <columns>Project__c</columns>
+    <columns>Change_Reqest__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Test_Type__c</field>
+        <operation>equals</operation>
+        <value>Integration</value>
+    </filters>
+    <label>Integration defects</label>
+</ListView>

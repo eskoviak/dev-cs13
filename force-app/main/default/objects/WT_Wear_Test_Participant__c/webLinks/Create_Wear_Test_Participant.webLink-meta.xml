@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Wear_Test_Participant</fullName>
+    <availability>online</availability>
+    <description>Custom button that works with Wear Test Participant Name workflow to auto-populate the record name.</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create Wear Test Participant</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/a2I/e?CF00NF000000D8nlm={!WT_Participant__c.Name}&amp;CF00NF000000D8nlm_lkid={!WT_Participant__c.Id}&amp;{!WT_Wear_Test_Participant__c.Name}=&quot;name&quot;</url>
+</WebLink>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Garments__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For Pricing section of New Account Setup</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Complete &quot;Garments Detail&quot; field below</inlineHelpText>
+    <label>Garments</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

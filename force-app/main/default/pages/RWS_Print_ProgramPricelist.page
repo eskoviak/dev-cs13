@@ -1,0 +1,413 @@
+<apex:page controller="RWS_Print_ProgramPricelistCont" showHeader="false" sidebar="false" renderAs="pdf"  applyBodyTag="false" action="{!getProgramDetails}" readOnly="true">
+  <head>
+     <style>
+            table.table tr td {
+                border: none !important;
+            }
+            table { border-spacing: 0px !important; }
+     </style>
+  </head>
+  <body>
+     <apex:outputPanel rendered="{!proposalNotes='1'}">   
+        <div draggable="false" >
+            <img src="{!URLFOR($Resource.RWSC_Assets, 'include/images/logo.jpg')}" alt="Red Wing Shoes" class="cursor" style="width:75px;float:left;"/>
+            <div style="margin-left:250px;"><h2>Program Agreement</h2></div>
+        </div>
+        
+        <apex:outputPanel rendered="{!isDealer}">
+        <div align="center">
+            <b>Legal Company Name: {!legalName}
+            <br/>
+            <center> &amp;</center>
+            {!programOwnerUser.CompanyName} (an independent Red Wing dealer, "Dealer")</b>
+        </div>    
+        <br/>
+          
+        <div style="margin-left:40px; font-size:13px">DEALER and {!legalName}, its subsidiaries and affiliates ("COMPANY") agree that DEALER will provide COMPANY with certain products and services subject to the terms of this agreement (“Agreement”).</div>
+        <div style="font-size:13px">
+            <ol>
+                <li style="margin-bottom: 10px;">  The initial agreed-to pricing, payment terms and list of approved products are listed on the attached.</li>
+                <li style="margin-bottom: 10px;">  <u><b>Pricing:</b></u>  The initial agreed-to pricing, payment terms and list of approved products are listed on the attached.</li>
+                <li style="margin-bottom: 10px;">  <u><b>Eligibility Management:</b></u>  The COMPANY’s employees may purchase approved footwear through either the use of a COMPANY-approved authorization form or through the utilization of DEALER’s digital option, as noted on the attached.  COMPANY will be financially responsible for all purchases of approved footwear unless purchased 
+                        by ineligible employees for which COMPANY had provided updated information on employee eligibility prior to the sale. Regardless, COMPANY will be financially responsible for purchases due to inadvertent data entry errors made by DEALER with COMPANY’s digital eligibility file when data entry is handled by DEALER at COMPANY’s request.</li>
+                <li style="margin-bottom: 10px;">  <u><b>Company Program Type:</b></u>  COMPANY will be invoiced, either at an agreed amount per employee or at an agreed percentage of the employee’s purchases, as indicated on the attached.  Any amounts that the COMPANY has not agreed to pay will be collected directly from the employee as indicated on the attached.</li>
+                <li style="margin-bottom: 10px;">  The participating Retailer will verify the identification of each COMPANY employee for every sale.</li>
+                <li style="margin-bottom: 10px;"> Invoicing and collection are handled by RED WING’s service provider, Multi Service Technology Solutions, Inc. (“MSTS”), who is a third-party beneficiary of RED WING's right to receive payment. MSTS is a party to this Agreement for the sole purpose of invoicing, collections and related financial matters.  Payments by Check are to be sent to: Red Wing Business Advantage Account, P.O. Box 844329, Dallas, Texas 75284-4329.  
+                       <br/>If paying via EFT or Wire Transfer, please reference the following: <br/>
+                       MSTS Bank Name:  Bank of America | MSTS ABA Routing #:  081000032 | MSTS Account Number:  010161004777</li>
+                <li style="margin-bottom: 10px;"> Products will be free from defects in workmanship and materials in accordance with Red Wing’s standard representations, warranties and policies listed on Red Wing’s standard catalogs and pricelists, which may be updated from time to time, and which will be provided upon request.  COMPANY employees may return any problematic or nonconforming product to DEALER.</li>
+                <li style="margin-bottom: 10px;"> Either party may cancel this Agreement at any time upon 60 days’ prior written notice.</li>
+                <li style="margin-bottom: 10px;"> This Agreement and its attachments represent the entire understanding of the parties with respect to the matters addressed herein.  This Agreement may be amended or modified only by a writing executed by all of the parties to this Agreement.  In the event of a conflict between this Agreement and any attachment, the terms of this Agreement will control.</li>
+                <table class="table" style="margin-left:40px; width:100%; font-size:13px; padding-bottom:15px;" align="center">
+                    <tr>
+                        <td style="width:45%;"></td>
+                        <td style="width:55%;"></td>
+                    </tr>
+                    <tr>
+                        <td >Name:_______________________________________  </td>
+                        <td >Name:_______________________________________ </td>
+                    </tr>
+                    <tr>
+                        <td >Title:________________________________________ </td>
+                        <td >Title:________________________________________ </td>
+                    </tr>
+                    <tr>
+                        <td > <b>{!programOwnerUser.CompanyName}</b> </td>
+                        <td > <b>{!legalName}</b>  </td>
+                    </tr>
+                </table>
+                <table class="table" style="margin-left:40px; width:100%; font-size:13px; padding-bottom:15px;" align="center">
+                    <tr>
+                        <td style="width:45%;"></td>
+                        <td style="width:55%;"></td>
+                    </tr>
+                    <tr>
+                         <td>_____________________________________________ </td>
+                         <td>_____________________________________________ </td>
+                    </tr>
+                    <tr>
+                        <td>Signature                <span style="margin-left:160px">Date</span> </td>
+                        <td>Signature                <span style="margin-left:160px">Date</span>  </td>
+                    </tr>
+                </table>
+                <br/>
+            </ol>
+         </div>
+        <!-- End of Agreement - Dealer -->
+        </apex:outputPanel>
+         
+        <apex:outputPanel rendered="{!!isDealer}">
+           <div align="center">
+            <b>Legal Company Name: {!legalName}
+            <br/>
+            <center> &amp;</center>
+             Red Wing Brands of America, Inc. (“Red Wing”)</b>
+           </div>    
+           <br/>
+          
+         <div style="margin-left:40px; font-size:13px">RED WING and {!legalName}, its subsidiaries and affiliates ("COMPANY") agree that RED WING will provide COMPANY with certain products and services subject to the terms of this agreement (“Agreement”).</div>
+         <div style="font-size:13px">
+            <ol>
+                <li style="margin-bottom: 10px;"> RED WING agrees to sell only those products deemed as “Approved” by the COMPANY to the COMPANY’s employees through RED WING’s retail dealer network and/or on-site mobile services (where applicable) (“Retailers”) at the agreed prices.</li>
+                <li style="margin-bottom: 10px;">  <u><b>Pricing:</b></u>  The initial agreed pricing, payment terms, list of approved products, as well as the period during which pricing will remain unchanged is listed on the attached. </li>
+                <li style="margin-bottom: 10px;">  <u><b>Eligibility Management:</b></u>  The COMPANY’s employees may purchase approved product through the use of a COMPANY-issued authorization form or, through the utilization of RED WING’s digital option, as noted on the attached.  COMPANY will be financially responsible for all COMPANY-sponsored subsidy amounts applied against purchases of approved  product utilizing the selected form of eligibility management unless purchased by ineligible employees for which COMPANY had provided updated information on employee eligibility prior to the sale.</li>
+                <li style="margin-bottom: 10px;">  <u><b>Company Program Type:</b></u>  COMPANY will be invoiced, either at an agreed amount per employee or at an agreed percentage of the employee’s purchases, as indicated on the attached.  Any amounts that COMPANY has not agreed to pay, as indicated on the attached, will be collected directly from the employee at the point of sale.</li>
+                <li style="margin-bottom: 10px;">  The participating Retailer will verify the identification of each COMPANY employee for every sale.</li>
+                <li style="margin-bottom: 10px;">  Invoicing and collection are handled by RED WING’s service provider, Multi Service Technology Solutions, Inc. (“MSTS”), who is a third-party beneficiary of RED WING's right to receive payment. MSTS is a party to this Agreement for the sole purpose of invoicing, collections and related financial matters.  Payments by <u>Check</u> are to be sent to: Red Wing Business Advantage Account, P.O. Box 844329, Dallas, Texas 75284-4329.  
+                       <br/>If paying via <u>EFT</u> or <u>Wire Transfer</u>, please reference the following: <br/>
+                       MSTS Bank Name:  Bank of America | MSTS ABA Routing #:  081000032 | MSTS Account Number:  010161004777</li>
+                <li style="margin-bottom: 10px;"> RED WING warrants its products to be free from defects in workmanship and materials in accordance with its standard representations, warranties and policies listed on RED WING’s standard catalogs and pricelists, which may be updated from time to time, and which will be provided upon request.  COMPANY employees may return any problematic or nonconforming product to any authorized Red Wing Retailer.</li>
+                <li style="margin-bottom: 10px;"> Either party may cancel this Agreement at any time upon 60 days’ prior written notice.</li>
+                <li style="margin-bottom: 10px;"> This Agreement and its attachments represent the entire understanding of the parties with respect to the matters addressed herein.  This Agreement may be amended or modified only by a writing executed by all of the parties to this Agreement.  In the event of a conflict between this Agreement and any attachment, the terms of this Agreement will control.</li>
+                <table class="table" style="margin-left:40px; width:100%; font-size:13px; padding-bottom:15px;" align="center">
+                    <tr>
+                        <td style="width:45%;"></td>
+                        <td style="width:55%;"></td>
+                    </tr>
+                    <tr>
+                        <td >Name:_______________________________________  </td>
+                        <td >Name:_______________________________________ </td>
+                    </tr>
+                    <tr>
+                        <td >Title:________________________________________ </td>
+                        <td >Title:________________________________________ </td>
+                    </tr>
+                    <tr>
+                        <td > <b> Red Wing Brands of America, Inc. </b> </td>
+                        <td > <b> {!legalName} </b>  </td>
+                    </tr>
+                </table>
+                <table class="table" style="margin-left:40px; width:100%; font-size:13px; padding-bottom:15px;" align="center">
+                    <tr>
+                        <td style="width:45%;"></td>
+                        <td style="width:55%;"></td>
+                    </tr>
+                    <tr>
+                         <td>_____________________________________________ </td>
+                         <td>_____________________________________________ </td>
+                    </tr>
+                    <tr>
+                        <td>Signature                <span style="margin-left:160px">Date</span> </td>
+                        <td>Signature                <span style="margin-left:160px">Date</span>  </td>
+                    </tr>
+                </table>
+                <br/>
+            </ol>
+         </div>
+        <!-- End of Agreement - Corporate -->
+        </apex:outputPanel>
+         
+        <div style="page-break-after: always; font-size:13px">
+        </div>
+     </apex:outputPanel>
+        
+     <apex:outputPanel rendered="{!proposalNotes='1'}" >
+        <div align="center" draggable="false" >
+           <img src="{!URLFOR($Resource.RWSC_Assets, 'include/images/RWfB_PricelistHeader.jpg')}" alt="Red Wing Shoes" class="cursor" style="width:100%"/>
+        </div>
+            
+        <div align="center" draggable="false" >
+            <apex:outputPanel >
+               <b> {!programOwnerUser.FirstName} {!programOwnerUser.LastName} | {!programOwnerUser.CompanyName}  </b><br/>
+               {!programOwnerUser.Phone} | {!programOwnerUser.Email}
+            </apex:outputPanel> 
+            <apex:outputPanel rendered="{!isDealer}">
+               <br/> Red Wing Authorized Dealer
+            </apex:outputPanel>
+            <hr/>
+        </div>
+               
+        <apex:outputText value="{0, date, MMMM d','  yyyy}"> <apex:param value="{!NOW()}" /> </apex:outputText> <br/> 
+        <apex:outputText value="{!legalName}" />, 
+               
+        <br/><br/>
+        Dear {!primaryContact.Name}, <br/><br/>
+        Thank you for your consideration in doing business with Red Wing. We are committed to offering you and your employees the very best in products and services. 
+        Please find your Purchase Program Summary below.
+
+        <br/><br/>
+        <table class="table" style="border: 1px solid; width:100%; font-size:12px; padding-bottom:15px;" align="center">
+           <tr>
+              <td style="width:33%;"></td>
+              <td style="width:66%;"></td>
+           </tr>
+           <tr>
+              <td colspan="2" style="height:30px;"> <b>PURCHASE PROGRAM</b> </td>
+           </tr>
+           <tr>
+              <td > PROGRAM NAME: </td>
+              <td> <b>{!progName} </b> </td>
+           </tr>
+           <tr>
+              <td > PROGRAM TYPE: </td>
+              <td> <b>{!progType} </b> </td>
+           </tr>
+           <tr>
+              <td > PRICING TERM: </td>
+              <td> <b> <apex:outputText value="{!activationDate }"/> - <apex:outputText value="{!expirationDate }"/>  </b></td>
+           </tr>
+           <tr>
+              <td > SUBSIDY AMOUNT: </td>
+              <td> <b>{!subsidyAmt} </b> </td>
+           </tr>
+           <tr>
+              <td > ACCESSORIES ALLOWED: </td>
+              <td> <b>{!accessoriesAllowedSubsidy} </b> </td>
+           </tr>
+           <tr>
+              <td > PAYROLL DEDUCT: </td>
+              <td > <b>{!payrollDeduction} </b> </td>
+           </tr>
+           <tr>
+              <td > ACCESSORIES ALLOWED: </td>
+              <td > <b>{!accessoriesAllowedPayroll} </b> </td>
+           </tr>
+        </table>
+        <table class="table" style="border: 1px solid; width:100%; font-size:12px; padding-bottom:15px;" align="center">
+           <tr>
+              <td style="width:33%;"></td>
+              <td style="width:66%;"></td>
+           </tr>
+           <tr>
+              <td colspan="2" style="height:30px; padding-top:0px;"> <b>BILLING/INVOICING</b> </td>
+           </tr>
+           <tr>
+              <td > PAYMENT TERMS: </td>
+              <td> <b> {!netTerms} </b> </td>
+           </tr>
+           <tr>
+              <td > BILLING FREQUENCY: </td>
+              <td> <b>{!billingFreq} </b> </td>
+           </tr>
+           <tr>
+              <td > INVOICE DELIVERY: </td>
+              <td> <b> {!invoiceDelivery} </b></td>
+           </tr>
+           <tr>
+              <td> REQUIRED INVOICE FIELDS: </td>
+              <td> <b>{!invoiceAttributes} </b> </td>
+           </tr>
+        </table>
+        <br/>
+
+        <apex:outputText value="{!program.Proposal_Notes__c}" /> <br/>
+        
+        <apex:outputPanel rendered="{!isCorporate}">
+           <table style="width:100%">
+              <tr>
+                 <td>
+                    <br/><br/>
+                    <b>Red Wing Brands of America, Inc.</b>
+                    <br/><br/>
+                    <b>{!programOwnerUser.FirstName} {!programOwnerUser.LastName}</b> <br/>
+                    {!programOwnerUser.Phone} <br/>
+                 </td>
+              </tr>
+           </table>
+        </apex:outputPanel>
+        
+        <apex:outputPanel rendered="{!isDealer}">
+           <br/><br/> 
+           <b>{!programOwnerUser.CompanyName}</b>
+           <br/><br/>
+           <b>{!programOwnerUser.FirstName} {!programOwnerUser.LastName}</b> <br/>
+           {!programOwnerUser.Phone} <br/>
+           {!programOwnerUser.Email} <br/>
+           <br/><br/>
+        </apex:outputPanel>
+        <br/>
+        <div style="page-break-after: always; font-size:12px">
+           To view your programs styles and pricing online, please visit <a href="http://{!program.Online_Pricelist_URL__c}" style="color:rgb(183, 0, 5) !important;">{!program.Online_Pricelist_URL__c}</a>  
+        </div>
+        
+     </apex:outputPanel>
+     
+     <apex:outputPanel rendered="{!IF(entries.size=0, true, false)}">
+        <div class="flt_lft" align="center" >
+           <div align="center" draggable="false" >
+              <img src="{!URLFOR($Resource.RWSC_Assets, 'include/images/RWfB_PricelistHeader.jpg')}" alt="Red Wing Shoes" class="cursor" style="width:100%"/>
+           </div>
+      
+           <div align="center" draggable="false" >
+              <apex:outputPanel > 
+                 <b> {!programOwnerUser.FirstName} {!programOwnerUser.LastName} | {!programOwnerUser.CompanyName}  </b><br/>
+                     {!programOwnerUser.Phone} | {!programOwnerUser.Email}
+              </apex:outputPanel>  
+              <apex:outputPanel rendered="{!isDealer}">
+                 <br/> Red Wing Authorized Dealer
+              </apex:outputPanel>
+              <hr/>
+           </div> 
+            
+           <table style="width:100%;">
+              <tr>
+                 <td>
+                    <div style='float:left; text-align:left; font-weight:bold; white-space:nowrap;'>{!legalName}</div>
+                    <div style='float:right; text-align:right; font-weight:bold; white-space:nowrap;'>Printed on {!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}</div>
+                 </td>
+              </tr>
+              <tr>
+                 <td>
+                    <div style='float:left; text-align:left; font-size:13px; font-weight:bold; white-space:nowrap;'>{!program.Name}</div>
+                    <div style='float:right; text-align:right; font-size:13px; font-weight:bold; white-space:nowrap;'>Effective Dates: {!activationDate} - {!expirationDate}</div>
+                 </td>
+              </tr>
+           </table>
+        </div>
+        <br/>
+        <br/>
+        This program does not have any products added.
+     </apex:outputPanel>
+     
+     <apex:outputPanel rendered="{!IF(entries.size>0, true, false)}" >
+        <apex:variable var="rows" value="{!0}"/> 
+        <apex:repeat rows="{!CEILING(entries.size/184)}" value="{!entries}" var="blah" rendered="true"> 
+           <div class="flt_lft" align="center" >
+              <div align="center" draggable="false">
+                 <img src="{!URLFOR($Resource.RWSC_Assets, 'include/images/RWfB_PricelistHeader.jpg')}" alt="Red Wing Shoes" class="cursor" style="width:100%"/>
+              </div>
+              
+              <div align="center" draggable="false" >
+                 <apex:outputPanel >
+                    <b> {!programOwnerUser.FirstName} {!programOwnerUser.LastName} | {!programOwnerUser.CompanyName}  </b><br/>
+                        {!programOwnerUser.Phone} | {!programOwnerUser.Email}
+                 </apex:outputPanel> 
+                 <apex:outputPanel rendered="{!isDealer}">
+                    <br/> Red Wing Authorized Dealer
+                 </apex:outputPanel>
+                 <hr/>
+              </div> 
+              
+              <table style="width:100%;">
+                 <tr>
+                    <td>
+                       <div style='float:left; text-align:left; font-weight:bold; white-space:nowrap;'>{!legalName}</div>
+                       <div style='float:right; text-align:right; font-weight:bold; white-space:nowrap;'>Printed on {!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}</div>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>
+                       <div style='float:left; text-align:left; font-size:13px; font-weight:bold; white-space:nowrap;'>{!program.Name}</div>
+                       <div style='float:right; text-align:right; font-size:13px; font-weight:bold; white-space:nowrap;'>Effective Dates: {!activationDate} - {!expirationDate}</div>
+                    </td>
+                 </tr>
+              </table>
+              
+              <p style="text-align: left; margin:6px !important">
+                 <apex:outputText value="{!program.Purchase_Program_Notes__c}" /> 
+              </p>
+           </div>
+           
+           <apex:pageBlock >
+              <div>
+                 <div style="display: inline-block; vertical-align: top; min-width:23%;margin:0 5px;">
+                    <apex:pageBlockTable align="center" value="{!entries}" var="prod" rows="46" first="{!rows}" style="font-size:12px; padding:10px; border:1px solid" rendered="{!IF(entries.size>rows, true, false)}">
+                       <apex:column headerValue="Brand" value="{!prod.prodObj.Brand_Code__c}" style="padding-right:10px;" />
+                       <apex:column headerValue="Style" value="{!prod.style}" style="padding-right:10px;" />
+                       <apex:column headerValue="Price" >
+                          <apex:outputText value="${0,number,###,###,###.00}">
+                             <apex:param value="{!prod.listPrice}"/>
+                          </apex:outputText>
+                       </apex:column>
+                       <apex:column headerValue=" " value="{!prod.prodObj.IsDiscontinued__c}" />
+                    </apex:pageBlockTable>
+                 </div>
+                 <apex:variable var="rows" value="{!rows + 46}"/>
+                 <div style="display: inline-block; vertical-align: top; min-width:23%;margin:0 5px;">
+                    <apex:pageBlockTable align="center" value="{!entries}" var="prod" rows="46" first="{!rows}" style="font-size:12px; padding:10px; border:1px solid" rendered="{!IF(entries.size>rows, true, false)}">
+                       <apex:column headerValue="Brand" value="{!prod.prodObj.Brand_Code__c}" style="padding-right:10px;" />
+                       <apex:column headerValue="Style" value="{!prod.style}" style="padding-right:10px;" />
+                       <apex:column headerValue="Price" >
+                          <apex:outputText value="${0,number,###,###,###.00}">
+                             <apex:param value="{!prod.listPrice}"/>
+                          </apex:outputText>
+                       </apex:column>
+                       <apex:column headerValue=" " value="{!prod.prodObj.IsDiscontinued__c}" />
+                    </apex:pageBlockTable>  
+                 </div>
+                 <apex:variable var="rows" value="{!rows + 46}"/>
+                 <div style="display: inline-block; vertical-align: top; min-width:23%;margin:0 5px;">  
+                    <apex:pageBlockTable align="center" value="{!entries}" var="prod" rows="46" first="{!rows}" style="font-size:12px; padding:10px; border:1px solid" rendered="{!IF(entries.size>rows, true, false)}">
+                       <apex:column headerValue="Brand" value="{!prod.prodObj.Brand_Code__c}" style="padding-right:10px;" />
+                       <apex:column headerValue="Style" value="{!prod.style}" style="padding-right:10px;" />
+                       <apex:column headerValue="Price" >
+                          <apex:outputText value="${0,number,###,###,###.00}">
+                             <apex:param value="{!prod.listPrice}"/>
+                          </apex:outputText>
+                       </apex:column>
+                       <apex:column headerValue=" " value="{!prod.prodObj.IsDiscontinued__c}" /> 
+                    </apex:pageBlockTable>  
+                 </div>
+                 <apex:variable var="rows" value="{!rows + 46}"/>
+                 <div style="display: inline-block; vertical-align: top; min-width:23%;margin:0 5px;">
+                    <apex:pageBlockTable align="center" value="{!entries}" var="prod" rows="46" first="{!rows}" style="font-size:12px; padding:10px; border:1px solid" rendered="{!IF(entries.size>rows, true, false)}">
+                       <apex:column headerValue="Brand" value="{!prod.prodObj.Brand_Code__c}" style="padding-right:10px;" />
+                       <apex:column headerValue="Style" value="{!prod.style}" style="padding-right:10px;"  />
+                       <apex:column headerValue="Price" >
+                          <apex:outputText value="${0,number,###,###,###.00}">
+                             <apex:param value="{!prod.listPrice}"/>
+                          </apex:outputText>
+                       </apex:column>
+                       <apex:column headerValue=" " value="{!prod.prodObj.IsDiscontinued__c}" />
+                    </apex:pageBlockTable>  
+                 </div>
+                 <apex:variable var="rows" value="{!rows + 46}"/>
+              </div>
+           </apex:pageBlock> 
+           
+           <div style="padding-top:10px"></div> 
+           <apex:outputPanel rendered="{!isDealer}">
+              <div style="font-size:12px; text-align: right;">Red Wing Store - Dealer</div>
+           </apex:outputPanel>
+           <div style="font-size:12px !important;">* These styles are discontinued and may have limited availability in store.</div>  
+           <div style="font-size:12px;">Prices are subject to change depending on settings of program.</div>
+           <div style="font-size:12px;">
+              To view your programs styles and pricing online, please visit <a href="http://{!program.Online_Pricelist_URL__c}" style="color:rgb(183, 0, 5) !important;">{!program.Online_Pricelist_URL__c}</a>  
+           </div>
+           <apex:outputPanel rendered="{!IF(entries.size>rows, true, false)}">
+              <div style="page-break-after: always"></div>
+           </apex:outputPanel>
+        </apex:repeat> 
+     </apex:outputPanel>
+  </body>
+</apex:page>

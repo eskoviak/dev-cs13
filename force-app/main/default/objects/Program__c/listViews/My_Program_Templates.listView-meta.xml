@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Program_Templates</fullName>
+    <columns>NAME</columns>
+    <columns>Activation_Date__c</columns>
+    <columns>Expiration_Date__c</columns>
+    <columns>Template__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Program__c.Program_Template</value>
+    </filters>
+    <label>My Program Templates</label>
+</ListView>

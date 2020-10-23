@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Driver__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The driver assigned to the truck run.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the name of the driver assigned to the truck run.</inlineHelpText>
+    <label>Driver</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Truck Runs</relationshipLabel>
+    <relationshipName>Truck_Runs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

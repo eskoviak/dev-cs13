@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Activation_Cash_and_Carry</fullName>
+    <active>true</active>
+    <description>Requirements to activate a Cash and Carry program</description>
+    <errorConditionFormula>AND(
+Active__c = TRUE,
+ISPICKVAL(Type__c,&apos;CashandCarry&apos;),
+OR(
+ISBLANK(Name),
+ISBLANK( Account__c ),
+ISBLANK( Text(Servicing_Level__c )),
+ISBLANK( Text(Subsidy_Tax__c )),
+HasPricebook__c = FALSE,
+Expiration_Date__c &lt; Today(),
+ISBLANK(Expiration_Date__c),
+ISBLANK( Activation_Date__c ),
+
+/*Type Specific Requirements*/
+
+ISPICKVAL( Eligibility_Option__c , &apos;True&apos;)
+))</errorConditionFormula>
+    <errorMessage>Your Cash and Carry Program cannot be Activated until you populate the necessary information.</errorMessage>
+</ValidationRule>

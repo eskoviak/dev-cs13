@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand__c</fullName>
+    <description>Allows users to categorize a test by brand.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Allows users to categorize a test by brand.</inlineHelpText>
+    <label>Brand</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Red Wing</fullName>
+                <default>false</default>
+                <label>Red Wing</label>
+            </value>
+            <value>
+                <fullName>Irish Setter Work</fullName>
+                <default>false</default>
+                <label>Irish Setter Work</label>
+            </value>
+            <value>
+                <fullName>WORX</fullName>
+                <default>false</default>
+                <label>WORX</label>
+            </value>
+            <value>
+                <fullName>Irish Setter Hunt</fullName>
+                <default>false</default>
+                <label>Irish Setter Hunt</label>
+            </value>
+            <value>
+                <fullName>Men&apos;s Herritage</fullName>
+                <default>false</default>
+                <label>Men&apos;s Herritage</label>
+            </value>
+            <value>
+                <fullName>Women&apos;s Herritage</fullName>
+                <default>false</default>
+                <label>Women&apos;s Herritage</label>
+            </value>
+            <value>
+                <fullName>Vasque</fullName>
+                <default>false</default>
+                <label>Vasque</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

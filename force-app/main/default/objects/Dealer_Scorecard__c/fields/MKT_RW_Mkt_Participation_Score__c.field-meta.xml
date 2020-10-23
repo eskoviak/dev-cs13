@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MKT_RW_Mkt_Participation_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( MKT_RW_Mkt_Participation_Last_4_Years__c, 
+&quot;80%&quot;,10, 
+&quot;70%&quot;,7, 
+&quot;60%&quot;,6, 
+&quot;50%&quot;,5, 
+&quot;&lt;50%&quot;,1, 
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>MKT - RW Mkt Participation Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

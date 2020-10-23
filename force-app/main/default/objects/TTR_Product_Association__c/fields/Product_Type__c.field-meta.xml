@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <description>Product Carried vs Product Requested</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter if this product is Carried vs Requested by the store.</inlineHelpText>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Irish Setter Casual Carried</fullName>
+                <default>false</default>
+                <label>Irish Setter Casual Carried</label>
+            </value>
+            <value>
+                <fullName>Irish Setter Casual Requested</fullName>
+                <default>false</default>
+                <label>Irish Setter Casual Requested</label>
+            </value>
+            <value>
+                <fullName>Irish Setter Hunt Carried</fullName>
+                <default>false</default>
+                <label>Irish Setter Hunt Carried</label>
+            </value>
+            <value>
+                <fullName>Irish Setter Hunt Store Requested</fullName>
+                <default>false</default>
+                <label>Irish Setter Hunt Store Requested</label>
+            </value>
+            <value>
+                <fullName>Irish Setter Work Carried</fullName>
+                <default>false</default>
+                <label>Irish Setter Work Carried</label>
+            </value>
+            <value>
+                <fullName>Irish Setter Work Store Requested</fullName>
+                <default>false</default>
+                <label>Irish Setter Work Store Requested</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

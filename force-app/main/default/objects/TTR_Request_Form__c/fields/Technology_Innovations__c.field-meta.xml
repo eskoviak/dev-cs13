@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technology_Innovations__c</fullName>
+    <description>This field is used to identify if the store has participated in Technology &amp; Innovations training.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please choose yes if the store has had training on Technology &amp; Innovations (Scentban, Exoflex, Cushin, etc).</inlineHelpText>
+    <label>Technology &amp; Innovations</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

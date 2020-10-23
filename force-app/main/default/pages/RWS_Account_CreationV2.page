@@ -1,0 +1,683 @@
+<apex:page id="AccountSetupnew" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false" docType="html-5.0" controller="RWS_AccountSetupController">
+    <html lang="en">
+
+    <head>
+        <c:HeadTagComponent />
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/popup.css')}" rel="stylesheet" />
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/jquery.validate.min.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/additional-methods.min.js')}" />
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/validation.js')}"></script>
+        <!--<script src="/soap/ajax/10.0/connection.js"> </script   >
+        <script src="/soap/ajax/10.0/apex.js"> </script >-->
+        <style>
+        .hasError {
+            border: #b70005 1px solid;
+        }
+        
+        .labelError {
+            color: #b70005 !important;
+        }
+        
+        .wid82 {
+            width: 82%;
+        }
+        
+        .wid63 {
+            width: 63%;
+        }
+        
+        .wid65 {
+            width: 65%;
+        }
+        
+        .sub-type-text {
+            color: black;
+            font-family: "TSTAR";
+            font-size: 15px !important;
+        }
+        
+        .hgt20 {
+            height: 20px;
+        }
+        
+        .ui-widget {
+            font-family: 'TSTAR', sans-serif;
+            font-size: 1em;
+        }
+        
+        .padding-top-7 {
+            padding-top: 7px;
+        }
+
+        .loader { 
+            position: absolute;
+            top: 48%;
+            left: 48%;
+            border: 6px solid #f3f3f3;
+              border-radius: 50%;
+              border-top: 6px solid #b70005;
+              width: 60px;
+              height: 60px;
+              -webkit-animation: spin 2s linear infinite;
+              animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        
+        div.form-group {
+            max-width: 100% !important;
+        } 
+        
+                
+        .ui-accordion .ui-accordion-content {padding:0px !important}
+        
+        
+        </style>
+        <script>
+       
+        var firedBySave = false;
+            
+        function checkContactForErrors() {
+          if (jQuery('.errorM3').length > 0){
+               ChangeAccordion(1);
+            } else {
+                ChangeAccordion(2);
+            }
+        }  
+        
+        
+        
+        function MaskPhone(){
+            $(".mask-phone2").mask("(999) 999-9999");
+        }
+        
+        function ChangeAccordion(number) {
+           
+           $("#accordion").accordion("option", "active", number);
+           
+           if (number == 1){
+               contactFocus();
+           }
+        }
+
+        var newProgramId;
+        function setProgramId(pId) {
+            newProgramId = pId;
+            handoverProgramId(pId);
+        }
+
+
+        function showSaveCancel() {
+            $('#noinvoiceId').hide();
+        }
+
+        function hideSearch() {
+            document.getElementById("FootwearTable_filter").style.display = 'none';
+        }
+
+        $(document).ready(function() {
+            $('.btn_cancel_sec1').click(function() {
+                $('.inputReset').val("");
+                $('#attachLabel').html("Upload Certificate");
+                document.getElementById("CertificationSection").style.display = 'none';
+                document.getElementById("ex_dateDiv").style.display = 'none';
+                document.getElementById("exReasonDiv").style.display = 'none';
+                document.getElementById("billingAddress").style.display = 'none';
+                document.getElementById('AccountSetupnew:AccountSection:Account:accountForm:country').selectedIndex  = 0;
+            });
+            
+            $('.btn_cancel_sec2').click(function() {
+                
+                document.getElementById("DifferentAddress").style.display = 'none';
+                document.getElementById("SameAsAccountAddress").style.display = 'block';                
+            });    
+            
+            
+            
+            $(window).keydown(function(event){
+                if(event.keyCode == 13) {
+                  event.preventDefault();
+                  return false;
+                }
+            });
+        });
+
+        function resetContactSection() {
+            $('.restInput').val("");
+        }
+
+        function clearInput() {
+            $('.clearInput').val("");
+        }
+
+        function resetbInfo() {
+            $('.resetSec3').val("");
+
+        }
+
+        function HideCreditApplicationInfo() {
+            $("#sendApplication").hide();
+        }
+
+
+
+
+        function HideOrShowTaxExemptAccount(t) {
+            //alert(t.value);
+            //console.log(t);
+            if (t.value == 'Yes') {
+                document.getElementById("CertificationSection").style.display = 'block';
+                document.getElementById("ex_dateDiv").style.display = 'block';
+                document.getElementById("exReasonDiv").style.display = 'block';
+                document.getElementById("AccountSetupnew:AccountSection:Account:accountForm:certificateNumber").focus(); 
+
+            } else {
+                document.getElementById("CertificationSection").style.display = 'none';
+                document.getElementById("ex_dateDiv").style.display = 'none';
+                document.getElementById("exReasonDiv").style.display = 'none';
+            }
+        }
+
+
+        function ContactAddress(t) {
+            //alert(t.value);
+            if (t.value == 'Different') {
+                document.getElementById("SameAsAccountAddress").style.display = 'none';
+                document.getElementById("SameAsBillingAddress").style.display = 'none';
+                document.getElementById("DifferentAddress").style.display = 'block';
+                document.getElementById("AccountSetupnew:ContactSection:Contact:contactForm:contactAddress").focus(); 
+
+            } else if (t.value == 'Same as Billing') {
+                document.getElementById("SameAsAccountAddress").style.display = 'none';
+                document.getElementById("SameAsBillingAddress").style.display = 'block';               
+                document.getElementById("DifferentAddress").style.display = 'none';
+                $('input[name="AccountSetupnew:BillingSection:Billing:billingForm:billingContactAddressPreferance"][value="Same as Billing"]').prop('checked', true);
+                    
+            } else {
+                document.getElementById("SameAsAccountAddress").style.display = 'block';
+                document.getElementById("SameAsBillingAddress").style.display = 'none';               
+                document.getElementById("DifferentAddress").style.display = 'none';
+                $('input[name="AccountSetupnew:BillingSection:Billing:billingForm:billingContactAddressPreferance"][value="Same as Physical"]').prop('checked', true);
+                
+            }
+        }
+        
+        function BillingAddress(t) {
+            //alert(t.value);
+            if (t.value == 'Different') {                
+                document.getElementById("billingAddress").style.display = 'block';
+                document.getElementById("AccountSetupnew:AccountSection:Account:accountForm:billingAddressLine1").focus(); 
+
+            } else {
+                document.getElementById("billingAddress").style.display = 'none';
+            }
+        }
+        </script>
+        <script>
+        function ContactBillingInfo(t) {
+            $invoiceParentValue = $('input[name="AccountSetupnew:BillingSection:Billing:billingForm:invoiceParentRadio"]:checked').val();
+
+            if (t.value == 'Different') {                
+                document.getElementById("same_primay").style.display = 'none';
+                document.getElementById("different_primay").style.display = 'block';
+                document.getElementById("accountAddressId").style.display = 'block';
+                document.getElementById("same_contact").style.display = 'block';
+                document.getElementById("AccountSetupnew:BillingSection:Billing:billingForm:b_fname").focus(); 
+
+                //document.getElementById("different_contact").style.display = 'block';
+                if($invoiceParentValue == 'Yes'){
+                    document.getElementById("noinvoiceId").style.display = 'block';
+                } else {
+                    document.getElementById("noinvoiceId").style.display = 'none';
+                }
+                $('input[name="AccountSetupnew:BillingSection:Billing:billingForm:billingContactAddressPreferance"][value="Same as Account"]').prop('checked', true);
+                if ($('input[name="AccountSetupnew:BillingSection:Billing:billingForm:billingContactAddressPreferance"][value="Different"]').is(":checked")) {
+                    ContactBillingAddress('Different');
+                }
+            } else {
+                document.getElementById("same_primay").style.display = 'block';
+                document.getElementById("different_primay").style.display = 'none';
+                document.getElementById("accountAddressId").style.display = 'none';
+                document.getElementById("same_contact").style.display = 'none';
+                if($invoiceParentValue == 'Yes'){
+                    document.getElementById("noinvoiceId").style.display = 'block';
+                } else {
+                    document.getElementById("noinvoiceId").style.display = 'none';
+                }
+                document.getElementById("different_contact").style.display = 'none';
+            }
+        }
+
+        function parentContactBillingInfo(t) {
+            if (t.value == 'Different') {
+                document.getElementById("parent_same_primary").style.display = 'none';
+                document.getElementById("parent_different_primary").style.display = 'block';
+                document.getElementById("parentAccountContactAddress").style.display = 'block';
+                document.getElementById("parent_same_contact").style.display = 'block';
+                //document.getElementById("parent_different_contact").style.display = 'block';
+
+                if ($('input[name="AccountSetupnew:BillingSection:Billing:billingForm:ParentContactBillingPreference"][value="Different"]').is(":checked")) {
+                    parentContactBillingAddress('Different');
+                }
+            } else {
+                document.getElementById("parent_same_primary").style.display = 'block';
+                document.getElementById("parent_different_primary").style.display = 'none';
+                document.getElementById("parentAccountContactAddress").style.display = 'none';
+                document.getElementById("parent_same_contact").style.display = 'none';
+
+                document.getElementById("parent_different_contact").style.display = 'none';
+            }
+        }
+
+        function ContactBillingAddress(t) {
+            if (t.value == 'Different') {
+                document.getElementById("billing_contact").style.display = 'none';
+                document.getElementById("same_contact").style.display = 'none';
+                document.getElementById("different_contact").style.display = 'block';
+                document.getElementById("noinvoiceId").style.display = 'none';
+                document.getElementById("AccountSetupnew:BillingSection:Billing:billingForm:b_contactAddress").focus(); 
+
+                $('input[name="AccountSetupnew:BillingSection:Billing:billingForm:billingContactAddressPreferance"][value="Different"]').prop('checked', true);
+            } else if (t.value == 'Same as Billing') {
+                $('input[name="AccountSetupnew:BillingSection:Billing:billingForm:billingContactAddressPreferance"][value="Same as Billing"]').prop('checked', true);
+                document.getElementById("billing_contact").style.display = 'block';
+                document.getElementById("same_contact").style.display = 'none';
+                document.getElementById("different_contact").style.display = 'none';
+                document.getElementById("noinvoiceId").style.display = 'none';
+            } else {
+                $('input[name="AccountSetupnew:BillingSection:Billing:billingForm:billingContactAddressPreferance"][value="Same as Physical"]').prop('checked', true);
+                document.getElementById("billing_contact").style.display = 'none';
+                document.getElementById("same_contact").style.display = 'block';
+                document.getElementById("different_contact").style.display = 'none';
+                document.getElementById("noinvoiceId").style.display = 'none';
+
+            }
+        }
+
+        function parentContactBillingAddress(t) {
+            if (t.value == 'Different') {
+                document.getElementById("parent_same_contact").style.display = 'none';
+                document.getElementById("parent_different_contact").style.display = 'block';
+
+                $('input[name="AccountSetupnew:BillingSection:Billing:billingForm:parentContactAddressPreference"][value="Different"]').prop('checked', true);
+            } else {
+                $('input[name="AccountSetupnew:BillingSection:Billing:billingForm:parentContactAddressPreference"][value="Same as Account"]').prop('checked', true);
+                document.getElementById("parent_same_contact").style.display = 'block';
+                document.getElementById("parent_different_contact").style.display = 'none';
+
+
+            }
+        }
+
+        function hideAddressFields() {
+            if ($('input[name="AccountSetupnew:BillingSection:Billing:billingForm:billingContactAddressPreferance"][value="Same as Account"]').is(":checked")) {
+                document.getElementById("DifferentAddress").style.display = 'none';
+            }
+        }
+
+
+        function UpdateEmailApplicationField(emailValue) {
+
+            $('.billingSectionTwo').val(emailValue);
+        }
+        
+        
+         $(function() {
+            
+             if ({!$Setup.RWfB_Community__c.Debug_Accordions__c} == true){
+                 ClickableAccordion();   
+             } else {
+                 NonClickableAccordion();
+             }
+        });
+        
+        function ClickableAccordion(){
+            $("#accordion").accordion({
+                
+                icons: false,
+                /* { 
+                       "header": false, 
+                       "activeHeader": false 
+                   },*/
+                heightStyle: "content",
+                /*classes: {
+                  "ui-accordion": "highlight"
+                },*/
+                create: function(event, ui) {
+                    updateWizard();
+                },
+                beforeActivate: function(event, ui) {
+                },
+                activate: function(event, ui) {
+                    var $active = $("#accordion").accordion("option", "active");
+                    updateWizard($active);
+                }
+            });    
+        }
+        
+        
+        function NonClickableAccordion(){
+            $("#accordion").accordion({
+                event: false,
+                icons: false,
+                /* { 
+                       "header": false, 
+                       "activeHeader": false 
+                   },*/
+                heightStyle: "content",
+                /*classes: {
+                  "ui-accordion": "highlight"
+                },*/
+                create: function(event, ui) {
+                    updateWizard();
+                },
+                beforeActivate: function(event, ui) {
+                },
+                activate: function(event, ui) {
+                    var $active = $("#accordion").accordion("option", "active");
+                    updateWizard($active);
+                }
+            });    
+        }
+        
+        </script>
+    </head>
+
+    <body id="body" onload="ChangeAccordion({!tabFocus});" data-accordion="{!tabFocus}">
+        <apex:form >
+            <apex:actionStatus onstart="$('#splashscreen').modal({backdrop: 'static', keyboard: false});" onstop="$('#splashscreen').modal('hide');" id="loadSplashScreen"/>
+            <apex:actionfunction name="handoverProgramId" action="{!populateProgramId}" rerender="" oncomplete="initProgramAndPricebook(newProgramId);">
+                <apex:param name="cpId" id="cpParam" assignTo="{!createdProgramId}" value="programId" />
+            </apex:actionfunction>
+            <apex:actionfunction name="rerenderReview" action="{!populateProgramId}" rerender="reviewProductsPanel" oncomplete="reviewProducts();" />
+            <apex:actionfunction name="rerenderCreditAndBilling" action="{!populateProgramId}" rerender="CredAndBill" />
+        </apex:form>
+        <div class="fluid-container">
+            <c:RWS_HeaderComponent />
+            <!--<div class="row site-content">
+                <div class="form-horizontal form_bg col-sm-12">
+                    <div class="col-sm-12 mrg_btm20">
+                            <h4 class="group_title text-uppercase">Set Up A New Industrial Account for Your Store</h4>
+                         <div class="col-sm-4 col-lg-5 mrg_top15">
+                            <a name="Advanced Setup" class="btn btn-danger btn-outline flt_rgt" href="{!URLSummary}">Advanced Setup</a>
+                        </div> 
+                    </div>
+                </div>
+            </div>-->
+            <div class="row secondary-bg site-content">
+                <div class="col-xs-12 text-center header">
+                    <h1 class="fancy white"><span>Set Up A New Industrial Account for Your Store</span></h1>
+                </div>
+            </div>
+            <c:RWS_Accordion_Wizard />
+            <div class="wrapper row site-content primary-bg">
+                <div class="form-horizontal p-0 col-sm-12">
+                    <div id="accordion">
+                        <!-- ************** Basic Account Info Form ************* -->
+                        <h4>
+                                    Enter Basic Account Details
+                                </h4>
+                        <div>
+                            <c:RWS_Account id="AccountSection" />
+                        </div>
+                        <h4>
+                                    ENTER CONTACT INFORMATION
+                                </h4>
+                        <div>
+                            <apex:pagemessages id="showcontactError"></apex:pagemessages>                         
+                            <div class="panel-body">    
+                                <div class="form-group">
+                                    <label class="form control-label col-xs-3 pad_rgt0">Account Name</label>
+                                    <div class="col-xs-8 pad_top7">                                
+                                        <b><apex:outputText styleClass="form-text" value="{!accountName}"  /></b>
+                                    </div>                            
+                                </div>
+                            </div>
+                                <c:RWS_Contact id="ContactSection" />
+                        </div>
+                        <!-- ************** Credit and Billing Panel ************* -->
+                        <h4>
+                                    Enter Credit and Billing Information
+                                </h4>
+                        <div>
+                            <apex:pagemessages id="showCreditError"></apex:pagemessages>
+                            <div class="panel-body">    
+                                <div class="form-group">
+                                    <label class="form control-label col-xs-3 pad_rgt0">Account Name</label>
+                                    <div class="col-xs-8 pad_top7">                                
+                                        <b><apex:outputText styleClass="form-text" value="{!accountName}"  /></b>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <c:RWS_CreditBilling id="BillingSection" />
+                        </div>
+                        <!-- ************** Create or Assign Purchasing Program Panel ************* -->
+                        <h4>
+                                    Create Or Assign Purchasing Program
+                                </h4>
+                        
+                        
+                        <div>
+                            <apex:pageMessages id="msgs" />
+                            <div class="panel-body">    
+                                <div class="form-group">
+                                    <label class="form control-label col-xs-3 pad_rgt0">Account Name</label>
+                                    <div class="col-xs-8 pad_top7">                                
+                                        <b><apex:outputText styleClass="form-text" value="{!accountName}"  /></b>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <apex:form id="programForm">
+                                <apex:actionfunction name="AddSelectedPgm" action="{!AddProgramToAccount}" onComplete="AddToPgmClick();" status="loadSplashScreen"/>
+                                <!-- ****** Create Or Assign Purchasing Program Choices ***** -->
+                                <div class="hgt15" />
+                                <div class="form-group mrg_btm10">
+                                    <label class="form control-label col-xs-3 pad_rgt0">Program</label>
+                                    <div class="col-xs-8 radio pad_top0">
+                                        <apex:selectRadio id="setupProgram" styleClass="radio_btn pad_btm0" onChange="updateSectionBtn(this)" onselect="updateSectionBtn(this)">
+                                            <apex:selectoption id="create_new" itemLabel="Create a new program" itemValue="Create a new program" />
+                                            <apex:selectoption id="assign_existing" itemLabel="Assign existing program" itemValue="Assign existing program" />
+                                            <apex:selectoption id="sorry_but_iam" itemLabel="Not at this time" itemValue="Not at this time" />
+                                        </apex:selectRadio>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="sorrybut_imnotready">
+                                    <div class="col-sm-3">&nbsp;</div>
+                                    <div class="col-sm-6 txt_center pad_btm20">
+                                        <apex:commandButton value="Back" styleClass="btn btn-danger btn-outline btn-xl mrg_rgt10" onclick="ChangeAccordion(2);updateCreditBillingButton();return false;"/>
+                                        <a id="AddToPgm" class="btn btn-danger btn-xl mrg_rgt10" onClick="AddToPgmClick(); return false;">Save and Submit</a>
+                                    </div>
+                                </div>
+                                <div class="existingProgram brd_top">
+                                   
+                                   
+                                    <script>
+                                    function AddToPgmClick(){
+                                        firedBySave = true;
+                                        window.location='AccountSummary?tab=account&id={!accountId}';
+                                    }
+                                    
+                                    function updateSectionBtn(t){
+                                        $('.saveNewProgramBtn').show();
+                                        if (t.value != "Create a new program"){
+                                        console.log(t.value);                                           
+                                            $('.createProgramBtns').hide();                                            
+                                        } else {
+                                            $('.createProgramBtns').show();
+                                            programFocus();
+                                        }
+                                                                                
+                                    }
+                                    
+                                    function updateContactButton(){
+                                        $('#saveButtonsContact').addClass('dis_none');
+                                        $('#updateButtonsContact').removeClass('dis_none');
+                                    }
+                                    function updateCreditBillingButton(){
+                                        $('.saveBtn').addClass('dis_none');
+                                        $('.updateBtn').removeClass('dis_none');
+                                    }
+                                    function AddTemp() {
+                                        if (($("input[type='checkbox'].check-program").is(':checked')) && ($('input[id="AccountSetupnew:programForm:setupProgram:1"]').is(":checked"))) {
+
+                                            confirmModal('PROGRAM TEMPLATE', 'The Program Template(s) will be added to the Account.', 'AddSelectedPgm();', null, 'Continue');
+
+                                        } else if ($('input[id="AccountSetupnew:programForm:setupProgram:1"]').is(":checked")) {
+                                            confirmModal('PROGRAM TEMPLATE', 'You must select a Program Template to add Program to the Account.', '', null, 'Close');
+                                        }
+
+                                    }
+
+                                    function clearPrograms() {
+                                        $('.check-program').prop('checked', false);
+                                    }
+                                    </script>
+                                    
+                                    
+                                    
+                                    <div class="form-group col-sm-12 pr-0">
+                                        <apex:pageblock >
+                                            <apex:pageblocktable columnClasses="table-striped" styleClass="col-sm-12 display dataTable no-footer pad_top10 pad_btm10 pad_lft10" value="{!ListOfProgramWrap}" var="PgmLst">
+                                                <apex:column styleClass="text-bold" value="{!PgmLst.PgmObj.Name}">
+                                                    <apex:facet name="header">Name</apex:facet>
+                                                </apex:column>
+                                                <apex:column styleClass="text-bold" value="{!PgmLst.PgmObj.Type__c}">
+                                                    <apex:facet name="header">Type</apex:facet>
+                                                </apex:column>
+                                                <apex:column styleClass="text-bold">
+                                                    <apex:facet name="header">Effective Date</apex:facet>
+                                                    <apex:outputText value="{0,date,M/d/yyyy}"> <apex:param value="{!PgmLst.PgmObj.Activation_Date__c}" /> </apex:outputText>
+                                                </apex:column>
+                                                <apex:column styleClass="text-bold" >
+                                                    <apex:facet name="header">Expiration Date</apex:facet>
+                                                    <apex:outputText value="{0,date,M/d/yyyy}"> <apex:param value="{!PgmLst.PgmObj.Expiration_Date__c}" /> </apex:outputText>
+                                                </apex:column>
+                                                <apex:column styleClass="bold" value="{!PgmLst.PgmObj.Program_Notes_Trimmed__c}">
+                                                    <apex:facet name="header">Notes</apex:facet>
+                                                </apex:column>
+                                                <apex:column styleClass="pad_top10 pad_btm10 bold text-center">
+                                                    <apex:facet name="header">
+                                                        <center></center>
+                                                    </apex:facet>
+                                                    <apex:inputCheckbox value="{!PgmLst.Selected}" styleClass="check-program" />
+                                                </apex:column>
+                                            </apex:pageblocktable>
+                                        </apex:pageblock>
+                                    </div>
+                                      
+                                    <div class="col-sm-12 txt_right">
+                                        <apex:commandButton value="Back" styleClass="btn btn-danger btn-outline btn-xl mrg_rgt10" onclick="ChangeAccordion(2);updateCreditBillingButton();return false;"/>
+                                        <button class="btn btn-danger btn-outline" onclick="clearPrograms();return false;">Clear</button>
+                                        <!--<a class="btn btn-danger btn-outline" href="AccountSummary?tab=account&id={!accountId}">Cancel</a>-->
+                                        <button id="AddToPgm" class="btn btn-danger add_to_program" onclick="AddTemp();return false;">Add &amp; Submit</button>
+                                    </div>
+                                </div>
+                                <div class="createNewProgram" id="createNewProgram">
+                                     <c:RWS_StepByStep_Program id="ProgramSection" />
+                                </div>
+                                <div class="row col-xs-10 txt_center createProgramBtns">
+            
+                                        <label class="form control-label col-xs-2 pad_rgt0" for="cl"></label>
+                                        <apex:commandButton value="Back" styleClass="btn btn-danger btn-outline btn-xl mrg_rgt10" onclick="ChangeAccordion(2);updateCreditBillingButton();return false;"/>
+                                    
+                                     <apex:outputPanel styleClass="dis_none saveNewProgramBtn">
+                                        <a id="save-program-validate-form" data-dismiss="modal" class="btn btn-danger btn-xl display_inline set_button_width">Save &amp; Select Products</a>
+                                    </apex:outputPanel>
+                                    
+                                    <div class="row col-xs-11 txt_center ">
+                                        <br/>                                    
+                                    </div>
+                                </div>
+                               
+                                 <apex:outputPanel id="selectProductsPanel">       
+                                <div class="productSelectionSection dis_none col-xs-11">
+                                   <c:RWS_Production_Selection /> 
+                               </div> 
+                               </apex:outputPanel>   
+                            </apex:form>
+                        </div>
+                        <h4 class="product-review-section">
+                                    REVIEW PRODUCTS &amp; SUBMIT
+                        </h4>
+                        
+                            <div>
+                                <apex:outputPanel id="reviewProductsPanel" layout="block">
+                                    <apex:outputPanel rendered="{!NOT(ISNULL(createdProgramId))}">
+                                        <c:RWS_Review_Products recordId="{!createdProgramId}" fLoad="true" id="ReviewProductsSection" />
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                            </div>    
+                        
+                    </div>
+                </div>
+            </div>
+            <c:RWS_Modals />
+            <c:RWS_Footer />
+        </div>
+        <!-- (MU) Added to modify inputs -->
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/bootstrap.min.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/jquery-ui-1.12.1/jquery-ui.min.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/jquery.maskedinput.min.js')}"></script>
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/logout.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquerydataTables.js')}" />
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/back_next.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/modal.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/attachments.js')}"></script>
+
+        <script type="text/javascript">
+               
+        $(document).ready(function() {
+            $(".mask-phone").mask("(999) 999-9999");
+            
+            
+            
+            document.getElementById("AccountSetupnew:AccountSection:Account:accountForm:name").focus();        
+        });
+         
+        function NumbersOnly(e) {
+            var AllowableCharacters='1234567890';
+            var i = document.all?parseInt(e.keyCode): parseInt(e.which);
+            if (i!=13 && i!=8 && i!=0){
+                if ((e.ctrlKey==false) && (e.altKey==false)) {
+                return (AllowableCharacters.indexOf(String.fromCharCode(i))!=-1);
+                } else {
+                return true;
+                }
+            } else {
+                return true;
+            }
+        } 
+        
+        function ClosePopUp() {
+            //FileUploadError
+            $("#FileUploadError").hide();
+        }
+        
+        function programFocus(){
+             document.getElementById("AccountSetupnew:programForm:ProgramSection:Program:programType").focus();   
+        }
+        
+        window.onbeforeunload = function (e){
+            if(firedBySave == false)
+                return 'Are you sure you want to leave the page without Saving?';
+        }; 
+        
+        </script>
+        <script type="text/javascript">
+        var __sfdcSessionId = '{!GETSESSIONID()}';
+        </script>
+        <script src="../../soap/ajax/19.0/connection.js" type="text/javascript"></script>
+    </body>
+
+    </html>
+</apex:page>

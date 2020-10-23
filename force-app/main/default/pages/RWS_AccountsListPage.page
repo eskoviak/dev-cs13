@@ -1,0 +1,417 @@
+<apex:page controller="RWS_AccountHomeController"
+           showHeader="false" sidebar="false"
+           applyBodyTag="false" applyHtmlTag="false"
+           standardStylesheets="false"
+           id="RWS_AccountsListPage">
+   
+  <html lang="en">
+    <head>
+        <c:HeadTagComponent />
+        <apex:includeScript value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquerydataTables.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/logout.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/bootstrap.min.js')}"/>
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/popup.css')}" rel="stylesheet" />
+		<script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/back_next.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/modal.js')}"></script>
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/additional-methods.min.js')}" />
+        
+
+        <style>
+                .dataTables_filter {
+                    display: none;
+                }
+                .search-form-control-feedback {
+                    padding-left:45px;                    
+                    position: absolute;
+                    top: -3px;
+                    left: 0;
+                    z-index: 5;
+                    display: block;
+                    width: 34px;
+                    height: 30px;
+                    line-height: 34px;
+                    text-align: center;
+                    pointer-events: none;
+                    color: rgb(204, 204, 204);
+                    margin-right: 1.5rem;
+                }
+                .search-has-feedback {
+                    position: relative;
+                    padding-right: 36px;
+                    border-radius: 10px;
+                    height: 30px;
+                    z-index: 3;
+                }
+                select.form-control.solutionLine,
+                select.form-control.solutionLine option {
+                    max-width: 300px;
+                    height: 30px;
+                }
+                
+                 .btn-dropdown {
+                    color: black;
+                    background-color: #fff;
+                    position: relative;
+                    z-index: 4;                    
+                }
+                
+                 .btn-dropdown:focus {
+                    border-color: white !important;
+                    outline: none !important;
+                    -webkit-box-shadow: none !important;
+                    box-shadow: none !important;
+                }
+                
+                .drop-radio {
+                  margin: 0px 16px;
+                }
+                
+                .drop-radio td {
+                  width: 19%;
+                }
+                
+                
+                
+                .drop-radio label {
+                  float: none;
+                  display: inline-block;
+                  font-size: 12px;
+                  padding-left: 5px !important;
+                  padding-top: 6px !important;
+                }
+                
+                
+               
+               .search-position {
+                    padding-left: 15px !important;
+                    position: absolute;
+                    top: 5px;
+                    left: 0;                                        
+                    width: 34px;
+                    height: 30px;
+                    line-height: 34px;
+                    text-align: center;            
+                    margin-right: 1.5rem;
+                } 
+                
+                
+                .dropdown-menu {
+                    position: absolute;
+                    top: 53% !important;
+                    left: 15px;
+                    z-index: 2;
+                    display: none;
+                    float: left;
+                    min-width: 160px;
+                    padding: 5px 0;
+                    margin: 0px 0 0;
+                    font-size: 14px;
+                    text-align: left;
+                    list-style: none;
+                    background-color: #fff;
+                    -webkit-background-clip: padding-box;
+                    background-clip: padding-box;
+                    border: 1px solid white;
+                    border: 1px solid white;
+                    border-radius: 4px;
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+                    box-shadow: 0 6px 12px rgba(0,0,0,.175); box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)
+                }
+          
+        </style>
+       
+    </head>
+    <body class="accounts">
+    <div class="fluid-container">
+      <c:RWS_HeaderComponent />
+        <apex:form id="accountListForm">
+            <apex:actionStatus onstart="$('#splashscreen').modal({backdrop: 'static', keyboard: false});" onstop="$('#splashscreen').modal('hide');" id="loadSplashScreen"/>
+            
+            <apex:actionFunction action="{!getAccounts}" name="searchAccountsFromSF" reRender="details" oncomplete="loadData('{!jsonResult}');" status="loadSplashScreen"/>
+                       
+                <apex:actionFunction action="{!getAccounts}" name="getAccounts" reRender="details" oncomplete="loadData('{!jsonResult}');" />
+                <apex:actionFunction action="{!setQueryListView}" name="setListViewQuery" oncomplete="getAccounts();" reRender="details" />
+                <apex:actionFunction action="{!setQuerySearch}" name="setSearchQuery" reRender="details" oncomplete="searchAccountsFromSF()" status="loadSplashScreen">
+                    <apex:param name="p1" assignTo="{!searchTerm}" value="" />
+                </apex:actionFunction>
+
+
+            <apex:pageBlock > 
+            
+            <div class="wrapper row site-content">
+                         <div class="form-horizontal form_bg col-sm-12">
+                             <div class="row summary-header">
+                                 <div class="col-sm-12">
+                                    <div class="col-sm-3">&nbsp;</div>
+                                    <div class="col-sm-6 pad_lft0">
+                                        <h2 class=" text-uppercase fancy white"><span>Account List</span></h2> 
+                                    </div>                                    
+                                    <div class="col-sm-3 txt_right">
+                                        <apex:outputPanel rendered="{!isFullAccessUser}">
+                                            <a id="newAccount"  class="btn btn-danger mrg_top20 mrg_btm20 mrg_rgt0" onClick="resetAttachmentSessionVar(); window.location='RWS_Account_CreationV2?tab=account'; return false;">New Account</a> 
+                                        </apex:outputPanel>
+                                        <apex:outputPanel rendered="{!!isFullAccessUser}">
+                                            <span id="newAccountDisabled"  class="btn btn-danger btn-outline disabled mrg_top20 mrg_btm20 mrg_rgt0 ">New Account</span>
+                                        </apex:outputPanel>                                       
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="row">
+                                 <div class="col-sm-12 pannel_bg">
+                                    <div class="col-sm-6">
+                                        <apex:selectList styleClass="solutionLine form-control my-1" value="{!selectedAccountView}" size="1" multiselect="false" onchange="setListViewQuery();" >
+                                            <!-- <apex:actionSupport event="onchange" action="{!getAccounts}" reRender="details" oncomplete="loadData('{!jsonResult}');" /> -->
+                                            <apex:selectOptions value="{!accountViews}" />
+                                        </apex:selectList>
+                                    </div> 
+                                        <!-- this needs to be commented out for now, see story RWCP-912 -->
+                                        <!-- <div class="flt_lft mrg_top15 editMenu">
+                                            <a href="#">Edit</a><a href="#">|</a>
+                                            <a href="#">Delete</a><a href="#">|</a>
+                                            <a href="#">Create New View</a> 
+                                        </div> -->
+                                    <div id="searchDiv" class="col-xs-6 col-md-offset-3 col-md-3 my-1 text-right">                                       
+                                           <input id="accSearchBox" name="accSearchBox" class="form-control search-has-feedback pad_lft50 account-search-box" placeholder="Search Active Only" type="text" onkeyup="onEnter(event, this.value);"/>
+                                           <div class="search-position">                                           
+                                               <button id="searchDropdownBtn" class="btn btn-dropdown dropdown-toggle" type="button" data-toggle="dropdown"><span class="caret"></span></button>
+                                               <ul id="searchDropdown" class="dropdown-menu">
+                                                   <apex:selectRadio id="accSearchRadio" layout="pageDirection" styleClass="drop-radio" value="{!searchBoxFilter}" onChange="setPlaceholder(this);">
+                                                       <li><apex:selectOption itemValue="active" itemLabel="Active Accounts Only" html-class=""/></li> 
+                                                       <li><apex:selectOption itemValue="myStore" itemLabel="My Store Accounts" html-class="" /></li>
+                                                       <li><apex:selectOption itemValue="all" itemLabel="All Accounts" html-class=""/></li>                                                            
+                                                  </apex:selectRadio>  
+                                              </ul>                                          
+                                          </div>
+                                        <span class="glyphicon glyphicon-search search-form-control-feedback"></span>
+                                    </div>
+                                </div>
+                             </div>
+                             <script>
+                                function onEnter(e, t){
+                                    if(e.keyCode === 13) {
+                                        searchAccounts(t);
+                                    }
+                                }
+                             
+                                function setPlaceholder(t) {
+                                    if (t.value == "active"){
+                                         $('.account-search-box').attr('placeholder','Search Active Only');
+                                    } else if (t.value == "all") {    
+                                         $('.account-search-box').attr('placeholder','Search All');
+                                    } else if (t.value == "myStore") {    
+                                         $('.account-search-box').attr('placeholder','Search My Store');
+                                    } 
+                                }
+                                function resetAttachmentSessionVar() {
+                                    sessionStorage.removeItem('disableAttachment');
+                                }
+                             
+                             </script>                             
+                             <apex:outputPanel id="detail">
+                                 <div class="row">
+                                     <div class="col-sm-12 mrg_btm20">  
+                                         <table id="device-grid-list" class="display" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th><span class="glyphicon glyphicon-sort"></span> Name</th>
+                                                    <th><span class="glyphicon glyphicon-sort"></span> Location</th>
+                                                    <th><span class="glyphicon glyphicon-sort"></span> Account #</th>
+                                                    <th><span class="glyphicon glyphicon-sort"></span> Account Status</th>
+                                                    <th><span class="glyphicon glyphicon-sort"></span> Programs</th>
+                                                    <th><span class="glyphicon glyphicon-sort"></span> Credit Status</th>
+                                                    <th><span class="glyphicon glyphicon-sort"></span> Account Alerts</th>                       
+                                                    <th><span class="glyphicon glyphicon-sort"></span> Owning Store</th>                                                    
+                                                    
+                                                </tr>
+                                            </thead> 
+                                         </table>
+                                     </div>
+                                 </div>
+                             </apex:outputPanel>
+                         </div>
+            </div>
+            
+		            
+					<!-- Default bootstrap modal -->
+			<div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			     <div class="modal-header ">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h3 class="modal-title" id="myModalLabel" >RWBAA AR Data</h3>
+			      </div>
+			      <div class="modal-body">
+			        ...
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+            </apex:pageBlock>
+        
+        </apex:form>
+      <c:RWS_Footer />
+    </div>
+    <script>
+        var timedFunction;
+        function searchAccounts(searchValue) {
+            
+            
+            if(timedFunction) clearTimeout(timedFunction);
+
+            if(searchValue == '' || searchValue.length < 2) return;
+            
+            setSearchQuery(searchValue);
+            
+            //moved this to above actionfunction oncomplete for uninterrupted process indicator - BW
+            /*timedFunction = setTimeout(function(){ 
+                     
+                    searchAccountsFromSF(); 
+                }, 
+            1000);*/
+            
+        }
+    
+        /*
+        function searchAccounts(searchValue) {
+            var dataTable = $('#device-grid-list').dataTable();
+            
+            dataTable.fnFilter(searchValue);
+            
+        } 
+        */
+    
+    function loadData(json)
+    {
+        //alert('data load');
+        var jsonData = $.parseJSON(json);
+        console.log('jsondata:' + jsonData);
+        
+        $("#device-grid-list").dataTable().fnDestroy();
+        table = $('#device-grid-list').DataTable({
+            "data": jsonData,
+            "columns": [
+               
+                /*{ 
+                 "data": "URLSummary",
+                 "render": function ( data, type, row ) {
+                      return '<a name="Summery"  href="'+data+'" >View</a>';
+                 }
+                },*/
+                { 
+                 "data": "AccObj.Name",
+                 "render": function ( data, type, row ) {
+                      return '<a class="rw-dark-red"  href="'+row.URLSummary+'" >'+ checkEmptyData(data) +'</a>';
+                 }
+                },
+                { 
+                 "data": "Location",
+                 "render": function ( data, type, row ) {
+                      return checkEmptyData(data);
+                 }
+                },
+                /* { 
+                 "data": "AccObj.Activation_Date__c",
+                 "render": function ( data, type, row ) {
+                      return checkEmptyData(data);
+                 }
+                },*/                               
+                { 
+                 "data": "AccObj.Account_Number_BPC__c",
+                 "render": function ( data, type, row ) {
+                     return checkEmptyData(data);
+                 }
+                },
+                {
+                 "data": "Active",
+                 "render": function ( data, type, row ) {
+                     return checkEmptyData(data);
+                 }
+                },                
+                {
+                 "data": "NoOfPrograms",
+                  "render": function ( data, type, row ) {
+                      return checkEmptyData(data);
+                 }
+                },
+                { 
+                 "data": "AccObj.Credit_Status__c",
+                 "render": function ( data, type, row ) {
+                     return checkEmptyData(data);
+                 }
+                },                
+                { 
+                 "data": "AccountAlertSize",
+                 "render": function ( data, type, row ) {   
+                 	var styledAlertData = '';
+	                 	if(checkEmptyData(data) > 0)
+	                 	{
+		                 	for(var key in row.AccountAlerts)
+		                 	{
+		                 		var value = row.AccountAlerts[key];
+		                 		styledAlertData += '<b style="background-color:'+checkEmptyData(value)+' ;padding: 4px;border-style: solid;border-color: gray;font-weight: 900;color:black">'+ checkEmptyData(key) +'</b> &nbsp;';
+		                 	}  
+		                 return '<a href="'+row.URLAccountAlert+'" data-toggle="modal" data-target="#myModal" data-remote="false" class="btn">' + styledAlertData +' </a>';
+	                 	}
+	                 	return styledAlertData;
+					}
+                },
+                {
+                 "data": "AccObj.Owning_Store__c",
+                 "render": function ( data, type, row ) {
+                     return checkEmptyData(data);
+                 }
+                }  
+                
+                
+            ],
+            "order": [[1, 'asc']]
+        } );
+        
+    }
+
+
+    $(document).ready( function () 
+    {
+    
+        $(window).keydown(function(event){
+            if(event.keyCode == 13) {
+              event.preventDefault();
+              return false;
+            }
+        });
+
+        loadData('{!jsonResult}');
+    });
+
+    
+    function checkEmptyData(data){
+        var dataValue = '&mdash;' ;
+        if(data!=null){
+            dataValue = data;
+        } 
+        return dataValue;
+        
+    }
+    
+    /*NEW */
+    
+		// Fill modal with content from link href
+		$("#myModal").on("show.bs.modal", function(e) {
+		    var link = $(e.relatedTarget);
+		    $(this).find(".modal-body").load(link.attr("href"));
+		});   
+		
+		//Clear modal body on close
+		$(".modal").on("hidden.bs.modal", function(){
+		    $(".modal-body").html("");
+		});   
+    </script>
+     <c:RWS_Modals />
+    </body>
+</html>
+</apex:page>

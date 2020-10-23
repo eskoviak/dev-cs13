@@ -1,0 +1,916 @@
+<apex:page id="AdvancedProgramSetup" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false" docType="html-5.0" controller="RWS_ProgramSetUpController">
+    <!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
+    <html lang="en">
+<head>
+<c:RWS_HeaderComponent />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/bootstrap.min.css')}"    rel="stylesheet" />
+<link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/font-awesome.css')}"    rel="stylesheet" />
+<link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/styles.css')}"    rel="stylesheet" />
+<link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/inputs.css')}"    rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/back_next.js')}"></script>
+<script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/validation.js')}"></script>
+
+   
+</head>
+<body>
+    <apex:form id="MyProgram">
+        <div class="wrapper row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="form-horizontal form_bg col-sm-12">
+
+                        <div class="col-sm-12 mrg_btm20">
+                            <div class="flt_lft cursor pad_rgt0">
+                                <i aria-hidden="true" class="fa fa-fw group_icon" title="Copy to use group"></i>
+                            </div>
+                            <div class="col-sm-6 pad_lft0">
+                                <h4 class="group_title text-uppercase">
+                                    <apex:outputText value=""/><br /> <span class="clr_blk">CREATE
+                                        A PURCHASING PROGRAM</span>
+                                </h4>
+                            </div>
+                            <div class="col-sm-5 txt_right mrg_top15">
+                                <span class="mrg_rgt10 cursor c_back rw-grey">&lt;</span><span
+                                    class="mrg_rgt10 cursor c_back rw-grey">Back</span> <span
+                                    class="mrg_rgt10 rw-grey">|</span> <span
+                                    class="mrg_rgt10 cursor c_next clr_blk">Advanced Setup</span> 
+                                    <i class="fa fa-fw cursor gears_icon" aria-hidden="true" title="Copy to use gears"></i>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="summary_section_2 col-sm-12 mini_text_padder pheader">
+                            <div class="col-sm-3">
+                                <h4 class="uppercase">ENTER ACCOUNT INFORMATION</h4>
+                            </div>
+                            <div class="col-sm-3 icon_padding txt_right flt_rgt">
+                                <a href="#" class="save_cancel"> <span class="">Save</span>
+                                    <i class="fa fa-fw save_icon" aria-hidden="true" title="Copy to use save"></i>
+                                </a>
+                            </div>                            
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="col-sm-12 clr_gry rw-grey fnt15 mrg_btm15 pad_lft0 mrg_top10">
+                                <span class="pad_all0 pad_lft20 mrg_lft20">All questions must be answered unless marked (Optional).</span>                                            
+                            </div>
+                            <div class="col-sm-12 brd_btm txt_center">
+                                <h4 class="section-title clr_blk text-uppercase">Company Name &#38; Address </h4>
+                            </div>
+                            <div class="col-sm-12 mrg_top20 brd_btm">
+                                <div class="form-group col-sm-6">
+                                   <label class="form control-label col-xs-3 pad_rgt0">Company Name</label>
+                                   <div class="col-xs-8">
+                                       <input class="form-control" id="" type="text" />
+                                   </div>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label class="form control-label col-xs-3 pad_rgt0">Company Phone &#35;</label>
+                                   <div class="col-xs-8">
+                                       <input class="form-control phone_number_validation" type="phone" id="" />
+                                   </div>
+                                    <label class="col-xs-3"></label>
+                                    <div class="col-xs-8">                                      
+                                        <p class="req_phone rw-dark-red">Please enter phone number</p>
+                                        <p class="regx_phone rw-dark-red">Please enter a valid phone number</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-12 mrg_top20 mrg_btm20 pad_btm20">
+                                <div class="form-group col-sm-6">
+                                   <label class="form control-label col-xs-3 pad_rgt0">Street Address</label>
+                                   <div class="col-xs-8">
+                                       <input class="form-control" id="" type="text" />
+                                   </div>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label class="form control-label col-xs-3 pad_rgt0">City</label>
+                                   <div class="col-xs-8">
+                                       <input class="form-control" id="" type="text" />
+                                   </div>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label class="form control-label col-xs-3 pad_rgt0">State &#47; Province</label>
+                                   <div class="col-xs-8"><select class="form-control" size="1">    
+                                            <option>CA</option>                                           
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label class="form control-label col-xs-3 pad_rgt0">Zip &#47; Postal Code</label>
+                                   <div class="col-xs-8">
+                                       <input class="form-control" id="" type="text" />
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mrg_top20">
+                                <div class="col-sm-12 brd_btm txt_center">
+                                    <h4 class="section-title clr_blk text-uppercase">Tax Information &#38; Exemptions </h4>
+                                </div>
+                                <div class="col-sm-12 pad_top15">
+                                    <div class="form-group col-sm-6">    
+                                        <label class="form control-label col-xs-3 pad_rgt0">Tax Exempt</label>
+                                        <div class="col-xs-8 radio pad_top0">
+                                             <div class="radio flt_lft mrg_rgt20">
+                                               <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid expt" id="inst" name="contact_add" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Exempt</a>
+                                               </label>
+                                             </div>                                              
+                                              <div class="radio flt_lft mrg_lft20">
+                                               <label class="pad_btm0"><input class="big rad_tax_wid expt" id=" inst_diff" name="contact_add" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Not Exempt</a>
+                                               </label>
+                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label class="form control-label col-xs-3 pad_rgt0">Certificate #</label>
+                                        <div class="col-xs-8"><input id="" type="text" class="form-control txt_certificate flt_lft" />                                                
+                                            <i aria-hidden="true" class="fa fa-fw pad_lft10 pad_top5 gears_icon" title="Copy to use upload"></i>
+                                            <span class="rw-dark-red pad_lft10 rw-dark-red">Upload Certificate</span>
+                                        </div> 
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label class="form control-label col-xs-3 pad_rgt0" for="ex_date">Expiration Date</label>
+                                        <div class="col-xs-8">
+                                            <input class="form-control" id="ex_date" type="date" value=""/>
+                                        </div> 
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label class="form control-label col-xs-3 pad_rgt0">Exemption Reason</label>
+                                        <div class="col-xs-8"><select class="form-control" size="1">    
+                                            <option>CA &#45; Towing</option>                                         
+                                        </select>
+                                        </div>   
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 pad_top15 brd_top inst">
+                                    <div class="form-group col-sm-6">    
+                                        <label class="form control-label col-xs-3 pad_rgt0">Industrial Account</label>
+                                        <div class="col-xs-8 radio pad_top0">
+                                             <div class="radio flt_lft mrg_rgt20">
+                                               <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid inst" id="" name="indstral" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Allowed</a>
+                                               </label>
+                                             </div>                                              
+                                              <div class="radio flt_lft mrg_lft20">
+                                               <label class="pad_btm0"><input class="big rad_tax_wid inst" id="" name="indstral" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Not Allowed</a>
+                                               </label>
+                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">    
+                                        <label class="form control-label col-xs-3 pad_rgt0">National Account</label>
+                                        <div class="col-xs-8 radio pad_top0">
+                                             <div class="radio flt_lft mrg_rgt20">
+                                               <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid nat" id="" name="nat" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Allowed</a>
+                                               </label>
+                                             </div>                                              
+                                              <div class="radio flt_lft mrg_lft20">
+                                               <label class="pad_btm0"><input class="big rad_tax_wid nat" id="" name="nat" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Not Allowed</a>
+                                               </label>
+                                             </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group col-sm-6">    
+                                        <label class="form control-label col-xs-3 pad_rgt0">City Exempt</label>
+                                        <div class="col-xs-8 radio pad_top0">
+                                             <div class="radio flt_lft mrg_rgt20">
+                                               <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid cityal" id="" name="city" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Allowed</a>
+                                               </label>
+                                             </div>                                              
+                                              <div class="radio flt_lft mrg_lft20">
+                                               <label class="pad_btm0"><input class="big rad_tax_wid cityal" id="" name="city" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Not Allowed</a>
+                                               </label>
+                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">    
+                                        <label class="form control-label col-xs-3 pad_rgt0">State Exempt</label>
+                                        <div class="col-xs-8 radio pad_top0">
+                                             <div class="radio flt_lft mrg_rgt20">
+                                               <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid state" id="" name="state" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Allowed</a>
+                                               </label>
+                                             </div>                                              
+                                              <div class="radio flt_lft mrg_lft20">
+                                               <label class="pad_btm0"><input class="big rad_tax_wid state" id="" name="state" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Not Allowed</a>
+                                               </label>
+                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">    
+                                        <label class="form control-label col-xs-3 pad_rgt0">Couty Exempt</label>
+                                        <div class="col-xs-8 radio pad_top0">
+                                             <div class="radio flt_lft mrg_rgt20">
+                                               <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid county" id="" name="county" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Allowed</a>
+                                               </label>
+                                             </div>                                              
+                                              <div class="radio flt_lft mrg_lft20">
+                                               <label class="pad_btm0"><input class="big rad_tax_wid county" id="" name="county" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Not Allowed</a>
+                                               </label>
+                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">    
+                                        <label class="form control-label col-xs-3 pad_rgt0">Country Exempt</label>
+                                        <div class="col-xs-8 radio pad_top0">
+                                             <div class="radio flt_lft mrg_rgt20">
+                                               <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid contry" id="" name="contry" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Allowed</a>
+                                               </label>
+                                             </div>                                              
+                                              <div class="radio flt_lft mrg_lft20">
+                                               <label class="pad_btm0"><input class="big rad_tax_wid contry" id="" name="contry" type="radio"/>
+                                                   <a class="options_tax mrg_lft5 fnt15">Not Allowed</a>
+                                               </label>
+                                             </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            
+                            </div>
+                            
+                            
+                            
+                        </div>
+                        <div class="summary_section_2 col-sm-12 mini_text_padder pheader">
+                            <div class="col-sm-3">
+                                <h4 class="uppercase">ENTER CONTACT INFORMATION</h4>
+                            </div>
+                            <div class="col-sm-3 icon_padding txt_right flt_rgt">
+                                <a href="#" class="save_cancel"> <span class="">Save</span>
+                                    <i class="fa fa-fw save_icon" aria-hidden="true" title="Copy to use save"></i>
+                                </a> 
+                            </div>                            
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="col-sm-12 clr_gry rw-grey fnt15 mrg_btm15 pad_lft0 mrg_top10">
+                                <span class="pad_all0 pad_lft20 mrg_lft20">All questions must be answered unless marked (Optional).</span>                                            
+                            </div>
+                            <div class="col-sm-12 brd_btm txt_center">
+                                <h4 class="section-title clr_blk">ACCOUNT CONTACT
+                                <a class="navx pull-right fnt15"> Add More
+                                    <i aria-hidden="true" class="fa fa-fw fnt18" title="Copy to use plus"></i>
+                                </a></h4>
+                            </div>
+                            <div class="col-sm-12 mrg_top20">
+                                <div class="form-group col-sm-6">
+                                   <label class="form control-label col-xs-3 pad_rgt0">First Name</label>
+                                   <div class="col-xs-8">
+                                       <input class="form-control" id="" type="text" />
+                                   </div>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label class="form control-label col-xs-3 pad_rgt0">Last Name</label>
+                                   <div class="col-xs-8">
+                                       <input class="form-control" id="" type="text" />
+                                   </div>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label class="form control-label col-xs-3 pad_rgt0">Email</label>
+                                   <div class="col-xs-8">
+                                       <input class="form-control acc_email" id="" type="text" />
+                                   </div>
+                                   <label class="col-xs-3"></label>
+                                    <div class="col-xs-8">                                      
+                                        <p class="rw-dark-red reqemail">Please enter email id</p>
+                                        <p class="rw-dark-red validation">Please enter a valid email id</p>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label class="form control-label col-xs-3 pad_rgt0">Company Phone &#35;</label>
+                                   <div class="col-xs-8">
+                                       <input class="form-control phone_number_validation1" id="" type="text" />
+                                   </div>
+                                    <label class="col-xs-3"></label>
+                                    <div class="col-xs-8">                                      
+                                        <p class="req_phone1 rw-dark-red">Please enter phone number</p>
+                                        <p class="regx_phone1 rw-dark-red">Please enter a valid phone number</p>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-6">    
+                                    <label class="form control-label col-xs-3 pad_rgt0">Contact Address</label>
+                                    <div class="col-xs-8 radio pad_top0">
+                                         <div class="radio flt_lft mrg_rgt20">
+                                           <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid contactAD" id="contact_AD" name="contactAD" type="radio"/>
+                                               <a class="options_tax mrg_lft5 fnt15">Same as Account</a>
+                                           </label>
+                                         </div>                                              
+                                          <div class="radio flt_lft mrg_lft20">
+                                           <label class="pad_btm0"><input class="big rad_tax_wid contactAD" id=" contact_Diff" name="contactAD" type="radio"/>
+                                               <a class="options_tax mrg_lft5 fnt15">Different</a>
+                                           </label>
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-12 mrg_all0">&nbsp;</div>
+                                <div class="P_sameasAcccount">
+                                    <div class="form-group col-sm-6">
+                                        <label class="form control-label col-xs-3 pad_rgt0"></label>
+                                        <div class="col-xs-8">123 West 12th Street, Suite 123<br/> Los Angeles CA 90012</div>
+                                    </div>
+                                    <div class="form-group col-sm-12"></div>
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">Role</label>
+                                       <div class="col-xs-8"><select class="form-control" size="1">    
+                                                <option>Primary Contact</option>                                           
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label class="form control-label col-xs-3 pad_rgt0">Title</label>
+                                        <div class="col-xs-8">
+                                           <input class="form-control" id="" type="text" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 clear"></div>
+                                <div class="P_differnt">
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">Street Address</label>
+                                       <div class="col-xs-8">
+                                           <input class="form-control" id="" type="text" />
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">City</label>
+                                       <div class="col-xs-8">
+                                           <input class="form-control" id="" type="text" />
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">State &#47; Province</label>
+                                       <div class="col-xs-8"><select class="form-control" size="1">    
+                                                <option>CA</option>                                           
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">Zip &#47; Postal Code</label>
+                                       <div class="col-xs-8">
+                                           <input class="form-control" id="" type="text" />
+                                       </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm-12">                             
+                                    <h4 class="section-title clr_blk flt_lft">ACCOUNT CONTACT</h4>
+                                    <div class="flt_rgt mrg_top10 col-sm-3 pad_rgt0">
+                                        <input type="search" class="search_box" placeholder="Search all store accounts" aria-controls="device-grid-list"/>
+                                         <span class="glyphicon glyphicon-search search_icons mysearch"></span>
+                                     </div> 
+                                </div>
+                                <div class="col-sm-12 mrg_btm20">  
+                                     <table id="device-grid-list" class="mytable display" cellspacing="0" width="100%" border="0">
+                                        <thead>
+                                            <tr>
+                                                <th class="brg_btm brd_top pad_btm15 pad_top10">Name</th>                                            
+                                                <th class="brg_btm brd_top">Email</th>
+                                                <th class="brg_btm brd_top">Phone</th>
+                                                <th class="brg_btm brd_top">Role</th>
+                                                <th class="brg_btm brd_top">Title</th>
+                                            </tr>
+                                        </thead> 
+                                        <tbody>
+                                            <tr>
+                                                <td><a>James Diggman</a></td>
+                                                <td><a>Baskaran.kasi@mindtree.com</a></td>
+                                                <td><a>123&#45;456&#45;7890</a></td>
+                                                <td><a>Primary...</a></td>
+                                                <td><a>Assistant Store...</a> <i class="fa fa-fw rw-silver" aria-hidden="true" title="Copy to use edit"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>James Diggman</a></td>
+                                                <td><a>Baskaran.kasi@mindtree.com</a></td>
+                                                <td><a>123&#45;456&#45;7890</a></td>
+                                                <td><a>Primary...</a></td>
+                                                <td><a>Assistant Store...</a> <i class="fa fa-fw rw-silver" aria-hidden="true" title="Copy to use edit"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>James Diggman</a></td>
+                                                <td><a>Baskaran.kasi@mindtree.com</a></td>
+                                                <td><a>123&#45;456&#45;7890</a></td>
+                                                <td><a>Primary...</a></td>
+                                                <td><a>Assistant Store...</a> <i class="fa fa-fw rw-silver" aria-hidden="true" title="Copy to use edit"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>James Diggman</a></td>
+                                                <td><a>Baskaran.kasi@mindtree.com</a></td>
+                                                <td><a>123&#45;456&#45;7890</a></td>
+                                                <td><a>Primary...</a></td>
+                                                <td><a>Assistant Store...</a> <i class="fa fa-fw rw-silver" aria-hidden="true" title="Copy to use edit"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>James Diggman</a></td>
+                                                <td><a>Baskaran.kasi@mindtree.com</a></td>
+                                                <td><a>123&#45;456&#45;7890</a></td>
+                                                <td><a>Primary...</a></td>
+                                                <td><a>Assistant Store...</a> <i class="fa fa-fw rw-silver" aria-hidden="true" title="Copy to use edit"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>James Diggman</a></td>
+                                                <td><a>Baskaran.kasi@mindtree.com</a></td>
+                                                <td><a>123&#45;456&#45;7890</a></td>
+                                                <td><a>Primary...</a></td>
+                                                <td><a>Assistant Store...</a> <i class="fa fa-fw rw-silver" aria-hidden="true" title="Copy to use edit"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>James Diggman</a></td>
+                                                <td><a>Baskaran.kasi@mindtree.com</a></td>
+                                                <td><a>123&#45;456&#45;7890</a></td>
+                                                <td><a>Primary...</a></td>
+                                                <td><a>Assistant Store...</a> <i class="fa fa-fw rw-silver" aria-hidden="true" title="Copy to use edit"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>James Diggman</a></td>
+                                                <td><a>Baskaran.kasi@mindtree.com</a></td>
+                                                <td><a>123&#45;456&#45;7890</a></td>
+                                                <td><a>Primary...</a></td>
+                                                <td><a>Assistant Store...</a> <i class="fa fa-fw rw-silver" aria-hidden="true" title="Copy to use edit"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="brd_btm"><a>James Diggman</a></td>
+                                                <td class="brd_btm"><a>Baskaran.kasi@mindtree.com</a></td>
+                                                <td class="brd_btm"><a>123&#45;456&#45;7890</a></td>
+                                                <td class="brd_btm"><a>Primary...</a></td>
+                                                <td class="brd_btm"><a>Assistant Store...</a> <i class="fa fa-fw rw-silver" aria-hidden="true" title="Copy to use edit"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="summary_section_2 col-sm-12 mini_text_padder pheader">
+                            <div class="col-sm-3">
+                                <h4 class="uppercase">ENTER CREDIT &#38; BILLING INFORMATION</h4>
+                            </div>
+                            <div class="col-sm-3 icon_padding txt_right flt_rgt">
+                                <a href="#" class="save_cancel"> <span class="">Save</span>
+                                    <i class="fa fa-fw save_icon" aria-hidden="true" title="Copy to use save"></i>
+                                </a>  
+                            </div>                            
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="col-sm-12 clr_gry rw-grey fnt15 mrg_btm15 pad_lft0 mrg_top10">
+                                <span class="pad_all0 pad_lft20 mrg_lft20">All questions must be answered unless marked (Optional).</span>                                            
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group col-sm-6">
+                                    <label class="form control-label col-xs-3 pad_rgt0"></label>
+                                    <h4 class="clr_blk col-xs-8 mrg_btm0 pad_btm0">Does your account require invoicing?</h4>
+                                </div>
+                                <div class="col-sm-12"></div>
+                                <div class="form-group col-sm-6">    
+                                    <label class="form control-label col-xs-3 pad_rgt0">Requires Invoicing</label>
+                                    <div class="col-xs-8 radio pad_top0">
+                                         <div class="radio flt_lft mrg_rgt20">
+                                           <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid invoice_yes" id="yes_incoie" name="invoice_yes" type="radio"/>
+                                               <a class="options_tax mrg_lft5 fnt15">Yes &#45; Invoicing Required</a>
+                                           </label>
+                                         </div>                                              
+                                          <div class="radio flt_lft mrg_lft20">
+                                           <label class="pad_btm0"><input class="big rad_tax_wid invoice_yes" id=" no_incoie" name="invoice_yes" type="radio"/>
+                                               <a class="options_tax mrg_lft5 fnt15">No</a>
+                                           </label>
+                                         </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-12 brd_btm txt_center brd_top pad_top5 pad_btm5">
+                                    <h4 class="section-title clr_blk">BILLING CONTACT</h4>
+                                </div>
+                                <div class="form-group col-sm-6 mrg_top20">    
+                                    <label class="form control-label col-xs-3 pad_rgt0">Same as Primary</label>
+                                    <div class="col-xs-8 radio pad_top0">
+                                         <div class="radio flt_lft mrg_rgt20">
+                                           <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid sameContact" id="sameContactid" name="sameContact" type="radio"/>
+                                               <a class="options_tax mrg_lft5 fnt15">Same Contact</a>
+                                           </label>
+                                         </div>                                              
+                                          <div class="radio flt_lft mrg_lft20">
+                                           <label class="pad_btm0"><input class="big rad_tax_wid sameContact" id=" DifsameContactid" name="sameContact" type="radio"/>
+                                               <a class="options_tax mrg_lft5 fnt15">Different</a>
+                                           </label>
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 clear"></div>
+                                <div class="billing_same_contact form-group col-sm-6">
+                                    <label class="form control-label col-xs-3 pad_rgt0"></label>
+                                    <div class="col-xs-8 radio pad_top0">
+                                        James Diggman<br/>
+                                        jd@diggman.com<br/>
+                                        123-456-7890
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-sm-12"></div>
+                                
+                                <div class="billing_diff_contact">                                  
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">First Name</label>
+                                       <div class="col-xs-8">
+                                           <input class="form-control" id="" type="text" />
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">Last Name</label>
+                                       <div class="col-xs-8">
+                                           <input class="form-control" id="" type="text" />
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">Email</label>
+                                       <div class="col-xs-8">
+                                           <input class="form-control acc_email1" id="" type="text" />
+                                       </div>
+                                       <label class="col-xs-3"></label>
+                                        <div class="col-xs-8">                                      
+                                            <p class="rw-dark-red reqemail1">Please enter email id</p>
+                                            <p class="rw-dark-red validation1">Please enter a valid email id</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">Company Phone &#35;</label>
+                                       <div class="col-xs-8">
+                                           <input class="form-control phone_number_validation" type="phone" id=""  />
+                                       </div>
+                                        <label class="col-xs-3"></label>
+                                        <div class="col-xs-8 mrg_btm_top_neg">                                      
+                                            <p class="req_phone rw-dark-red">Please enter phone number</p>
+                                            <p class="regx_phone rw-dark-red">Please enter a valid phone number</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="brd_btm col-sm-12"></div>
+                                
+                                <div class="form-group col-sm-6 mrg_top20">    
+                                    <label class="form control-label col-xs-3 pad_rgt0">Contact Address</label>
+                                    <div class="col-xs-8 radio pad_top0">
+                                         <div class="radio flt_lft mrg_rgt20">
+                                           <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid sameContact_acc" id="sameContact_accid" name="sameContact_acc" type="radio"/>
+                                               <a class="options_tax mrg_lft5 fnt15">Same as Accoun</a>
+                                           </label>
+                                         </div>                                              
+                                          <div class="radio flt_lft mrg_lft20">
+                                           <label class="pad_btm0"><input class="big rad_tax_wid sameContact_acc" id=" DifsameContact_accid" name="sameContact_acc" type="radio"/>
+                                               <a class="options_tax mrg_lft5 fnt15">Different</a>
+                                           </label>
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 clear"></div>
+                                <div class="billing_same_contact_acnt form-group col-sm-6">
+                                    <label class="form control-label col-xs-3 pad_rgt0"></label>
+                                    <div class="col-xs-8 radio pad_top0">
+                                        123 West 12th Street, Suite 123<br/>
+                                        Inglewood CA 90012
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-sm-12"></div>
+                                <div class="billing_diff_contact_acnt">
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">Street Address</label>
+                                       <div class="col-xs-8">
+                                           <input class="form-control" id="" type="text" />
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">City</label>
+                                       <div class="col-xs-8">
+                                           <input class="form-control" id="" type="text" />
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">State &#47; Province</label>
+                                       <div class="col-xs-8"><select class="form-control" size="1">    
+                                                <option>CA</option>                                           
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">Zip &#47; Postal Code</label>
+                                       <div class="col-xs-8">
+                                           <input class="form-control" id="" type="text" />
+                                       </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <div class="col-sm-12 brd_btm txt_center pad_top20 pad_btm5 mrg_btm20">
+                                    <h4 class="section-title clr_blk">PAYMENT TERMS &#38; INVOICE PREFERENCES</h4>
+                                </div>
+                                <div class="col-sm-12 pad_lft0 pad_rgt0">
+                                    <div class="form-group col-sm-6"> 
+                                        <label class="form control-label col-xs-3 pad_rgt0">Billing Frequency</label>
+                                        <div class="col-xs-8"><select class="form-control" size="1">    
+                                            <option>Monthly</option>                                           
+                                        </select>
+                                        </div>    
+                                    </div>
+                                    <div class="form-group col-sm-6"> 
+                                        <label class="form control-label col-xs-3 pad_rgt0">Payment Terms</label>
+                                        <div class="col-xs-8"><select class="form-control" size="1">    
+                                            <option>Net 45</option>                                            
+                                        </select>
+                                        </div> 
+                                    </div>
+                                    <div class="form-group col-sm-6"> 
+                                        <label class="form control-label col-xs-3 pad_rgt0">Invoice Delivery By</label>
+                                        <div class="col-xs-8"><select class="form-control" size="1">    
+                                            <option>Mail</option>                                          
+                                        </select>
+                                        </div>    
+                                    </div>
+                                    
+                                    <div class="form-group col-sm-6"> 
+                                        <label class="form control-label col-xs-3 pad_rgt0">Preferred Payment Method</label>
+                                        <div class="col-xs-8"><select class="form-control" size="1">    
+                                            <option>Check</option>                                         
+                                        </select>
+                                        </div>    
+                                    </div>
+                                    <div class="brd_btm col-sm-12 pad_lft0 pad_rgt0 mrg_btm20"></div>
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">Requested Credit Limit</label>
+                                       <div class="col-xs-8">
+                                           <input class="form-control" type="text"/>
+                                       </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                       <label class="form control-label col-xs-3 pad_rgt0">Email Application To</label>
+                                       <div class="col-xs-8">
+                                           <input class="form-control acc_email2" id="" type="text" />
+                                       </div>
+                                       <label class="col-xs-3"></label>
+                                        <div class="col-xs-8">                                      
+                                            <p class="rw-dark-red reqemail2">Please enter email id</p>
+                                            <p class="rw-dark-red validation2">Please enter a valid email id</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">&nbsp;</div>
+                                    <div class="form-group col-sm-6">
+                                        <label class="col-xs-3"></label>
+                                        <div class="col-xs-8 txt_right">
+                                            <a class="btn_consalidate btn btn-danger">SEND CREDIT APPLICATION</a>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                
+                                
+                                
+                            </div>
+                            
+                            
+                            
+                            
+                        </div>
+                        
+                        
+                        
+                    <div class="summary_section_2 col-sm-12 mini_text_padder pheader">
+                        <div class="col-sm-6">
+                            <h4 class="uppercase">CREATE OR ASSIGN PURCHASING PROGRAM</h4>
+                        </div>
+                        <div class="col-sm-3 icon_padding txt_right flt_rgt">
+                            <a href="#" class="save_cancel"> <span class="">Save</span>
+                                <i class="fa fa-fw save_icon" aria-hidden="true" title="Copy to use save"></i>
+                            </a>                                
+                            
+                        </div>                            
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="col-sm-12 mrg_btm20">
+                            <div class="col-sm-12 brd_btm txt_center pad_top20 pad_btm5 mrg_btm20">
+                                <h4 class="section-title clr_blk">PAYMENT TERMS &#38; INVOICE PREFERENCES</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 form-group">                            
+                            <label class="form control-label col-xs-3 pad_rgt0" for="type">Type</label>
+                            <div class="col-xs-8">
+                                <apex:selectList value="{!selectType}" styleClass="form-control" multiselect="false" size="1">
+                                    <apex:selectOptions value="{!Type}"/>
+                                </apex:selectList>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6"> 
+                            <label class="form control-label col-xs-3 pad_rgt0">Program Name</label>
+                            <div class="col-xs-8"><select class="form-control" size="1">    
+                                <option>Diggman Shoe Program</option>                                         
+                            </select>
+                            </div>    
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label class="form control-label col-xs-3 pad_rgt0">Activation Date</label>
+                            <div class="col-xs-8">
+                                <apex:input id="actdate" type="date"  styleClass="form-control" value="{!activationDate}"/> 
+                            </div>
+                        </div>
+                         <div class="form-group col-sm-6">
+                            <label class="form control-label col-xs-3 pad_rgt0" for="exdate">Expiration Date</label>
+                            <div class="col-xs-8">
+                                <apex:input id="exdate" type="date"  styleClass="form-control" value="{!expirationDate}"/> 
+                                <!-- <apex:inputtext id="exdate" styleClass="form-control" /> -->
+                                <!-- <input class="form-control" id="exdate" type="number" /> -->
+                            </div>
+                        </div>
+                        <div class="col-sm-12 form-group">
+                           
+                                <label class="form control-label col-xs-2 pwidth pad_rgt0" for="status">Program Notes</label>
+                                <div class="col-xs-10">
+                                    <apex:inputtextarea id="pnotes" styleclass="form-control" value="{!programNotes}" />
+                                    <!-- <textarea class="form-control" id="pnotes"></textarea> -->
+                                </div>
+                        </div>
+                        <div class="col-sm-12 mrg_btm20 mrg_top20">
+                            <div class="col-sm-12 brd_btm txt_center pad_top20 pad_btm5 mrg_btm20">
+                                <h4 class="section-title clr_blk">SUBSIDY &#45; BASED ON TYPE</h4>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label class="form control-label col-xs-3 pad_rgt0" for="stype">Subsidy Type</label>
+                            <div class="col-xs-8">
+                                <apex:selectList value="{!selectsubsidyType}" styleClass="form-control" multiselect="false" size="1">
+                                    <apex:selectOptions value="{!subsidyType}"/>
+                                </apex:selectList>
+                                <!-- <input class="form-control" id="stype" type="text" /> -->
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label class="form control-label col-xs-3 pad_rgt0" for="subsidy">Subsidy &#40;&#36;&#41;</label>
+                            <div class="col-xs-8">
+                                <apex:input id="subAmt" type="number" styleClass="form-control" value="{!subsidyAmount}"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-12"></div>
+                        <div class="form-group col-sm-6">
+                            <label class="form control-label col-xs-3 pad_rgt0" for="subsidyfrequency">Subsidy Frequency</label>
+                            <div class="col-xs-8">
+                                <apex:selectList value="{!selectsubsidyFrequency}" styleClass="form-control" multiselect="false" size="1">
+                                    <apex:selectOptions value="{!subsidyFrequency}"/>
+                                </apex:selectList>                                
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label class="form control-label col-xs-3 pad_rgt0" for="maxamount">Max Amount</label>
+                            <div class="col-xs-8">
+                                <apex:input id="maxAmt" type="number" styleClass="form-control" value="{!maxAmount}"/>
+                                <!-- <apex:inputtext id="maxamount" styleClass="form-control" /> -->
+                                <!-- <input class="form-control" id="maxamount" type="number" /> -->
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">&nbsp;</div>
+                        <div class="form-group col-sm-6">    
+                            <label class="form control-label col-xs-3 pad_rgt0">Accessories Allowed</label>
+                            <div class="col-xs-8 radio pad_top0">
+                                 <div class="radio flt_lft mrg_rgt20">
+                                   <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid Accessories" id="" name="Accessories" type="radio"/>
+                                       <a class="options_tax mrg_lft5 fnt15">Allowed</a>
+                                   </label>
+                                 </div>                                              
+                                  <div class="radio flt_lft mrg_lft20">
+                                   <label class="pad_btm0"><input class="big rad_tax_wid Accessories" id=" " name="Accessories" type="radio"/>
+                                       <a class="options_tax mrg_lft5 fnt15">Not Allowed</a>
+                                   </label>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label class="form control-label col-xs-3 pad_rgt0" for="aparis">Allowed &#35; of Pairs</label>
+                            <div class="col-xs-8">
+                                <apex:input id="aparis" styleClass="form-control" type="number" value="{!numberPairsAllow}"/>
+                                <!-- <input class="form-control" id="aparis" type="number" /> -->
+                            </div>
+                        </div>                      
+                        <div class="form-group col-sm-6">
+                            <label class="form control-label col-xs-3 pad_rgt0" for="subtax">Sub Tax Method</label>
+                            <div class="col-xs-8">
+                                <apex:input id="subtax" styleClass="form-control" type="text" html-placeholder="This field is not available in config"/>
+                                <!-- <apex:inputtext id="subtax" styleClass="form-control" /> -->
+                                <!-- <input class="form-control" id="subtax" type="text" /> -->
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mrg_btm20 mrg_top20">
+                            <div class="col-sm-12 brd_btm txt_center pad_top20 pad_btm5 mrg_btm20">
+                                <h4 class="section-title clr_blk">ELIGIBILITY &#45; BASED ON SUBSIDY</h4>
+                            </div>
+                        </div>
+                         <div class="form-group col-sm-6">
+                            <label class="form control-label col-xs-3 pad_rgt0">Eligibility Option</label>
+                            <div class="col-xs-8">
+                                <apex:selectList value="{!selecteligibilityOption}" styleClass="form-control" multiselect="false" size="1">
+                                    <apex:selectOptions value="{!eligibilityOption}"/>
+                                </apex:selectList>
+                                <!-- <input class="form-control" type="text" /> -->
+                            </div>
+                        </div>
+                         <div class="form-group col-sm-6">
+                            <label class="form control-label col-xs-3 pad_rgt0">Voucher Distribution</label>
+                            <div class="col-xs-8">
+                                <apex:selectList value="{!selectVoucherDistribution}" styleClass="form-control" multiselect="false" size="1">
+                                    <apex:selectOptions value="{!VoucherDistribution}"/>
+                                </apex:selectList>
+                                <!-- <input class="form-control" type="text" /> -->
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">    
+                            <label class="form control-label col-xs-3 pad_rgt0">Annual Reset or Rollover</label>
+                            <div class="col-xs-8 radio pad_top0">
+                                 <div class="radio flt_lft mrg_rgt20">
+                                   <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid annul" id="" name="annul" type="radio"/>
+                                       <a class="options_tax mrg_lft5 fnt15">Annual Reset</a>
+                                   </label>
+                                 </div>                                              
+                                  <div class="radio flt_lft mrg_lft20">
+                                   <label class="pad_btm0"><input class="big rad_tax_wid annul" id=" " name="annul" type="radio"/>
+                                       <a class="options_tax mrg_lft5 fnt15">Rollover</a>
+                                   </label>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mrg_btm20 mrg_top20">
+                            <div class="col-sm-12 brd_btm txt_center pad_top20 pad_btm5 mrg_btm20">
+                                <h4 class="section-title clr_blk">PAYROLL DEDUCTION &#45; BASED ON TYPE</h4>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">    
+                            <label class="form control-label col-xs-3 pad_rgt0">Mandatory</label>
+                            <div class="col-xs-8 radio pad_top0">
+                                 <div class="radio flt_lft mrg_rgt20">
+                                   <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid Mandatory" id="" name="Mandatory" type="radio"/>
+                                       <a class="options_tax mrg_lft5 fnt15">Mandatory</a>
+                                   </label>
+                                 </div>                                              
+                                  <div class="radio flt_lft mrg_lft20">
+                                   <label class="pad_btm0"><input class="big rad_tax_wid Mandatory" id=" " name="Mandatory" type="radio"/>
+                                       <a class="options_tax mrg_lft5 fnt15">Not Mandatory</a>
+                                   </label>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">    
+                            <label class="form control-label col-xs-3 pad_rgt0">Accessories Allowed</label>
+                            <div class="col-xs-8 radio pad_top0">
+                                 <div class="radio flt_lft mrg_rgt20">
+                                   <label class="pad_btm0"><input checked="checked" class="big rad_tax_wid accall" id="" name="accall" type="radio"/>
+                                       <a class="options_tax mrg_lft5 fnt15">Annual Reset</a>
+                                   </label>
+                                 </div>                                              
+                                  <div class="radio flt_lft mrg_lft20">
+                                   <label class="pad_btm0"><input class="big rad_tax_wid accall" id=" " name="accall" type="radio"/>
+                                       <a class="options_tax mrg_lft5 fnt15">Rollover</a>
+                                   </label>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="col-sm-12 subsidy_content_section rw-grey">                            
+                            <div class="form-group mrg_top20 pad_top10 col-sm-12 flt_rgt">
+                                <label class="col-xs-3"></label>
+                                <div class="col-xs-8" align="right">
+                                    <!--  ************** Edit Mode *************** -->
+                                    <input type="reset" class="btn btn-danger btn-outline btn-xl" value="Reset" id="" /> 
+                                    <!--  ************** Edit Mode *************** -->
+                                    <apex:outputPanel rendered="{!IF(EditMode == true,TRUE,FALSE)}" styleclass="tabHeaderSection cb">               
+                                        <a id="btn_Update_Program" data-dismiss="modal" class="btn_consalidate btn btn-danger btn-xl" onclick="CreateAccount()">Update</a>
+                                    </apex:outputpanel>  
+                                    <!--  ************** Save Mode *************** -->
+                                    <apex:outputPanel rendered="{!IF(EditMode == false,TRUE,FALSE)}" styleclass="tabHeaderSection cb">               
+                                        <a id="btn_save_Program"  data-dismiss="modal" class="btn_consalidate btn btn-danger btn-xl" onclick="CreateAccount();">Save</a>
+                                    </apex:outputpanel> 
+                                    <apex:actionFunction name="saveProgram" action="{!SaveProgramDetails}" reRender="duplicate" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </apex:form>
+</body>
+    </html>
+</apex:page>

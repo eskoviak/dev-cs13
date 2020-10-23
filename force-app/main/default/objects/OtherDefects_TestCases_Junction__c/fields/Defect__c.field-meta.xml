@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Defect__c</fullName>
+    <externalId>false</externalId>
+    <label>Defect</label>
+    <referenceTo>Defects__c</referenceTo>
+    <relationshipLabel>Other Defects for Test Cases</relationshipLabel>
+    <relationshipName>Other_Defects_for_Test_Cases</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

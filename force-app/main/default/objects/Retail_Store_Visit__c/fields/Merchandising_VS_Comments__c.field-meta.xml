@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Merchandising_VS_Comments__c</fullName>
+    <description>The Store meets the minimum requirements on Merchandising &amp; Visual Standards</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Refer to Dealer Support Catalog. Does the store meet the minimum requirements on Merchandising &amp; Visual Standards?</inlineHelpText>
+    <label>Merchandising &amp; VS Comments</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

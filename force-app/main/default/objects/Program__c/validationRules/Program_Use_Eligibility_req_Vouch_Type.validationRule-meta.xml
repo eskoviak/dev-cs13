@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Use_Eligibility_req_Vouch_Type</fullName>
+    <active>true</active>
+    <description>If Use Eligibility Tool = Yes, select the Voucher Type</description>
+    <errorConditionFormula>AND(
+isPickVal(Eligibility_Option__c, &apos;True&apos;),
+isBlank(TEXT( Annual_Reset_or_Rollover__c)))</errorConditionFormula>
+    <errorMessage>If Use Eligibility Tool = Yes, select the Voucher Type</errorMessage>
+</ValidationRule>

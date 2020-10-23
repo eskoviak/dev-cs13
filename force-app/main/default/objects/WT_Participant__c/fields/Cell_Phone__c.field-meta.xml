@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cell_Phone__c</fullName>
+    <description>Cell phone of the tester.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Cell phone of the tester.</inlineHelpText>
+    <label>Cell Phone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Phone</type>
+</CustomField>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X40_Hour_Fit__c</fullName>
+    <externalId>false</externalId>
+    <label>40 Hour Fit</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Out on testers</fullName>
+                <default>false</default>
+                <label>Out on testers</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Fail</fullName>
+                <default>false</default>
+                <label>Fail</label>
+            </value>
+            <value>
+                <fullName>Action Plan</fullName>
+                <default>false</default>
+                <label>Action Plan</label>
+            </value>
+            <value>
+                <fullName>Retest</fullName>
+                <default>false</default>
+                <label>Retest</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

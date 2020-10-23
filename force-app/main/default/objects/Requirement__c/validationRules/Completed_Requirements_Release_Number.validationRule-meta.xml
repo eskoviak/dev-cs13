@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_Requirements_Release_Number</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Development_Status__c , &quot;Completed&quot;),  ISNULL( Release_Build_Number__c ) )</errorConditionFormula>
+    <errorDisplayField>Release_Build_Number__c</errorDisplayField>
+    <errorMessage>Completed Requirements must have a reference to a development release or build.</errorMessage>
+</ValidationRule>

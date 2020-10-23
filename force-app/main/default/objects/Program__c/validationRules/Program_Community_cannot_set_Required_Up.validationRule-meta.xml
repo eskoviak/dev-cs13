@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Community_cannot_set_Required_Up</fullName>
+    <active>true</active>
+    <description>Community users are not able to set or change the Required Invoice = Yes</description>
+    <errorConditionFormula>AND(
+ $Profile.Name = &quot;RWS Business Partner Community&quot;,
+ ISPICKVAL(Require_Upload_of_Company_Voucher__c,&quot;Yes&quot;),
+OR(
+ISCHANGED(Require_Upload_of_Company_Voucher__c),
+ISNEW())
+)</errorConditionFormula>
+    <errorMessage>Please contact your ROM if Upload of Invoice is Required.</errorMessage>
+</ValidationRule>

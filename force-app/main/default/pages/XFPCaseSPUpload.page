@@ -1,0 +1,5 @@
+<apex:page standardController="Case" showHeader="false">
+<apex:pageBlock title="Attach File to {!Case.CaseNumber}" tabStyle="Case" mode="edit">
+<XFILES:XFileUpload />
+</apex:pageBlock>
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Use_Eligibility_req_Vouch_Upload</fullName>
+    <active>false</active>
+    <description>If Use Eligibility Tool = No, select the Require Voucher Upload</description>
+    <errorConditionFormula>AND(
+isPickVal(Eligibility_Option__c, &apos;False&apos;),
+isBlank(TEXT(  Require_Upload_of_Company_Voucher__c )))</errorConditionFormula>
+    <errorMessage>If Use Eligibility Tool = No, select the Require Company Voucher</errorMessage>
+</ValidationRule>

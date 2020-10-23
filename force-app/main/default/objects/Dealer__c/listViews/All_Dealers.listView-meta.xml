@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Dealers</fullName>
+    <columns>NAME</columns>
+    <columns>Group_Number__c</columns>
+    <columns>Legal_Entity_Type__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Dealer_Org_Type__c</columns>
+    <columns>IsActive__c</columns>
+    <columns>Date_Inactivated__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Dealers</label>
+</ListView>

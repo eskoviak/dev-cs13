@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Filter_Logic__c</fullName>
+    <description>The filter logic for an IA Feature.  (AND, OR) Logic for each filter and how they related to one another when selecting multiple filters using the Product Selection Visualforce Page.
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The filter logic for an IA Feature.  (AND, OR) Logic for each filter and how they related to one another when selecting multiple filters using the Product Selection Visualforce Page.</inlineHelpText>
+    <label>Filter Logic</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AND</fullName>
+                <default>false</default>
+                <label>AND</label>
+            </value>
+            <value>
+                <fullName>OR</fullName>
+                <default>false</default>
+                <label>OR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

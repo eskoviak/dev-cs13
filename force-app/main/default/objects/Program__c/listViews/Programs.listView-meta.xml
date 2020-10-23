@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Programs</fullName>
+    <columns>NAME</columns>
+    <columns>Activation_Date__c</columns>
+    <columns>Expiration_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Template__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Active Programs</label>
+</ListView>

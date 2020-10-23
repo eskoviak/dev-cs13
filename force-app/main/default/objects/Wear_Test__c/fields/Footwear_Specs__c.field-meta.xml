@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Footwear_Specs__c</fullName>
+    <description>This is to define the minimum Footwear Specifications.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the minimum Footwear Specifications.</inlineHelpText>
+    <label>Footwear Specs</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All-Leather Upper</fullName>
+                <default>false</default>
+                <label>All-Leather Upper</label>
+            </value>
+            <value>
+                <fullName>Any Safety Toe</fullName>
+                <default>false</default>
+                <label>Any Safety Toe</label>
+            </value>
+            <value>
+                <fullName>Chemical-Resistant</fullName>
+                <default>false</default>
+                <label>Chemical-Resistant</label>
+            </value>
+            <value>
+                <fullName>Color - Black Only</fullName>
+                <default>false</default>
+                <label>Color - Black Only</label>
+            </value>
+            <value>
+                <fullName>Color - Brown Only</fullName>
+                <default>false</default>
+                <label>Color - Brown Only</label>
+            </value>
+            <value>
+                <fullName>Electrical Hazard (EH)</fullName>
+                <default>false</default>
+                <label>Electrical Hazard (EH)</label>
+            </value>
+            <value>
+                <fullName>Electro-Static Dissappative (ESD)</fullName>
+                <default>false</default>
+                <label>Electro-Static Dissappative (ESD)</label>
+            </value>
+            <value>
+                <fullName>Heel - 90 Degree</fullName>
+                <default>false</default>
+                <label>Heel - 90 Degree</label>
+            </value>
+            <value>
+                <fullName>Heel Height - 1/2&quot; Minimum</fullName>
+                <default>false</default>
+                <label>Heel Height - 1/2&quot; Minimum</label>
+            </value>
+            <value>
+                <fullName>Heel Height - 3/4&quot; Minimum</fullName>
+                <default>false</default>
+                <label>Heel Height - 3/4&quot; Minimum</label>
+            </value>
+            <value>
+                <fullName>Heel Height - 5/8&quot; Minimum</fullName>
+                <default>false</default>
+                <label>Heel Height - 5/8&quot; Minimum</label>
+            </value>
+            <value>
+                <fullName>Heel - Yes</fullName>
+                <default>false</default>
+                <label>Heel - Yes</label>
+            </value>
+            <value>
+                <fullName>Height: 6&quot; Minimum</fullName>
+                <default>false</default>
+                <label>Height: 6&quot; Minimum</label>
+            </value>
+            <value>
+                <fullName>Height: 8&quot; Minimum</fullName>
+                <default>false</default>
+                <label>Height: 8&quot; Minimum</label>
+            </value>
+            <value>
+                <fullName>Height: Over the Ankle</fullName>
+                <default>false</default>
+                <label>Height: Over the Ankle</label>
+            </value>
+            <value>
+                <fullName>Insulated (INS)</fullName>
+                <default>false</default>
+                <label>Insulated (INS)</label>
+            </value>
+            <value>
+                <fullName>Lace-Up Closure</fullName>
+                <default>false</default>
+                <label>Lace-Up Closure</label>
+            </value>
+            <value>
+                <fullName>Metatarsal (MT) - Any</fullName>
+                <default>false</default>
+                <label>Metatarsal (MT) - Any</label>
+            </value>
+            <value>
+                <fullName>Metatarsal (MT) - External</fullName>
+                <default>false</default>
+                <label>Metatarsal (MT) - External</label>
+            </value>
+            <value>
+                <fullName>Metatarsal (MT) - Internal</fullName>
+                <default>false</default>
+                <label>Metatarsal (MT) - Internal</label>
+            </value>
+            <value>
+                <fullName>No Athletic Styles</fullName>
+                <default>false</default>
+                <label>No Athletic Styles</label>
+            </value>
+            <value>
+                <fullName>No Chukkas</fullName>
+                <default>false</default>
+                <label>No Chukkas</label>
+            </value>
+            <value>
+                <fullName>No Hiker Styles</fullName>
+                <default>false</default>
+                <label>No Hiker Styles</label>
+            </value>
+            <value>
+                <fullName>No Slip-Ons</fullName>
+                <default>false</default>
+                <label>No Slip-Ons</label>
+            </value>
+            <value>
+                <fullName>Oil &amp; Gas Resistant Sole</fullName>
+                <default>false</default>
+                <label>Oil &amp; Gas Resistant Sole</label>
+            </value>
+            <value>
+                <fullName>Pull-On</fullName>
+                <default>false</default>
+                <label>Pull-On</label>
+            </value>
+            <value>
+                <fullName>Puncture-Resistant (PR)</fullName>
+                <default>false</default>
+                <label>Puncture-Resistant (PR)</label>
+            </value>
+            <value>
+                <fullName>Shank</fullName>
+                <default>false</default>
+                <label>Shank</label>
+            </value>
+            <value>
+                <fullName>Slip-Resistant (Any)</fullName>
+                <default>false</default>
+                <label>Slip-Resistant (Any)</label>
+            </value>
+            <value>
+                <fullName>Slip-Resistant (Best)</fullName>
+                <default>false</default>
+                <label>Slip-Resistant (Best)</label>
+            </value>
+            <value>
+                <fullName>Slip-Resistant (Better &amp; Best)</fullName>
+                <default>false</default>
+                <label>Slip-Resistant (Better &amp; Best)</label>
+            </value>
+            <value>
+                <fullName>Soft-Toe</fullName>
+                <default>false</default>
+                <label>Soft-Toe</label>
+            </value>
+            <value>
+                <fullName>Sole: Abrasion Resistant</fullName>
+                <default>false</default>
+                <label>Sole: Abrasion Resistant</label>
+            </value>
+            <value>
+                <fullName>Sole: Non-Marking</fullName>
+                <default>false</default>
+                <label>Sole: Non-Marking</label>
+            </value>
+            <value>
+                <fullName>Toe Cap: Aluminum-Toe (AT)</fullName>
+                <default>false</default>
+                <label>Toe Cap: Aluminum-Toe (AT)</label>
+            </value>
+            <value>
+                <fullName>Toe Cap: Composite-Toe (NT)</fullName>
+                <default>false</default>
+                <label>Toe Cap: Composite-Toe (NT)</label>
+            </value>
+            <value>
+                <fullName>Toe Cap: Steel-Toe (ST)</fullName>
+                <default>false</default>
+                <label>Toe Cap: Steel-Toe (ST)</label>
+            </value>
+            <value>
+                <fullName>Tread: Aggressive Tread Pattern</fullName>
+                <default>false</default>
+                <label>Tread: Aggressive Tread Pattern</label>
+            </value>
+            <value>
+                <fullName>Tread: Medium Tread Pattern</fullName>
+                <default>false</default>
+                <label>Tread: Medium Tread Pattern</label>
+            </value>
+            <value>
+                <fullName>Tread: Minimum Tread Pattern</fullName>
+                <default>false</default>
+                <label>Tread: Minimum Tread Pattern</label>
+            </value>
+            <value>
+                <fullName>USA Made Only</fullName>
+                <default>false</default>
+                <label>USA Made Only</label>
+            </value>
+            <value>
+                <fullName>Varies by Group</fullName>
+                <default>false</default>
+                <label>Varies by Group</label>
+            </value>
+            <value>
+                <fullName>Waterproof (WP)</fullName>
+                <default>false</default>
+                <label>Waterproof (WP)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

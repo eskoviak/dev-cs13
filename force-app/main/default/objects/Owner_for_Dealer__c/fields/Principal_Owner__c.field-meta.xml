@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Principal_Owner__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is this a valued Owner
+Field Type: Store Data
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Person who gets single consensus from ownership group.</inlineHelpText>
+    <label>Principal Owner</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

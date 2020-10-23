@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Backer_Panel_Graphic__c</fullName>
+    <externalId>false</externalId>
+    <label>Backer Graphic Panel or Lozier Shelf</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>InJex graphic 97082</fullName>
+                <default>false</default>
+                <label>InJex graphic 97082</label>
+            </value>
+            <value>
+                <fullName>Boa  graphic 97079</fullName>
+                <default>false</default>
+                <label>Boa  graphic 97079</label>
+            </value>
+            <value>
+                <fullName>CuShin 97773</fullName>
+                <default>false</default>
+                <label>CuShin 97773</label>
+            </value>
+            <value>
+                <fullName>DynaForce graphic 97075</fullName>
+                <default>false</default>
+                <label>DynaForce graphic 97075</label>
+            </value>
+            <value>
+                <fullName>ExoFlex 97778</fullName>
+                <default>false</default>
+                <label>ExoFlex 97778</label>
+            </value>
+            <value>
+                <fullName>FlexForce graphic 94411</fullName>
+                <default>false</default>
+                <label>FlexForce graphic 94411</label>
+            </value>
+            <value>
+                <fullName>FlexLock 97783</fullName>
+                <default>false</default>
+                <label>FlexLock 97783</label>
+            </value>
+            <value>
+                <fullName>ForceShield graphic 97079</fullName>
+                <default>false</default>
+                <label>ForceShield graphic 97079</label>
+            </value>
+            <value>
+                <fullName>Gore-Tex 97774</fullName>
+                <default>false</default>
+                <label>Gore-Tex 97774</label>
+            </value>
+            <value>
+                <fullName>IS Hunt 15 inch 97775</fullName>
+                <default>false</default>
+                <label>IS Hunt 15 inch 97775</label>
+            </value>
+            <value>
+                <fullName>IS Hunt 9 inch 97772</fullName>
+                <default>false</default>
+                <label>IS Hunt 9 inch 97772</label>
+            </value>
+            <value>
+                <fullName>ISH Lozier Shelf 97785</fullName>
+                <default>false</default>
+                <label>ISH Lozier Shelf 97785</label>
+            </value>
+            <value>
+                <fullName>ISW Lozier Shelf 97715</fullName>
+                <default>false</default>
+                <label>ISW Lozier Shelf 97715</label>
+            </value>
+            <value>
+                <fullName>King Toe graphic  97075</fullName>
+                <default>false</default>
+                <label>King Toe graphic  97075</label>
+            </value>
+            <value>
+                <fullName>King Toe graphic 97739</fullName>
+                <default>false</default>
+                <label>King Toe graphic 97739</label>
+            </value>
+            <value>
+                <fullName>LadyHawk 97776</fullName>
+                <default>false</default>
+                <label>LadyHawk 97776</label>
+            </value>
+            <value>
+                <fullName>Primaloft graphic 97800</fullName>
+                <default>false</default>
+                <label>Primaloft graphic 97800</label>
+            </value>
+            <value>
+                <fullName>RPM graphic 97799</fullName>
+                <default>false</default>
+                <label>RPM graphic 97799</label>
+            </value>
+            <value>
+                <fullName>RW Lozier Shelf 97063</fullName>
+                <default>false</default>
+                <label>RW Lozier Shelf 97063</label>
+            </value>
+            <value>
+                <fullName>StableFlex graphic 97738</fullName>
+                <default>false</default>
+                <label>StableFlex graphic 97738</label>
+            </value>
+            <value>
+                <fullName>Thermal Boost 97777</fullName>
+                <default>false</default>
+                <label>Thermal Boost 97777</label>
+            </value>
+            <value>
+                <fullName>Thinsulate 97782</fullName>
+                <default>false</default>
+                <label>Thinsulate 97782</label>
+            </value>
+            <value>
+                <fullName>Thinsulate graphic 97741</fullName>
+                <default>false</default>
+                <label>Thinsulate graphic 97741</label>
+            </value>
+            <value>
+                <fullName>Troutbrook graphic 97798</fullName>
+                <default>false</default>
+                <label>Troutbrook graphic 97798</label>
+            </value>
+            <value>
+                <fullName>Ultra Dry Graphic 97740</fullName>
+                <default>false</default>
+                <label>Ultra Dry Graphic 97740</label>
+            </value>
+            <value>
+                <fullName>Ultra Dry Graphic 97797</fullName>
+                <default>false</default>
+                <label>Ultra Dry Graphic 97797</label>
+            </value>
+            <value>
+                <fullName>No Feature Graphic</fullName>
+                <default>false</default>
+                <label>No Feature Graphic</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

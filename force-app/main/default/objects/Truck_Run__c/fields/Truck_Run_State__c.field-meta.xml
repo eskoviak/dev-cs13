@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Truck_Run_State__c</fullName>
+    <description>2 character state abbreviation for truck run location.  Used if different from accounts physical address.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the 2 character state abbreviation if different from physical address for account.</inlineHelpText>
+    <label>Truck Run State</label>
+    <length>2</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

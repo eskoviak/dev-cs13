@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Account_Term_requires_Net_Days_fiel</fullName>
+    <active>true</active>
+    <description>If &quot;Open Account Term&quot; is selected in the Intl Payment Terms field, the Net Days field becomes required</description>
+    <errorConditionFormula>AND(
+      ISPICKVAL( Intl_Payment_Terms__c, &quot;Open Account Term&quot;),
+      AND(
+          NOT(ISPICKVAL( Net_Days__c,&quot;15&quot;)),
+          NOT(ISPICKVAL( Net_Days__c,&quot;30&quot;)),
+          NOT(ISPICKVAL( Net_Days__c,&quot;45&quot;)),
+          NOT(ISPICKVAL( Net_Days__c,&quot;60&quot;)),
+          NOT(ISPICKVAL( Net_Days__c,&quot;90&quot;)),
+          NOT(ISPICKVAL( Net_Days__c,&quot;120&quot;)),
+          NOT(ISPICKVAL( Net_Days__c,&quot;180&quot;)),
+          NOT(ISPICKVAL( Net_Days__c,&quot;240&quot;)),
+          NOT(ISPICKVAL( Net_Days__c,&quot;Other&quot;))
+       )
+)</errorConditionFormula>
+    <errorDisplayField>Net_Days__c</errorDisplayField>
+    <errorMessage>When &quot;Open Account Term&quot; is selected in the Intl Payment Terms field, a value must be selected in the &quot;Net Days&quot; field.</errorMessage>
+</ValidationRule>

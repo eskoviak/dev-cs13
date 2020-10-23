@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Servicing_Level__c</fullName>
+    <description>Controls the sharing (servicing stores) for an Industrial Account Program.
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Controls the sharing (servicing stores) for an Industrial Account Program.
+Dealer Only and Dealer Market Area Program are allowed for Dealer Stores. 
+RWSS is allowed for Corporate Stores.</inlineHelpText>
+    <label>Servicing Level</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RWSS</fullName>
+                <default>false</default>
+                <label>RWSS</label>
+            </value>
+            <value>
+                <fullName>RWSSPlus</fullName>
+                <default>true</default>
+                <label>RWSS +</label>
+            </value>
+            <value>
+                <fullName>DealerMarketAreaProgram</fullName>
+                <default>false</default>
+                <label>Dealer Market Area Program</label>
+            </value>
+            <value>
+                <fullName>DealerOnly</fullName>
+                <default>false</default>
+                <label>Dealer Only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_Order__c</fullName>
+    <description>Controls the display order of an IA Feature in Product Selection.   Display order is relative to the display order value on other records.  Applies to both parent and child IA Features.
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Controls the display order of an IA Feature in Product Selection.</inlineHelpText>
+    <label>Display Order</label>
+    <precision>8</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

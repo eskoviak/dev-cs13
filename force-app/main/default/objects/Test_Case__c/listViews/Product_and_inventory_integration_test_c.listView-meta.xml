@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_and_inventory_integration_test_c</fullName>
+    <columns>NAME</columns>
+    <columns>Test_Case_Name__c</columns>
+    <columns>Test_Type__c</columns>
+    <columns>testStatus__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>High_Level_Requirement__c</field>
+        <operation>equals</operation>
+        <value>POS Product and Inventory</value>
+    </filters>
+    <filters>
+        <field>Test_Type__c</field>
+        <operation>equals</operation>
+        <value>Integration</value>
+    </filters>
+    <label>Product and inventory integration</label>
+</ListView>

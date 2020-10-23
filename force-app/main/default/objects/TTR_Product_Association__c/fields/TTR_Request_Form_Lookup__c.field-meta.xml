@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TTR_Request_Form_Lookup__c</fullName>
+    <description>Lookup to TTR Form.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Lookup to TTR Form.</inlineHelpText>
+    <label>TTR Request Form Lookup</label>
+    <referenceTo>TTR_Request_Form__c</referenceTo>
+    <relationshipName>TTR_to_Product_Junction_Objects</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

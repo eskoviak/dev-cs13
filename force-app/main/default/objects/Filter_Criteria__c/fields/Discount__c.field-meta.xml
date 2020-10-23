@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discount__c</fullName>
+    <description>The discount % that was entered for a product filter on the product selection visualforce page.  Used to apply discounts to products which are auto added to a program.
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The discount % that was entered for a product filter on the product selection visualforce page.  Used to apply discounts to products which are auto added to a program.</inlineHelpText>
+    <label>Discount %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

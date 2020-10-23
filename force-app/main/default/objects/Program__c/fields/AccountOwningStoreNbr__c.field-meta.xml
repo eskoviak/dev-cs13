@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountOwningStoreNbr__c</fullName>
+    <description>RWFB Program Owner related Contact Account Store Number 
+Used in Job &quot;SFDC ODS FullLoad&quot;</description>
+    <externalId>false</externalId>
+    <formula>Owner:User.Contact.Account_Store_Number__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Owning Store Number based on the Program Owner</inlineHelpText>
+    <label>Account Owning Store Nbr</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

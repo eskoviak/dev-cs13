@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Type_cannot_be_changed_after_Act</fullName>
+    <active>true</active>
+    <description>Program Type cannot be changed once the Program has been activated</description>
+    <errorConditionFormula>AND(
+ISCHANGED( Type__c ),
+HasBeenActive__c = TRUE)</errorConditionFormula>
+    <errorMessage>Program Type cannot be changed for Programs that have been Active</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<apex:page standardController="Account" extensions="CloneAccountCtrl">
+	<apex:includeScript value="{!URLFOR($Resource.jQueryDCS,'/js/jquery-1.8.0.min.js')}" />
+	<flow:interview name="CLONE_IA_ACCOUNT" interview="{!cloneAccountFlow}" finishlocation="{!finishLocation}">
+		<apex:param name="OrigAccountID" value="{!Account.Id}" />
+	</flow:interview>
+	<script type="text/javascript">
+		j$ = jQuery.noConflict();
+
+		j$(document).ready(function() {
+			var x = "{!cloneAccountFlow.originalAccount}";
+			if(typeof x !== 'undefined' && x !== null && x !== ''){
+				window.location.replace("/" + x);
+			}
+		});
+	</script>
+</apex:page>

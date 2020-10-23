@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Subsidy_Type_Dollar_Reqs</fullName>
+    <active>true</active>
+    <description>Fields that are required to populate based on Subsidy Type $</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Subsidy_Type__c, &apos;dollar&apos;),
+OR(
+ISBLANK(Subsidy_Amount__c),
+ISBLANK(Number_of_Pairs_Allowed__c)))</errorConditionFormula>
+    <errorMessage>For the selected Subsidy Type, you must input the related values.</errorMessage>
+</ValidationRule>

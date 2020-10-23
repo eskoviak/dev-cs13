@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_SIC__c</fullName>
+    <description>These are the Industry SIC codes.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the Industry SIC code.</inlineHelpText>
+    <label>Industry (SIC)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agricultural production -- crops (1)</fullName>
+                <default>false</default>
+                <label>Agricultural production -- crops (1)</label>
+            </value>
+            <value>
+                <fullName>Agricultural production -- livestock (2)</fullName>
+                <default>false</default>
+                <label>Agricultural production -- livestock (2)</label>
+            </value>
+            <value>
+                <fullName>Agricultural services (7)</fullName>
+                <default>false</default>
+                <label>Agricultural services (7)</label>
+            </value>
+            <value>
+                <fullName>Chemicals/Pharmaceuticals (28)</fullName>
+                <default>false</default>
+                <label>Chemicals/Pharmaceuticals (28)</label>
+            </value>
+            <value>
+                <fullName>Coal Mining (12)</fullName>
+                <default>false</default>
+                <label>Coal Mining (12)</label>
+            </value>
+            <value>
+                <fullName>Construction (15)</fullName>
+                <default>false</default>
+                <label>Construction (15)</label>
+            </value>
+            <value>
+                <fullName>Electrical and Electronic equipment (36)</fullName>
+                <default>false</default>
+                <label>Electrical and Electronic equipment (36)</label>
+            </value>
+            <value>
+                <fullName>Fabricated Metal Products (34)</fullName>
+                <default>false</default>
+                <label>Fabricated Metal Products (34)</label>
+            </value>
+            <value>
+                <fullName>Fishing, hunting, trapping (9)</fullName>
+                <default>false</default>
+                <label>Fishing, hunting, trapping (9)</label>
+            </value>
+            <value>
+                <fullName>Food &amp; Kindred Products (20)</fullName>
+                <default>false</default>
+                <label>Food &amp; Kindred Products (20)</label>
+            </value>
+            <value>
+                <fullName>Forestry (8)</fullName>
+                <default>false</default>
+                <label>Forestry (8)</label>
+            </value>
+            <value>
+                <fullName>Heavy Construction (16)</fullName>
+                <default>false</default>
+                <label>Heavy Construction (16)</label>
+            </value>
+            <value>
+                <fullName>Hi-Tech Industry</fullName>
+                <default>false</default>
+                <label>Hi-Tech Industry</label>
+            </value>
+            <value>
+                <fullName>Industrial and Commercial Machinery (35)</fullName>
+                <default>false</default>
+                <label>Industrial and Commercial Machinery (35)</label>
+            </value>
+            <value>
+                <fullName>Lumber Manufacturers (24)</fullName>
+                <default>false</default>
+                <label>Lumber Manufacturers (24)</label>
+            </value>
+            <value>
+                <fullName>Metal Mining (10)</fullName>
+                <default>false</default>
+                <label>Metal Mining (10)</label>
+            </value>
+            <value>
+                <fullName>Non-metallic minerals (14)</fullName>
+                <default>false</default>
+                <label>Non-metallic minerals (14)</label>
+            </value>
+            <value>
+                <fullName>Oil and Gas Extraction (13)</fullName>
+                <default>false</default>
+                <label>Oil and Gas Extraction (13)</label>
+            </value>
+            <value>
+                <fullName>Paper and Allied Products (26)</fullName>
+                <default>false</default>
+                <label>Paper and Allied Products (26)</label>
+            </value>
+            <value>
+                <fullName>Petroleum Refining (29)</fullName>
+                <default>false</default>
+                <label>Petroleum Refining (29)</label>
+            </value>
+            <value>
+                <fullName>Primary Metal Manufacturers (33)</fullName>
+                <default>false</default>
+                <label>Primary Metal Manufacturers (33)</label>
+            </value>
+            <value>
+                <fullName>Printing, Publishing (27)</fullName>
+                <default>false</default>
+                <label>Printing, Publishing (27)</label>
+            </value>
+            <value>
+                <fullName>Public Utility (49)</fullName>
+                <default>false</default>
+                <label>Public Utility (49)</label>
+            </value>
+            <value>
+                <fullName>Sanitary Landfills (49)</fullName>
+                <default>false</default>
+                <label>Sanitary Landfills (49)</label>
+            </value>
+            <value>
+                <fullName>Specialty Trade Contractors (17)</fullName>
+                <default>false</default>
+                <label>Specialty Trade Contractors (17)</label>
+            </value>
+            <value>
+                <fullName>Stone, Clay and Glass (32)</fullName>
+                <default>false</default>
+                <label>Stone, Clay and Glass (32)</label>
+            </value>
+            <value>
+                <fullName>Tranportation- water (473100,- 4788900)</fullName>
+                <default>false</default>
+                <label>Tranportation- water (473100,- 4788900)</label>
+            </value>
+            <value>
+                <fullName>Transporation - air (45)</fullName>
+                <default>false</default>
+                <label>Transporation - air (45)</label>
+            </value>
+            <value>
+                <fullName>Transportation Equipment (37)</fullName>
+                <default>false</default>
+                <label>Transportation Equipment (37)</label>
+            </value>
+            <value>
+                <fullName>Transportation - petro (46)</fullName>
+                <default>false</default>
+                <label>Transportation - petro (46)</label>
+            </value>
+            <value>
+                <fullName>Transportation service (401100 - 421401)</fullName>
+                <default>false</default>
+                <label>Transportation service (401100 - 421401)</label>
+            </value>
+            <value>
+                <fullName>Warehousing/freight (422100 - 42310)</fullName>
+                <default>false</default>
+                <label>Warehousing/freight (422100 - 42310)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Backer_Panel_Size__c</fullName>
+    <externalId>false</externalId>
+    <label>Backer Panel Size</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Backer_Panel_Graphic__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>12 inch 97065</fullName>
+                <default>false</default>
+                <label>12 inch 97065</label>
+            </value>
+            <value>
+                <fullName>15 inch 97068</fullName>
+                <default>false</default>
+                <label>15 inch 97068</label>
+            </value>
+            <value>
+                <fullName>9 inch 97769</fullName>
+                <default>false</default>
+                <label>9 inch 97769</label>
+            </value>
+            <value>
+                <fullName>15 inch 97770</fullName>
+                <default>false</default>
+                <label>15 inch 97770</label>
+            </value>
+            <value>
+                <fullName>21 inch 97771</fullName>
+                <default>false</default>
+                <label>21 inch 97771</label>
+            </value>
+            <value>
+                <fullName>12 inch 97732</fullName>
+                <default>false</default>
+                <label>12 inch 97732</label>
+            </value>
+            <value>
+                <fullName>15 inch 97733</fullName>
+                <default>false</default>
+                <label>15 inch 97733</label>
+            </value>
+            <value>
+                <fullName>21 inch 97064</fullName>
+                <default>false</default>
+                <label>21 inch 97064</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>IS Hunt 9 inch 97772</controllingFieldValue>
+            <controllingFieldValue>No Feature Graphic</controllingFieldValue>
+            <valueName>9 inch 97769</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IS Hunt 15 inch 97775</controllingFieldValue>
+            <controllingFieldValue>Ultra Dry Graphic 97797</controllingFieldValue>
+            <controllingFieldValue>Primaloft graphic 97800</controllingFieldValue>
+            <controllingFieldValue>RPM graphic 97799</controllingFieldValue>
+            <controllingFieldValue>Troutbrook graphic 97798</controllingFieldValue>
+            <controllingFieldValue>LadyHawk 97776</controllingFieldValue>
+            <controllingFieldValue>StableFlex graphic 97738</controllingFieldValue>
+            <controllingFieldValue>Thermal Boost 97777</controllingFieldValue>
+            <controllingFieldValue>Thinsulate 97782</controllingFieldValue>
+            <controllingFieldValue>CuShin 97773</controllingFieldValue>
+            <controllingFieldValue>FlexLock 97783</controllingFieldValue>
+            <controllingFieldValue>Gore-Tex 97774</controllingFieldValue>
+            <controllingFieldValue>No Feature Graphic</controllingFieldValue>
+            <valueName>15 inch 97770</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ultra Dry Graphic 97797</controllingFieldValue>
+            <controllingFieldValue>Primaloft graphic 97800</controllingFieldValue>
+            <controllingFieldValue>RPM graphic 97799</controllingFieldValue>
+            <controllingFieldValue>Troutbrook graphic 97798</controllingFieldValue>
+            <controllingFieldValue>King Toe graphic 97739</controllingFieldValue>
+            <controllingFieldValue>StableFlex graphic 97738</controllingFieldValue>
+            <controllingFieldValue>Thinsulate graphic 97741</controllingFieldValue>
+            <controllingFieldValue>Ultra Dry Graphic 97740</controllingFieldValue>
+            <controllingFieldValue>No Feature Graphic</controllingFieldValue>
+            <valueName>15 inch 97733</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>InJex graphic 97082</controllingFieldValue>
+            <controllingFieldValue>No Feature Graphic</controllingFieldValue>
+            <valueName>21 inch 97064</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>King Toe graphic  97075</controllingFieldValue>
+            <controllingFieldValue>Boa  graphic 97079</controllingFieldValue>
+            <controllingFieldValue>DynaForce graphic 97075</controllingFieldValue>
+            <controllingFieldValue>FlexForce graphic 94411</controllingFieldValue>
+            <controllingFieldValue>ForceShield graphic 97079</controllingFieldValue>
+            <controllingFieldValue>No Feature Graphic</controllingFieldValue>
+            <valueName>15 inch 97068</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ExoFlex 97778</controllingFieldValue>
+            <controllingFieldValue>No Feature Graphic</controllingFieldValue>
+            <valueName>21 inch 97771</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Feature Graphic</controllingFieldValue>
+            <valueName>12 inch 97065</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No Feature Graphic</controllingFieldValue>
+            <valueName>12 inch 97732</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

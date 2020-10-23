@@ -1,0 +1,167 @@
+<apex:page controller="RWS_RwbaaARSummaryController"
+           showHeader="false" sidebar="false"
+           applyBodyTag="false" applyHtmlTag="false"
+           standardStylesheets="false"
+           id="RWS_AccountRwbaaSummary">
+  <html lang="en">
+    <head>
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/popup.css')}" rel="stylesheet" />
+    </head>
+    <style>
+        .top-buffer { margin-top:20px; }
+        .tableFixHead          { overflow-y: auto; height: 200px; }
+        .tableFixHead thead th { position: sticky; top: 0; }
+        
+        /* Just common table stuff */
+        table  { border-collapse: collapse; width: 100%; }
+        tr      {height: 12px;}
+        th, td { padding: 8px 16px; }
+        th     { color:black; background:#eee;font-weight:bold;} 
+        
+        label { padding-right:8px }
+    </style>
+     <body>
+     <apex:form id="HeaderForm">
+        <apex:actionFunction action="{!getRwbaaARData}" name="getRwbaaARData" reRender="details" />
+
+        <apex:outputpanel >
+        <!-- Header Row -->
+            <div class="row">
+                    <div class="col-sm-6">
+                            <label>Account:</label>
+                            <apex:outputText id="account" value="{!AccountName}" />
+                    </div>
+                    <div class="col-sm-6">
+                            <label>**AR Data updated as of</label>
+                            <b><apex:outputText id="aDate" value="{!ARLastModifiedDate}" /></b>
+                    </div>
+            </div>    
+            <div class="row">
+                    <div class="col-sm-4">
+                            <label>Account Number: </label>
+                            <apex:outputText id="accountNumber" value="{!AccountNumber}" />
+                    </div>
+            </div>   
+            <div class="row">
+                    <div class="col-sm-4">
+                            <label>RWBAA ID: </label>
+                            <apex:outputText id="rwbaaId" value="{!RwbaaId}" />
+                    </div>
+            </div>                             
+        <!-- AR Snapshot -->
+            <div class="row top-buffer ">
+                <div class="col-sm-4" ><label style="text-decoration: underline;">AR Snapshot: </label></div>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Current Amount</th>
+                        <th>1-7 Days Late</th>
+                        <th>8-14 Days Late</th>
+                        <th>15-30 Days Late</th>
+                        <th>31-45 Days Late</th>
+                        <th>46-60 Days Late</th>
+                        <th>Over 60 Days Late</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><apex:outputText id="CurrentAmount" value="{!CurrentAmount}" /></td>
+                        <td><apex:outputText id="DL1to7" value="{!DaysLate1to7}" /></td>
+                        <td><apex:outputText id="DL8to14" value="{!DaysLate8to14}" /></td>
+                        <td><apex:outputText id="DL15to30" value="{!DaysLate15to30}" /></td>
+                        <td><apex:outputText id="DL31to45" value="{!DaysLate31to45}" /></td>
+                        <td><apex:outputText id="DL46to60" value="{!DaysLate46to60}" /></td>
+                        <td><apex:outputText id="Over60" value="{!DaysLateOver60}" /></td>
+                      </tr>
+                    </tbody>
+                  </table>  
+             </div>
+        <!-- AR Snapshot 2nd row-->          
+             <div class="row">
+                 <div class="col-sm-2">
+                    <label>Total Credit Line</label>
+                 </div>
+                 <div class="col-sm-2">
+                    <label>Remaining Credit</label>
+                 </div>
+                 <div class="col-sm-2">
+                    <label>Unapplied</label>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-sm-2">
+                     <apex:outputText id="totalCreditLine" value="{!TotalCreditLine}" />
+                 </div>
+                 <div class="col-sm-2">
+                     <apex:outputText id="remainingCredit" value="{!RemainingCredit}" />
+                 </div>
+                 <div class="col-sm-2">
+                     <apex:outputText id="unappliedPay" value="{!UnappliedPayment}" />
+                 </div>
+             </div>
+        <!-- RWBAA Contacts -->
+            <div class="row top-buffer tableFixHead">
+                <div class="col-sm-4" ><label style="text-decoration: underline;">RWBAA Contacts: </label></div>
+                <table class="table">
+                <thead>
+                  <tr>
+                    <th>RWBAA First Name</th>
+                    <th>RWBAA Last Name</th>
+                    <th>RWBAA Contact Type</th>
+                    <th>RWBAA Phone</th>    
+                    <th>RWBAA Email Address</th>
+                    <th>RWBAA Bill Send Type</th>
+                    <th>RWBAA Active</th>
+                  </tr>
+                </thead>
+                <apex:repeat value="{!RWBAAContacts}" var="RwbaaCon">                  
+                <tbody>
+                  <tr>
+                    <td><apex:outputText id="FN" value="{!RwbaaCon.RWBAA_First_Name__c}" /></td>
+                    <td><apex:outputText id="LN" value="{!RwbaaCon.RWBAA_Last_Name__c}" /></td>
+                    <td><apex:outputText id="ContactType" value="{!RwbaaCon.RWBAA_Contact_Type__c}" /></td>
+                    <td><apex:outputText id="Phone" value="{!RwbaaCon.RWBAA_Phone__c}" /></td>
+                    <td><apex:outputText id="EmailAddr" value="{!RwbaaCon.RWBAA_Email_Address__c}" /></td>
+                    <td><apex:outputText id="BillSentType" value="{!RwbaaCon.RWBAA_Bill_Send_Type__c}" /></td>
+                    <td><apex:inputCheckbox value="{!RwbaaCon.RWBAA_Active__c}" disabled="true" /></td>                 
+                  </tr>
+                </tbody>
+                </apex:repeat>
+              </table>
+            </div>  
+        <!-- RWFB Contacts -->
+            <div class="row top-buffer tableFixHead">
+                <div class="col-sm-4" ><label style="text-decoration: underline;">RWFB Contacts: </label></div> 
+                
+                <table class="table">
+                <thead>
+                  <tr>
+                    <th>RWFB First Name</th>
+                    <th>RWFB Last Name</th>
+                    <th>RWFB Contact Type</th>
+                    <th>RWFB Phone</th> 
+                    <th>RWFB Email Address</th>
+                    <th>RWFB Title</th>
+                    <th>RWFB Active</th>
+                  </tr>
+                </thead>
+              <apex:repeat value="{!RWFBContacts}" var="RwfbCont">
+                <tbody>
+                  <tr>
+                    <td><apex:outputText id="FN" value="{!RwfbCont.FirstName}" /></td>
+                    <td><apex:outputText id="LN" value="{!RwfbCont.LastName}" /></td>
+                    <td><apex:outputText id="ContType" value="{!RwfbCont.Contact_Identifier__c}" /></td>
+                    <td><apex:outputText id="Phone" value="{!RwfbCont.Phone}" /></td>
+                    <td><apex:outputText id="Email" value="{!RwfbCont.Email}" /></td>
+                    <td><apex:outputText id="Title" value="{!RwfbCont.Title}" /></td>
+                    <td><apex:inputCheckbox value="{!RwfbCont.Active__c}" disabled="true" /></td>
+                  </tr>
+                </tbody>
+              </apex:repeat>
+              </table>
+            </div>                  
+        </apex:outputpanel>
+        </apex:form> 
+     </body>
+  </html>
+</apex:page>

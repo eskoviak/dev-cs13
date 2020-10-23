@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Style_Secondary__c</fullName>
+    <description>Secondary preferred style</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Secondary preferred style</inlineHelpText>
+    <label>Preferred Style (Secondary)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>6” lace</fullName>
+                <default>false</default>
+                <label>6” lace</label>
+            </value>
+            <value>
+                <fullName>8” lace</fullName>
+                <default>false</default>
+                <label>8” lace</label>
+            </value>
+            <value>
+                <fullName>Athletic</fullName>
+                <default>false</default>
+                <label>Athletic</label>
+            </value>
+            <value>
+                <fullName>Backpacking</fullName>
+                <default>false</default>
+                <label>Backpacking</label>
+            </value>
+            <value>
+                <fullName>Big game boot</fullName>
+                <default>false</default>
+                <label>Big game boot</label>
+            </value>
+            <value>
+                <fullName>Chukka</fullName>
+                <default>false</default>
+                <label>Chukka</label>
+            </value>
+            <value>
+                <fullName>Heritage 6” lace-up</fullName>
+                <default>false</default>
+                <label>Heritage 6” lace-up</label>
+            </value>
+            <value>
+                <fullName>Heritage 8” lace-up</fullName>
+                <default>false</default>
+                <label>Heritage 8” lace-up</label>
+            </value>
+            <value>
+                <fullName>Heritage chelsea</fullName>
+                <default>false</default>
+                <label>Heritage chelsea</label>
+            </value>
+            <value>
+                <fullName>Heritage chukka</fullName>
+                <default>false</default>
+                <label>Heritage chukka</label>
+            </value>
+            <value>
+                <fullName>Heritage engineer</fullName>
+                <default>false</default>
+                <label>Heritage engineer</label>
+            </value>
+            <value>
+                <fullName>Heritage oxford</fullName>
+                <default>false</default>
+                <label>Heritage oxford</label>
+            </value>
+            <value>
+                <fullName>Hiker</fullName>
+                <default>false</default>
+                <label>Hiker</label>
+            </value>
+            <value>
+                <fullName>Hiking</fullName>
+                <default>false</default>
+                <label>Hiking</label>
+            </value>
+            <value>
+                <fullName>Insulated Pac</fullName>
+                <default>false</default>
+                <label>Insulated Pac</label>
+            </value>
+            <value>
+                <fullName>Knee high waterproof</fullName>
+                <default>false</default>
+                <label>Knee high waterproof</label>
+            </value>
+            <value>
+                <fullName>Logger</fullName>
+                <default>false</default>
+                <label>Logger</label>
+            </value>
+            <value>
+                <fullName>Oxford</fullName>
+                <default>false</default>
+                <label>Oxford</label>
+            </value>
+            <value>
+                <fullName>Performance Hiking</fullName>
+                <default>false</default>
+                <label>Performance Hiking</label>
+            </value>
+            <value>
+                <fullName>Pull-on</fullName>
+                <default>false</default>
+                <label>Pull-on</label>
+            </value>
+            <value>
+                <fullName>Romeo</fullName>
+                <default>false</default>
+                <label>Romeo</label>
+            </value>
+            <value>
+                <fullName>Rubber knee boot</fullName>
+                <default>false</default>
+                <label>Rubber knee boot</label>
+            </value>
+            <value>
+                <fullName>Slip-on</fullName>
+                <default>false</default>
+                <label>Slip-on</label>
+            </value>
+            <value>
+                <fullName>Trail Running</fullName>
+                <default>false</default>
+                <label>Trail Running</label>
+            </value>
+            <value>
+                <fullName>Upland boot</fullName>
+                <default>false</default>
+                <label>Upland boot</label>
+            </value>
+            <value>
+                <fullName>Western lace-up</fullName>
+                <default>false</default>
+                <label>Western lace-up</label>
+            </value>
+            <value>
+                <fullName>Western pull-on</fullName>
+                <default>false</default>
+                <label>Western pull-on</label>
+            </value>
+            <value>
+                <fullName>Winter Hiking</fullName>
+                <default>false</default>
+                <label>Winter Hiking</label>
+            </value>
+            <value>
+                <fullName>Zipper boot</fullName>
+                <default>false</default>
+                <label>Zipper boot</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

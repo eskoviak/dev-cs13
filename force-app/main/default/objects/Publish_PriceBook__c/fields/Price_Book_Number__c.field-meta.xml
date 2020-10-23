@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Book_Number__c</fullName>
+    <description>Auto Number field to generate a unique Price Book ID used for correlation with external systems downstream. Product integration should leave this field null as an insert will create the value.</description>
+    <displayFormat>PL-{000000}</displayFormat>
+    <externalId>false</externalId>
+    <inlineHelpText>Auto Number field to generate a unique Price Book ID used for correlation with external systems downstream. Product integration should leave this field null as an insert will create the value.</inlineHelpText>
+    <label>Price Book Number</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

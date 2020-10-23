@@ -1,0 +1,9 @@
+<apex:page standardController="Publish_PriceBook__c" extensions="RWS_ppbButtonController" action="{!autoRun}">
+  <apex:sectionHeader title="Auto-Running Apex Code"/>
+  <apex:outputPanel >
+      Something went wrong during the update of Publish PriceBook Entries. You should have 
+      been redirected back to the Publish Pricebook record page you clicked the button on if 
+      the update ran successfully. Please have your admin check debug logs for any errors that 
+      may have occcured during this process.
+  </apex:outputPanel>
+</apex:page>

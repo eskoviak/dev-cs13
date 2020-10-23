@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_Shop_Lite_Irish_Setter_Hunt</fullName>
+    <active>true</active>
+    <label>Vendor Shop Lite Irish Setter Hunt</label>
+    <picklistValues>
+        <picklist>Backer_Panel_Graphic__c</picklist>
+        <values>
+            <fullName>CuShin 97773</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ExoFlex 97778</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FlexLock 97783</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gore-Tex 97774</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IS Hunt 15 inch 97775</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IS Hunt 9 inch 97772</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISH Lozier Shelf 97785</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LadyHawk 97776</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Feature Graphic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Primaloft graphic 97800</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RPM graphic 97799</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>StableFlex graphic 97738</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thermal Boost 97777</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thinsulate 97782</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Troutbrook graphic 97798</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ultra Dry Graphic 97797</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Backer_Panel_Size__c</picklist>
+        <values>
+            <fullName>15 inch 97770</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21 inch 97771</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9 inch 97769</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Merchandising_System__c</picklist>
+        <values>
+            <fullName>Lozier End Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slatwall</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

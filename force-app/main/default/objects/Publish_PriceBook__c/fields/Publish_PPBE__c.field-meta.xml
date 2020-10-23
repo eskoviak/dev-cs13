@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Publish_PPBE__c</fullName>
+    <description>This button will only appear when the Program and PPB are successfully Published. This will update the related Active PPBE records that are either Waiting or Deactivated.</description>
+    <externalId>false</externalId>
+    <formula>IF(AND(ISPICKVAL(Publish_Status__c,&quot;Published&quot;), ISPICKVAL(Program__r.Publish_Status__c,&quot;Published&quot;)), HYPERLINK(&apos;/apex/RWS_ppbButtonPage?id=&apos; &amp; Id , IMAGE(&apos;/resource/1488377428000/PublishPricebook&apos;, &apos;Publish Pricebook&apos;), &apos;_self&apos;), &apos;&apos;)</formula>
+    <inlineHelpText>This button will only appear when the Program and PPB are successfully Published. This will update the related Active PPBE records that are either Waiting or Deactivated.</inlineHelpText>
+    <label>&lt;span/&gt;</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

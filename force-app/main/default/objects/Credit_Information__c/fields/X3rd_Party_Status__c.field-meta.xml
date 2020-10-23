@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3rd_Party_Status__c</fullName>
+    <description>3rd Party Status of the collection</description>
+    <externalId>false</externalId>
+    <inlineHelpText>3rd Party Collection Status</inlineHelpText>
+    <label>3rd Party Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre-Collection</fullName>
+                <default>false</default>
+                <label>Pre-Collection</label>
+            </value>
+            <value>
+                <fullName>Atradius</fullName>
+                <default>false</default>
+                <label>Atradius</label>
+            </value>
+            <value>
+                <fullName>Biorn Corporation</fullName>
+                <default>false</default>
+                <label>Biorn Corporation</label>
+            </value>
+            <value>
+                <fullName>CCI</fullName>
+                <default>false</default>
+                <label>CCI</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

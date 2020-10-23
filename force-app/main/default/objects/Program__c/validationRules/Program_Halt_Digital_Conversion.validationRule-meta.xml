@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Halt_Digital_Conversion</fullName>
+    <active>true</active>
+    <description>Once a program is activated the Use Eligibility Tool setting cannot be changed. Please create a new program if needed.</description>
+    <errorConditionFormula>AND(
+HasBeenActive__c = TRUE,
+ISCHANGED(Eligibility_Option__c),
+NOT($Profile.Name = &apos;System Administrator&apos;)
+)</errorConditionFormula>
+    <errorMessage>Once a program is activated the Use Eligibility Tool setting cannot be changed. Please create a new program if needed.</errorMessage>
+</ValidationRule>

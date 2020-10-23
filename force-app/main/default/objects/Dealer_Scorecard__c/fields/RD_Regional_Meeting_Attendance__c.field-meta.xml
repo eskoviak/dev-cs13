@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RD_Regional_Meeting_Attendance__c</fullName>
+    <description>Select the most appropriate level that represents the dealers participation in regional meetings.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the most appropriate level that represents the dealers participation in regional meetings.</inlineHelpText>
+    <label>RD - Regional Meeting Attendance</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+                <label>All</label>
+            </value>
+            <value>
+                <fullName>Some</fullName>
+                <default>false</default>
+                <label>Some</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

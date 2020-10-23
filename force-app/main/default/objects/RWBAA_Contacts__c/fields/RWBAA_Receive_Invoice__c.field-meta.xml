@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RWBAA_Receive_Invoice__c</fullName>
+    <description>Multiservice send invoice options;picklist of available combos for invoice delivery</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Multiservice send invoice options</inlineHelpText>
+    <label>RWBAA Receive Invoice</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PDF,Attach,Consolidated</fullName>
+                <default>false</default>
+                <label>PDF,Attach,Consolidated</label>
+            </value>
+            <value>
+                <fullName>PDF,Link,Consolidated</fullName>
+                <default>false</default>
+                <label>PDF,Link,Consolidated</label>
+            </value>
+            <value>
+                <fullName>PDF,Attach,Individual Invoices emailed separately</fullName>
+                <default>false</default>
+                <label>PDF,Attach,Individual Invoices emailed separately</label>
+            </value>
+            <value>
+                <fullName>PDF,Link,Individual Invoices emailed separately</fullName>
+                <default>false</default>
+                <label>PDF,Link,Individual Invoices emailed separately</label>
+            </value>
+            <value>
+                <fullName>CSV,Attach,Consolidated</fullName>
+                <default>false</default>
+                <label>CSV,Attach,Consolidated</label>
+            </value>
+            <value>
+                <fullName>CSV,Link,Consolidated</fullName>
+                <default>false</default>
+                <label>CSV,Link,Consolidated</label>
+            </value>
+            <value>
+                <fullName>Mail</fullName>
+                <default>false</default>
+                <label>Mail</label>
+            </value>
+            <value>
+                <fullName>Express Delivery</fullName>
+                <default>false</default>
+                <label>Express Delivery</label>
+            </value>
+            <value>
+                <fullName>Fax</fullName>
+                <default>false</default>
+                <label>Fax</label>
+            </value>
+            <value>
+                <fullName>EmailAttachCSV</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Email with Attached CSV</label>
+            </value>
+            <value>
+                <fullName>EmailAttachPDF</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Email with Attached PDF</label>
+            </value>
+            <value>
+                <fullName>EmailLinkCSV</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Email with Link to CSV</label>
+            </value>
+            <value>
+                <fullName>EmailLinkPDF</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Email with Link to PDF</label>
+            </value>
+            <value>
+                <fullName>Individual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Individual</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_to_Submit_Article__c</fullName>
+    <defaultValue>&quot;WHEN ARTICLE IS READY: change Validation Status to   Submit Article for Mgr Review, Click [Assign], Enter Velma Carbajal in Assign to, Enter Due date (14 days from today) and check Send Email.&quot;</defaultValue>
+    <description>Instructions on submitting articles</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For Customer Support Reps: How to Submit Articles</inlineHelpText>
+    <label>**How to Submit Article**</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>38.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Display list account with view,edit functionality.</description>
+    <label>RWS_AccountSummary</label>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>31</minorNumber>
+        <namespace>tdc_tvte</namespace>
+    </packageVersions>
+</ApexPage>

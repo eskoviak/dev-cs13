@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Contract_Entity__c</fullName>
+    <description>Description TBD</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Help Text TBD</inlineHelpText>
+    <label>Sales Contract Entity</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Example 1</fullName>
+                <default>false</default>
+                <label>Example 1</label>
+            </value>
+            <value>
+                <fullName>Example 2</fullName>
+                <default>false</default>
+                <label>Example 2</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,120 @@
+<apex:page title="Price Check ({!oAccount.Name})" controller="PriceCheckController" tabstyle="Account" id="PriceCheck" cache="false" showHeader="false" sidebar="false">
+    <apex:includeScript value="{!URLFOR($Resource.Jquery172)}" />
+    
+    <style>
+    	div.groupLabel{
+    		position:relative;
+    		background-color:#F8F8F8;
+    		border-left:1px solid #DBDBDB;
+    		border-right:1px solid #DBDBDB;
+    		padding:1px 10px;
+    		font-weight:bold;
+    		top:8px;
+    		display:inline;
+    	}
+    	
+    	.group{
+    		padding:20px 20px 15px;
+    		border:1px solid #DBDBDB;
+    	}
+    	
+    	.startAjaxLoader{
+    		padding:4px;
+    	}
+    	
+    	h2.mainTitle{
+    		white-space:nowrap;
+    	}
+    
+    </style>
+    <apex:form id="Form">
+    	<apex:pageBlock title="Price Check ({!oAccount.Name})">
+    		<br/>
+   		    <apex:outputPanel id="MessageBlock">
+        		<apex:pageMessages />
+        		<a name="MessageBlockAnchor" id="MessageBlockAnchor"></a>
+    		</apex:outputPanel>
+    		<br/>
+    		<div class="groupLabel">Search Criteria</div>
+    		<div class="group">
+	    		<apex:panelGrid columns="7" id="SearchGrid"> 
+		    		<apex:outputLabel value="Style Name/Code" for="TextBoxProductCode" />
+		    		<apex:inputText id="TextBoxProductCode" value="{!sProductString}" />
+		    		<apex:outputLabel value="Brand" for="TextBoxProductBrand" />
+		    		<apex:selectList id="TextBoxProductBrand" value="{!sProductBrand}" size="1" >
+						<apex:selectOptions value="{!lProductBrands}"/>
+					</apex:selectList>
+					<apex:commandButton value="Search" status="SearchResultsStatus" rerender="SearchResultsWrapper,MessageBlock" action="{!searchProducts}" />
+					<apex:actionstatus id="SearchResultsStatus" startStyleClass="startAjaxLoader">
+						<apex:facet name="start">
+							<apex:image value="{!$Resource.Ajax_Loader}" />
+						</apex:facet>
+					</apex:actionstatus>
+				</apex:panelGrid>
+			</div><br/><br/>
+			<apex:outputPanel id="SearchResultsWrapper">
+				<div class="groupLabel">Product Search Results</div>
+	    		<div class="group">
+	    			<apex:outputText id="SearchSuggestion" rendered="{!NOT(RenderSearchResults)}" value="{!SearchSuggestionText}" style="color:#818181;" />
+	    			<apex:outputPanel id="SearchResults" rendered="{!RenderSearchResults}" StyleClass="SearchResultsWrapper">
+		    			<apex:pageBlockTable value="{!lProductSearchResults}" var="searchResult" id="searchResultsId">
+		                    <apex:column width="40">
+		                        <apex:commandLink value="Select" action="{!doPriceCheck}" status="SearchResultsStatus" reRender="PriceCheckResultsWrapper,MessageBlock">
+									<apex:param value="{!searchResult.Product.ProductCode}" assignTo="{!selectedProductCode}" name="ProductCode"/> 
+									<apex:param value="{!searchResult.Facility}" assignTo="{!selectedFacility}" name="Facility"/> 
+								</apex:commandLink>                        
+		                    </apex:column>
+		                    <apex:column headerValue="Style Code" width="100">
+		                        <apex:outputField value="{!searchResult.Product.ProductCode}"/>
+		                    </apex:column>
+		                    <apex:column headerValue="Style Name" width="400">
+		                        <apex:outputField value="{!searchResult.Product.Name}" />
+		                    </apex:column>
+		                    <apex:column headerValue="Brand/Family" width="100">
+		                        <apex:outputField value="{!searchResult.Product.Family}" />
+		                    </apex:column>  
+		                    <apex:column headerValue="Facility" width="100">
+		                        <apex:outputText value="{!searchResult.Facility}" />
+		                    </apex:column>  
+		                </apex:pageBlockTable>
+	                </apex:outputPanel>
+	    		</div>
+    		</apex:outputPanel>
+    		<br/><br/><br/>
+    		<apex:outputPanel id="PriceCheckResultsWrapper">
+				<div class="groupLabel">Price Check Results | {!oAccount.Name} [{!oAccount.RWS_ID__c}]</div>
+	    		<div class="group">
+	    			<apex:outputText id="PriceCheckSuggestion" rendered="{!NOT(RenderPriceCheckResults)}" value="{!PriceCheckSuggestionText}" style="color:#818181;" />
+	    			<apex:outputPanel id="PriceCheckResults" rendered="{!RenderPriceCheckResults}" StyleClass="SearchResultsWrapper">
+		    			<apex:pageBlockTable value="{!lPriceCheckResults}" var="PriceCheckResults" id="PriceCheckResultsId">
+		    				<apex:column rendered="false" headerValue="Customer Name" width="800">
+			                    <apex:outputText value="{!PriceCheckResults.CustomerName}"/> 
+			                </apex:column>
+			             	<apex:column rendered="false" headerValue="Customer Number" width="300">
+			                    <apex:outputField value="{!PriceCheckResults.PriceCheck.Customer_Number__c}"/> 
+			                </apex:column>  
+			                <apex:column headerValue="Style Code" width="200">
+			                    <apex:outputField value="{!PriceCheckResults.PriceCheck.Style_Number__c}"/> 
+			                </apex:column>
+			                <apex:column headerValue="Facility" width="200">
+			                    <apex:outputField value="{!PriceCheckResults.PriceCheck.Facility__c}"/> 
+			                </apex:column>
+			                <apex:column headerValue="Contract Expiration Date" width="300">
+			                    <apex:outputField value="{!PriceCheckResults.PriceCheck.Contract_Expiration_Date__c}"/> 
+			                </apex:column>                   
+			                <apex:column headerValue="Price List Code" width="200">
+			                    <apex:outputField value="{!PriceCheckResults.PriceCheck.Price_List_Code__c}"/> 
+			                </apex:column>
+			                <apex:column headerValue="Price" width="200">
+			                    <apex:outputField rendered="{!NOT(PriceCheckResults.Error)}" value="{!PriceCheckResults.PriceCheck.Price__c}"/>
+			                    <apex:outputText rendered="{!PriceCheckResults.Error}" value="Failed!"/>  
+			                </apex:column> 
+		                </apex:pageBlockTable>
+		                <a name="PriceCheckAnchor" id="PriceCheckAnchor"></a>
+	                </apex:outputPanel>
+	    		</div>
+    		</apex:outputPanel>
+    		<br/><br/><br/>
+    	</apex:pageBlock>
+    </apex:form>
+</apex:page>

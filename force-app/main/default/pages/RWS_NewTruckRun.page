@@ -1,0 +1,669 @@
+<!-- ************FOR COMMUNITY*******************
+*Name          :  RWS_NewTruckRun
+*Description   :  Edit and Schedule Truck Run
+*Author        :  Rajani D Cheruku
+*Modification Log
+
+********************************************************************* -->
+
+<apex:page id="TruckSummary" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false" docType="html-5.0" controller="RWS_NewTruckRun_Controller">
+    <html lang="en">
+
+    <head>
+        <c:HeadTagComponent />
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/popup.css')}" rel="stylesheet" />
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/back_next.js')}"></script>
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/jquery.validate.min.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/additional-methods.min.js')}" />
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/validation.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/modal.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/attachments.js')}"></script>
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/logout.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquerydataTables.js')}"/>
+        <script type="text/javascript">
+        
+
+        
+        function disablePropagation(event) {
+           if (event.stopPropagation){
+               event.stopPropagation();
+           }
+           else if(window.event){
+              window.event.cancelBubble=true;
+           }
+        }      
+        
+        var save = function() {
+            alert('save');
+            updateEvent();
+            location.reload(); 
+            };
+       
+        function resetCalendarSessionVar() {
+                                    sessionStorage.removeItem('disableAttachment');
+                                }
+        
+        </script>
+        <style>
+            div.panel {
+                padding: 0 18px;
+                background-color: rgb(237, 232, 221) !important;            
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+            }
+            
+            .enlargeTextbox {
+                zoom: 1.5;                
+            } 
+            
+            .pad_top2 {
+                padding-top: 2px;    
+            }
+            
+        </style>
+    </head>
+    
+    <body class="accounts" onload="displayBilling(); showEditDivs();" >
+        <div class="fluid-container">
+            <c:RWS_Header />
+            <div class="row site-content">
+                <div class="form-horizontal form_bg col-sm-12 pt-0">
+                    <!-- ************* Page Header ****************** -->
+                    <div class="col-sm-12 summary-header">
+                        <div class="col-sm-4">&nbsp;</div>
+                        <div class="col-sm-4 mrg_btm0 pad_rgt5">
+                            <h2 class="text-uppercase fancy white"><span>Continue Setting Up New Truck Run</span></h2>
+                        </div>
+                        <apex:outputPanel id="activationButtons">
+                            <div class="col-sm-4 pad_rgt5">
+                                
+                                <apex:outputPanel >
+                                    <a id="newAccount"  class="btn btn-danger mrg_top20 mrg_btm20 mrg_rgt0" onClick="resetCalendarSessionVar(); window.location='RWS_TruckControllerCalendar'; return false;">View Calendar</a> 
+                                </apex:outputPanel>
+                            </div>
+                        </apex:outputPanel>
+                    </div>
+                    <!-- begin container div account info -->
+                    <apex:actionregion >
+                    <apex:form id="accountStatusForm">
+                        <apex:actionStatus onstart="$('#splashscreen').modal({backdrop: 'static', keyboard: false});" onstop="$('#splashscreen').modal('hide');" id="loadSplashScreen"/>
+                     </apex:form>
+                    
+                    <apex:form id="accountForm">
+                        <div id="accountDetailsHeader">
+                            <!-- ************** Truck Run Info Header ************* -->
+                            <div class="row">
+                                <div class="summary_section_2 col-xs-12 mini_text_padder pheader">
+                                    <div class="col-xs-3">
+                                        <span class="text-uppercase sub-header">Truck Run Information</span>
+                                    </div>
+                                    <div id="accountDetailsHeaderView">
+                                        <div class="col-xs-1 col-xs-offset-8 txt_right pad_rgt0">
+                                            <!-- Edit Access: {!hasEditAccess} {!isNeedToLock} -->
+                                            
+                                            <apex:outputpanel id="editAccountAction"  >
+                                                <a href="#" class="navx" onClick="disablePropagation(event); editAccount(); checkExemption(); return false;">
+                                                    <!-- ********************** Edit **************** -->
+                                                    <span class="btn btn-danger btn-outline mrg_rgt5" aria-hidden="false">Edit</span>
+                                                </a>
+                                            </apex:outputpanel>
+                                        </div>
+                                    </div>                    
+                                    <!-- ********************** Save & Cancel **************** --> 
+                                    <div id="accountDetailsHeaderEdit" class="dis_none">          
+                                        <apex:actionRegion >                                           
+                                            <div class="col-sm-2 col-sm-offset-7 txt_right pad_rgt0">
+                                                <apex:outputPanel id="accountSaveAction" >
+                                                    <!--<a href="#" class="navx" onclick="saveAccount(); return false;">
+</a>-->
+                                                    <!-- ********************** Save **************** -->
+                                                    <span class="btn btn-danger" onClick="save();" rerender="out" aria-hidden="true">Save</span>
+                                                </apex:outputPanel>
+                                                <a href="#" class="navx" onClick="disablePropagation(event); AccountHideEdit(); return false;">
+                                                    <!-- ********************** Cancel **************** -->
+                                                    <span class="btn btn-danger btn-outline" aria-hidden="true">Cancel</span>
+                                                </a>
+                                            </div>
+                                        </apex:actionRegion>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            
+                            <div id="accountDetails"> 
+                                <apex:outputPanel id="accountDetailsPanel">
+                                    
+                                    <!-- ************** Truck Info Section************* -->
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label class="form control-label col-xs-2 pad_rgt0" for="newTruckreadonly">Truck Run</label>
+                                            <div class="col-xs-3 pad_top7">
+                                                <apex:outputText id="newTruckreadonly" value="{!newTruck}" />
+                                            </div>
+                                            <label class="form control-label col-xs-2 pad_rgt0" for="newStartDatereadonly">Run Start Date</label>
+                                            <div class="col-xs-3 pad_top7">
+                                                <apex:outputText id="newStartDatereadonly" value="{!newStartDate}" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form control-label col-xs-2 pad_rgt0" for="TruckRunTypereadonly">Truck Run Type</label>
+                                            <div class="col-xs-3 pad_top7">
+                                                <apex:outputText id="TruckRunTypereadonly" value="{!TruckRunType}" />
+                                                <!--<apex:outputText id="companyType" value="{!accountType}" /> -->
+                                            </div>
+                                            <label class="form control-label col-xs-2 pad_rgt0" for="newStartDateRO">Start Time</label>
+                                            <div class="col-xs-3 pad_top7">
+                                                <apex:outputText id="newStartDateRO" value="{!newStartTime}" />
+                                            </div>
+                                        </div>
+                                      <div class="form-group">
+                                            <label class="form control-label col-xs-2 pad_rgt0" for="TruckRunStatusRO">Truck Run Status</label>
+                                            <div class="col-xs-3 pad_top7">
+                                                <apex:outputText id="TruckRunStatusRO" value="{!TruckRunStatus}" />
+                                            </div>
+                                            
+                                          	<label class="form control-label col-xs-2 pad_rgt0" for="newEndDateRO">Run End Date</label>
+                                          <div class="col-xs-3 pad_top7">
+                                              <apex:outputText id="newEndDateRO" value="{!newEndDate}" />
+                                          </div>
+                                        </div>
+                                        <apex:outputPanel id="accountInfo">
+                                            <div class="form-group">
+                                                <label class="form control-label col-xs-2 pad_rgt0" for="RwfbAccountRO">RWfB Account</label>
+                                                <div class="col-xs-3 pad_top7">
+                                                    <apex:outputText id="RwfbAccountRO" value="{!RwfbAccount}" />
+                                                </div>
+                                                
+                                                <label class="form control-label col-xs-2 pad_rgt0" for="newEndTimeRO">End Time</label>
+                                                <div class="col-xs-3 pad_top7">
+                                                    <apex:outputText id="newEndTimeRO" value="{!newEndTime}" />
+                                                </div>
+                                            </div>
+                                        </apex:outputPanel>
+                                        <div class="form-group">
+                                            <label class="form control-label col-xs-2 pad_rgt0" for="TruckRunContactRO">Truck Run contact</label>
+                                            <div class="col-xs-3 pad_top7">
+                                                <apex:outputText id="TruckRunContactRO" value="{!TruckRunContact}" />
+                                            </div>
+                                            
+                                            <label class="form control-label col-xs-2 pad_rgt0" for="newStoreRO">Store</label>
+                                            <div class="col-xs-3 pad_top7">
+                                                <apex:outputText id="newStoreRO" value="{!newStore}" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form control-label col-xs-2 pad_rgt0" for="newTruckForRunRO">Truck For Run</label>
+                                            <div class="col-xs-3 pad_top7">
+                                                <apex:outputText id="newTruckForRunRO" value="{!newTruckForRun}" />
+                                            </div>
+                                            
+                                            <label class="form control-label col-xs-2 pad_rgt0" for="newDriverRO">Driver</label>
+                                            <div class="col-xs-3 pad_top7">
+                                                <apex:outputText id="newDriverRO" value="{!newDriver}" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form control-label col-xs-2 pad_rgt0" for="newStatusRO">Status</label>
+                                            <div class="col-xs-3 pad_top7">
+                                                <apex:outputText id="newStatusRO" value="{!newStatus}" />
+                                            </div>   
+                                            <label class="form control-label col-xs-2 pad_rgt0" for="ownerIdRO">Owner Id</label>
+                                            <div class="col-xs-3 pad_top7">
+                                                <apex:outputText id="ownerIdRO" value="{!ownerId}" />
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <!-- end container div truck info -->
+                                        <apex:actionfunction name="saveAccount" action="{!updateEvent}" oncomplete="AccountHideEdit();" reRender="activationButtons, accountDetailsPanel, contactPhysicalAddress" />
+                                        
+                                        
+                                    </div> 
+                                </apex:outputPanel>
+                            </div>  <!-- panel -->
+                            
+                            <!-- begin container div truck info edit -->
+                                        <div id="accountEdit" style="display:none">
+                                            <!-- ************** Truck Info Section Header************* -->
+                                            <apex:actionFunction name="updateEvent" action="{!updateEvent}" />  
+                                            <apex:outputPanel id="accountEditId">
+                                                <apex:pagemessages id="showAccountError"></apex:pagemessages> 
+                                                <div class="panel-body">                     
+                                                    
+                                                    <div class="form-group">
+                                                        <label class="form control-label col-xs-2 pad_rgt0" for="newTruck">Truck Run</label>
+                                                        <div class="col-xs-3 pad_top7">
+                                                            <apex:inputText id="newTruck" value="{!newTruck}" />
+                                                        </div>
+                                                        <label class="form control-label col-xs-2 pad_rgt0" for="newStartDate">Run Start Date</label>
+                                                        <div class="col-xs-3 pad_top7">
+                                                            <apex:inputText id="newStartDate" value="{!newStartDate}" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="form control-label col-xs-2 pad_rgt0" for="TruckRunType">Truck Run Type</label>
+                                                        <div class="col-xs-3 pad_top7">
+                                                            <apex:inputText id="TruckRunType" value="{!TruckRunType}" />
+                                                            <!--<apex:outputText id="companyType" value="{!accountType}" /> -->
+                                                        </div>
+                                                        <label class="form control-label col-xs-2 pad_rgt0" for="newStartTime">Start Time</label>
+                                                        <div class="col-xs-3 pad_top7">
+                                                            <apex:inputText id="newStartTime" value="{!newStartTime}" />
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label class="form control-label col-xs-2 pad_rgt0" for="TruckRunStatus">Truck Run Status</label>
+                                                        <div class="col-xs-3 pad_top7">
+                                                            <apex:inputText id="TruckRunStatus" value="{!TruckRunStatus}" />
+                                                        </div>
+                                                        <label class="form control-label col-xs-2 pad_rgt0" for="newEndDate">Run End Date</label>
+                                                        <div class="col-xs-3 pad_top7">
+                                                            <apex:inputText id="newEndDate" value="{!newEndDate}" />
+                                                        </div>
+                                                    </div>
+                                                    <apex:outputPanel id="accountInfoInput">
+                                                        <div class="form-group">
+                                                            <label class="form control-label col-xs-2 pad_rgt0" for="RwfbAccount">RWfB Account</label>
+                                                            <div class="col-xs-3 pad_top7">
+                                                                <apex:inputText id="RwfbAccount" value="{!RwfbAccount}" />
+                                                            </div>
+                                                            <label class="form control-label col-xs-2 pad_rgt0" for="newEndTime">End Time</label>
+                                                            <div class="col-xs-3 pad_top7">
+                                                                <apex:inputText id="newEndTime" value="{!newEndTime}" />
+                                                            </div>                                                            
+                                                        </div>
+                                                    </apex:outputPanel>
+                                                    <div class="form-group">
+                                                        <label class="form control-label col-xs-2 pad_rgt0" for="TruckRunContact">Truck Run contact</label>
+                                                        <div class="col-xs-3 pad_top7">
+                                                            <apex:inputText id="TruckRunContact" value="{!TruckRunContact}" />
+                                                        </div>
+                                                        
+                                                        <label class="form control-label col-xs-2 pad_rgt0" for="newStore">Store</label>
+                                                        <div class="col-xs-3 pad_top7">
+                                                            <apex:inputText id="newStore" value="{!newStore}" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="form control-label col-xs-2 pad_rgt0" for="newTruckForRun">Truck For Run</label>
+                                                        <div class="col-xs-3 pad_top7">
+                                                            <apex:inputText id="newTruckForRun" value="{!newTruckForRun}" />
+                                                        </div>
+                                                        
+                                                        <label class="form control-label col-xs-2 pad_rgt0" for="newDriver">Driver</label>
+                                                        <div class="col-xs-3 pad_top7">
+                                                            <apex:inputText id="newDriver" value="{!newDriver}" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="form control-label col-xs-2 pad_rgt0" for="newStatus">Status</label>
+                                                        <div class="col-xs-3 pad_top7">
+                                                            <apex:inputText id="newStatus" value="{!newStatus}" />
+                                                        </div> 
+                                                        <label class="form control-label col-xs-2 pad_rgt0" for="ownerId">Owner Id</label>
+                                                        <div class="col-xs-3 pad_top7">
+                                                            <apex:inputText id="ownerId" value="{!ownerId}" />
+                                                        </div> 
+                                                    </div>
+                                            
+                                                </div>
+                                            </apex:outputPanel>
+                                            <!--</apex:form>-->
+                                            
+                                        </div>
+                        </div>
+                    </apex:form>
+                    </apex:actionregion>
+                    <!-- end container div account info edit -->
+                    
+            <c:RWS_Modals />
+            <div class="modal inmodal" id="sendApplication" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title title_red">APPLICATION SENT</p>
+                        </div>
+                        <div class="modal-body pad_top_btm40">
+                            <p class="sub_tilte_clr txt_center mrg_btm0">Thank you, your application has
+                                <br/> been submitted and can expect
+                                <br/> a response within 4 hours</p>
+                        </div>
+                        <div class="modal-footer">
+                            <section class="col-sm-12">
+                                <ul class="list-inline col-sm-12 mrg_all0 padd_all0 ">
+                                    <li class="col-sm-12 popup_close"><a class="cancel1 cursor" data-dismiss="modal" onclick="HideCreditApplicationInfo();">OKAY</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--</apex:form>-->
+            <c:RWS_Footer />
+        </div>
+        
+        
+        
+
+        
+        <!--<c:JavaScriptLibrariesComponent />-->
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/bootstrap.min.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/jquery-ui-1.12.1/jquery-ui.min.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/jquery.maskedinput.min.js')}"></script>
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/account_summary.js')}"></script>
+        <script src="/soap/ajax/10.0/connection.js">
+        </script>
+        <script src="/soap/ajax/10.0/apex.js">
+        </script>
+        <script src="https://use.fontawesome.com/da00ee6e16.js"></script>
+        <apex:outputPanel id="Afterinsert">
+            <script>
+            
+            
+
+
+            function showEditDivs() {
+                var link = '{!$CurrentPage.parameters.link}';
+                if (link == 'edit') {
+                    $("#accountDetails").hide();
+                    $("#accountEdit").show();
+                    $("#contactDetails").hide();
+                    $("#contactEdit").show();
+                    $("#billingDetails").hide();
+                    $("#billingEdit").show();
+
+                }
+            }
+
+
+            
+            
+            </script>
+        </apex:outputPanel>
+        <script>
+        $(document).ready(function() {
+            $(".billingcredit_email").blur(function() {
+
+
+                var contents = $(".billingcredit_email").val();
+                $(".getbilling_email").val(contents);
+            });
+        });
+
+        function ContactHideView() {
+            document.getElementById("contactDetails").style.display = 'None';
+            document.getElementById("contactEdit").style.display = 'block';
+            document.getElementById("contactDetailsHeaderView").style.display = 'None';
+            document.getElementById("contactDetailsHeaderEdit").style.display = 'block';
+        }
+
+        
+
+        function HideOrShowTaxExempt(t) {
+            if (t.value == 'Yes') {
+                document.getElementById("CertificationSection2").style.display = 'block';
+                document.getElementById("CertificationSection1").style.display = 'block';
+                document.getElementById("AccountSummary:accountForm:certificate").focus(); 
+
+            } else {
+                document.getElementById("CertificationSection2").style.display = 'none';
+                document.getElementById("CertificationSection1").style.display = 'none';
+            }
+
+        }
+
+        function ContactAddress(t) {
+            //alert(t.value);
+            if (t.value == 'Different') {
+                document.getElementById("SameAsAccountAddress").style.display = 'none';
+                document.getElementById("SameAsBillingAddress").classList.add('dis_none');
+                document.getElementById("DifferentAddress").style.display = 'block';
+                document.getElementById("AccountSummary:contactForm:contactStreet").focus();
+            } else if(t.value == 'Same as Billing') {
+                document.getElementById("SameAsAccountAddress").style.display = 'none';
+                document.getElementById("SameAsBillingAddress").classList.remove('dis_none');
+                document.getElementById("DifferentAddress").style.display = 'none';            
+            } else {
+                document.getElementById("SameAsAccountAddress").style.display = 'block';
+                document.getElementById("DifferentAddress").style.display = 'none';
+                document.getElementById("SameAsBillingAddress").classList.add('dis_none');
+            }
+        }
+
+        function clearUploadSelection(){
+            $('#attachLabel').text("Choose File to Attach");
+
+            $('#AttachmentListView').DataTable( {
+                PageLength: 10,
+                 bFilter: false,
+                 order: [ 6, "desc" ]
+            } );    
+        }
+
+       
+        function HideCreditApplicationInfo() {
+            $("#sendApplication").hide();
+        }
+
+        function clearInput() {
+            $('.clearInput').val("");
+        }
+        
+        
+        </script>
+        
+        
+        <!-- *************** File upload method Start ****************** -->
+        
+       
+        
+        
+        
+        <apex:outputpanel id="FileUploadSection1">
+            <script type="text/javascript">
+            
+
+
+
+            var maxStringSize = 6000000; //Maximum String size is 6,000,000 characters
+            var maxFileSize = 5242880; //4350000; //After Base64 Encoding, this is the max file size
+            var chunkSize = 950000; //Maximum Javascript Remoting message size is 1,000,000 characters
+            var attachment;
+            var attachmentName;
+            var attachmentType;
+            var fileSize;
+            var positionIndex;
+            var doneUploading;
+            var UploadErrorMsg;
+
+            //Method to prepare a file to be attached to the Account bound to the page by the standardController
+            function uploadFile(rwfbPara, file, filName) {
+                
+                
+                //console.log(file);
+                console.log(reloadpage);
+                console.log(acctId);
+                console.log(filName);
+                console.log(rwfbPara);
+               
+                //if ($('input[id="AccountSummary:accountForm:SelectTaxExemptid:0"]').is(':checked')) {
+
+
+                    if (file != undefined && acctId != undefined && acctId.length > 0 && file.name == filName) {
+                        if (file.size <= maxFileSize) {
+                            attachmentName = file.name;
+                            attachmentType = file.type;
+                            var fileReader = new FileReader();
+                            fileReader.onloadend = function(e) {
+
+                                //need to read ArrayBuffer into usable string
+                                var chars = new Uint8Array(e.target.result);
+                                var CHUNK_SIZE = 0x8000;
+                                var index = 0;
+                                var length = chars.length;
+                                var result = '';
+                                var slice;
+                                while (index < length) {
+                                    slice = chars.subarray(index, Math.min(index + CHUNK_SIZE, length));
+                                    result += String.fromCharCode.apply(null, slice);
+                                    index += CHUNK_SIZE;
+                                }
+                                //here we are using Ajax API Toolkit
+                                var att = new sforce.SObject("Attachment");
+                                att.Name = attachmentName;
+                                att.ContentType = attachmentType;
+                                att.ParentId = rwfbPara;
+
+                                att.Body = (new sforce.Base64Binary(result)).toString();
+
+                                sforce.connection.create([att], {
+                                    onSuccess: function(result, source) {
+                                        if (result[0].getBoolean("success")) {
+                                            console.log("new attachment created with id " + result[0].id);                                            
+                                            refreshList();
+                                            console.log("sendCredit: "+sendCredit);
+                                            if (sendCredit == true) {
+                                                sendCreditApp();
+                                            } else {
+                                                updateCreditInfoJS();
+                                            }                                     
+                                        } else {
+                                            UploadErrorMsg = "Failed to create attachment " + result[0];
+                                            console.log(UploadErrorMsg);
+                                            //specialModal('fa fa-exclamation', 'UPLOAD ERROR', UploadErrorMsg, null, '', '', 'OKAY', null, '');
+                                        }
+                                    },
+                                    onFailure: function(error, source) {
+                                        UploadErrorMsg = "An error has occurred " + error;
+                                        console.log(UploadErrorMsg);
+                                        specialModal('fa fa-exclamation', 'UPLOAD ERROR', UploadErrorMsg, null, '', '', 'OKAY', null, '');
+                                    },
+                                    timeout: 120000
+                                });
+
+
+                            }
+                            fileReader.onerror = function(e) {
+                                //alert("There was an error reading the file.  Please try again.");
+                                UploadErrorMsg = "There was an error reading the file.  Please try again.";
+                                console.log(UploadErrorMsg);
+                                specialModal('fa fa-exclamation', 'UPLOAD ERROR', UploadErrorMsg, null, '', '', 'OKAY', null, '');
+                            }
+                            fileReader.onabort = function(e) {
+                                //alert("There was an error reading the file.  Please try again.");
+                                UploadErrorMsg = "There was an error reading the file.  Please try again.";
+                                console.log(UploadErrorMsg);
+                                specialModal('fa fa-exclamation', 'UPLOAD ERROR', UploadErrorMsg, null, '', '', 'OKAY', null, '');
+                            }
+
+                            fileReader.readAsArrayBuffer(file); //Read the body of the file
+
+                        } else {
+                            //alert("File must be under 4.3 MB in size.  Your file is too large.  Please try again.");
+                            UploadErrorMsg = "File must be under 5 MB in size.  Your file is too large.  Please try again.";
+                            console.log(UploadErrorMsg);
+                            //specialModal('fa fa-exclamation', 'UPLOAD ERROR', UploadErrorMsg, null, '', '', 'OKAY', null, '');
+                        }
+                    } else {
+                        //alert("You must choose a file before trying to upload it");
+                        // (MU: 12/19) File not required for initial setup. Task: RWCP-1170
+                        //UploadErrorMsg = "You must choose a file before trying to upload it";
+                        
+                        
+                    }
+
+                
+            }
+
+           
+          
+
+            function restoreEdit() {
+                $("#contactEditLink").attr("disabled", "false");
+                $("#contactEditBtn").removeClass("disabled");
+                $("#contactEditLink").click(function() {
+                    editContact();
+                    return false;
+                });
+                contactFocus();
+            }
+            </script>
+        </apex:outputpanel>
+    
+        <!-- *************** File upload method End ****************** -->
+        <script>
+        var editFlag;
+        
+        
+        $(document).ready(function() {
+                            
+            
+
+            var last_valid_selection = null;
+            $('.invoiceAttributeId').change(function(event) {
+                if ($(this).val().length > 4) {
+                    $(this).val(last_valid_selection);
+                } else {
+                    last_valid_selection = $(this).val();
+                }
+            });
+          
+
+
+        });
+        
+        function resetSessVar() {
+            if (sessionStorage.getItem('discountFootwearTable') != null) {
+                sessionStorage.removeItem('discountFootwearTable');
+            } else if (sessionStorage.getItem('discountAccessoriesTable') != null) {
+                sessionStorage.removeItem('discountAccessoriesTable');
+            } else if (sessionStorage.getItem('discountWorkwearTable') != null) {
+                sessionStorage.removeItem('discountWorkwearTable');
+            } else if (sessionStorage.getItem('discountOutsideTable') != null) {
+                sessionStorage.removeItem('discountOutsideTable');
+            } 
+            console.log('sessionStorage cleared for discount');
+        }
+        
+        function onChangeFile() {                
+                var file = $('input[type=file]')[0].files[0].name;                                
+                if (file != ' ' || file != null) {
+                    document.getElementById("attachLabel").innerHTML = file ;
+                    document.getElementById("attachErrorMsg").innerHTML = '&nbsp;';
+                   
+                }
+        }
+        
+        function accountFocus(){
+            document.getElementById("AccountSummary:accountForm:phone").focus();        
+
+        }
+        
+        function contactFocus(){
+            document.getElementById("AccountSummary:contactForm:firstName").focus(); 
+        }
+        
+        
+        //This function will pop up a standard confirm box when exiting the page with unsaved changes - cannot be custom styled
+        
+        window.onbeforeunload = function (e){
+            if(editFlag == true)  
+                return 'Are you sure you want to leave the page without Saving?';
+        }; 
+        
+        
+        </script>
+        <script type="text/javascript">
+        var __sfdcSessionId = '{!GETSESSIONID()}';
+        </script>
+        <script src="../../soap/ajax/19.0/connection.js" type="text/javascript"></script>
+        </div>
+        </div>
+    </body>
+    
+
+    </html>
+</apex:page>

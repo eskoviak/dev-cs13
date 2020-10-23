@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <description>Used in apex to match to the category on the Product object. Updated via apex.
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used in apex to match to the category on the Product object. Updated via apex.</inlineHelpText>
+    <label>Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Footwear</fullName>
+                <default>false</default>
+                <label>Footwear</label>
+            </value>
+            <value>
+                <fullName>Workwear</fullName>
+                <default>false</default>
+                <label>Workwear</label>
+            </value>
+            <value>
+                <fullName>Accessories</fullName>
+                <default>false</default>
+                <label>Accessories</label>
+            </value>
+            <value>
+                <fullName>Accessories Apparel and Gear</fullName>
+                <default>false</default>
+                <label>Accessories Apparel and Gear</label>
+            </value>
+            <value>
+                <fullName>Outside Lines</fullName>
+                <default>false</default>
+                <label>Outside Lines</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

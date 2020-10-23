@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Corrective_Action__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Corrective Action</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corrected Data &amp; QC</fullName>
+                <default>true</default>
+                <label>Corrected Data &amp; QC</label>
+            </value>
+            <value>
+                <fullName>Created Enhancement Request</fullName>
+                <default>false</default>
+                <label>Created Enhancement Request</label>
+            </value>
+            <value>
+                <fullName>Created Helpdesk Ticket</fullName>
+                <default>false</default>
+                <label>Created Helpdesk Ticket</label>
+            </value>
+            <value>
+                <fullName>Governance/auditing</fullName>
+                <default>false</default>
+                <label>Governance/auditing</label>
+            </value>
+            <value>
+                <fullName>Implemented revised process</fullName>
+                <default>false</default>
+                <label>Implemented revised process</label>
+            </value>
+            <value>
+                <fullName>No Action</fullName>
+                <default>false</default>
+                <label>No Action</label>
+            </value>
+            <value>
+                <fullName>Training / Coaching</fullName>
+                <default>false</default>
+                <label>Training / Coaching</label>
+            </value>
+            <value>
+                <fullName>Workaround</fullName>
+                <default>false</default>
+                <label>Workaround</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

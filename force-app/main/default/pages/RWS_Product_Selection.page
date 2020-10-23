@@ -1,0 +1,111 @@
+<apex:page showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false" docType="html-5.0" controller="RWS_Production_Selection_Controller" id="ProductSelectionPage" action="{!validateProgram}">
+    <html lang="en">
+        <head>
+            <c:HeadTagComponent />
+            <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/jquery.validate.min.js')}" />
+            <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/additional-methods.min.js')}" />
+            <apex:includeScript value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquerydataTables.js')}" />
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/validation.js')}"></script>
+            <style type="text/css">
+                
+                .modal-content {
+                    border-radius: 0px;
+                }
+                
+                .modal-header h4 {
+                    font-family: "MFred";
+                    font-size: 30px;
+                    text-align: center;
+                }
+                
+                .modal-body {
+                    color: black;
+                    font-family: "TSTAR";
+                    font-size: 25px;
+                }
+                .modal-footer {
+                    text-align: center;
+                }
+                .modal-dialog {
+                    background-color: #EDE8DD;
+                }
+                .ui-widget {
+                    font-family: 'TSTAR',sans-serif; 
+                    font-size: 1em;
+                }
+
+            </style>
+        </head>
+
+        <body class="programs form_bg">
+            <apex:pageMessages />
+            <div class="fluid-container" style="{!IF(showPage, '', 'display: none;')}">
+                <!-- ************** Create or Assign Purchasing Program Panel ************* -->
+                <div class="site-content" id="accordion">
+                    <h4>
+                        Add Products to Program
+                    </h4>
+                    <div>
+                        <apex:form id="MyProgram">
+                            <apex:actionStatus onstart="$('#splashscreen').modal({backdrop: 'static', keyboard: false});" onstop="$('#splashscreen').modal('hide');" id="loadSplashScreen"/>
+                            <c:RWS_Production_Selection displayProgramFields="true" />
+                        </apex:form>
+                    </div>
+                    <h4 class="product-review-section">
+                        REVIEW PRODUCTS <!--&amp; SUBMIT-->
+                    </h4>
+                    <apex:outputPanel id="reviewProductsPanel" layout="block">
+                        <c:RWS_Review_Products recordId="{!programId}" fLoad="true" showTbl="false"/>
+                    </apex:outputPanel>
+                </div>
+            </div>
+            <c:RWS_Modals />
+            
+            <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/bootstrap.min.js')}" />
+            <script src="{!URLFOR($Resource.RWSC_Assets, 'include/jquery-ui-1.12.1/jquery-ui.min.js')}"></script>
+            <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/modal.js')}"></script>
+            
+            <script type="text/javascript">
+
+            function rerenderReview() { 
+                rerenderReviewInternal();
+            }
+            
+            $(document).ready(function(){
+
+                $(window).keydown(function(event){
+                    if(event.keyCode == 13) {
+                        event.preventDefault();
+                        return false;
+                    }
+                });
+
+                $( "#accordion" ).accordion({
+
+                    icons: false, /* { 
+                        "header": false, 
+                        "activeHeader": false 
+                    },*/
+                    heightStyle: "content",
+                      /*classes: {
+                        "ui-accordion": "highlight"
+                      },*/
+                    create: function (event, ui) {
+                     //$("span#result").html ($("span#result").html () + "<b>Created</b><br>");
+                    },
+
+                    beforeActivate: function (event, ui) {
+                     //$("span#result").html ($("span#result").html () + ", <b>beforeActivate</b><br>");
+                    },
+
+                    activate: function (event, ui) {
+
+                     //$("span#result").html ($("span#result").html () + "<b>activate</b><br>");
+                    }
+                });
+            });
+            </script>
+           
+        </body>
+    </html>
+</apex:page>

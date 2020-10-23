@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_Shop_Lite_Irish_Setter_Work</fullName>
+    <active>true</active>
+    <label>Vendor Shop Lite Irish Setter Work</label>
+    <picklistValues>
+        <picklist>Backer_Panel_Graphic__c</picklist>
+        <values>
+            <fullName>ISW Lozier Shelf 97715</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>King Toe graphic 97739</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Feature Graphic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Primaloft graphic 97800</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RPM graphic 97799</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>StableFlex graphic 97738</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thinsulate graphic 97741</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Troutbrook graphic 97798</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ultra Dry Graphic 97797</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Backer_Panel_Size__c</picklist>
+        <values>
+            <fullName>12 inch 97732</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 inch 97733</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Merchandising_System__c</picklist>
+        <values>
+            <fullName>Lozier End Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slatwall</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

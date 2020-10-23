@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Participant_Status__c</fullName>
+    <description>The status of the tester. A tester may only be active in any one test/product at a time.
+Renamed from Tester Status</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The current status of the participant. A participant may only be added to a test if their status is active.</inlineHelpText>
+    <label>Participant Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pending</fullName>
+                <default>true</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Available for Testing</fullName>
+                <default>false</default>
+                <label>Available for Testing</label>
+            </value>
+            <value>
+                <fullName>Currently Testing</fullName>
+                <default>false</default>
+                <label>Currently Testing</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subsidy_Type__c</fullName>
+    <description>The type of subsidy.  A percentage, dollar, or open which means both.
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The type of subsidy.  A percentage, dollar, or open which means both.</inlineHelpText>
+    <label>Subsidy Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>dollar</fullName>
+                <default>false</default>
+                <label>$</label>
+            </value>
+            <value>
+                <fullName>percentage</fullName>
+                <default>false</default>
+                <label>%</label>
+            </value>
+            <value>
+                <fullName>open</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Open</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Subsidy</controllingFieldValue>
+            <controllingFieldValue>SubsidyandPayrollDeduction</controllingFieldValue>
+            <controllingFieldValue>SubsidywithPcard</controllingFieldValue>
+            <valueName>dollar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subsidy</controllingFieldValue>
+            <controllingFieldValue>SubsidyandPayrollDeduction</controllingFieldValue>
+            <controllingFieldValue>SubsidywithPcard</controllingFieldValue>
+            <valueName>percentage</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

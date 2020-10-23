@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Case__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Allows linking of Action Items to Test Cases</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Identify the Test Case associated to this Action Item (if any)</inlineHelpText>
+    <label>Test Case</label>
+    <referenceTo>Test_Case__c</referenceTo>
+    <relationshipLabel>Action Items</relationshipLabel>
+    <relationshipName>Action_Items</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Increase_Notification_Period__c</fullName>
+    <externalId>false</externalId>
+    <label>Price Increase Notification Period</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ASAP</fullName>
+                <default>false</default>
+                <label>ASAP</label>
+            </value>
+            <value>
+                <fullName>60 days</fullName>
+                <default>false</default>
+                <label>60 days</label>
+            </value>
+            <value>
+                <fullName>90 days</fullName>
+                <default>false</default>
+                <label>90 days</label>
+            </value>
+            <value>
+                <fullName>6 months</fullName>
+                <default>false</default>
+                <label>6 months</label>
+            </value>
+            <value>
+                <fullName>May 1/Sept 1</fullName>
+                <default>false</default>
+                <label>May 1/Sept 1</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

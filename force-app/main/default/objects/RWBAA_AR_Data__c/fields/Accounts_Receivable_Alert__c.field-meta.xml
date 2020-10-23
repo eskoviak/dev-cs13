@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accounts_Receivable_Alert__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+OR( MSTS_AR_8_to_14__c &gt; 0,
+    MSTS_AR_15_to_30__c &gt; 0,
+    MSTS_AR_31_to_45__c &gt; 0,
+    MSTS_AR_46_to_60__c &gt; 0,
+    MSTS_AR_61_to_90__c  &gt; 0,
+    MSTS_AR_91_to_120__c &gt; 0,
+    MSTS_AR_121_to_150__c  &gt; 0,
+    MSTS_AR_Over_150__c &gt; 0), &quot;AR&quot;,
+    NULL
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Accounts Receivable Alert</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leather_Type_Temp__c</fullName>
+    <description>Temp field for IA 2.0 conversion</description>
+    <externalId>false</externalId>
+    <label>Leather Type - Temp</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abrasion resistant mono-mesh</fullName>
+                <default>false</default>
+                <label>Abrasion resistant mono-mesh</label>
+            </value>
+            <value>
+                <fullName>Abrasion resistant NYLON</fullName>
+                <default>false</default>
+                <label>Abrasion resistant NYLON</label>
+            </value>
+            <value>
+                <fullName>Air mesh nylon</fullName>
+                <default>false</default>
+                <label>Air mesh nylon</label>
+            </value>
+            <value>
+                <fullName>Bison Taos Leather</fullName>
+                <default>false</default>
+                <label>Bison Taos Leather</label>
+            </value>
+            <value>
+                <fullName>BLACK</fullName>
+                <default>false</default>
+                <label>BLACK</label>
+            </value>
+            <value>
+                <fullName>Black Chaparrel Leather</fullName>
+                <default>false</default>
+                <label>Black Chaparrel Leather</label>
+            </value>
+            <value>
+                <fullName>BLACK CHROME</fullName>
+                <default>false</default>
+                <label>BLACK CHROME</label>
+            </value>
+            <value>
+                <fullName>BLACK EDGEWATER</fullName>
+                <default>false</default>
+                <label>BLACK EDGEWATER</label>
+            </value>
+            <value>
+                <fullName>BLACK ENDURA LEATHER</fullName>
+                <default>false</default>
+                <label>BLACK ENDURA LEATHER</label>
+            </value>
+            <value>
+                <fullName>Black Fortitude</fullName>
+                <default>false</default>
+                <label>Black Fortitude</label>
+            </value>
+            <value>
+                <fullName>Black leather</fullName>
+                <default>false</default>
+                <label>Black leather</label>
+            </value>
+            <value>
+                <fullName>Black Mesa Leather</fullName>
+                <default>false</default>
+                <label>Black Mesa Leather</label>
+            </value>
+            <value>
+                <fullName>BLACK NATURE SOFT</fullName>
+                <default>false</default>
+                <label>BLACK NATURE SOFT</label>
+            </value>
+            <value>
+                <fullName>Black rubber</fullName>
+                <default>false</default>
+                <label>Black rubber</label>
+            </value>
+            <value>
+                <fullName>Black Scout</fullName>
+                <default>false</default>
+                <label>Black Scout</label>
+            </value>
+            <value>
+                <fullName>BLACK STAR</fullName>
+                <default>false</default>
+                <label>BLACK STAR</label>
+            </value>
+            <value>
+                <fullName>BLACK STAR LEATHER</fullName>
+                <default>false</default>
+                <label>BLACK STAR LEATHER</label>
+            </value>
+            <value>
+                <fullName>BLACK TURBO VEGAS LEATHER</fullName>
+                <default>false</default>
+                <label>BLACK TURBO VEGAS LEATHER</label>
+            </value>
+            <value>
+                <fullName>Black Voyageur</fullName>
+                <default>false</default>
+                <label>Black Voyageur</label>
+            </value>
+            <value>
+                <fullName>BLACK Yukon</fullName>
+                <default>false</default>
+                <label>BLACK Yukon</label>
+            </value>
+            <value>
+                <fullName>BLACK YUKON LEATHER</fullName>
+                <default>false</default>
+                <label>BLACK YUKON LEATHER</label>
+            </value>
+            <value>
+                <fullName>Briar Turbo Vegas</fullName>
+                <default>false</default>
+                <label>Briar Turbo Vegas</label>
+            </value>
+            <value>
+                <fullName>BROWN</fullName>
+                <default>false</default>
+                <label>BROWN</label>
+            </value>
+            <value>
+                <fullName>BROWN AKIBA</fullName>
+                <default>false</default>
+                <label>BROWN AKIBA</label>
+            </value>
+            <value>
+                <fullName>Brown Boomer</fullName>
+                <default>false</default>
+                <label>Brown Boomer</label>
+            </value>
+            <value>
+                <fullName>Brown Chrome</fullName>
+                <default>false</default>
+                <label>Brown Chrome</label>
+            </value>
+            <value>
+                <fullName>BROWN CORDURA</fullName>
+                <default>false</default>
+                <label>BROWN CORDURA</label>
+            </value>
+            <value>
+                <fullName>Brown Leather</fullName>
+                <default>false</default>
+                <label>Brown Leather</label>
+            </value>
+            <value>
+                <fullName>Brown Overtime Leather</fullName>
+                <default>false</default>
+                <label>Brown Overtime Leather</label>
+            </value>
+            <value>
+                <fullName>Brown Taos Leather</fullName>
+                <default>false</default>
+                <label>Brown Taos Leather</label>
+            </value>
+            <value>
+                <fullName>Calico Brawny Leather</fullName>
+                <default>false</default>
+                <label>Calico Brawny Leather</label>
+            </value>
+            <value>
+                <fullName>CIGAR CIDER</fullName>
+                <default>false</default>
+                <label>CIGAR CIDER</label>
+            </value>
+            <value>
+                <fullName>Coffee Bean Cascade</fullName>
+                <default>false</default>
+                <label>Coffee Bean Cascade</label>
+            </value>
+            <value>
+                <fullName>Cognac Fortitude</fullName>
+                <default>false</default>
+                <label>Cognac Fortitude</label>
+            </value>
+            <value>
+                <fullName>DARK BROWN</fullName>
+                <default>false</default>
+                <label>DARK BROWN</label>
+            </value>
+            <value>
+                <fullName>Dark brown Gambler</fullName>
+                <default>false</default>
+                <label>Dark brown Gambler</label>
+            </value>
+            <value>
+                <fullName>DARK BROWN PUEBLO</fullName>
+                <default>false</default>
+                <label>DARK BROWN PUEBLO</label>
+            </value>
+            <value>
+                <fullName>Dark brown worn saddle</fullName>
+                <default>false</default>
+                <label>Dark brown worn saddle</label>
+            </value>
+            <value>
+                <fullName>Dark coffee soggy leather</fullName>
+                <default>false</default>
+                <label>Dark coffee soggy leather</label>
+            </value>
+            <value>
+                <fullName>Full Grain (FG)</fullName>
+                <default>false</default>
+                <label>Full Grain (FG)</label>
+            </value>
+            <value>
+                <fullName>FG Black Floater Babylonia</fullName>
+                <default>false</default>
+                <label>FG Black Floater Babylonia</label>
+            </value>
+            <value>
+                <fullName>FG BLACK LEATHER</fullName>
+                <default>false</default>
+                <label>FG BLACK LEATHER</label>
+            </value>
+            <value>
+                <fullName>FG Black Yukon</fullName>
+                <default>false</default>
+                <label>FG Black Yukon</label>
+            </value>
+            <value>
+                <fullName>FG BROWN</fullName>
+                <default>false</default>
+                <label>FG BROWN</label>
+            </value>
+            <value>
+                <fullName>FG Leather</fullName>
+                <default>false</default>
+                <label>FG Leather</label>
+            </value>
+            <value>
+                <fullName>FG Leather with abrasion resistant mesh</fullName>
+                <default>false</default>
+                <label>FG Leather with abrasion resistant mesh</label>
+            </value>
+            <value>
+                <fullName>FG Mocha Crazy Horse</fullName>
+                <default>false</default>
+                <label>FG Mocha Crazy Horse</label>
+            </value>
+            <value>
+                <fullName>FG Poplar Frontier</fullName>
+                <default>false</default>
+                <label>FG Poplar Frontier</label>
+            </value>
+            <value>
+                <fullName>FG Tumbled Natural Laidback</fullName>
+                <default>false</default>
+                <label>FG Tumbled Natural Laidback</label>
+            </value>
+            <value>
+                <fullName>FG Waterproof Leather</fullName>
+                <default>false</default>
+                <label>FG Waterproof Leather</label>
+            </value>
+            <value>
+                <fullName>FG, Briar Turbo Vegas Leather</fullName>
+                <default>false</default>
+                <label>FG, Briar Turbo Vegas Leather</label>
+            </value>
+            <value>
+                <fullName>FG, Dark Brown Worn Saddle</fullName>
+                <default>false</default>
+                <label>FG, Dark Brown Worn Saddle</label>
+            </value>
+            <value>
+                <fullName>FG, Mocha Crazy Horse Leather</fullName>
+                <default>false</default>
+                <label>FG, Mocha Crazy Horse Leather</label>
+            </value>
+            <value>
+                <fullName>FG, Water Resistant (WR)</fullName>
+                <default>false</default>
+                <label>FG, Water Resistant (WR)</label>
+            </value>
+            <value>
+                <fullName>FG, WR Nutmeg Ebbtide Leather</fullName>
+                <default>false</default>
+                <label>FG, WR Nutmeg Ebbtide Leather</label>
+            </value>
+            <value>
+                <fullName>FG, WR Oro-iginal Leather</fullName>
+                <default>false</default>
+                <label>FG, WR Oro-iginal Leather</label>
+            </value>
+            <value>
+                <fullName>FG, WR Velva Boomer Leather</fullName>
+                <default>false</default>
+                <label>FG, WR Velva Boomer Leather</label>
+            </value>
+            <value>
+                <fullName>FG, Waterproof (WP)</fullName>
+                <default>false</default>
+                <label>FG, Waterproof (WP)</label>
+            </value>
+            <value>
+                <fullName>FG, WP Dark Brown Pueblo</fullName>
+                <default>false</default>
+                <label>FG, WP Dark Brown Pueblo</label>
+            </value>
+            <value>
+                <fullName>FG, WP Gaucho</fullName>
+                <default>false</default>
+                <label>FG, WP Gaucho</label>
+            </value>
+            <value>
+                <fullName>FG, WP Hazelnut Voyageur</fullName>
+                <default>false</default>
+                <label>FG, WP Hazelnut Voyageur</label>
+            </value>
+            <value>
+                <fullName>FG, WP Hazelnut Voyageur &amp; Cordura</fullName>
+                <default>false</default>
+                <label>FG, WP Hazelnut Voyageur &amp; Cordura</label>
+            </value>
+            <value>
+                <fullName>FG, WP Nutmeg Ebbtide Leather</fullName>
+                <default>false</default>
+                <label>FG, WP Nutmeg Ebbtide Leather</label>
+            </value>
+            <value>
+                <fullName>GAUCHO CRAZY HORSE</fullName>
+                <default>false</default>
+                <label>GAUCHO CRAZY HORSE</label>
+            </value>
+            <value>
+                <fullName>Gaucho Yuma Leather</fullName>
+                <default>false</default>
+                <label>Gaucho Yuma Leather</label>
+            </value>
+            <value>
+                <fullName>Golden Bighorn Leather</fullName>
+                <default>false</default>
+                <label>Golden Bighorn Leather</label>
+            </value>
+            <value>
+                <fullName>GREY</fullName>
+                <default>false</default>
+                <label>GREY</label>
+            </value>
+            <value>
+                <fullName>Hazelnut Tramper</fullName>
+                <default>false</default>
+                <label>Hazelnut Tramper</label>
+            </value>
+            <value>
+                <fullName>Hazelnut Voyageur</fullName>
+                <default>false</default>
+                <label>Hazelnut Voyageur</label>
+            </value>
+            <value>
+                <fullName>Java soggy leather</fullName>
+                <default>false</default>
+                <label>Java soggy leather</label>
+            </value>
+            <value>
+                <fullName>Leather with Abrasion resistant mesh</fullName>
+                <default>false</default>
+                <label>Leather with Abrasion resistant mesh</label>
+            </value>
+            <value>
+                <fullName>Mahogany Cider Leather</fullName>
+                <default>false</default>
+                <label>Mahogany Cider Leather</label>
+            </value>
+            <value>
+                <fullName>Mahogany Voyageur Leather</fullName>
+                <default>false</default>
+                <label>Mahogany Voyageur Leather</label>
+            </value>
+            <value>
+                <fullName>MOCHA CRAZY HORSE</fullName>
+                <default>false</default>
+                <label>MOCHA CRAZY HORSE</label>
+            </value>
+            <value>
+                <fullName>Mocha Crazy Horse Leather</fullName>
+                <default>false</default>
+                <label>Mocha Crazy Horse Leather</label>
+            </value>
+            <value>
+                <fullName>Musk Leather</fullName>
+                <default>false</default>
+                <label>Musk Leather</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Nutmeg Ebbtide</fullName>
+                <default>false</default>
+                <label>Nutmeg Ebbtide</label>
+            </value>
+            <value>
+                <fullName>Oiled Nubuck</fullName>
+                <default>false</default>
+                <label>Oiled Nubuck</label>
+            </value>
+            <value>
+                <fullName>Oro-Iginal</fullName>
+                <default>false</default>
+                <label>Oro-Iginal</label>
+            </value>
+            <value>
+                <fullName>Oro-Russet Oro-Iginal Leather</fullName>
+                <default>false</default>
+                <label>Oro-Russet Oro-Iginal Leather</label>
+            </value>
+            <value>
+                <fullName>Polyurethane</fullName>
+                <default>false</default>
+                <label>Polyurethane</label>
+            </value>
+            <value>
+                <fullName>Poplar Frontier</fullName>
+                <default>false</default>
+                <label>Poplar Frontier</label>
+            </value>
+            <value>
+                <fullName>PU Coated Brown Leather</fullName>
+                <default>false</default>
+                <label>PU Coated Brown Leather</label>
+            </value>
+            <value>
+                <fullName>PU-Coated Dark Brown</fullName>
+                <default>false</default>
+                <label>PU-Coated Dark Brown</label>
+            </value>
+            <value>
+                <fullName>Raindance Leather</fullName>
+                <default>false</default>
+                <label>Raindance Leather</label>
+            </value>
+            <value>
+                <fullName>Red Brown Kayak and Gaucho Yuma Leather</fullName>
+                <default>false</default>
+                <label>Red Brown Kayak and Gaucho Yuma Leather</label>
+            </value>
+            <value>
+                <fullName>Red Maple Fortitude</fullName>
+                <default>false</default>
+                <label>Red Maple Fortitude</label>
+            </value>
+            <value>
+                <fullName>Red Oak Mesa</fullName>
+                <default>false</default>
+                <label>Red Oak Mesa</label>
+            </value>
+            <value>
+                <fullName>Red Roan</fullName>
+                <default>false</default>
+                <label>Red Roan</label>
+            </value>
+            <value>
+                <fullName>Red Roan leather</fullName>
+                <default>false</default>
+                <label>Red Roan leather</label>
+            </value>
+            <value>
+                <fullName>Rubber</fullName>
+                <default>false</default>
+                <label>Rubber</label>
+            </value>
+            <value>
+                <fullName>Soft PU Coated</fullName>
+                <default>false</default>
+                <label>Soft PU Coated</label>
+            </value>
+            <value>
+                <fullName>Stretch Airmesh Nylon, Black Leather</fullName>
+                <default>false</default>
+                <label>Stretch Airmesh Nylon, Black Leather</label>
+            </value>
+            <value>
+                <fullName>SUEDE</fullName>
+                <default>false</default>
+                <label>SUEDE</label>
+            </value>
+            <value>
+                <fullName>Suede, Waterproof</fullName>
+                <default>false</default>
+                <label>Suede, Waterproof</label>
+            </value>
+            <value>
+                <fullName>Synthetic Leather</fullName>
+                <default>false</default>
+                <label>Synthetic Leather</label>
+            </value>
+            <value>
+                <fullName>TPU &amp; Abrasion Resistant Nylon</fullName>
+                <default>false</default>
+                <label>TPU &amp; Abrasion Resistant Nylon</label>
+            </value>
+            <value>
+                <fullName>Velva boomer</fullName>
+                <default>false</default>
+                <label>Velva boomer</label>
+            </value>
+            <value>
+                <fullName>Waterproof Gold Nubuck</fullName>
+                <default>false</default>
+                <label>Waterproof Gold Nubuck</label>
+            </value>
+            <value>
+                <fullName>WHITE LEATHER</fullName>
+                <default>false</default>
+                <label>WHITE LEATHER</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

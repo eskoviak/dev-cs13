@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReplyToEmail__c</fullName>
+    <description>The email address to be used if someone replies to the outbound message used by code.  This is normally an administrator or support address.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The email address to be used if someone replies to the outbound message used by code.  This is normally an administrator or support address.</inlineHelpText>
+    <label>Reply To Email</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

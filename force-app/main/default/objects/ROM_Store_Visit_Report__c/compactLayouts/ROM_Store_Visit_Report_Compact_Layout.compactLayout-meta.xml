@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROM_Store_Visit_Report_Compact_Layout</fullName>
+    <fields>Account__c</fields>
+    <fields>Store_Manager_Name__c</fields>
+    <fields>Store_Manager_Phone__c</fields>
+    <label>ROM Store Visit Report Compact Layout</label>
+</CompactLayout>

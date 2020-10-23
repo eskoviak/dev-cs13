@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Addl_Address_M3_Cannot_Edit</fullName>
+    <active>true</active>
+    <description>Users cannot edit Additional Address records integrated with M3 (Mailing Address)</description>
+    <errorConditionFormula>AND(
+         NOT( ISBLANK(RWS_Id__c)), 
+         $Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+         $Profile.Name &lt;&gt; &quot;Cast Iron Integration&quot; 
+)</errorConditionFormula>
+    <errorMessage>This Address is tied to M3/Movex and cannot be edited. To change this data, create an &quot;Account Info Change Request&quot; case.</errorMessage>
+</ValidationRule>

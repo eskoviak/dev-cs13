@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RWfB_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Identified the Red Wing for Business account where the truck run will be scheduled.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the Red Wing for Business Account tied to the truck run.</inlineHelpText>
+    <label>RWfB Account</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Business Partner Community</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Truck Runs</relationshipLabel>
+    <relationshipName>Truck_Runs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

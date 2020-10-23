@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Future_Phase_Requirements</fullName>
+    <columns>NAME</columns>
+    <columns>Description__c</columns>
+    <columns>Project__c</columns>
+    <columns>Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project__c</field>
+        <operation>equals</operation>
+        <value>Retail Solutions - Future Phase</value>
+    </filters>
+    <label>Future Phase Requirements</label>
+</ListView>

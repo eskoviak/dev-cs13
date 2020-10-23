@@ -1,0 +1,123 @@
+<apex:page showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false" controller="RWS_Home_PageController">
+    <html lang="en">
+
+    <head>
+        <c:HeadTagComponent />
+        <style>
+        
+        </style>
+        <apex:outputPanel rendered="{!$User.Alias == 'guest' }">
+            <script type="text/javascript">
+            self.location.href = '{!$Label.Community_Name}login?retURL=%2FRWS_Home_Page';
+            </script>
+        </apex:outputPanel>
+    </head>
+
+    <body class="homepage">
+        <div class="container-fluid">
+            <c:RWS_HeaderComponent />
+            <div style="display:none;">
+                <apex:form >
+                    <apex:pageBlock >
+                    </apex:pageBlock>
+                </apex:form>
+            </div>
+            <div class="row secondary-bg site-content">
+                <div class="col-xs-12 text-center header">
+                    <h1 class="fancy white"><span>Welcome to Red Wing for Business</span></h1>
+                    <p class="white">Providing Industry Leading Safety Solutions to Business Customers</p>
+                </div>
+            </div>
+            <div class="row primary-bg home-sections site-content">
+                <div class="col-xs-4 col-md-4 col-lg-4">
+                    <div class="row">
+                        <div class="text-center">
+                            <h3 class="fancy text-uppercase"><span>Account Lookup</span></h3>
+                        </div>
+                    </div>
+                    <div class="row">                        
+                            <p>
+                                Looking for an account or program? Use this area to locate and manage all accounts your store is able to service. Adding products to a program, modifying account details, adding contacts are all activities you are able to manage.
+                               <!-- <apex:outputPanel rendered="{!recourseNumber != 0 && recourseNumber != null && recourseNumber != 1}"> <br/><span class="rw-red bold"> {!recourseNumber} Recourse Accounts </span> </apex:outputPanel>
+                                <apex:outputPanel rendered="{!recourseNumber == 1}"> <br/><span class="rw-red bold"> {!recourseNumber} Recourse Account </span> </apex:outputPanel> -->
+                            </p>                                                  
+                    </div>  
+                </div>
+                <div class="col-xs-4 col-md-4 col-lg-4">
+                    <div class="row">
+                        <div class="text-center">
+                            <h3 class="fancy text-uppercase"><span>Creating Accounts</span></h3>
+                        </div>
+                    </div>
+                    <div class="row">                        
+                            <p>
+                                Is your account ready to go? Use this area to create your account, submit a credit application, and setup a program for a business account for the first time. You will be asked for basic account details, tax status, billing information, program details and products.
+                            </p>                                                  
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-4 col-lg-4">
+                    <div class="row">
+                        <div class="text-center">
+                            <h3 class="fancy text-uppercase"><span>Program Template</span></h3>
+                        </div>
+                    </div>
+                    <div class="row">                        
+                            <p>Would you like to create a new program to be used in your store? Templates are used in the account setup process and contain program, product and pricing information. Set these up to streamline the account creation process for new accounts.</p>                                                  
+                    </div>            
+                </div>
+                <div class="row col-xs-12">
+                    <div class="col-xs-4">         
+                        <button class="btn btn-danger" onClick="window.location='{!$Label.Community_Name}RWS_AccountsListPage?tab=account'; return false;">Account Lookup</button>
+                    </div>    
+                    <div class="col-xs-4">
+                        <apex:outputPanel rendered="{!isFullAccessUser}">
+                            <button class="btn btn-danger" onClick="resetSessVar(); resetAttachmentSessionVar(); window.location='{!$Label.Community_Name}RWS_Account_CreationV2?tab=account'; return false;">New Account</button>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!!isFullAccessUser}">
+                            <span class="btn btn-danger disabled" >New Account</span>
+                        </apex:outputPanel>
+                    </div>   
+                    <div class="col-xs-4">              
+                        <apex:outputPanel rendered="{!isFullAccessUser}" >
+                            <button class="btn btn-danger" onClick="resetSessVar(); window.location='{!$Label.Community_Name}RWS_NewProgramSetup?tab=program'; return false;">New Program Template</button>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!!isFullAccessUser}" >
+                            <span class="btn btn-danger disabled">New Program Template</span>
+                        </apex:outputPanel>
+                    
+                    </div>               
+               </div>
+               <div class="col-xs-12 hgt15"/>                                    
+            </div>         
+            <c:RWS_Footer />
+        </div>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            var lastURL = document.referrer;
+            if (lastURL.includes("frontdoor.jsp")) {
+                $('body').removeClass('homepage');
+            }
+        });
+        
+        function resetAttachmentSessionVar() {
+            sessionStorage.removeItem('disableAttachment');
+        }
+        
+        function resetSessVar() {
+            if (sessionStorage.getItem('discountFootwearTable') != null) {
+                sessionStorage.removeItem('discountFootwearTable');
+            } else if (sessionStorage.getItem('discountAccessoriesTable') != null) {
+                sessionStorage.removeItem('discountAccessoriesTable');
+            } else if (sessionStorage.getItem('discountWorkwearTable') != null) {
+                sessionStorage.removeItem('discountWorkwearTable');
+            } else if (sessionStorage.getItem('discountOutsideTable') != null) {
+                sessionStorage.removeItem('discountOutsideTable');
+            } 
+        }
+        
+        </script>
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/logout.js')}" />
+    </body>
+
+    </html>
+</apex:page>

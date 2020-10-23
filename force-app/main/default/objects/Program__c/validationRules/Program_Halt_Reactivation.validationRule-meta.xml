@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Halt_Reactivation</fullName>
+    <active>true</active>
+    <description>A user cannot reactivate the previously deactivated Program without contact Support to delete unnecessary PPBE records</description>
+    <errorConditionFormula>AND( 
+HasBeenActive__c = TRUE, 
+Active__c = TRUE, 
+ISCHANGED(Active__c), 
+NOT($Profile.Name = &apos;RWS Customer Service NA Mgr&apos;), 
+NOT($Profile.Name = &apos;RWS Retail Acctg - National Accounts&apos;), 
+NOT($Profile.Name = &apos;System Administrator&apos;) 
+)</errorConditionFormula>
+    <errorMessage>You cannot reactivate a previously deactivated Program. Please contact Support to enable the ability to reactivate your Program.</errorMessage>
+</ValidationRule>

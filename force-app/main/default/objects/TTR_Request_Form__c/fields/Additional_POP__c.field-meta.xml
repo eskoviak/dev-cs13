@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_POP__c</fullName>
+    <description>This the for additional point of purchase notes. Example - Large Logo, other banners, shelf types, cut-outs, etc.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter any additional POP ordered.  Example - Large Logo, other banners, shelf types, cut-outs, etc.</inlineHelpText>
+    <label>Additional POP</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

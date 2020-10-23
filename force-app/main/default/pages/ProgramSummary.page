@@ -1,0 +1,648 @@
+<apex:page id="ProgramSummary" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false" docType="html-5.0" controller="RWS_ProgramSetUpController">
+    <html lang="en">
+
+    <head>
+        <c:HeadTagComponent />
+        <link href="{!URLFOR($Resource.RWSC_Assets, 'include/css/popup.css')}" rel="stylesheet" />
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/jquery.validate.min.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/additional-methods.min.js')}" />
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/validation.js')}" />
+        <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/modal.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.RWS_Datatable, '/RWS_Datatable/jquerydataTables.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/logout.js')}" />
+       
+        <script type="text/javascript">
+        function printModal() {
+            $("#proposalNotesPopup").modal('show');
+        }
+        function getNotes() {
+            var notes = $("textarea#proposalnotes").val();
+            return notes;
+        }
+        </script>
+    </head>
+
+    <body class="programs">
+
+         <div id="proposalNotesPopup" class="modal fade inmodal">
+                <div class="modal-dialog">
+                    <div class="modal-content modal-bg">
+                        <div class="modal-header header-border txt_center black">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title modal-header-text"> <span>PRINTING</span></h4>
+                        </div>
+                        <div class="pad_top_btm40 modal-bg">
+                            <p class="sub_tilte_clr txt_center mrg_btm0 modal-body-text">
+                                Would you like to add proposal notes to your program summary print view? <br />
+                                <textarea id="proposalnotes" rows="5"  maxlength="255" style="width:500px;max-width:500px;font-size:0.6em;">{!proposalNotes}</textarea><br />
+                                <span style="self-align:left;color:#ccc;font-size:0.5em;">Max Character Limit: 255</span>
+                            </p>
+                        </div>
+                        <div class="modal-footer footer-border">
+                            <ul class="list-inline col-sm-12 mrg_all0 padd_all0 ">
+                                <li class="col-sm-12 popup_close">
+                                    <button type="button" class="btn btn-danger " onclick="SaveProposalNotes(getNotes());$('#proposalNotesPopup').modal('hide');">CONTINUE</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div id="pageContainer" class="fluid-container">
+            <div class="col-lg-12">
+                <c:RWS_HeaderComponent />
+            </div>
+            <apex:form Id="theForm">
+                
+                <apex:actionFunction name="SaveProposalNotes" action="{!SaveProposalNotes}" oncomplete="window.open('RWS_Print_ProgramPricelist?programId={!programId}&pn=1', '_blank');" reRender="" >
+                   <apex:param name="proposalNotes" assignTo="{!proposalNotes}" value="" />
+                </apex:actionFunction>
+ 
+                <apex:outputpanel id="ProgramSummaryPage">
+                    <div class="wrapper row site-content">
+                                <div class="form-horizontal form_bg col-sm-12">
+                                    
+                                    <div class="col-sm-12 summary-header">
+                                        <div class="col-sm-4">&nbsp;</div>
+                                        
+                                        <div class="col-sm-4 mrg_btm10">
+                                            <h2 class="text-uppercase fancy white"><span>Program Summary</span></h2>
+                                        </div>
+                                        <div class="col-sm-4 pad_rgt5">
+                                            <div style="position: absolute; top: 0px; right: 0px; width: 600px;">                                                
+                                                <apex:outputpanel rendered="{!(ProgramActive && hasEditAccess && !isTemplate && isFullAccessUser)}">
+                                                    <span id="btn_Program_DeActivation" onClick="specialModal('fa fa-bell-o', 'DEACTIVATE PROGRAM?', 'Do you want to deactivate this program?', null, '', 'DeActivateProgram()', 'YES', '' , 'NO')" class="btn btn-danger btn-md flt_rgt mrg_top20 mrg_btm20">Deactivate Program</span>
+                                                </apex:outputpanel>                                                
+                                                <apex:outputpanel rendered="{!(ProgramActive && !hasEditAccess && !isTemplate) || (ProgramActive && !isFullAccessUser)}" layout="none">
+                                                    <span class="btn btn-danger btn-outline disabled btn-md flt_rgt mrg_top20 mrg_btm20">Deactivate Program</span>
+                                                </apex:outputpanel>
+                                                <apex:outputPanel rendered="{!(!ProgramActive && hasEditAccess && !isTemplate && isFullAccessUser)}">
+                                                    <span id="btn_Program_Activation" onClick="specialModal('fa fa-bell-o', 'ACTIVATE PROGRAM?', 'Do you want to activate this program?', null, '', 'ActivateProgram()', 'YES', '' , 'NO')" class="btn btn-danger btn-md flt_rgt mrg_top20 mrg_btm20">Activate Program</span>
+                                                </apex:outputPanel>
+                                                <apex:outputPanel rendered="{!(!ProgramActive && !hasEditAccess && !isTemplate) || (!ProgramActive && !isFullAccessUser)}" layout="none">
+                                                    <span class="btn btn-danger btn-outline btn-md disabled flt_rgt mrg_top20 mrg_btm20">Activate Program</span>
+                                                </apex:outputPanel>
+                                                
+                                                <apex:outputPanel rendered="{!!hasEditAccess || !isFullAccessUser}" layout="none">
+                                                    <div class="flt_rgt">
+                                                        <span class="btn btn-danger btn-outline mrg_top20 mrg_btm20 disabled">Edit</span>
+                                                    </div> 
+                                                </apex:outputPanel>
+                                                <apex:outputPanel rendered="{!hasEditAccess && isFullAccessUser}" layout="none">
+                                                <div class="flt_rgt">
+                                                    <a href="RWS_NewProgramSetup?tab=program&proid={!programId}" class="btn btn-danger btn-outline mrg_top20 mrg_btm20">Edit</a>
+                                                </div> <!-- Edit Button For New Design -->
+                                                </apex:outputPanel>
+                                                <apex:outputPanel id="printButtons">
+                                                    <apex:outputPanel rendered="{!!isScheduled}">
+                                                        <a href="RWS_Print_ProgramPricelist?programId={!programId}&pn=0" target="_blank" class="btn btn-danger btn-outline btn-md flt_rgt mrg_top20 mrg_btm20">Print Pricelist</a>
+                                                    </apex:outputPanel>
+                                                    <apex:outputPanel rendered="{!isScheduled}">
+                                                         <a href="RWS_Print_ProgramPricelist?programId={!programId}&pn=0" target="_blank" class="btn btn-danger btn-outline btn-md flt_rgt mrg_top20 mrg_btm20 disabled">Print Pricelist</a>
+                                                    </apex:outputPanel>
+                                                    <apex:outputPanel rendered="{!isFullAccessUser && !isScheduled}">
+                                                        <button onclick="printModal();return false;" class="btn btn-danger btn-outline btn-md flt_rgt mrg_top20 mrg_btm20">Print Proposal</button>
+                                                    </apex:outputPanel>
+                                                    <apex:outputPanel rendered="{!!isFullAccessUser || isScheduled}">
+                                                        <span class="btn btn-danger btn-outline btn-md flt_rgt mrg_top20 mrg_btm20 disabled">Print Proposal</span>
+                                                    </apex:outputPanel>
+                                                </apex:outputPanel>    
+                                            </div>
+                                        </div>    
+                                    </div>
+                                    
+                                    
+                                    
+                                    <div class="clear"></div>
+                                    <apex:pagemessages id="ProgramSummaryErrorMsg">
+                                    </apex:pagemessages>
+                                    <!-- Begin Program Summary Display Section -->
+                                    <div id="progSummaryDisplay">
+                                        <div class="summary_section_2 col-sm-12 mini_text_padder pheader">
+                                            <div class="col-sm-3">
+                                                <span class="uppercase sub-header">Program Details</span>
+                                            </div>                                           
+                                     
+                                            
+                                        </div>
+                                        <div class="col-sm-12 program_content_section">
+                                            <div class="col-sm-6 mrg_top20">
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="pname">Program Name</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label ">
+                                                            <apex:outputText value="{!programName}" />
+                                                        </label>
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="actdate">Program Effective Date</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label ">
+                                                            <apex:outputText id="actDate" value="{!displayactivationDate}" />
+                                                        </label>
+                                                        <apex:inputHidden value="{!displayactivationDate}" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="exdate">Expiration Date</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label ">
+                                                            <apex:outputText value="{!displayexpirationDate}" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="type">Type</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label ">
+                                                            <apex:outputText id="Programtype" value="{!selectType}" />
+                                                        </label>
+                                                        <apex:inputHidden value="{!selectType}" />
+                                                    </div>
+                                                </div>
+                                                 <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="subtax">Tax Method</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label ">
+                                                            <apex:outputText value="{!selectSubsidyTax}" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="status">Program Notes</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label  txt_left">
+                                                            <apex:outputText value="{!programNotes}" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="status">Invoice Attributes Required</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label  txt_left">
+                                                            <apex:outputText value="{!invoiceAttributes}" />
+                                                        </label>
+                                                    </div>
+                                                </div>                                                                       
+                                            </div>
+                                            <div class="col-sm-6 mrg_top20">
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="powner">Processing Status</label>
+                                                    <apex:outputPanel id="processingStatusField">
+                                                                                                        
+                                                        <div id="processingStatus" class="col-xs-2 pad_rgt0">
+                                                            <label class="form control-label ">
+                                                                <apex:outputText value="{!processingStatus}" />
+                                                            </label>
+                                                        </div>
+                                                        
+                                                        <apex:outputPanel rendered="{!isScheduled}">
+                                                            <div class="col-xs-6 pad_top7 pad_lft0">
+                                                                <span class="fa fa-refresh rw-red cursor" onClick="updateProcessingStatus(); return false;"/>
+                                                            </div>
+                                                        </apex:outputPanel>    
+                                                        
+                                                    </apex:outputPanel>                                                    
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="accountname">Account Name</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label">
+                                                            <a href="{!redirectToAccount}" class="view-contact">
+                                                                <apex:outputText id="accountName" value="{!AccountName}" />
+                                                            </a>
+                                                        </label>
+                                                        <apex:inputHidden value="{!AccountName}" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="powner">Program Owner</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label ">
+                                                            <apex:outputText value="{!proOwner}" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="ProgramStatusEdit">Status</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label ">
+                                                            <apex:outputText value="{!ProgramStatus}" />
+                                                        </label>
+                                                        <apex:inputhidden id="ProgramStatusEdit" value="{!ProgramActivationStatus}" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="pCard">P-Card</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label ">
+                                                            <apex:outputText value="{!displaySelectedPCardOption}" />
+                                                        </label>
+                                                        <apex:inputhidden id="pCard" value="{!selectedPCardOption}" />
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="salesContract">Sales Contract</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label ">
+                                                            <apex:outputText value="{!selectedSalesContract}" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div id="contractRefDiv" class="form-group dis_none">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="contractRef">Sales Contract Reference</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label ">
+                                                            <apex:outputText value="{!displaySelectedContractReason}" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                                <div class="form-group">
+                                                    <label class="form control-label col-xs-4 pad_rgt0" for="slevel">Service Level</label>
+                                                    <div class="col-xs-8">
+                                                        <label class="form control-label ">
+                                                            <apex:outputText id="ServicingLevel" value="{!selectedServiceLevel}" />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                     
+                                        </div>
+                                        
+                                        <!-- Subsidy Div -->
+                                        <div id="subsidyDiv">
+                                            <div class="summary_section_2 col-sm-12 mini_text_padder pheader mrg_top20">
+                                                <div class="col-sm-3">
+                                                    <span class="uppercase sub-header">Subsidy</span>
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="col-sm-12 subsidy_content_section rw-grey">
+                                                <div class="col-sm-6 mrg_top20 rw-grey">
+                                                    <div class="form-group">
+                                                        <label class="form control-label col-xs-4 pad_rgt0" for="stype">Subsidy Type</label>
+                                                        <div class="col-xs-8">
+                                                            <label class="form control-label ">
+                                                                <apex:outputText id="subsidyType" value="{!selectsubsidyType}" />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group dis_none" id="subsidyAmt">
+                                                        <label class="form control-label col-xs-4 pad_rgt0" for="subsidy">Subsidy &#40;&#36;&#41;</label>
+                                                        <div class="col-xs-8">
+                                                            <label class="form control-label ">
+                                                                <apex:outputText value="{!subsidyAmount}"/>                                                            
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group dis_none" id="subsidyPercent">
+                                                        <label class="form control-label col-xs-4 pad_rgt0" for="subsidypercentage">Subsidy &#40;&#37;&#41;</label>
+                                                        <div class="col-xs-8">
+                                                            <label class="form control-label ">                                                            
+                                                                <apex:outputText value="{0, number, ###.##}" >   
+                                                                    <apex:param value="{!subsidyPercent}" />
+                                                                </apex:outputText>                                                         
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group dis_none" id="maxAmt">
+                                                        <label class="form control-label col-xs-4 pad_rgt0" for="maxamount">Max Amount</label>
+                                                        <div class="col-xs-8">
+                                                            <label class="form control-label ">                                                            
+                                                                <apex:outputText value="{!maxAmount}" />                                                            
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 mrg_top20 rw-grey">
+                                                
+                                                    <div class="form-group">
+                                                        <label class="form control-label col-xs-4 pad_rgt0" for="aallowed">Accessories Allowed</label>
+                                                        <div class="col-xs-8">
+                                                            <label class="form control-label ">
+                                                                <apex:outputText value="{!selectaccessallowsubsidy}" />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="form control-label col-xs-4 pad_rgt0" for="allowedPairs">Allowed &#35; of Pairs</label>
+                                                        <div class="col-xs-8">
+                                                            <label class="form control-label ">
+                                                                <apex:outputText value="{!numberPairsAllow}" />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="eligibilityDiv">
+                                        <div class="summary_section_2 col-sm-12 mini_text_padder pheader mrg_top20">
+                                            <div class="col-sm-3">
+                                                <span class="uppercase sub-header">ELIGIBILITY</span>
+                                            </div>
+                                            
+                                        </div>
+                                            <div class="col-sm-12 subsidy_content_section rw-grey">
+                                                <div  class="col-sm-6 mrg_top20 rw-grey">
+                                                    <div class="form-group">
+                                                        <label class="form control-label col-xs-4 pad_rgt0">Use Eligibility Tool</label>
+                                                        <div class="col-xs-8">
+                                                            <label class="form control-label ">
+                                                                <apex:outputText value="{!selecteligibilityOption}" />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div id="requireUploadDiv" class="col-sm-6 mrg_top20 rw-grey dis_none">
+                                                    <div class="form-group">
+                                                        
+                                                        <label class="form control-label col-xs-4 pad_rgt0">REQUIRE UPLOAD OF VOUCHER</label>
+                                                        <div class="col-xs-8">
+                                                            <label class="form control-label ">
+                                                                <apex:outputText value="{!selectRequireUpload}" />
+                                                            </label>
+                                                        </div>                                            
+                                                    </div>
+                                             
+                                                </div>
+                                                
+                                                
+                                                
+                                                <div id="voucherTypeDiv" class="col-sm-6 mrg_top20 rw-grey dis_none">
+                                                    <div class="form-group">
+                                                        
+                                                        <label class="form control-label col-xs-4 pad_rgt0">Voucher Type</label>
+                                                        <div class="col-xs-8">
+                                                            <label class="form control-label ">
+                                                                <apex:outputText value="{!selectAnnualResetorRollover}" />
+                                                            </label>
+                                                        </div>                                            
+                                                    </div>
+                                             
+                                                </div>
+                                                
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                        <div id="payrollDiv">
+                                            <div class="summary_section_2 col-sm-12 mini_text_padder pheader mrg_top20">
+                                                <div class="col-sm-5">
+                                                    <span class="uppercase sub-header">PAYROLL DEDUCTIONS</span>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-sm-12 subsidy_content_section rw-grey">
+                                                
+                                               <div class="col-sm-6 mrg_top20 rw-grey">
+                                                    <div class="form-group">
+                                                        <label class="form control-label col-xs-4 pad_rgt0">Mandatory</label>
+                                                        <div class="col-xs-8">
+                                                            <label class="form control-label ">
+                                                                <apex:outputText value="{!selectMandatory}" />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>  
+                                                
+                                                <div class="col-sm-6 mrg_top20 rw-grey">  
+                                                    <div class="form-group">
+                                                        <label class="form control-label col-xs-4 pad_rgt0">Accessories Allowed</label>
+                                                        <div class="col-xs-8">
+                                                            <label class="form control-label ">
+                                                                 <apex:outputText value="{!selectAccessAllowPayrollDeduction}" />
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            
+                                            
+                                            
+                                        </div>
+                                        <div class="summary_section_2 col-sm-12 mini_text_padder pheader mrg_top20">
+                                            <div class="col-sm-3">
+                                                <span class="uppercase sub-header">PRODUCTS</span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-sm-12 subsidy_content_section">
+                                            <apex:outputPanel id="preview">
+                                                <c:RWS_Preview_Review_Products recordId="{!programId}"/>
+                                            </apex:outputPanel>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    <!-- End Program Summary Edit Section -->
+                                </div>
+                                <div class="hgt15 mrg_btm20">&nbsp;</div>
+                    </div>
+                    <c:RWS_Modals />
+                    <apex:actionStatus onstart="$('#splashscreen').modal({backdrop: 'static', keyboard: false});" onstop="$('#splashscreen').modal('hide');" id="loadSplashScreen"/>
+                    <apex:actionFunction name="ActivateProgram" action="{!ActivateProgram}" oncomplete="ProgramStatus();" reRender="ProgramSummaryPage,JsFunstion,ProgramSummaryErrorMsg,ActivationErrorMessageDisplay,ActivationErrorMessageDisplayPanel" status="loadSplashScreen" />
+                    <apex:actionFunction name="DeActivateProgram" action="{!DeActivateProgram}" oncomplete="ProgramStatusDeactive();" reRender="ProgramSummaryPage,JsFunstion" status="loadSplashScreen" />
+                    <apex:actionFunction name="updateProcessingStatus" action="{!updateProcessingStatus}" reRender="processingStatusField, preview, printButtons" status="loadSplashScreen"/>
+                    <script src="{!URLFOR($Resource.RWSC_Assets, 'include/js/bootstrap.min.js')}"></script>
+                    <script src="{!URLFOR($Resource.RWSC_Assets, 'include/jquery-ui-1.12.1/jquery-ui.min.js')}"></script>
+                    <script type="text/javascript">
+                    $(document).ready(function() {
+                        
+                        
+                        //BW - this shows the contract reference field on page load if sales contract = TXMAS
+                         if ("{!selectedSalesContract}" == "TXMAS")
+                            $("#contractRefDiv").removeClass("dis_none");
+                
+                        
+                        $('input.activation-datepicker').datepicker();
+                        $('input.expiration-datepicker').datepicker();
+                        if ("{!activationDate}" !== "") {
+                            $('input.activation-datepicker').datepicker("setDate", "{!displayactivationDate}");
+                        }
+                        if ("{!expirationDate}" !== "") {
+                            $('input.expiration-datepicker').datepicker("setDate", "{!displayexpirationDate}");
+                        }
+                        
+                        //alert("{!selectsubsidyType}");                        
+                        if ("{!selectsubsidyType}" == "$" ) {
+                            document.getElementById("subsidyAmt").style.display = 'block';
+                                               
+                        } else if ("{!selectsubsidyType}" == "%") {
+                            document.getElementById("subsidyPercent").style.display = 'block';
+                            document.getElementById("maxAmt").style.display = 'block';                        
+                            
+                        } else {                       
+                            document.getElementById("maxAmt").style.display = 'block';                        
+                        }
+                        
+ 
+                        //alert("{!selectType}");
+                        if ("{!selectType}" == "Cash and Carry" ) {
+                            document.getElementById("subsidyDiv").style.display = 'none';
+                            document.getElementById("eligibilityDiv").style.display = 'none';
+                            document.getElementById("payrollDiv").style.display = 'none';
+                                               
+                        } else if ("{!selectType}" == "Payroll Deduction") {
+                            document.getElementById("subsidyDiv").style.display = 'none';
+                            document.getElementById("eligibilityDiv").style.display = 'block';                        
+                            
+                        } else if ("{!selectType}" == "Subsidy") {                                                
+                            document.getElementById("payrollDiv").style.display = 'none';
+                                                                       
+                        } else if ("{!selectType}" == "Subsidy with Pcard" ) {
+                            document.getElementById("subsidyDiv").style.display = 'block';
+                            document.getElementById("eligibilityDiv").style.display = 'none';
+                            document.getElementById("payrollDiv").style.display = 'none';
+                        }
+                        
+                                     
+                        
+                        if("{!selecteligibilityOption}"  == "No"){                           
+                            document.getElementById("requireUploadDiv").style.display = 'block';   
+                        } else if ("{!selecteligibilityOption}" == "Yes"){                          
+                            document.getElementById("voucherTypeDiv").style.display = 'block'; 
+                        }
+                        
+                        
+                    });                  
+                    
+                    
+                    </script>
+                </apex:outputpanel>
+            </apex:form>
+            <c:RWS_Footer />
+        </div>
+        <!--<c:JavaScriptLibrariesComponent />-->
+        <script type="text/javascript">
+                
+        
+        function displayProgramDetails() {
+            $('#progSummaryEdit').hide();
+            $('#progSummaryDisplay').show();
+        }
+
+        function editProgramDetails() {
+            $('#progSummaryDisplay').hide();
+            $('#progSummaryEdit').show();
+        }
+        
+         
+        </script>
+        <apex:outputpanel id="JsFunstion">
+            <script>
+           
+            /*
+            function refreshProcessingStatus(){
+                //console.log('begin JS programSummary function isScheduled value: {!isScheduled}');
+                //var url = $(location).attr('href');
+                //var programId = '{!$CurrentPage.parameters.proid}'; //url.split('/').pop().split('&').shift().split('=').pop();
+                updateProductTable('{!programId}');
+               // updateProcessingStatus();
+
+            }
+            
+            function consoleLog() {
+                console.log('final value for isScheduled(programSummary): {!isScheduled}');
+            }*/
+            
+            function ProgramStatus() {
+                $(".modal-backdrop.fade.in").hide();
+                var status = '{!ProgramStatus}';
+                var error = '{!errorMsg}';
+                var exceptionError = '{!ProgramActivationStatus}';
+                
+                if (exceptionError != '') {
+                    specialModal('fa fa-bell-o', 'ACTIVATION ERROR', 'Program is not active. ' + exceptionError, null, '', '$(".modal-backdrop.fade.in").hide()', 'OKAY', null, '');                
+                } 
+                
+                if (error != '') {
+                    //$("#ActivationErrorMessageDisplay").show();
+                    specialModal('fa fa-bell-o', 'ACTIVATION ERROR', 'Program is not active. ' + error, null, '', '$(".modal-backdrop.fade.in").hide()', 'OKAY', null, '');
+                } 
+                
+                if (exceptionError == '' && error == '') {
+                    //$( "#programThanks" ).show();
+                    specialModal('fa fa-bell-o', 'PROGRAM ACTIVATION', status, null, '', '$(".modal-backdrop.fade.in").hide()', 'OKAY', null, '');
+                }
+
+            }
+
+            function ProgramStatusDeactive() {
+                $(".modal-backdrop.fade.in").hide();
+                var status = '{!ProgramStatus}';
+                //$("#programInActiveThanks").show();
+                specialModal('fa fa-bell-o', 'PROGRAM DEACTIVATION', status, null, '', '$(".modal-backdrop.fade.in").hide()', 'OKAY', null, '');
+                /*
+                if(status == 'Active'){
+                   //$( "#programThanks" ).show();
+                   // $("#programThanks").show();
+                }
+                else{
+                    $("#programInActiveThanks").show();
+                }*/
+            }
+
+
+            function CloseMe(id) {
+                $("#" + id + "").hide();
+            }
+            </script>
+        </apex:outputpanel>
+        <script type="text/javascript">
+        /*
+                function activationDateCheck(){
+                    var acct= document.getElementById('AccountSetup:theForm:accountName');
+                    //var activeDate=document.getElementById("AccountSetup:theForm:actDate").value;
+                    //var type=document.getElementById("AccountSetup:theForm:id="Programtype"").value;
+
+                    //var acct = $('#accountName').val() ; 
+                    //var activeDate = $('#actDate').val() ; 
+                    //var type = $('#id="Programtype"').val() ; 
+                    alert("test: " + acct );
+                    //alert("test" + activeDate );
+                    //alert("test"+ type);
+                    var errorMsg='';
+                    var close="close";
+                    var blank=" ";  
+                    if (activeDate>Date.now){
+                        if ((acct != '') || (acct !=  null)) {
+                            errorMsg="Program cannot be activated with a future activation date";
+                        }else{
+                            if (type =="Cash and Carry"){
+                                errorMsg="Program cannot be activated with a future activation date";
+                            } else {
+                                errorMsg="Program cannot be activated. Account should either be credit approved or use a Cash n' Carry program."; 
+                            }
+                        }
+                    } 
+
+                    if(errorMsg != ''){
+                    alert(errorMsg);
+                    //document.getElementById("activeDateError").innerHTML = errorMsg;
+                    //document.getElementById("closeModal").innerHTML = close;
+                    //document.getElementById("yesButton").innerHTML = blank;
+                    }
+                    else{
+                        ActivateProgram();
+                    }
+                
+                }*/
+        </script>
+    </body>
+
+    </html>
+</apex:page>

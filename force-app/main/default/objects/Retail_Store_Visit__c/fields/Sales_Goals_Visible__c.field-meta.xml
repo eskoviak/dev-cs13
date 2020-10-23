@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Goals_Visible__c</fullName>
+    <description>Verify store sales goals are visible and known</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Verify goal board is up to date and team members know what their goals are for the day</inlineHelpText>
+    <label>Sales Goals Visible</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>NA_Yes_No</valueSetName>
+    </valueSet>
+</CustomField>

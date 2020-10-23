@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retail_Solution_Defects</fullName>
+    <columns>NAME</columns>
+    <columns>Source__c</columns>
+    <columns>Release_Build_Discovered__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Defect_Title__c</columns>
+    <columns>Assigned_to__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Defect_Status__c</columns>
+    <columns>Change_Reqest__c</columns>
+    <columns>Activity__c</columns>
+    <columns>Release_Build_Fixed__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project__c</field>
+        <operation>contains</operation>
+        <value>Retail Solution</value>
+    </filters>
+    <filters>
+        <field>Project__c</field>
+        <operation>notContain</operation>
+        <value>Future</value>
+    </filters>
+    <label>Retail Solution Defects</label>
+</ListView>

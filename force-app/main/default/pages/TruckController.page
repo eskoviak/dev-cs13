@@ -1,0 +1,228 @@
+<apex:page controller="TruckController">
+    <apex:remoteObjects >
+        <apex:remoteObjectModel name="Account" fields="Id,Name,Latitude__c,Longitude__c,IA_Service_Method__c,Last_Truck_Run__c,Days_Since_Last_Truck_Run__c"/>
+    </apex:remoteObjects>
+    <apex:outputPanel id="exportPanel">
+        <apex:form >
+            <apex:outputLabel value="Account Selection: " for="accountSelect"/>
+            <apex:selectList id="accountSelect" value="{!SelectedAccountId}" size="1" title="Account Selection">
+                <apex:selectOptions value="{!Accounts}"></apex:selectOptions>
+                <apex:actionSupport event="onchange" action="{!PopulateMapForAccount}" />
+                <apex:actionSupport reRender="exportPanel" />
+            </apex:selectList>
+            <apex:outputLabel value="--OR--"/>
+            <apex:outputLabel value="Truck Selection: " for="truckSelect"/>
+            <apex:selectList id="truckSelect" value="{!SelectedTruckId}" size="1" title="Truck Selection" label="Truck Selection:">
+                <apex:selectOptions value="{!TruckList}"></apex:selectOptions>
+                <apex:actionSupport event="onchange" action="{!PopulateMapForTruck}" />
+                <apex:actionSupport reRender="exportPanel" />
+            </apex:selectList>
+            <apex:outputLabel value="Include Non-Truck Serviced Stores:" for="ignoreNonTruck"/>
+            <apex:inputCheckbox id="ignoreNonTruck" title="Include Non Serviced Stores:">
+                <apex:actionSupport event="onchange" action="{!ToggleIgnoreNonTruck}" />
+                <apex:actionSupport reRender="exportPanel" />
+            </apex:inputCheckbox>
+            <!--
+            <apex:selectList size="1">
+                <apex:selectOptions value="{!UserList}"></apex:selectOptions>
+            </apex:selectList>
+            -->
+            
+        <Apex:commandButton value="View Calendar" action="{!openCal}"/> 
+        </apex:form>
+        <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAPrAXTH0emo3y82aI9dzZwylNVpDk5l3U&sensor=false"></script>
+    	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?key=AIzaSyAPrAXTH0emo3y82aI9dzZwylNVpDk5l3U"></script> 
+    	<script type="text/javascript"> 
+        // Any js placed here will be fired when output panel is rerendered
+        if({!MapVisible} == true)
+     {
+      var myOptions = {
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeControl: true
+      }
+      
+      var map;
+      var marker;
+      var dotColor;
+      var content;
+      var bounds = new google.maps.LatLngBounds();
+      var geocoder = new google.maps.Geocoder();
+      var address = "{!ParentAccount.Latitude__c} {!ParentAccount.Longitude__c}";
+      var infowindow;
+     
+      geocoder.geocode( {address: address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK && results.length) {
+          if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+          
+            //create map
+            map = new google.maps.Map(document.getElementById("map"), myOptions);
+                        
+            //center map
+            map.setCenter(results[0].geometry.location);
+            
+            //create infowindow 
+            content = "<b>{!ParentAccount.Name}</b>";
+            infowindow = new google.maps.InfoWindow();  
+              
+            //create marker
+            marker = new google.maps.Marker({
+                position: results[0].geometry.location,
+                map: map,
+                title: "{!ParentAccount.Name}",
+                icon: "https://maps.gstatic.com/mapfiles/ms2/micons/rangerstation.png"
+            });
+            bounds.extend(marker.getPosition());
+            
+            //add listeners
+            google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+                return function() {
+                    infowindow.setContent(content);
+                    infowindow.open(map,marker);
+                };
+            })(marker,content,infowindow)); 
+            
+            var today = new Date();
+            //Add industrial account markers
+            <apex:repeat var="a" value="{!ServicedAccounts}">
+                if("{!IgnoreServicedByTruck}" == 'true' || "{!a.IA_Service_Method__c}".includes("Truck"))
+                {
+                    var dotColor = "purple";
+                      if("{!a.Last_Truck_Run__c}" != "" && new Date("{!a.Last_Truck_Run__c}") > today)
+                      {
+                          dotColor = "ltblue";
+                      }
+                      else if("{!a.Days_Since_Last_Truck_Run__c}" == "")
+                      {
+                          //dotColor = "purple";
+                      }
+                      else if("{!a.Days_Since_Last_Truck_Run__c}" < 30)
+                      {
+                          dotColor = "green";
+                      }
+                      else if("{!a.Days_Since_Last_Truck_Run__c}" < 180)
+                      {
+                          dotColor = "yellow";
+                      }
+                      else
+                      {
+                          dotColor = "red";
+                      }
+                    
+                    var truckRunUrl = "{!BaseUrl}" + "/a2n/e?CF00N2F000000WRQy={!a.Name}";
+                    truckRunUrl = encodeURI(truckRunUrl);
+                    var accountUrl = "{!BaseUrl}" + "/{!a.Id}";
+                    accountUrl = encodeURI(accountUrl);
+                    content = '<b><a href="' + accountUrl + '">{!a.Name}</a></b><p>Last Truck Run: {!a.Last_Truck_Run__c}</p><p>Days Since Last Truck Run:{!a.Days_Since_Last_Truck_Run__c}</p><p><a href="' + truckRunUrl + '">Schedule Truck Run</a></p>';
+                    
+                    infowindow = new google.maps.InfoWindow();
+                    marker = new google.maps.Marker({
+                         position: new google.maps.LatLng("{!a.Latitude__c}", "{!a.Longitude__c}"),
+                         map: map,
+                         title: "{!a.Name}",
+                         icon: 'https://maps.google.com/mapfiles/ms/icons/' + dotColor + '-dot.png'
+                    });
+                    bounds.extend(marker.getPosition());
+                
+                    google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+                        return function() {
+                            infowindow.setContent(content);
+                            infowindow.open(map,marker);
+                        };
+                    })(marker,content,infowindow)); 
+                }
+ 			</apex:repeat>
+            map.fitBounds(bounds);
+            addLegend();  
+          }
+          
+        } else {
+          $('#map').css({'height' : '15px'});
+          $('#map').html("Oops! {!ParentAccount.Name}'s location could not be found, please make sure the latitude and longitude are populated.");
+          resizeIframe();
+        }
+      });
+    }
+      function resizeIframe() {
+        var me = window.name;
+        if (me) {
+          var iframes = parent.document.getElementsByName(me);
+          if (iframes && iframes.length == 1) {
+            height = document.body.offsetHeight;
+            iframes[0].style.height = height + "px";
+          }
+        }
+      }
+        
+      function addLegend() {
+      	var iconBase = 'https://maps.google.com/mapfiles/ms/icons/';
+          var icons = {
+              home: {
+                  name: 'Store',
+                  icon: "https://maps.gstatic.com/mapfiles/ms2/micons/rangerstation.png"
+              },
+              future: {
+                  name: 'Future Truck Run Scheduled',
+                  icon: iconBase + 'ltblue-dot.png'
+              },
+              good: {
+                  name: 'Truck run in last 30 days',
+                  icon: iconBase + 'green-dot.png'
+              },
+              okay: {
+                  name: 'Truck run in last 180 days',
+                  icon: iconBase + 'yellow-dot.png'
+              },
+              bad: {
+                  name: 'No truck run in last 180 days',
+                  icon: iconBase + 'red-dot.png'
+              },
+              never: {
+                  name: 'No truck run ever scheduled',
+                  icon: iconBase + 'purple-dot.png'
+              },
+          };
+          
+          var legend = document.getElementById('legend');
+          var div = document.createElement('div');
+          div.id = "legendLine";
+          div.margin = 5;
+          for (var key in icons) {
+              var type = icons[key];
+              var name = type.name;
+              var icon = type.icon;
+              
+              div.innerHTML += '     <img src="' + icon + '"> ' + name + '     ';
+          }
+          legend.appendChild(div);
+      }
+    </script>
+     
+    <style>
+    #map {
+      font-family: Arial;
+      font-size:12px;
+      line-height:normal !important;
+      height:500px;
+      background:transparent;
+    }
+    #legend {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid #000;
+      }
+      #legend h3 {
+        margin-top: 0;
+      }
+      #legend img {
+        vertical-align: middle;
+      }
+    </style>
+    </apex:outputPanel>
+    <body>
+    <div id="map"></div>
+    <div id="legend"></div>
+    </body>
+</apex:page>

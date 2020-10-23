@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CaseSubType__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>CaseSubType</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PO</fullName>
+                <default>true</default>
+                <label>PO</label>
+            </value>
+            <value>
+                <fullName>Remittance</fullName>
+                <default>false</default>
+                <label>Remittance</label>
+            </value>
+            <value>
+                <fullName>Junk Mail</fullName>
+                <default>false</default>
+                <label>Junk Mail</label>
+            </value>
+            <value>
+                <fullName>Auto Reply</fullName>
+                <default>false</default>
+                <label>Auto Reply</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

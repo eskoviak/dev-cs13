@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Participant__c</fullName>
+    <description>Field establishing the junction object relationship with Wear Tester.
+Renamed from Wear Tester</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Link to the Wear Tester.
+
+Enter any text into the Wear Test Participant Name field.
+A workflow will update the name to Participant Name-Wear Test</inlineHelpText>
+    <label>Participant</label>
+    <referenceTo>WT_Participant__c</referenceTo>
+    <relationshipLabel>Wear Test Participants</relationshipLabel>
+    <relationshipName>WT_Product_Testers</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

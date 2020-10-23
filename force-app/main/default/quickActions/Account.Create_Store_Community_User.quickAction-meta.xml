@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Create a default community user for the partner community</description>
+    <height>300</height>
+    <label>Create Store Community User</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <page>RWS_StoreCommUserCreatorQA</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

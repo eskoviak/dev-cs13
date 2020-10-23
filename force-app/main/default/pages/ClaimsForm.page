@@ -1,0 +1,215 @@
+<apex:page showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" standardStylesheets="false" controller="ClaimsForm_Controller">
+    <html lang="en">
+        <head>
+            <c:HeadTagComponent />
+            <apex:includeScript value="{!URLFOR($Resource.RWSC_Assets, 'include/js/jquery.validate.min.js')}" />
+            
+            <style>
+            
+            </style>
+            <apex:outputPanel rendered="{!$User.Alias == 'guest' }">
+                <script type="text/javascript">
+                self.location.href = '{!$Label.Community_Name}login?retURL=%2FRWS_Home_Page';
+                </script>
+            </apex:outputPanel>
+            <script type="text/javascript">
+            
+            $(document).ready(function() {
+                // Validation for Claims Form (START) //
+                $('[id$=claimsform]').validate({
+                    rules: {
+                        '{!$Component.claimsform.orderNumber}': {
+                            maxlength: 20
+                        },
+                        '{!$Component.claimsform:accountTypeSelect}': {
+                            required: true
+                        },
+                        '{!$Component.claimsform:caseNotes}': {
+                            maxlength: 255
+                        },
+                        '{!$Component.claimsform:listPO}': {
+                            maxlength: 32768
+                        }
+                    },
+                        // Specify the validation error messages
+                    messages: {
+                        '{!$Component.claimsform:orderNumber}': {
+                            max: "You may only enter at most 20 characters into Order Number"
+                        },
+                        '{!$Component.claimsform:accountTypeSelect}': {
+                            required: "Please select an Account Type"
+                        },
+                        '{!$Component.claimsform:caseNotes}': {
+                            max: "You may only enter at most 255 characters into Case Notes"
+                        },
+                        '{!$Component.claimsform:listPO}': {
+                            max: "Please enter fewer characters into the PO List"
+                        }
+                    }
+                });
+            });
+
+            $.validator.setDefaults({
+                highlight: function(element, errorClass, validClass) {
+                        $(element).closest('div').addClass('has-error has-feedback'); //.removeClass('has-success has-feedback');
+                        $(element).closest('select').addClass('has-feedback'); //.removeClass('has-success has-feedback');.css({"margin-bottom": "0px"}).css({"margin-bottom": "15px"})
+                        //$(element).closest('div').find('i.fa').remove();
+                        $(element).closest('div').append('<i class="fa fa-warning fa-lg form-control-feedback"></i>');
+                        //$(element).closest('.form-group').addClass('has-error has-feedback');
+                },
+                unhighlight: function(element, errorClass, validClass) {
+                        $(element).closest('div').removeClass('has-error has-feedback'); //.addClass('has-success has-feedback');
+                        $(element).closest('select').removeClass('has-feedback'); //.removeClass('has-success has-feedback');
+                        $(element).closest('div').find('i.fa').remove();
+                        //$(element).closest('.form-group').removeClass('has-error has-feedback');
+                        //$(element).closest('.col-xs-3').append('<i class="fa fa-check fa-lg form-control-feedback"></i>');
+                }
+            });
+            
+            var saveAndContinue = function() {
+                if($('[id$=claimsform]').valid()){
+                    CallInsertMethod();
+                }
+            };
+            // Validation for Claims Form (END) // 
+
+            
+            var changePhotoName = function(buttonId, label, picture){
+                	var fileName = document.getElementById(buttonId).value;
+                    var fileNameFormatted = fileName.replace(/^.*[\\\/]/, '');                                    
+                    if (fileName != ' ' || fileName !=  null){
+                        document.getElementById(label).innerHTML = fileNameFormatted;
+                        document.getElementById(picture).value = fileNameFormatted;
+                    }
+                };
+        </script>
+            
+        </head>
+        <body class="homepage">
+            <c:RWS_Header />
+        <div class="row secondary-bg site-content">
+            <div class="col-xs-12 text-center header">
+                <h1 class="fancy white"><span>AUTHORIZATION FORM FOR DEFECTIVE &amp; NEW PRODUCT</span></h1>
+            </div>
+        </div>
+            <div class="wrapper row site-content primary-bg">
+                <div class="form-horizontal p-0 col-sm-12">
+                    <!-- header section starts here -->
+                    <!-- header section ends here -->
+                    
+                                    <apex:actionregion >
+                                        <apex:form id="claimsform">
+                                            <apex:actionFunction name="CallInsertMethod" action="{!InsertNewCase}" />                                         
+                                    <div class="basicInfo pad_top20">
+                                        <br /><br />
+                                        <div id="orderNumberGroup" class="form-group">
+                                            <label class="form control-label col-xs-3 pad_rgt0" for="name">Order Number</label>
+                                            <div class="col-xs-8">
+                                                <apex:inputText id="orderNumber" styleClass="form-control orderNumberClass inputReset requredName" maxlength="20" value="{!OrderNumber}"/>
+                                                <span class="orderNumberVal-icon glyphicon glyphicon glyphicon-alert form-control-feedback dis_none"></span>
+                                            </div>
+                                            <label class="col-xs-3 pad_rgt0 mrg_top10" />
+                                            <div class="col-xs-8 ">
+                                                <span class="rw-dark-red req_orderNumber dis_none mrg_top10">Please enter Order Number</span>
+                                            </div>
+                                        </div>
+										
+										<div id="accountTypeGroup" class="form-group">
+                                            <label class="form control-label col-xs-3 pad_rgt0" for="name">Account Type</label>
+                                            <div class="col-xs-8">
+                                                <apex:selectList styleClass="form-control" value="{!AccountType}" size="1" id="accountTypeSelect">
+                                                    <apex:selectOption itemValue="" itemLabel="--Select--"/>
+                                                    <apex:selectOption itemValue="US RWSS" itemLabel="US RWSS"/>
+                                                    <apex:selectOption itemValue="Branded Accounts" itemLabel="Branded Accounts"/>
+                                                    <apex:selectOption itemValue="International/Canada" itemLabel="International/Canada"/>
+                                                </apex:selectList>
+                                                <span class="accountTypeVal-icon glyphicon glyphicon glyphicon-alert form-control-feedback dis_none"></span>
+                                            </div>
+                                            <label class="col-xs-3 pad_rgt0 mrg_top10" />
+                                            <div class="col-xs-8 ">
+                                                <span class="rw-dark-red req_accountType dis_none mrg_top10">Please select Account Type</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="caseNotesGroup" class="form-group">
+                                            <label class="form control-label col-xs-3 pad_rgt0" for="name">Case Notes</label>
+                                            <div class="col-xs-8">
+                                                <apex:inputText id="caseNotes" styleClass="form-control caseNotesClass inputReset requredName" maxlength="255" value="{!IssueDescription}"/>
+                                                <span class="caseNotesVal-icon glyphicon glyphicon glyphicon-alert form-control-feedback dis_none"></span>
+                                            </div>
+                                            <label class="col-xs-3 pad_rgt0 mrg_top10" />
+                                            <div class="col-xs-8 ">
+                                                <span class="rw-dark-red req_caseNotes dis_none mrg_top10">Please enter Case Notes</span>
+                                            </div>
+                                        </div>
+										
+										<div id="listPOGroup" class="form-group">
+                                            <label class="col-xs-3 pad_rgt0"></label>
+                                            <div class="col-xs-8">
+                                                <p class="rw-grey mrg_btm0">Please enter a comma separated list of values without spaces (1234,1235,...) </p>
+                                            </div>
+                                            <div id="listPORow" >
+                                                <label class="form control-label col-xs-3 pad_rgt0" for="name">List PO &amp; Original Invoice Numbers</label>
+                                                <div class="col-xs-8" style="margin-bottom:15px">
+                                                    <apex:inputText id="listPO" styleClass="form-control listPOClass inputReset requredName" maxlength="32768" value="{!Orders}"/>
+                                                    <span class="listPOVal-icon glyphicon glyphicon glyphicon-alert form-control-feedback dis_none"></span>
+                                                </div>
+                                            </div>
+                                            <label class="col-xs-3 pad_rgt0 mrg_top10" />
+                                            <div class="col-xs-8 ">
+                                                <span class="rw-dark-red req_listPO dis_none mrg_top10">Please enter PO &amp; Original Invoice Numbers</span>
+                                            </div>
+                                        </div>
+                                        
+										<div id="picture1Group" class="form-group">
+                                            <label class="form control-label col-xs-3 pad_rgt0" for="name">Picture 1</label>
+                                            <apex:inputHidden id="picture1" value="{!FileName1}"/>
+											<div class="col-xs-3">
+                                                <label for="{!$Component.fileUpload1}" id="fileUpload1Label" class="btn btn-danger btn-outline">Choose File</label>
+												<apex:inputfile value="{!File1}" id="fileUpload1" style="display:none" onchange="changePhotoName('{!$Component.fileUpload1}', 'fileUpload1Label', '{!$Component.picture1}');"></apex:inputfile>
+											</div>
+                                        </div>
+										
+										<div id="picture2Group" class="form-group">
+                                            <label class="form control-label col-xs-3 pad_rgt0" for="name">Picture 2</label>
+                                            <apex:inputHidden id="picture2" value="{!FileName2}"/>
+											<div class="col-xs-3">
+                                                <label for="{!$Component.fileUpload2}" id="fileUpload2Label" class="btn btn-danger btn-outline">Choose File</label>
+												<apex:inputfile value="{!File2}" id="fileUpload2" style="display:none" onchange="changePhotoName('{!$Component.fileUpload2}', 'fileUpload2Label', '{!$Component.picture2}');"></apex:inputfile>
+											</div>
+                                        </div>
+										
+										<div id="picture3Group" class="form-group">
+                                            <label class="form control-label col-xs-3 pad_rgt0" for="name">Picture 3</label>
+                                            <apex:inputHidden id="picture3" value="{!FileName3}"/>
+											<div class="col-xs-3">
+                                                <label for="{!$Component.fileUpload3}" id="fileUpload3Label" class="btn btn-danger btn-outline">Choose File</label>
+												<apex:inputfile value="{!File3}" id="fileUpload3" style="display:none" onchange="changePhotoName('{!$Component.fileUpload3}', 'fileUpload3Label', '{!$Component.picture3}');"></apex:inputfile>
+											</div>
+                                        </div>
+                                        
+										<div class="form-group">
+                                            <label class="form control-label col-xs-3 pad_rgt0" for="name"></label>
+                                            <div class="col-xs-8">
+                                                <apex:commandButton id="clearClaim" value="Clear" styleClass="btn btn-danger btn-outline btn-xl flt_lft btn_cancel_sec1" onclick="this.form.reset(); return false;"/>
+                                                <apex:outputPanel styleclass="tabHeaderSection cb">
+                                                    <span aria-expanded="true" aria-controls="collapseContact">          
+                                                        <a id="btn_save_Claim"  data-dismiss="modal" class="btn btn-danger btn-xl btn_req1" 
+                                                           data-toggle="modal" style="width: 50%;" onclick="saveAndContinue();">Save and Continue</a>
+                                                    </span>
+                                                </apex:outputPanel>
+                                            </div>
+                                        </div>
+                                <apex:pageBlock >
+                                    
+                                </apex:pageBlock>
+                                        </div>
+                            </apex:form>
+                                    
+                                    </apex:actionregion>
+                            	</div>
+                        	</div>
+                        
+    	</body>
+    </html>
+</apex:page>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requires_Marketing_Approval_by__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Requires Marketing Approval by this Person (look up to user record)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The person in marketing who should approve this article</inlineHelpText>
+    <label>Requires Marketing Approval by</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>User.UserRole.Name</field>
+            <operation>contains</operation>
+            <value>Marketing</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Customer_Support</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

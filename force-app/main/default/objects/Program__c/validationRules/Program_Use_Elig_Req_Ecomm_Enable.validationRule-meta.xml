@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Use_Elig_Req_Ecomm_Enable</fullName>
+    <active>false</active>
+    <description>If Use Eligibility Tool = Yes, select Yes or No in Ecomm Enabled</description>
+    <errorConditionFormula>AND(
+isPickVal(Eligibility_Option__c, &apos;True&apos;),
+isBlank(TEXT( Ecomm_Enabled__c)))</errorConditionFormula>
+    <errorMessage>If Use Eligibility Tool = Yes, select No or Yes for Ecomm Enabled. It can not be blank.</errorMessage>
+</ValidationRule>

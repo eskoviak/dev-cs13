@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesmen_Samples_On_Order_Date__c</fullName>
+    <description>Date associated with the Salesmen Samples field. If Salesmen Samples is On Order, a date can be entered.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date associated with the Salesmen Samples field.</inlineHelpText>
+    <label>Salesmen Samples On Order Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

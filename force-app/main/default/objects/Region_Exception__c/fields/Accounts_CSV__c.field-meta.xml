@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accounts_CSV__c</fullName>
+    <description>CSV list of Account Ids to be shared with region set in standard Name field</description>
+    <externalId>false</externalId>
+    <label>Accounts CSV</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

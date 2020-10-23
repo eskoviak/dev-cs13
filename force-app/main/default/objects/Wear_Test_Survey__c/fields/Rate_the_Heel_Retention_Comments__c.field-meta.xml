@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rate_the_Heel_Retention_Comments__c</fullName>
+    <description>Survey Question: How would you rate the heel retention of the product?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Survey Question: How would you rate the heel retention of the product?</inlineHelpText>
+    <label>Rate the Heel Retention - Comments</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

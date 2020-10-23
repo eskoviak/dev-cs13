@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auto_Update_Price__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>If TRUE your price books is automatically adjusted with MSRP changes.  EXAMPLE:  If you had 20% off Red Wing and the MSRP increases; your 20% remains but it is off the new MSRP.
+Field Type: IA
+Integrated: Y</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If TRUE your price book is automatically adjusted with MSRP changes.  EXAMPLE:  If you had 20% off Red Wing and the MSRP increases; your 20% remains but it is off the new MSRP.</inlineHelpText>
+    <label>Auto Update Price</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

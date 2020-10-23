@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Status of exception action</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter status of actions for correction of exception</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Reviewed</fullName>
+                <default>false</default>
+                <label>Not Reviewed</label>
+            </value>
+            <value>
+                <fullName>No Action Taken</fullName>
+                <default>false</default>
+                <label>No Action Taken</label>
+            </value>
+            <value>
+                <fullName>Corrected</fullName>
+                <default>false</default>
+                <label>Corrected</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

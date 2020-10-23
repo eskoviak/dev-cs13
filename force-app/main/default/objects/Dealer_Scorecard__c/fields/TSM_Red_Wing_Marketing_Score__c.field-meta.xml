@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TSM_Red_Wing_Marketing_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(  TSM_Red_Wing_Marketing__c  , 
+&quot;4%&quot;,10, 
+&quot;3%&quot;,8, 
+&quot;2%&quot;,6, 
+&quot;1%&quot;,4,
+&quot;0%&quot;,0, 
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>TSM - Red Wing Marketing Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

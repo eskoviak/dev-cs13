@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RWBAA_Active__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Designates that the Contact is Active or Inactive for this account</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contact is Active or Inactive for this account</inlineHelpText>
+    <label>RWBAA Active</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

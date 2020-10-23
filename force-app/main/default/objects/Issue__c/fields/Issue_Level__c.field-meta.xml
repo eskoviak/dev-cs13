@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue_Level__c</fullName>
+    <description>The severity of the issue.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select a level of severity to describe the issue.</inlineHelpText>
+    <label>Issue Level</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - Critical/Showstopper</fullName>
+                <color>#FF0000</color>
+                <default>false</default>
+                <label>1 - Critical/Showstopper</label>
+            </value>
+            <value>
+                <fullName>2 - Major</fullName>
+                <color>#FF6666</color>
+                <default>false</default>
+                <label>2 - Major</label>
+            </value>
+            <value>
+                <fullName>3 - Medium</fullName>
+                <color>#FF6600</color>
+                <default>false</default>
+                <label>3 - Medium</label>
+            </value>
+            <value>
+                <fullName>4 - Minor</fullName>
+                <color>#FFCC33</color>
+                <default>false</default>
+                <label>4 - Minor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

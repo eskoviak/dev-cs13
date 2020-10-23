@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industrial_Accounts_Solution_Reporting</fullName>
+    <columns>NAME</columns>
+    <columns>Report_Priority__c</columns>
+    <columns>Report_Source__c</columns>
+    <columns>Source_System__c</columns>
+    <columns>Report_Frequency__c</columns>
+    <columns>Detailed_Requirement__c</columns>
+    <columns>Status__c</columns>
+    <columns>Status_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project_Name__c</field>
+        <operation>equals</operation>
+        <value>Customer WOW - Industrial Accounts Solution</value>
+    </filters>
+    <label>Industrial Accounts Solution Reporting</label>
+</ListView>

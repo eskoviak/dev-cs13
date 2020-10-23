@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Work_Safety_Product_Specification__c</fullName>
+    <description>This field is used to identify if the store has participated in Work &amp; Safety Product Specifications.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please choose yes if the store has had training on Work/Safety Product Specification (ASTM, I/75 C/75, CSA, EH, ST, PR).</inlineHelpText>
+    <label>Work &amp; Safety Product Specification</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Truck_Log_Book_Reviewed__c</fullName>
+    <description>Driver Logs in Use - Each shoemobile driver is maintaining the required truck log and doing the required truck inspections daily</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Driver Logs in Use - Each shoemobile driver is maintaining the required truck log and doing the required truck inspections daily.</inlineHelpText>
+    <label>Truck Log Book Reviewed</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Yes_No</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicator for the Tax Exemption Reason.  If checked (TRUE) the Tax Exemption Reason is active.
+Field Type: IA
+Integrated: N</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicator for the Tax Exemption Reason.  If checked (TRUE) the Tax Exemption Reason is active.</inlineHelpText>
+    <label>Active</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

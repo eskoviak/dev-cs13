@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_To_Account__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>This is the Account that the record is related to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the Account that the record is related to.</inlineHelpText>
+    <label>Related To Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipName>Private_Notes_Attachments</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
